@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dettonville</title>
+    <link>http://dettonville.org/tags/</link>
+    <description>Recent content in Tags on Dettonville</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>news</title>
+      <link>http://dettonville.org/tags/news/</link>
+      <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>release</title>
+      <link>http://dettonville.org/tags/release/</link>
+      <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/release/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>examples</title>
+      <link>http://dettonville.org/tags/examples/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/examples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ide</title>
+      <link>http://dettonville.org/tags/ide/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intellij</title>
+      <link>http://dettonville.org/tags/intellij/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/intellij/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web-site</title>
+      <link>http://dettonville.org/tags/web-site/</link>
+      <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/web-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build</title>
+      <link>http://dettonville.org/tags/build/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gradle</title>
+      <link>http://dettonville.org/tags/gradle/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/gradle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>how-to</title>
+      <link>http://dettonville.org/tags/how-to/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedback</title>
+      <link>http://dettonville.org/tags/feedback/</link>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/tags/feedback/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

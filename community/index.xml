@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Dettonville</title>
+    <link>http://dettonville.org/community/</link>
+    <description>Recent content in Community on Dettonville</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Dec 2016 13:22:54 +0100</lastBuildDate><atom:link href="http://dettonville.org/community/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Help</title>
+      <link>http://dettonville.org/community/getting-help/</link>
+      <pubDate>Sat, 31 Dec 2016 13:22:16 +0100</pubDate>
+      
+      <guid>http://dettonville.org/community/getting-help/</guid>
+      <description>You are using MapStruct and ran into a problem?
+First check out the reference guide. If that doesn&amp;rsquo;t help to answer your question you may join the MapStruct GitHub Discussions or hop by the MapStruct Gitter room. We also monitor the mapstruct tag on StackOverflow.
+To report a bug or request a new feature use the MapStruct issue tracker. Note that bug reports should be accompanied by a test case demonstrating the issue.</description>
+    </item>
+    
+    <item>
+      <title>Other Resources on the Web</title>
+      <link>http://dettonville.org/community/other-resources/</link>
+      <pubDate>Sat, 31 Dec 2016 13:22:54 +0100</pubDate>
+      
+      <guid>http://dettonville.org/community/other-resources/</guid>
+      <description>Blog posts  Code generators: MapStruct 101 MapStruct: Transferring data from one bean to another Quick Guide to MapStruct Object mapping magic with MapStruct Bean Mapping mit MapStruct; Introduction to MapStruct (German) Mapping Dozer vs MapStruct mapstruct - Java bean mappings; First 3rd party post on MapStruct ever :) MapStruct; Introductory post on MapStruct with code examples Don’t get lost, take the map! – DTO survival code; DTO mapping with MapStruct Wer ist der optimale Java Bean Mapper?</description>
+    </item>
+    
+  </channel>
+</rss>

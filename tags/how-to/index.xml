@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how-to on Dettonville</title>
+    <link>http://dettonville.org/tags/how-to/</link>
+    <description>Recent content in how-to on Dettonville</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using MapStruct with Gradle</title>
+      <link>http://dettonville.org/news/2013-07-08-using-mapstruct-with-gradle/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/news/2013-07-08-using-mapstruct-with-gradle/</guid>
+      <description>Update Feb. 26, 2017: Since writing this post, usage of annotation processors with Gradle got much easier and the set-up described in the following isn&amp;rsquo;t required anymore. The example project on GitHub has been updated accordingly.
+You work with Gradle to build your application and would like to make use of MapStruct to generate mappings between different representations of your model? Then read on to learn how to make MapStruct work with the Groovy based build tool.</description>
+    </item>
+    
+  </channel>
+</rss>

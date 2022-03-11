@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Frequently Asked Questions (FAQ) &ndash; Dettonville</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/uikit.gradient.min.css" />
+        <link rel="stylesheet" href="/css/prettify.css" />
+        <link rel="stylesheet" href="/css/font-awesome.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+        <link rel="alternate" href="/news/index.xml" type="application/rss+xml" title="Dettonville" />
+        <script src="/js/jquery-3.1.1.min.js"></script>
+        <script src="/js/uikit.min.js"></script>
+        <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-41136939-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+
+    <body>
+        <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
+            <a class="uk-navbar-brand ms-hidden-small ms-navbar-brand" href="/">MapStruct</a>
+            <ul class="uk-navbar-nav ms-hidden-small">
+            
+
+    <li>
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li class="uk-active">
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+            </ul>
+            <a href="#nav-small" class="ms-visible-small uk-navbar-toggle" data-uk-offcanvas="{mode:'slide'}"></a>
+            <a class="uk-navbar-brand uk-navbar-center ms-visible-small ms-navbar-brand" href="/">MapStruct</a>
+        </nav>
+
+        <div id="nav-small" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+                
+
+    <li>
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li class="uk-active">
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <div class="uk-grid">
+        <div class="uk-width-medium-1-4">
+            <div class="ms-aside">
+            
+<ul class="uk-nav uk-nav-side">
+    <li class="uk-nav-header">FAQ</li>
+</ul>
+
+
+
+    <ul class="uk-nav uk-nav-sub">
+    
+        <li>
+            <a href="#How-is-MapStruct-different-from-other-bean-mapping-tools">
+                How is MapStruct different from other bean mapping tools?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Can-I-use-MapStruct-within-Eclipse">
+                Can I use MapStruct within Eclipse?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Can-I-use-MapStruct-together-with-Project-Lombok">
+                Can I use MapStruct together with Project Lombok?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Why-does-Named-not-work">
+                Why does @Named not work?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Why-do-I-get-this-error-Could-not-retrieve-Mapper-annotation-during-compilation">
+                Why do I get this error: Could not retrieve @Mapper annotation during compilation?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Why-is-it-not-possible-for-MapStruct-to-generate-implementations-for-Iterable-Stream-and-Map-Types-from-update-MappingTarget-methods">
+                Why is it not possible for MapStruct to generate implementations for Iterable, Stream and Map Types from update (`@MappingTarget`) methods?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#How-do-I-handle-null-properties-in-the-source-bean">
+                How do I handle null properties in the source bean?
+            </a>
+        </li>
+    
+        <li>
+            <a href="#How-to-solve-ambiguous-methods">
+                How to solve ambiguous methods
+            </a>
+        </li>
+    
+        <li>
+            <a href="#Problems-with-qualifiers">
+                Problems with qualifiers
+            </a>
+        </li>
+    
+        <li>
+            <a href="#How-to-avoid-MapStruct-selecting-a-method">
+                How to avoid MapStruct selecting a method?
+            </a>
+        </li>
+    
+    </ul>
+
+
+
+            </div>
+        </div>
+        <div class="uk-width-medium-3-4 ms-main">
+            
+<div>
+    <div class="uk-flex uk-flex-space-between">
+        <div>
+            <h1>Frequently Asked Questions (FAQ)</h1>
+        </div>
+        <div class="uk-hidden-small uk-float-right ms-edit-on-github">
+            <a href="https://github.com/dettonville/dettonville.org/tree/master/content/faq/_index.md" title="Open the source of this page on GitHub" target="_blank"><i class="fa fa-github"></i> Edit on GitHub</a>
+        </div>
+    </div>
+</div>
+<div>
+<div><h2 id="How-is-MapStruct-different-from-other-bean-mapping-tools"><a class="ms-header-link" href="#How-is-MapStruct-different-from-other-bean-mapping-tools"><i class="fa fa-link"></i></a>How is MapStruct different from other bean mapping tools?</h2>
+<div>
+<p>Unlike most other bean mapping tools, MapStruct doesn&rsquo;t work at runtime but is a compile-time code generator.</p>
+<p>Generating mapping code at build time has many advantages:</p>
+<ul>
+<li>Early feedback about erroneous or incomplete mappings, in command line builds as well as within your IDE</li>
+<li>Excellent performance, as no reflection or byte code generation at runtime is needed;
+the generated code contains plain method invocations, just as if the mapper was hand-written</li>
+<li>No runtime dependencies, making MapStruct a great solution for Android applications</li>
+<li>The generated code is easy to understand (and debug, if ever needed)</li>
+<li>The optional <a href="http://dettonville.org/documentation/ide-support/#eclipse">Eclipse plug-in</a> assists you when writing mappings, e.g. by auto-completion</li>
+</ul>
+</div>
+<h2 id="Can-I-use-MapStruct-within-Eclipse"><a class="ms-header-link" href="#Can-I-use-MapStruct-within-Eclipse"><i class="fa fa-link"></i></a>Can I use MapStruct within Eclipse?</h2>
+<div>
+<p>Yes.</p>
+<p>Check out the <a href="http://dettonville.org/documentation/ide-support/#eclipse">set-up instructions</a> for Eclipse.
+There is also a work-in-progress <a href="https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin#group-metrics-tab">Eclipse plug-in</a>
+which facilitates the definition of mapper interfaces with auto-completion and some quick fixes.</p>
+</div>
+<h2 id="Can-I-use-MapStruct-together-with-Project-Lombok"><a class="ms-header-link" href="#Can-I-use-MapStruct-together-with-Project-Lombok"><i class="fa fa-link"></i></a>Can I use MapStruct together with Project Lombok?</h2>
+<div>
+<p>Yes, as of MapStruct 1.2.0.Beta1 and Lombok 1.16.14.</p>
+<p><a href="https://projectlombok.org/">Project Lombok</a> is an annotation processor that (amongst other things) adds getters and setters to the AST (abstract syntax tree) of compiled bean classes.
+AST modifications are not foreseen by Java annotation processing API,
+so quite some trickery was required within Lombok as well MapStruct to make both of them work together.
+Essentially, MapStruct will wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.</p>
+<p>An example for using the two projects together can be found <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-lombok">here</a>.</p>
+<p>If you are using Lombok 1.18.16 or newer you also need to add <a href="https://search.maven.org/artifact/org.projectlombok/lombok-mapstruct-binding">lombok-mapstruct-binding</a> in order to make Lombok and MapStruct work together.</p>
+<p>If you are on an older version of MapStruct or Lombok,
+the solution is to put the JavaBeans to be amended by Lombok and the mapper interfaces
+to be processed by MapStruct into two separate modules of your project.
+Then Lombok will run in the compilation of the first module,
+causing the bean classes to be complete when MapStruct runs during the compilation of the second module.</p>
+</div>
+<h2 id="Why-does-Named-not-work"><a class="ms-header-link" href="#Why-does-Named-not-work"><i class="fa fa-link"></i></a>Why does @Named not work?</h2>
+<div>
+<p>Check out that you are actually using <a href="http://mapstruct.org/documentation/stable/api/org/mapstruct/Named.html"><code>org.mapstruct.Named</code></a>
+and  <strong>not</strong> <code>javax.inject.Named</code>.</p>
+</div>
+<h2 id="Why-do-I-get-this-error-Could-not-retrieve-Mapper-annotation-during-compilation"><a class="ms-header-link" href="#Why-do-I-get-this-error-Could-not-retrieve-Mapper-annotation-during-compilation"><i class="fa fa-link"></i></a>Why do I get this error: Could not retrieve @Mapper annotation during compilation?</h2>
+<div>
+<p>This can happen if you are using <a href="http://mvnrepository.com/artifact/org.mapstruct/mapstruct-jdk8"><code>mapstruct-jdk8</code></a> and
+some other dependency is using an older version of <a href="http://mvnrepository.com/artifact/org.mapstruct/mapstruct"><code>mapstruct</code></a>.
+To solve the problem find the dependency that is using <code>mapstruct</code> and exclude it.</p>
+<p>A known dependency that uses <code>mapstruct</code> and has this problem is <a href="http://mvnrepository.com/artifact/io.springfox/springfox-swagger2"><code>springfox-swagger2</code></a>.</p>
+<p>For Maven you need to exclude it like:</p>
+<pre class="prettyprint linenums lang-xml">
+&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+    &lt;version&gt;${swagger2.version}&lt;/version&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
+            &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+</pre>
+<p>For Gradle you need to exclude it like:</p>
+<pre class="prettyprint linenums lang-groovy">
+compile(&#39;io.springfox:springfox-swagger2:${swagger2.version}&#39;) {
+    exclude group: &#39;org.mapstruct&#39;, module: &#39;mapstruct&#39;
+}
+</pre>
+</div>
+<h2 id="Why-is-it-not-possible-for-MapStruct-to-generate-implementations-for-Iterable-Stream-and-Map-Types-from-update-MappingTarget-methods"><a class="ms-header-link" href="#Why-is-it-not-possible-for-MapStruct-to-generate-implementations-for-Iterable-Stream-and-Map-Types-from-update-MappingTarget-methods"><i class="fa fa-link"></i></a>Why is it not possible for MapStruct to generate implementations for Iterable, Stream and Map Types from update (`@MappingTarget`) methods?</h2>
+<div>
+<p>Consider this (when thinking what MapStruct should do for updating collections in general):</p>
+<ul>
+<li>What if there&rsquo;s no match: should the non-matching elements be removed?</li>
+<li>Should the non matching source elements be added?</li>
+<li>What exactly constitutes to a match: equals? hashcode? comparator==0?</li>
+<li>Can there be more than one match (Lists, but also depending on what is considered a match.)</li>
+<li>How should the resulting collection be sorted?</li>
+<li>Should a newly created object be added to a persistence context?</li>
+<li>What about JPA child-parent relations?</li>
+</ul>
+<p>About the latter one, many IDEs also generates remove methods. So should MapStruct call these in the light of the above?</p>
+<p>At this moment it works like this: whenever the user wants a collection update method, MapStruct generates a regular call to element mappings (in stead of an update call), because it is the only sensible thing to do. All the remainder is highly dependent on the use-case.</p>
+</div>
+<h2 id="How-do-I-handle-null-properties-in-the-source-bean"><a class="ms-header-link" href="#How-do-I-handle-null-properties-in-the-source-bean"><i class="fa fa-link"></i></a>How do I handle null properties in the source bean?</h2>
+<div>
+<p>The strategies were developed over time and hence the naming / behavior deserves attention in future versions of MapStruct to getter better allignment. This would introduce backward incompatibillties, so we cannot not do this in the 1.x versions of MapStruct.</p>
+<p>The following table expresses when the current strategies apply:</p>
+<div class='faq-table'>
+  <table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">source property</th>
+<th style="text-align:center">source bean</th>
+<th style="text-align:center">direct mapping</th>
+<th style="text-align:center">update mapping (<code>@MappingTarget</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NullValueCheckStrategy</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>NullValuePropertyMappingStrategy</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><code>@Mapping#defaultValue</code></td>
+<td style="text-align:center">x</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>NullValueMappingStrategy</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We&rsquo;ve noticed a common mistake that <code>NullValuePropertyMappingStrategy</code> is used in relation to direct mapping, which is understandble because of its naming. So lets look at the following example:</p>
+<pre class="prettyprint linenums lang-java">
+@Mapper
+public interface MyMapper {
+
+    Bar map( Foo source );    
+}
+
+public class Foo {
+
+    private String string;
+    // setters/getters
+}
+
+public class Bar {
+
+    private String string;
+    // setters/getters
+}
+</pre>
+<p>generates:</p>
+<pre class="prettyprint linenums lang-java">
+public class MyMapperImpl implements MyMapper {
+
+    @Override
+    public Bar map(Foo source) {
+        if ( source == null ) {
+            return null;
+        }
+
+        Bar bar = new Bar();
+
+        bar.setString( source.getString() );
+
+        return bar;
+    }
+}
+</pre>
+<p>So, lets look what it would mean if <code>NullValuePropertyMappingStrategy</code> could be applied to direct mappings:</p>
+<ul>
+<li>
+<p><code>SET_TO_NULL</code>. What does this mean when the <code>source.string</code> is null? It would set the source to null when null. But that is what it already does above without any strategy.</p>
+</li>
+<li>
+<p><code>IGNORE</code>. When <code>source.string</code> is null, it would ignore setting the target. But that can be achieved with <code>NullValueCheckStrategy.ALWAYS</code>. Look at the example below:</p>
+</li>
+</ul>
+<pre class="prettyprint linenums lang-java">
+@Mapper( nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS )
+public interface MyMapper {
+
+    Bar map( Foo source );
+}
+</pre>
+<p>generates:</p>
+<pre class="prettyprint linenums lang-java">
+public class MyMapperImpl implements MyMapper {
+
+    @Override
+    public Bar map(Foo source) {
+        if ( source == null ) {
+            return null;
+        }
+
+        Bar bar = new Bar();
+
+        if ( source.getString() != null ) {
+            bar.setString( source.getString() );
+        }
+
+        return bar;
+    }
+}
+</pre>
+<ul>
+<li><code>SET_TO_DEFAULT</code>. <code>SET_TO_DEFAULT</code> is not covered by other cases in direct mapping, but can be achieved as well. Lets asume we would like to set an empty String as default value on null source. There are 2 possibilities:</li>
+</ul>
+<pre class="prettyprint linenums lang-java">
+@Mapper
+public interface MyMapper {
+
+    @Mapping( target = &#34;string&#34;, defaultValue = &#34;&#34; )
+    Bar map( Foo source );
+}
+</pre>
+<p>generates:</p>
+<pre class="prettyprint linenums lang-java">
+public class MyMapperImpl implements MyMapper {
+
+    @Override
+    public Bar map(Foo source) {
+        if ( source == null ) {
+            return null;
+        }
+
+        Bar bar = new Bar();
+
+        if ( source.getString() != null ) {
+            bar.setString( source.getString() );
+        }
+        else {
+            bar.setString( &#34;&#34; );
+        }
+
+        return bar;
+    }
+}
+</pre>
+<p>but has the drawback that this needs to be done for each property.</p>
+<p>The other option would be to create the target object with a default property value, either inside the target (Bar) during construction -if you have control over the target beans-, or via an object factory method:</p>
+<pre class="prettyprint linenums lang-java">
+@Mapper( nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+public interface MyMapper {
+
+    Bar map( Foo source );
+
+    @ObjectFactory
+    default Bar create() {
+        Bar bar = new Bar();
+        bar.setString( &#34;&#34; );
+        return bar;
+    }
+}
+</pre>
+<p>Finally overview below shows on what level a strategy can be applied:</p>
+<div class='faq-table'>
+  <table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">@MapperConfig</th>
+<th style="text-align:center">@Mapper</th>
+<th style="text-align:center">@BeanMapping</th>
+<th style="text-align:center">@Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NullValueCheckStrategy</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>NullValuePropertyMappingStrategy</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>@Mapping#defaultValue</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>NullValueMappingStrategy</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>More detailed information can be found in the reference guide.</p>
+</div>
+<section id="ambiguous"></section>
+<h2 id="How-to-solve-ambiguous-methods"><a class="ms-header-link" href="#How-to-solve-ambiguous-methods"><i class="fa fa-link"></i></a>How to solve ambiguous methods</h2>
+<div>
+<p>MapStruct tries various mechanisms to map a sourceproperty to a targetproperty when it cannot make a direct mapping. In order, MapStruct tries:</p>
+<ol>
+<li>other mapping methods (inside the mapper, or via the uses relation). This concerns both hand-written methods and MapStruct generated methods</li>
+<li>direct mapping (source type is directly assignable to target type)</li>
+<li>type conversions (e.g. from int to String)</li>
+<li>BuiltIn methods (see documentation on a list of supported methods)</li>
+<li>2 step method, variant 1: <code>target = methodY( methodX ( source ) )</code></li>
+<li>2 step method, variant 2: <code>target = methodY( conversionX ( source ) )</code></li>
+<li>2 step method, variant 3: <code>target = conversionY( methodX ( source ) )</code></li>
+</ol>
+<p>Whenever MapStruct finds a unique candidate, MapStruct stops and uses this method to make the mapping between source and target. However, for option 1, 5, 6, 7 it is possible that multiple eligible candidtates are found for which MapStruct cannot decide which one to select. MapStruct reports this as &ldquo;ambiguous mapping method&rdquo; and lists the methods from which it cannot make a selection. Here, you have to guide MapStruct in making the correct mapping.</p>
+<p>This can be done in the following ways:</p>
+<ul>
+<li>provide a method with the exact signature if MapStruct cannot select between base- and super types.</li>
+<li>provide qualifiers.</li>
+</ul>
+</div>
+<section id="qualifier"></section>
+<h2 id="Problems-with-qualifiers"><a class="ms-header-link" href="#Problems-with-qualifiers"><i class="fa fa-link"></i></a>Problems with qualifiers</h2>
+<div>
+<p>MapStruct uses the mechanism of Qualifiers to resolve conflicts. MapStruct selects methods based on the combination of source type and target type.</p>
+<p>An error labeled: &ldquo;Qualifier error&rdquo; is MapStructs way of letting you know that it cannot find the method you intended to annotate with a qualifier annotation or with <code>@Named</code>. There can be several reasons for this:</p>
+<ul>
+<li>you forgot to add the proper retention policy. It must be <code>@Retention(RetentionPolicy.CLASS)</code></li>
+<li>you forgot to add the qualifier (your own annotation, or <code>@Named</code>) to the designated method</li>
+<li>the method signature to which you added the qualfier does not match the source type and target type required for the mapping</li>
+<li>in 1.3.x and earlier, MapStruct was more lenient and allowed qualifiers also if MapStruct did not actually use them. That has been fixed in 1.4.x, on order to get consistent behaviour</li>
+<li>if you wanted to use a 2 step mapping (so selecting two mapping methods) to get from source to target, you need to add the qualifier to both designated methods.</li>
+</ul>
+</div>
+<h2 id="How-to-avoid-MapStruct-selecting-a-method"><a class="ms-header-link" href="#How-to-avoid-MapStruct-selecting-a-method"><i class="fa fa-link"></i></a>How to avoid MapStruct selecting a method?</h2>
+<div>
+<p>MapStruct selects methods by means of assignabillity of source - and target type:</p>
+<ul>
+<li>source assignable to the source parameter of a method</li>
+<li>target assignable to the return type or the <code>@MappingTarget</code> annotated target parameter of a method.</li>
+<li>Qualifying methods are in <code>@Mapper#used</code> mappers or in the <code>Mapper</code> class/interface itself.</li>
+</ul>
+<p>Problems arise when more than one method meets the qualifications.</p>
+<p>In general, qualifiers are used to guide MapStruct to the proper choice. Usualy by indicating <code>@Mapping#qualifiedBy</code> or <code>@Mapping#qualifiedByName</code>. Lesser known is that Qualifiers also work the other way around: if a method is annotated with a qualfier that does not match the <code>@Mapping#qualifiedBy</code> MapStruct will not select that method. This is also valid when <code>@Mapping#qualifiedBy</code> is absent alltogether</p>
+<p>Consider specifying a qualifier like this:</p>
+<pre class="prettyprint linenums lang-java">
+@Qualifier // make sure that this is the MapStruct qualifier annotation
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.CLASS)
+public @interface DoIgnore {
+}
+</pre>
+<p>and placing it on a method:</p>
+<pre class="prettyprint linenums lang-java">
+@DoIgnore
+TypeX doSomething(TypeY y) {
+    // -- do something
+}
+</pre>
+<p>the method <code>doSomething</code> will be ignored by MapStruct.</p>
+</div>
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+        <div class="ms-footer">
+            <div class="uk-container uk-container-center uk-vertical-align uk-height-1-1">
+                <div class="uk-vertical-align-middle uk-width-1-1">
+                    <div class="uk-grid-small" >
+                        <div class="uk-width-1-1 ">
+                            <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
+                                <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-grid">
+                        <div class="uk-width-1-1 ms-subnav-footer">
+                            © The MapStruct authors 2022
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+           prettyPrint();
+        </script>
+    </body>
+</html>
+

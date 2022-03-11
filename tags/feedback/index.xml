@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>feedback on Dettonville</title>
+    <link>http://dettonville.org/tags/feedback/</link>
+    <description>Recent content in feedback on Dettonville</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/feedback/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcing MapStruct</title>
+      <link>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</link>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</guid>
+      <description>It is my pleasure to announce the first release of the MapStruct project!
+MapStruct is a code generator which simplifies the implementation of mappings between Java bean types by generating mapping code at compile time, following a convention-over-configuration approach.
+The problem In multi-layered applications there is often the need to map between objects from diffent models.
+Examples include the conversion from JPA entities into data transfer or view objects and the mapping between the internal model of an application and external-facing representations such as the types of a web service facade.</description>
+    </item>
+    
+  </channel>
+</rss>

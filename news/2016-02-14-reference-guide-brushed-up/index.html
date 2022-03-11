@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reference Guide brushed up and converted to AsciiDoc &ndash; Dettonville</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/uikit.gradient.min.css" />
+        <link rel="stylesheet" href="/css/prettify.css" />
+        <link rel="stylesheet" href="/css/font-awesome.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+        <link rel="alternate" href="/news/index.xml" type="application/rss+xml" title="Dettonville" />
+        <script src="/js/jquery-3.1.1.min.js"></script>
+        <script src="/js/uikit.min.js"></script>
+        <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-41136939-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+
+    <body>
+        <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
+            <a class="uk-navbar-brand ms-hidden-small ms-navbar-brand" href="/">MapStruct</a>
+            <ul class="uk-navbar-nav ms-hidden-small">
+            
+
+    <li class="uk-active">
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li>
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+            </ul>
+            <a href="#nav-small" class="ms-visible-small uk-navbar-toggle" data-uk-offcanvas="{mode:'slide'}"></a>
+            <a class="uk-navbar-brand uk-navbar-center ms-visible-small ms-navbar-brand" href="/">MapStruct</a>
+        </nav>
+
+        <div id="nav-small" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+                
+
+    <li class="uk-active">
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li>
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <div class="uk-grid">
+        <div class="uk-width-medium-1-4">
+            <div class="ms-aside">
+            
+    <ul class="uk-nav uk-nav-side">
+    <li class="uk-nav-header">Latest News</li>
+</ul>
+<ul class="uk-nav uk-nav-sub">
+    
+    <li><a href="http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/">MapStruct Spring Extensions 0.1.1 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/">Support for subclass mapping, various enhancements and much more: MapStruct 1.5.0.Beta2 is out</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/">Support for mapping from Map to bean, conditional mapping and much more: MapStruct 1.5.0.Beta1 is out</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/">MapStruct Spring Extensions 0.1.0 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/">MapStruct Spring Extensions 0.0.3 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/">MapStruct Spring Extensions 0.0.2 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/">MapStruct 1.4.2.Final bug fix released</a></li>
+    
+</ul>
+
+
+            </div>
+        </div>
+        <div class="uk-width-medium-3-4 ms-main">
+            
+<article class="uk-article">
+    <p class="uk-article-meta ms-article-date">
+    <time>February 14, 2016</time>
+</p>
+
+<h1 class="uk-article-title"><a href="http://dettonville.org/news/2016-02-14-reference-guide-brushed-up/">Reference Guide brushed up and converted to AsciiDoc</a></h1>
+
+<p class="uk-article-meta ms-article-author">
+    By <b>Gunnar Morling</b> under 
+    <span class="uk-badge">
+    
+        news
+    </span>
+    
+</p>
+
+    <div>
+        <div><p>While we pride ourselves on providing a comprehensive and detailed documentation, the MapStruct reference guide grew out of form a bit over time.
+To name just one issue, readability wasn&rsquo;t great on smaller screen sizes.</p>
+<p>All that&rsquo;s history now, the reference guide has been converted into the AsciiDoc format, which makes the documentation much easier to maintain and allows for several publishing options using the fantastic <a href="http://asciidoctor.org/">AsciiDoctor</a> tool.</p>
+<p>The guide is provided in two formats now: <a href="/documentation/stable/reference/html/">HTML</a> and as <a href="/documentation/stable/reference/pdf/mapstruct-reference-guide.pdf">PDF</a>. The actual contents is largely unchanged, but we moved some sections around in order to reduce the number of chapters to a more digestable level. It&rsquo;s high on our agenda to rewrite some parts of the guide which aren&rsquo;t perfect yet, which should be much lesser of a burden now thanks to AsciiDoc.</p>
+<p>In addition, you also can find the <a href="/documentation/stable/api/">API JavaDoc</a> online now.</p>
+<p>The main <a href="/documentation">documentation page</a> page which previously just contained the reference documentation has been revamped into a landing page for all thing related to documentation. It provides links to the reference guide, example projects and many useful resources around MapStruct provided at other places on the web, such as blog posts and conference presentation slides.</p>
+<p>Enjoy!</p>
+</div>
+    </div>
+    <div>
+        <ul class="uk-pagination">
+            
+            <li>
+                <a href="http://dettonville.org/news/2016-03-16-mapstruct-1_1_0_Beta1-released/" title="MapStruct 1.1.0.Beta1 released"><i class="uk-icon-angle-double-left"></i></a>
+            </li>
+            
+            
+            <li>
+                <a href="http://dettonville.org/news/2015-11-25-mapstruct-1_0_Final-released/" title="MapStruct 1.0 Final released"><i class="uk-icon-angle-double-right"></i></a>
+            </li>
+            
+
+        </ul>
+    </div>
+
+    <div>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'dettonville';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+</article>
+
+        </div>
+    </div>
+</div>
+
+        <div class="ms-footer">
+            <div class="uk-container uk-container-center uk-vertical-align uk-height-1-1">
+                <div class="uk-vertical-align-middle uk-width-1-1">
+                    <div class="uk-grid-small" >
+                        <div class="uk-width-1-1 ">
+                            <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
+                                <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-grid">
+                        <div class="uk-width-1-1 ms-subnav-footer">
+                            © The MapStruct authors 2022
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+           prettyPrint();
+        </script>
+    </body>
+</html>
+

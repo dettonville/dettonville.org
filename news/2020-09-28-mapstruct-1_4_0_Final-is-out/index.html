@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MapStruct 1.4.0.Final is out &ndash; Dettonville</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/uikit.gradient.min.css" />
+        <link rel="stylesheet" href="/css/prettify.css" />
+        <link rel="stylesheet" href="/css/font-awesome.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+        <link rel="alternate" href="/news/index.xml" type="application/rss+xml" title="Dettonville" />
+        <script src="/js/jquery-3.1.1.min.js"></script>
+        <script src="/js/uikit.min.js"></script>
+        <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-41136939-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+
+    <body>
+        <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
+            <a class="uk-navbar-brand ms-hidden-small ms-navbar-brand" href="/">MapStruct</a>
+            <ul class="uk-navbar-nav ms-hidden-small">
+            
+
+    <li class="uk-active">
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li>
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+            </ul>
+            <a href="#nav-small" class="ms-visible-small uk-navbar-toggle" data-uk-offcanvas="{mode:'slide'}"></a>
+            <a class="uk-navbar-brand uk-navbar-center ms-visible-small ms-navbar-brand" href="/">MapStruct</a>
+        </nav>
+
+        <div id="nav-small" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+                
+
+    <li class="uk-active">
+    <a href="/news/"> News </a>
+    </li>
+
+    <li>
+    <a href="/documentation/installation/">Documentation</a>
+    </li>
+
+    <li>
+    <a href="/community/getting-help/">Community</a>
+    </li>
+
+    <li>
+    <a href="/development/contributing/">Development</a>
+    </li>
+
+    <li>
+    <a href="/faq/"> FAQ </a>
+    </li>
+
+    <li>
+    <a href="https://github.com/dettonville/dettonville"><i class='fa fa-github fa-lg'></i> Code &amp; Issues </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <div class="uk-grid">
+        <div class="uk-width-medium-1-4">
+            <div class="ms-aside">
+            
+    <ul class="uk-nav uk-nav-side">
+    <li class="uk-nav-header">Latest News</li>
+</ul>
+<ul class="uk-nav uk-nav-sub">
+    
+    <li><a href="http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/">MapStruct Spring Extensions 0.1.1 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/">Support for subclass mapping, various enhancements and much more: MapStruct 1.5.0.Beta2 is out</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/">Support for mapping from Map to bean, conditional mapping and much more: MapStruct 1.5.0.Beta1 is out</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/">MapStruct Spring Extensions 0.1.0 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/">MapStruct Spring Extensions 0.0.3 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/">MapStruct Spring Extensions 0.0.2 released</a></li>
+    
+    <li><a href="http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/">MapStruct 1.4.2.Final bug fix released</a></li>
+    
+</ul>
+
+
+            </div>
+        </div>
+        <div class="uk-width-medium-3-4 ms-main">
+            
+<article class="uk-article">
+    <p class="uk-article-meta ms-article-date">
+    <time>September 27, 2020</time>
+</p>
+
+<h1 class="uk-article-title"><a href="http://dettonville.org/news/2020-09-28-mapstruct-1_4_0_Final-is-out/">MapStruct 1.4.0.Final is out</a></h1>
+
+<p class="uk-article-meta ms-article-author">
+    By <b>Filip Hrisafov, Sjaak Derksen</b> under 
+    <span class="uk-badge">
+    
+        release
+    </span>
+    
+    <span class="uk-badge">
+    
+        news
+    </span>
+    
+</p>
+
+    <div>
+        <div><p>Long overdue it is our pleasure to announce the final version MapStruct 1.4.
+This is our 4th release since november 2015.</p>
+<p>Besides bug fixes, the 1.4 release brings some new exciting features:</p>
+<ul>
+<li>Making use of constructor arguments when instantiating mapping targets</li>
+<li>Support Gradle incremental annotation processing feature</li>
+<li>Map nested bean properties to current target</li>
+<li>Support value mapping between <code>String</code> and <code>Enum</code></li>
+<li>Support <code>@Mapping</code> in meta annotations</li>
+<li>User control over mapping features (direct, method, conversion, 2step)</li>
+<li>Support mapping from / to Java 14 records (preview feature)</li>
+<li>New <code>EnumTransformationStrategy</code> and <code>EnumNamingStrategy</code> SPIs</li>
+<li>Improve performance for 2 step mapping methods</li>
+</ul>
+<p>For more details checkout the individual release announcements for the
+<a href="/news/2020-06-01-mapstruct-1_4_0_Beta1-is-out-with-constructor-support.md">Beta1</a>,
+<a href="/news/2020-06-01-mapstruct-1_4_0_Beta2-is-out.md">Beta2</a>,
+<a href="/news/2020-07-19-mapstruct-1_4_0_Beta3-is-out.md">Beta3</a> and
+<a href="/news/2020-09-28-mapstruct-1_5_0_Final-is-out.md">CR1</a> releases.</p>
+<h3 id="whats-inside"><a class="ms-header-link" href="#whats-inside"><i class="fa fa-link"></i></a>What&rsquo;s inside</h3>
+<p>First and foremost as we promised in the 1.3.0.Final release we have delivered the ability to cope with creating beans via constructors.
+Here it is included mapping into Kotlin Data Classes and Java 14 records.
+Apart from that we also have the following new features / enhancements:</p>
+<ul>
+<li>Support Gradle incremental annotation processing - MapStruct will no longer cause an entire recompilation of your java module</li>
+<li>Map nested beans to current target - i.e. you can use &ldquo;.&rdquo; in <code>Mapping#target</code> to map nested beans to the current target</li>
+<li>Supporting value mapping between <code>String</code> and <code>Enum</code> - i.e. <code>@ValueMapping</code> can be used to map enums into strings and vice versa</li>
+<li>Supping meta annotations wih <code>@Mapping</code> - i.e. you can create your own annotation that holds common <code>@Mapping</code> definitions</li>
+<li>User control over mapping features - i.e. you can decide which steps MapStruct should execute during the mapping, meaning that you can easily define clone methods without the need to define mappings for your entire object structure</li>
+<li>New SPIs for enum mapping</li>
+</ul>
+<p>In total 105 issues have been fixed between the 1.3.0.Final and 1.4.0.Final releases.
+It is interesting that the number of fixed issues is the same as between the 1.2.0.Final and 1.3.0.Final release (this is not on purpose :)).</p>
+<h3 id="whats-next"><a class="ms-header-link" href="#whats-next"><i class="fa fa-link"></i></a>What&rsquo;s next</h3>
+<p>We have said numerous times that we want to do more smaller and more frequent releases.
+However, every time we say that something else comes up and we still take our time between releases.
+This is mostly because we are doing this in our spare time.</p>
+<p>We will try to do the releases more frequently.
+There are already some interesting feature requests that we would like to include in some of the future releases.</p>
+<p>Most notable requests are:</p>
+<ul>
+<li>Conditional mapping (i.e. use custom methods to check whether a value is present, think whether string is not blank).
+There is already a PR from the community about this issue, so this will most likely be the basis for the 1.5 release</li>
+<li>Mapping into / from Map like structures from / into beans</li>
+</ul>
+<p>In case you have some other ideas please feel free to share them with us or vote for issues that you&rsquo;d like to see implemented in our <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a>.
+We are also always looking for new contributors, so if you are interested in helping us out please have a look at our issue tracker or contact us.</p>
+<h3 id="stats"><a class="ms-header-link" href="#stats"><i class="fa fa-link"></i></a>Stats</h3>
+<p>We are very proud and thankful of our growing community.
+It is really satisfying to see how everyone helps each other in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter Room</a>, on <a href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a> or in our <a href="https://groups.google.com/forum/#!forum/mapstruct-users">Google group</a>.
+We currently have 3100+ stars and 70+ contributors on GitHub.
+More than 16000 people are using our <a href="https://plugins.jetbrains.com/plugin/10036-mapstruct-support">IntelliJ</a> plugin, which is already released with support for the new constructor mapping.</p>
+<p>Most impressive though are the download numbers we get from the Maven Central repo.
+As an example here are the numbers for the <em>org.mapstruct:mapstruct-processor</em> artifact:</p>
+<div style="text-align:center">
+    <img src="/images/downloads_09-2019_09-2020.png" style="padding-bottom: 3px;"/>
+</div>
+<p>The number of Downloads compared to the time we released 1.3.0.Final has been quadrupled.</p>
+<h3 id="thanks"><a class="ms-header-link" href="#thanks"><i class="fa fa-link"></i></a>Thanks</h3>
+<p>Last but not least we would like to congratulate all the enthusiastic MapStruct contributors making this release possible.
+In alphabetic order this are all the contributors that contributed to the 1.4 release of Mapstruct:</p>
+<ul>
+<li><a href="https://github.com/dekelpilli">@dekelpilli</a>,</li>
+<li><a href="https://github.com/fml2">@fml2</a>,</li>
+<li><a href="https://github.com/jakraska">@jakraska</a>,</li>
+<li><a href="https://github.com/juliojgd">@juliojgd</a>,</li>
+<li><a href="https://github.com/marceloverdijk">@marceloverdijk</a>,</li>
+<li><a href="https://github.com/mattdrees">@mattdrees</a>,</li>
+<li><a href="https://github.com/power721">@power721</a>,</li>
+<li><a href="https://github.com/pradzins">@pradzins</a>,</li>
+<li><a href="https://github.com/seime">@seime</a></li>
+<li><a href="https://github.com/sullis">@sullis</a>,</li>
+<li><a href="https://github.com/timjb">@timjb</a>,</li>
+<li><a href="https://github.com/ttzn">@ttzn</a>,</li>
+<li><a href="https://github.com/vegemite4me">@vegemite4me</a>,</li>
+<li><a href="https://github.com/xcorail">@xcorail</a>,</li>
+<li><a href="https://github.com/Zomzog">@Zomzog</a>,
+and of course seasoned MapStruct hackers <a href="https://github.com/sjaakd">Sjaak Derksen</a>, <a href="https://github.com/filiphr">Filip Hrisafov</a>, <a href="https://github.com/chris922">Christian Bandowski</a> and <a href="https://github.com/Captain1653">Andrei Arlou</a>.</li>
+</ul>
+<p>Happy coding with MapStruct 1.4!!</p>
+<h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
+<p>You can fetch the new release from Maven Central using the following GAV coordinates:</p>
+<ul>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.4.0.Final%7Cjar">org.mapstruct:mapstruct:1.4.0.Final</a></li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.4.0.Final%7Cjar">org.mapstruct:mapstruct-processor:1.4.0.Final</a></li>
+</ul>
+<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.4.0.Final">from GitHub</a>.</p>
+<p>If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:</p>
+<ul>
+<li>Get help in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a> or at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group</li>
+<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
+</ul></div>
+    </div>
+    <div>
+        <ul class="uk-pagination">
+            
+            <li>
+                <a href="http://dettonville.org/news/2020-10-11-mapstruct-1_4_1_Final-bug-fix-released/" title="MapStruct 1.4.1.Final bug fix released"><i class="uk-icon-angle-double-left"></i></a>
+            </li>
+            
+            
+            <li>
+                <a href="http://dettonville.org/news/2020-08-31-mapstruct-1_4_0_CR1-released/" title="MapStruct 1.4.0.CR1 released"><i class="uk-icon-angle-double-right"></i></a>
+            </li>
+            
+
+        </ul>
+    </div>
+
+    <div>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'dettonville';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+</article>
+
+        </div>
+    </div>
+</div>
+
+        <div class="ms-footer">
+            <div class="uk-container uk-container-center uk-vertical-align uk-height-1-1">
+                <div class="uk-vertical-align-middle uk-width-1-1">
+                    <div class="uk-grid-small" >
+                        <div class="uk-width-1-1 ">
+                            <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
+                                <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-grid">
+                        <div class="uk-width-1-1 ms-subnav-footer">
+                            © The MapStruct authors 2022
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+           prettyPrint();
+        </script>
+    </body>
+</html>
+

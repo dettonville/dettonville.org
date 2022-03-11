@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>IterableMapping (MapStruct 1.4.2.Final)</title>
 <meta name="date" content="2021-01-31">
-<meta name="keywords" content="org.mapstruct.IterableMapping class">
+<meta name="keywords" content="org.dettonville.IterableMapping class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/InjectionStrategy.html" title="enum in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MapMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InjectionStrategy.html" title="enum in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/IterableMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/IterableMapping.html" target="_top">Frames</a></li>
 <li><a href="IterableMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type IterableMapping" class="title">Annotation Type IterableMapping</h2>
 </div>
 <div class="contentContainer">
@@ -106,7 +106,7 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <div class="block">Configures the mapping between two iterable like types, e.g. <code>List&lt;String&gt;</code> and <code>List&lt;Date&gt;</code>.
 
 
- <p>Note: either  <a href="../../org/mapstruct/IterableMapping.html#dateFormat--"><code>dateFormat()</code></a>, <a href="../../org/mapstruct/IterableMapping.html#elementTargetType--"><code>elementTargetType()</code></a> or <a href="../../org/mapstruct/IterableMapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>
+ <p>Note: either  <a href="../../org/dettonville/IterableMapping.html#dateFormat--"><code>dateFormat()</code></a>, <a href="../../org/dettonville/IterableMapping.html#elementTargetType--"><code>elementTargetType()</code></a> or <a href="../../org/dettonville/IterableMapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>
  must be specified</p>
 
  <p>
@@ -166,49 +166,49 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#dateFormat--">dateFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#dateFormat--">dateFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text"><code>SimpleDateFormat</code></a> if the annotated method maps from an iterable of
  <code>String</code> to an iterable <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#elementMappingControl--">elementMappingControl</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#elementMappingControl--">elementMappingControl</a></span></code>
 <div class="block">Allows detailed control over the mapping process.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#elementTargetType--">elementTargetType</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#elementTargetType--">elementTargetType</a></span></code>
 <div class="block">Specifies the type of the element to be used in the result of the mapping method in case multiple mapping
  methods qualify.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source value to this iterable mapping.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#numberFormat--">numberFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#numberFormat--">numberFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text"><code>DecimalFormat</code></a> if the annotated method maps from a
   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang"><code>Number</code></a> to a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#qualifiedBy--">qualifiedBy</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#qualifiedBy--">qualifiedBy</a></span></code>
 <div class="block">A qualifier can be specified to aid the selection process of a suitable mapper.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/IterableMapping.html#qualifiedByName--">qualifiedByName</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/IterableMapping.html#qualifiedByName--">qualifiedByName</a></span></code>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this iterable mapping method's
  element type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the
- class-level) a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
+ class-level) a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
 </td>
 </tr>
 </table>
@@ -285,7 +285,7 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the qualifiers</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/Qualifier.html" title="annotation in org.mapstruct"><code>Qualifier</code></a></dd>
+<dd><a href="../../org/dettonville/Qualifier.html" title="annotation in org.dettonville"><code>Qualifier</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -305,7 +305,7 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;qualifiedByName</pre>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this iterable mapping method's
  element type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the
- class-level) a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.
+ class-level) a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.
  <p>
  Note that annotation-based qualifiers are generally preferable as they allow more easily to find references and
  are safe for refactorings, but name-based qualifiers can be a less verbose alternative when requiring a large
@@ -314,8 +314,8 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>One or more qualifier name(s)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/IterableMapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>, 
-<a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a></dd>
+<dd><a href="../../org/dettonville/IterableMapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>,
+<a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -354,10 +354,10 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValueMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source value to this iterable mapping. If no
- strategy is configured, the strategy given via <a href="../../org/mapstruct/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> or
- <a href="../../org/mapstruct/Mapper.html#nullValueMappingStrategy--"><code>Mapper.nullValueMappingStrategy()</code></a> will be applied, using <a href="../../org/mapstruct/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a>
+ strategy is configured, the strategy given via <a href="../../org/dettonville/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> or
+ <a href="../../org/dettonville/Mapper.html#nullValueMappingStrategy--"><code>Mapper.nullValueMappingStrategy()</code></a> will be applied, using <a href="../../org/dettonville/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a>
  by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -365,7 +365,7 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValueMappingStrategy.RETURN_NULL</dd>
+<dd>org.dettonville.NullValueMappingStrategy.RETURN_NULL</dd>
 </dl>
 </li>
 </ul>
@@ -386,13 +386,13 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.4</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/control/DeepClone.html" title="annotation in org.mapstruct.control"><code>DeepClone</code></a>, 
-<a href="../../org/mapstruct/control/NoComplexMapping.html" title="annotation in org.mapstruct.control"><code>NoComplexMapping</code></a>, 
-<a href="../../org/mapstruct/control/MappingControl.html" title="annotation in org.mapstruct.control"><code>MappingControl</code></a></dd>
+<dd><a href="../../org/dettonville/control/DeepClone.html" title="annotation in org.dettonville.control"><code>DeepClone</code></a>,
+<a href="../../org/dettonville/control/NoComplexMapping.html" title="annotation in org.dettonville.control"><code>NoComplexMapping</code></a>,
+<a href="../../org/dettonville/control/MappingControl.html" title="annotation in org.dettonville.control"><code>MappingControl</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.control.MappingControl.class</dd>
+<dd>org.dettonville.control.MappingControl.class</dd>
 </dl>
 </li>
 </ul>
@@ -424,11 +424,11 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/InjectionStrategy.html" title="enum in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MapMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InjectionStrategy.html" title="enum in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/IterableMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/IterableMapping.html" target="_top">Frames</a></li>
 <li><a href="IterableMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -463,6 +463,6 @@ public @interface <span class="memberNameLabel">IterableMapping</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://mapstruct.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://dettonville.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

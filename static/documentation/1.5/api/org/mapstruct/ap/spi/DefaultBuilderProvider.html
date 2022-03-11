@@ -6,7 +6,7 @@
 <title>DefaultBuilderProvider (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.DefaultBuilderProvider class">
+<meta name="keywords" content="org.dettonville.ap.spi.DefaultBuilderProvider class">
 <meta name="keywords" content="elementUtils">
 <meta name="keywords" content="typeUtils">
 <meta name="keywords" content="init()">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Class DefaultBuilderProvider" class="title">Class DefaultBuilderProvider</h2>
 </div>
 <div class="contentContainer">
@@ -134,7 +134,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.spi.DefaultBuilderProvider</li>
+<li>org.dettonville.ap.spi.DefaultBuilderProvider</li>
 </ul>
 </li>
 </ul>
@@ -143,22 +143,22 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="BuilderProvider.html" title="interface in org.mapstruct.ap.spi">BuilderProvider</a></code></dd>
+<dd><code><a href="BuilderProvider.html" title="interface in org.dettonville.ap.spi">BuilderProvider</a></code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ImmutablesBuilderProvider.html" title="class in org.mapstruct.ap.spi">ImmutablesBuilderProvider</a></code></dd>
+<dd><code><a href="ImmutablesBuilderProvider.html" title="class in org.dettonville.ap.spi">ImmutablesBuilderProvider</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">DefaultBuilderProvider</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.spi">BuilderProvider</a></pre>
-<div class="block">Default implementation of <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.spi"><code>BuilderProvider</code></a>.
+implements <a href="BuilderProvider.html" title="interface in org.dettonville.ap.spi">BuilderProvider</a></pre>
+<div class="block">Default implementation of <a href="BuilderProvider.html" title="interface in org.dettonville.ap.spi"><code>BuilderProvider</code></a>.
 
  The default builder provider considers all public static parameterless methods of a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeMirror</code></a>
  as potential builder creation methods. For each potential builder creation method checks in the return type
  of the method if there exists a method that returns the initial <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeMirror</code></a> if such a combination is found
- the <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> is created with those 2 methods.
+ the <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> is created with those 2 methods.
  Example:
  <pre><code>
  public class Person {
@@ -196,7 +196,7 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
  In the example above, when searching for a builder for the <code>Person</code> type. The <code>Person#builder</code> method
  would be a builder creation candidate. Then the return type of <code>Person#builder</code>, <code>Builder</code>, is
  investigated for a parameterless method that returns <code>Person</code>. When <code>Builder#create</code> is found
- the <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> is created with the <code>Person#builder</code> as a builder creation method and
+ the <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> is created with the <code>Person#builder</code> as a builder creation method and
  <code>Builder#create</code> as a build method.
  <p>
  <b>IMPORTANT</b>: Types from the <code>java</code> and <code>javax</code> packages are excluded from inspection</div>
@@ -274,14 +274,14 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>protected <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a></code></td>
+<td class="colFirst"><code>protected <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findBuilderInfo(javax.lang.model.element.TypeElement)">findBuilderInfo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">TypeElement</a>&nbsp;typeElement)</code></th>
 <td class="colLast">
-<div class="block">Find the <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> for the given <code>typeElement</code>.</div>
+<div class="block">Find the <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> for the given <code>typeElement</code>.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a></code></td>
+<td class="colFirst"><code><a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findBuilderInfo(javax.lang.model.type.TypeMirror)">findBuilderInfo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</code></th>
 <td class="colLast">
 <div class="block">Find the builder information, if any, for the <code>type</code>.</div>
@@ -304,7 +304,7 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the builder provider with the MapStruct processing environment.</div>
 </td>
@@ -403,18 +403,18 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BuilderProvider.html#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">BuilderProvider</a></code></span></div>
+<pre class="methodSignature">public&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BuilderProvider.html#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">BuilderProvider</a></code></span></div>
 <div class="block">Initializes the builder provider with the MapStruct processing environment.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="BuilderProvider.html#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></code>&nbsp;in interface&nbsp;<code><a href="BuilderProvider.html" title="interface in org.mapstruct.ap.spi">BuilderProvider</a></code></dd>
+<dd><code><a href="BuilderProvider.html#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></code>&nbsp;in interface&nbsp;<code><a href="BuilderProvider.html" title="interface in org.dettonville.ap.spi">BuilderProvider</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>processingEnvironment</code> - environment for facilities</dd>
 </dl>
@@ -426,12 +426,12 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 <ul class="blockList">
 <li class="blockList">
 <h4>findBuilderInfo</h4>
-<pre class="methodSignature">public&nbsp;<a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</pre>
+<pre class="methodSignature">public&nbsp;<a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BuilderProvider.html#findBuilderInfo(javax.lang.model.type.TypeMirror)">BuilderProvider</a></code></span></div>
 <div class="block">Find the builder information, if any, for the <code>type</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="BuilderProvider.html#findBuilderInfo(javax.lang.model.type.TypeMirror)">findBuilderInfo</a></code>&nbsp;in interface&nbsp;<code><a href="BuilderProvider.html" title="interface in org.mapstruct.ap.spi">BuilderProvider</a></code></dd>
+<dd><code><a href="BuilderProvider.html#findBuilderInfo(javax.lang.model.type.TypeMirror)">findBuilderInfo</a></code>&nbsp;in interface&nbsp;<code><a href="BuilderProvider.html" title="interface in org.dettonville.ap.spi">BuilderProvider</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - the type for which a builder should be found</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -454,7 +454,7 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 <dd>the type element or <code>null</code> if the <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeMirror</code></a> is not a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/DeclaredType.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>DeclaredType</code></a>
  and the declared type element is not <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink"><code>TypeElement</code></a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="TypeHierarchyErroneousException.html" title="class in org.mapstruct.ap.spi">TypeHierarchyErroneousException</a></code> - if the <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeMirror</code></a> is of kind <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeKind.html?is-external=true#ERROR" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeKind.ERROR</code></a></dd>
+<dd><code><a href="TypeHierarchyErroneousException.html" title="class in org.dettonville.ap.spi">TypeHierarchyErroneousException</a></code> - if the <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeMirror</code></a> is of kind <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeKind.html?is-external=true#ERROR" title="class or interface in javax.lang.model.type" class="externalLink"><code>TypeKind.ERROR</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -464,27 +464,27 @@ implements <a href="BuilderProvider.html" title="interface in org.mapstruct.ap.s
 <ul class="blockList">
 <li class="blockList">
 <h4>findBuilderInfo</h4>
-<pre class="methodSignature">protected&nbsp;<a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">TypeElement</a>&nbsp;typeElement)</pre>
-<div class="block">Find the <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> for the given <code>typeElement</code>.
+<pre class="methodSignature">protected&nbsp;<a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">TypeElement</a>&nbsp;typeElement)</pre>
+<div class="block">Find the <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> for the given <code>typeElement</code>.
  <p>
  The default implementation iterates over all the methods in <code>typeElement</code> and uses
  <a href="#isPossibleBuilderCreationMethod(javax.lang.model.element.ExecutableElement,javax.lang.model.element.TypeElement)"><code>isPossibleBuilderCreationMethod(ExecutableElement, TypeElement)</code></a> and
  <a href="#findBuildMethods(javax.lang.model.element.TypeElement,javax.lang.model.element.TypeElement)"><code>findBuildMethods(TypeElement, TypeElement)</code></a> to create the
- <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a>.
+ <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a>.
  <p>
  The default implementation uses <a href="#shouldIgnore(javax.lang.model.element.TypeElement)"><code>shouldIgnore(TypeElement)</code></a> to check if the
  <code>typeElement</code> should be ignored.
  <p>
- In case there are multiple <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> then a <a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.mapstruct.ap.spi"><code>MoreThanOneBuilderCreationMethodException</code></a> is
+ In case there are multiple <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> then a <a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.dettonville.ap.spi"><code>MoreThanOneBuilderCreationMethodException</code></a> is
  thrown.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>typeElement</code> - the type element for which a builder searched</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi"><code>BuilderInfo</code></a> or <code>null</code> if no builder was found for the type
+<dd>the <a href="BuilderInfo.html" title="class in org.dettonville.ap.spi"><code>BuilderInfo</code></a> or <code>null</code> if no builder was found for the type
  <a href="#findBuildMethods(javax.lang.model.element.TypeElement,javax.lang.model.element.TypeElement)"><code>findBuildMethods(TypeElement, TypeElement)</code></a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.mapstruct.ap.spi">MoreThanOneBuilderCreationMethodException</a></code> - if there are multiple builder creation methods</dd>
+<dd><code><a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.dettonville.ap.spi">MoreThanOneBuilderCreationMethodException</a></code> - if there are multiple builder creation methods</dd>
 </dl>
 </li>
 </ul>

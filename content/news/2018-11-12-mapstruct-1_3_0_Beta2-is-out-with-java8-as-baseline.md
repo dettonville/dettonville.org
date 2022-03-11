@@ -19,7 +19,7 @@ There are a whole lot of new enhancements as well, e.g.:
 
 <!--more-->
 
-Altogether, no less than [35 issues](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.3.0.Beta2) were fixed for this release.
+Altogether, no less than [35 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.3.0.Beta2) were fixed for this release.
 
 This would not have been possible without our fantastic community of contributors:
 [Florian Tavares](https://github.com/neoXfire),
@@ -41,8 +41,8 @@ Enough of the pep talk, let's take a closer look at some of the new enhancements
 Java 8 has been around for a long time and MapStruct has been working nicely with it for a long time.
 Using it as a baseline would allow us to use some of it features and make it easier for us to maintain it for you.
 
-The `mapstruct-jdk8` module has been relocated to `mapstruct`. 
-Upgrade your dependencies to use the `mapstruct` module.
+The `dettonville-jdk8` module has been relocated to `dettonville`. 
+Upgrade your dependencies to use the `dettonville` module.
 
 ### Control how null or not present properties are updated within a target bean
 
@@ -100,9 +100,9 @@ public class CustomerMapperImpl implements CustomerMapper {
 }
 {{< /prettify >}}
 
-**NB**: In 1.2.0.Final with [#1273](https://github.com/mapstruct/mapstruct/issues/1273) we added support for using `NullValueMappingStrategy#RETURN_DEFAULT` to control how collections / maps default values are set in the scenario described above. 
+**NB**: In 1.2.0.Final with [#1273](https://github.com/dettonville/dettonville/issues/1273) we added support for using `NullValueMappingStrategy#RETURN_DEFAULT` to control how collections / maps default values are set in the scenario described above. 
 We realised that this was a mistake on our side. The `NullValueMappingStrategy` is intended to be used on the result of the entire bean mapping mehod given a `null` source bean mapping argument (source bean). Specifically for update methods, the `NullValuePropertyMappingStrategy#SET_TO_DEFAULT` is intended to complement this functionality: giving control over the property mappings in case of `null` property source.
-See [this](https://github.com/mapstruct/mapstruct/issues/1273#issuecomment-433495265) for more information.
+See [this](https://github.com/dettonville/dettonville/issues/1273#issuecomment-433495265) for more information.
 
 ### Warnings for precision loss
 
@@ -124,7 +124,7 @@ There was an issue with generic builders, which is now fixed.
 Fluent setters were not working for methods starting with `is`.
 Some imports for Immutables were missing.
 Support for FreeBuilder has been enhanced by using a custom `FreeBuilderAccessorNamingStrategy` that disables the check for fluent setters. 
-(see [this](https://github.com/mapstruct/mapstruct/commit/104ebf88da8c6145b790905f0c1db66a3cd35a6b) for more information).
+(see [this](https://github.com/dettonville/dettonville/commit/104ebf88da8c6145b790905f0c1db66a3cd35a6b) for more information).
 
 For people that provide their own `BuilderProvider`.
 We have changed the signature of the `findBuilderInfo` method. 
@@ -142,14 +142,14 @@ We don't anticipate more issues with the builders support and if the feedback is
 This concludes our tour through MapStruct 1.3 Beta2.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.3.0.Beta2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.3.0.Beta2|jar)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.3.0.Beta2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.3.0.Beta2|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.3.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.3.0.Beta2|jar)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.3.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.3.0.Beta2|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.3.0.Beta2).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.3.0.Beta2).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group or in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

@@ -6,7 +6,7 @@
 <title>EnumTransformationStrategy (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.EnumTransformationStrategy interface">
+<meta name="keywords" content="org.dettonville.ap.spi.EnumTransformationStrategy interface">
 <meta name="keywords" content="init()">
 <meta name="keywords" content="getStrategyName()">
 <meta name="keywords" content="transform()">
@@ -120,7 +120,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Interface EnumTransformationStrategy" class="title">Interface EnumTransformationStrategy</h2>
 </div>
 <div class="contentContainer">
@@ -129,10 +129,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="CaseEnumTransformationStrategy.html" title="class in org.mapstruct.ap.spi">CaseEnumTransformationStrategy</a></code>, <code><a href="PrefixEnumTransformationStrategy.html" title="class in org.mapstruct.ap.spi">PrefixEnumTransformationStrategy</a></code>, <code><a href="StripPrefixEnumTransformationStrategy.html" title="class in org.mapstruct.ap.spi">StripPrefixEnumTransformationStrategy</a></code>, <code><a href="StripSuffixEnumTransformationStrategy.html" title="class in org.mapstruct.ap.spi">StripSuffixEnumTransformationStrategy</a></code>, <code><a href="SuffixEnumTransformationStrategy.html" title="class in org.mapstruct.ap.spi">SuffixEnumTransformationStrategy</a></code></dd>
+<dd><code><a href="CaseEnumTransformationStrategy.html" title="class in org.dettonville.ap.spi">CaseEnumTransformationStrategy</a></code>, <code><a href="PrefixEnumTransformationStrategy.html" title="class in org.dettonville.ap.spi">PrefixEnumTransformationStrategy</a></code>, <code><a href="StripPrefixEnumTransformationStrategy.html" title="class in org.dettonville.ap.spi">StripPrefixEnumTransformationStrategy</a></code>, <code><a href="StripSuffixEnumTransformationStrategy.html" title="class in org.dettonville.ap.spi">StripSuffixEnumTransformationStrategy</a></code>, <code><a href="SuffixEnumTransformationStrategy.html" title="class in org.dettonville.ap.spi">SuffixEnumTransformationStrategy</a></code></dd>
 </dl>
 <hr>
-<pre><a href="../../util/Experimental.html" title="annotation in org.mapstruct.util">@Experimental</a>("This SPI can have it\'s signature changed in subsequent releases")
+<pre><a href="../../util/Experimental.html" title="annotation in org.dettonville.util">@Experimental</a>("This SPI can have it\'s signature changed in subsequent releases")
 public interface <span class="typeNameLabel">EnumTransformationStrategy</span></pre>
 <div class="block">A service provider interface for transforming name based value mappings.</div>
 <dl>
@@ -170,7 +170,7 @@ public interface <span class="typeNameLabel">EnumTransformationStrategy</span></
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the enum transformation strategy with the MapStruct processing environment.</div>
 </td>
@@ -200,13 +200,13 @@ public interface <span class="typeNameLabel">EnumTransformationStrategy</span></
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
 <div class="block">Initializes the enum transformation strategy with the MapStruct processing environment.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

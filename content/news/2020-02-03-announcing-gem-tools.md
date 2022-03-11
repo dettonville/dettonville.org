@@ -15,7 +15,7 @@ this allows us to access the MapStruct annotation in a type-safe way, without re
 This is a really old project and the only release on Maven Central is from March 2010.
 
 Thus we needed something newer and created our own utility.
-Say hi to [Gem Tools](https://github.com/mapstruct/tools-gem). 
+Say hi to [Gem Tools](https://github.com/dettonville/tools-gem). 
  
 <!--more-->
 
@@ -24,7 +24,7 @@ Say hi to [Gem Tools](https://github.com/mapstruct/tools-gem).
 The Hickory Annotation processor is a really simple processor, which has served us for a really long time.
 We've had no problems with it. 
 However, we noticed that it is no longer easy for us to add new features quickly.
-Andrei had to close his PR [#1923](https://github.com/mapstruct/mapstruct/pull/1923) due to different maintainability problems.
+Andrei had to close his PR [#1923](https://github.com/dettonville/dettonville/pull/1923) due to different maintainability problems.
 The processor being old also meant that it had some warnings when compiling our code on newer Java versions.
 
 ### Benefits
@@ -51,7 +51,7 @@ If you're using Maven to build your project add the following to your _pom.xml_ 
 ...
 <dependencies>
     <dependency>
-        <groupId>org.mapstruct.tools.gem</groupId>
+        <groupId>org.dettonville.tools.gem</groupId>
         <artifactId>gem-api</artifactId>
         <version>${tools.gem.version}</version>
     </dependency>
@@ -68,7 +68,7 @@ If you're using Maven to build your project add the following to your _pom.xml_ 
                 <target>1.8</target> <!-- depending on your project -->
                 <annotationProcessorPaths>
                     <path>
-                        <groupId>org.mapstruct.tools.gem</groupId>
+                        <groupId>org.dettonville.tools.gem</groupId>
                         <artifactId>gem-processor</artifactId>
                         <version>${tools.gem.version}</version>
                     </path>
@@ -87,9 +87,9 @@ With Gradle, you add something along the following lines to your _build.gradle_:
 {{< prettify groovy >}}
 dependencies {
     ...
-    compile 'org.mapstruct.tools.gem:gem-api:1.0.0.Alpha1'
+    compile 'org.dettonville.tools.gem:gem-api:1.0.0.Alpha1'
 
-    annotationProcessor 'org.mapstruct.tools.gem:gem-processor:1.0.0.Alpha1'
+    annotationProcessor 'org.dettonville.tools.gem:gem-processor:1.0.0.Alpha1'
 }
 {{< /prettify >}}
 
@@ -204,7 +204,7 @@ public class MappingGem implements Gem {
 
     public static  <T> T  build(Element element, Builder<T> builder) {
         AnnotationMirror mirror = element.getAnnotationMirrors().stream()
-            .filter( a ->  "org.mapstruct.Mapping".contentEquals( ( ( TypeElement )a.getAnnotationType().asElement() ).getQualifiedName() ) )
+            .filter( a ->  "org.dettonville.Mapping".contentEquals( ( ( TypeElement )a.getAnnotationType().asElement() ).getQualifiedName() ) )
             .findAny()
             .orElse( null );
         return build( mirror, builder );
@@ -395,11 +395,11 @@ Happy coding with Gem Tools!!
 
 You can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct.tools.gem:gem-api:1.0.0.Alpha1](http://search.maven.org/#artifactdetails|org.mapstruct.tools.gem|gem-api|1.0.0.Alpha1|jar)
-* Annotation processor JAR: [org.mapstruct.tools.gem:gem-processor:1.0.0.Alpha1](http://search.maven.org/#artifactdetails|org.mapstruct.tools.gem|gem-processor|1.0.0.Alpha1|jar)
+* Annotation JAR: [org.dettonville.tools.gem:gem-api:1.0.0.Alpha1](http://search.maven.org/#artifactdetails|org.dettonville.tools.gem|gem-api|1.0.0.Alpha1|jar)
+* Annotation processor JAR: [org.dettonville.tools.gem:gem-processor:1.0.0.Alpha1](http://search.maven.org/#artifactdetails|org.dettonville.tools.gem|gem-processor|1.0.0.Alpha1|jar)
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/tools-gem/issues)
+* Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/tools-gem/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

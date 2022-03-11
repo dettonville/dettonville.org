@@ -27,7 +27,7 @@ the generated code contains plain method invocations, just as if the mapper was 
 Yes.
 
 Check out the [set-up instructions]({{< ref "ide-support.md#eclipse" >}}) for Eclipse.
-There is also a work-in-progress [Eclipse plug-in](https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin#group-metrics-tab)
+There is also a work-in-progress [Eclipse plug-in](https://marketplace.eclipse.org/content/dettonville-eclipse-plugin#group-metrics-tab)
 which facilitates the definition of mapper interfaces with auto-completion and some quick fixes.
 {{% /faq_question %}}
 
@@ -39,9 +39,9 @@ AST modifications are not foreseen by Java annotation processing API,
 so quite some trickery was required within Lombok as well MapStruct to make both of them work together.
 Essentially, MapStruct will wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.
 
-An example for using the two projects together can be found [here](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-lombok).
+An example for using the two projects together can be found [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-lombok).
 
-If you are using Lombok 1.18.16 or newer you also need to add [lombok-mapstruct-binding](https://search.maven.org/artifact/org.projectlombok/lombok-mapstruct-binding) in order to make Lombok and MapStruct work together.
+If you are using Lombok 1.18.16 or newer you also need to add [lombok-dettonville-binding](https://search.maven.org/artifact/org.projectlombok/lombok-dettonville-binding) in order to make Lombok and MapStruct work together.
 
 If you are on an older version of MapStruct or Lombok,
 the solution is to put the JavaBeans to be amended by Lombok and the mapper interfaces
@@ -51,16 +51,16 @@ causing the bean classes to be complete when MapStruct runs during the compilati
 {{% /faq_question %}}
 
 {{% faq_question "Why does @Named not work?" %}}
-Check out that you are actually using [`org.mapstruct.Named`](http://mapstruct.org/documentation/stable/api/org/mapstruct/Named.html)
+Check out that you are actually using [`org.dettonville.Named`](http://dettonville.org/documentation/stable/api/org/dettonville/Named.html)
 and  **not** `javax.inject.Named`.
 {{% /faq_question %}}
 
 {{% faq_question "Why do I get this error: Could not retrieve @Mapper annotation during compilation?" %}}
-This can happen if you are using [`mapstruct-jdk8`](http://mvnrepository.com/artifact/org.mapstruct/mapstruct-jdk8) and
-some other dependency is using an older version of [`mapstruct`](http://mvnrepository.com/artifact/org.mapstruct/mapstruct).
-To solve the problem find the dependency that is using `mapstruct` and exclude it.
+This can happen if you are using [`dettonville-jdk8`](http://mvnrepository.com/artifact/org.dettonville/dettonville-jdk8) and
+some other dependency is using an older version of [`dettonville`](http://mvnrepository.com/artifact/org.dettonville/dettonville).
+To solve the problem find the dependency that is using `dettonville` and exclude it.
 
-A known dependency that uses `mapstruct` and has this problem is [`springfox-swagger2`](http://mvnrepository.com/artifact/io.springfox/springfox-swagger2).
+A known dependency that uses `dettonville` and has this problem is [`springfox-swagger2`](http://mvnrepository.com/artifact/io.springfox/springfox-swagger2).
 
 For Maven you need to exclude it like:
 
@@ -71,8 +71,8 @@ For Maven you need to exclude it like:
     <version>${swagger2.version}</version>
     <exclusions>
         <exclusion>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
+            <groupId>org.dettonville</groupId>
+            <artifactId>dettonville</artifactId>
         </exclusion>
     </exclusions>
 </dependency>
@@ -82,7 +82,7 @@ For Gradle you need to exclude it like:
 
 {{< prettify groovy >}}
 compile('io.springfox:springfox-swagger2:${swagger2.version}') {
-    exclude group: 'org.mapstruct', module: 'mapstruct'
+    exclude group: 'org.dettonville', module: 'dettonville'
 }
 {{< /prettify >}}
 

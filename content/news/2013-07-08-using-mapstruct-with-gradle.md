@@ -4,10 +4,10 @@ author: Gunnar Morling
 date: "2013-07-08"
 tags: [how-to, build, gradle]
 aliases:
-    - /news/2013/07/08/using-mapstruct-with-gradle.html
+    - /news/2013/07/08/using-dettonville-with-gradle.html
 ---
 _Update Feb. 26, 2017: Since writing this post, usage of annotation processors with Gradle got much easier and the set-up described in the following isn't required anymore._
-_The [example project](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-gradle) on GitHub has been updated accordingly._
+_The [example project](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle) on GitHub has been updated accordingly._
 
 You work with [Gradle](http://www.gradle.org/) to build your application and would like to make use of MapStruct to generate mappings between different representations of your model? Then read on to learn how to make MapStruct work with the Groovy based build tool.
 
@@ -26,7 +26,7 @@ To integrate MapStruct into a Gradle build, first make sure you use the Java 6 l
 <pre class="prettyprint linenums">
 ext {
     javaLanguageLevel = '1.6'
-    generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
+    generatedMapperSourcesDir = "${buildDir}/generated-src/dettonville/main"
 }
 
 sourceCompatibility = rootProject.javaLanguageLevel
@@ -34,16 +34,16 @@ sourceCompatibility = rootProject.javaLanguageLevel
 
 It's a good idea to declare a property which holds the language level. That way it can be referenced later on where required. We also define a property which specifies the target directory for the generated mapper classes.
 
-The next step is to add the MapStruct annotation module (<em>org.mapstruct:mapstruct:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate [dependency configuration](http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations) which contains the MapStruct processor module (<em>org.mapstruct:mapstruct-processor:&lt;VERSION&gt;</em>):
+The next step is to add the MapStruct annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate [dependency configuration](http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations) which contains the MapStruct processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):
 
 <pre class="prettyprint linenums">
 configurations {
-    mapstruct
+    dettonville
 }
 
 dependencies {
-    compile( 'org.mapstruct:mapstruct:&lt;VERSION&gt;' )
-    mapstruct( 'org.mapstruct:mapstruct-processor:&lt;VERSION&gt;' )
+    compile( 'org.dettonville:dettonville:&lt;VERSION&gt;' )
+    dettonville( 'org.dettonville:dettonville-processor:&lt;VERSION&gt;' )
 }
 </pre>
 
@@ -60,10 +60,10 @@ We also store the original source directories in a property in order to referenc
 
 <pre class="prettyprint linenums">
 task generateMainMapperClasses(type: JavaCompile) {
-    ext.aptDumpDir = file( "${buildDir}/tmp/apt/mapstruct" )
+    ext.aptDumpDir = file( "${buildDir}/tmp/apt/dettonville" )
     destinationDir = aptDumpDir
 
-    classpath = compileJava.classpath + configurations.mapstruct
+    classpath = compileJava.classpath + configurations.dettonville
     source = sourceSets.main.originalJavaSrcDirs
     ext.sourceDestDir = file ( "$generatedMapperSourcesDir" )
 
@@ -72,7 +72,7 @@ task generateMainMapperClasses(type: JavaCompile) {
             "-nowarn",
             "-proc:only",
             "-encoding", "UTF-8",
-            "-processor", "org.mapstruct.ap.MappingProcessor",
+            "-processor", "org.dettonville.ap.MappingProcessor",
             "-s", sourceDestDir.absolutePath,
             "-source", rootProject.javaLanguageLevel,
             "-target", rootProject.javaLanguageLevel,
@@ -90,7 +90,7 @@ task generateMainMapperClasses(type: JavaCompile) {
 }
 </pre>
 
-The task's classpath comprises both, the actual compilation classpath as well as the `mapstruct` configuration set up before. As source path the previously stored source directories are used.
+The task's classpath comprises both, the actual compilation classpath as well as the `dettonville` configuration set up before. As source path the previously stored source directories are used.
 
 The options passed to the compile task should be rather self-explanatory. Note that by passing `-proc:only`, the task will only invoke the given processor but perform no compilation (that will be done by the default compilation step later on).
 
@@ -104,18 +104,18 @@ compileJava.dependsOn generateMainMapperClasses
 
 ### Give it a shot
 
-You can find the complete [build.gradle](https://github.com/mapstruct/mapstruct-examples/blob/master/mapstruct-on-gradle/build.gradle) file on GitHub. It is part of an example project which generates a simple mapper class and executes some tests against it. To clone the example project just execute
+You can find the complete [build.gradle](https://github.com/dettonville/dettonville-examples/blob/master/dettonville-on-gradle/build.gradle) file on GitHub. It is part of an example project which generates a simple mapper class and executes some tests against it. To clone the example project just execute
 
 <pre class="prettyprint lang-sh linenums">
-git clone https://github.com/mapstruct/mapstruct-examples.git
+git clone https://github.com/dettonville/dettonville-examples.git
 </pre>
 
 You can then build the example by running
 
 <pre class="prettyprint lang-sh linenums">
-cd mapstruct-on-gradle &amp;&amp; ./gradlew build
+cd dettonville-on-gradle &amp;&amp; ./gradlew build
 </pre>
 
 The project comes with the [Gradle Wrapper](http://www.gradle.org/docs/current/userguide/userguide_single.html#gradle_wrapper), a small utility which retrieves the right Gradle version upon the first build. So it is not required to install Gradle separately.
 
-In case you have questions, ideas or any other kind of feedback just add a comment to this post or leave a message in the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group.
+In case you have questions, ideas or any other kind of feedback just add a comment to this post or leave a message in the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group.

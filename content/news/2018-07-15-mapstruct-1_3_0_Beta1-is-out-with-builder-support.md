@@ -18,7 +18,7 @@ The new release comes with a whole lot of new functionality, e.g.:
 
 <!--more-->
 
-Altogether, not less than [59 issues](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.3.0.Beta1) were fixed for this release.
+Altogether, not less than [59 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.3.0.Beta1) were fixed for this release.
 
 This would not have been possible without our fantastic community of contributors:
 [Christian Bandowski](https://github.com/chris922), 
@@ -45,7 +45,7 @@ Enough of the pep talk, let's take a closer look at some of the new features!
 
 ### Mapping of (immutable) objects using builders
 
-Use of builder to [map (immutable) objects](https://github.com/mapstruct/mapstruct/issues/782) has been one of the most requested features of MapStruct.
+Use of builder to [map (immutable) objects](https://github.com/dettonville/dettonville/issues/782) has been one of the most requested features of MapStruct.
 
 We are happy to announce that as of 1.3.0.Beta1 MapStruct has out of the box support for builders.
 Works with:
@@ -57,13 +57,13 @@ Works with:
 * [Protocol Buffer builder](https://developers.google.com/protocol-buffers/docs/javatutorial)
 * It also works for custom builders if the object being build provides a parameterless public static method for instantiating the builder. Otherwise, you would need to write a custom `BuilderProvider`
 
-For more details how the Builder support works have a look at the [Using builders](http://mapstruct.org/documentation/dev/reference/html/#mapping-with-builders) of the reference guide 
+For more details how the Builder support works have a look at the [Using builders](http://dettonville.org/documentation/dev/reference/html/#mapping-with-builders) of the reference guide 
 
-We have modified our example project with protobuf support to use the out of the box support for Builders. Have a look at it [here](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-protobuf3).
+We have modified our example project with protobuf support to use the out of the box support for Builders. Have a look at it [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-protobuf3).
 
 ### Constructor injection for annotation based component models
 
-Construction injection for annotation based component models (`spring`, `cdi`, `jsr330`) can bow [be used](https://github.com/mapstruct/mapstruct/issues/571).
+Construction injection for annotation based component models (`spring`, `cdi`, `jsr330`) can bow [be used](https://github.com/dettonville/dettonville/issues/571).
 
 Example:
 
@@ -82,7 +82,7 @@ For backwards compatibility it is set to `ReportingPolicy.IGNORE`.
 
 ### Support for defaultExpression
 
-`Mapping#defaultExpression` can now [be used](https://github.com/mapstruct/mapstruct/issues/1363) to customize the default value of a mapping.
+`Mapping#defaultExpression` can now [be used](https://github.com/dettonville/dettonville/issues/1363) to customize the default value of a mapping.
 
 {{< prettify java >}}
 @Mapper
@@ -100,7 +100,7 @@ This annotation actually applies ignore to all target properties, which means th
 
 ### Performance improvement of constant / defaultValue primitive to String mappings
 
-With [#1401](https://github.com/mapstruct/mapstruct/issues/1401) we now try to check if it is possible to assign a `defaultValue` and / or a `constant` directly without doing a conversion. 
+With [#1401](https://github.com/dettonville/dettonville/issues/1401) we now try to check if it is possible to assign a `defaultValue` and / or a `constant` directly without doing a conversion. 
 For example for the following mapper:
 
 {{< prettify java >}}
@@ -162,7 +162,7 @@ public class PersonMapperImpl implements PersonMapper {
 ### Enhancements
 
 * Package private mappers with the default component model
-* Improve performance of `mapstruct-processor` on Java 9
+* Improve performance of `dettonville-processor` on Java 9
 * Support for using `@ObjectFactory` on objects passed with `@Context`
 * Implicit converstion between `String` and `java.util.Currency`
 * Improved error messages and locations
@@ -172,15 +172,15 @@ public class PersonMapperImpl implements PersonMapper {
 This concludes our tour through MapStruct 1.3 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct-jdk8:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-jdk8|1.3.0.Beta1|jar) (for usage with Java >= 8) 
-or [org.mapstruct:mapstruct:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.3.0.Beta1|jar) (for earlier Java versions)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.3.0.Beta1|jar)
+* Annotation JAR: [org.dettonville:dettonville-jdk8:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.3.0.Beta1|jar) (for usage with Java >= 8) 
+or [org.dettonville:dettonville:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.3.0.Beta1|jar) (for earlier Java versions)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.3.0.Beta1|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.3.0.Beta1).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.3.0.Beta1).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group or in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

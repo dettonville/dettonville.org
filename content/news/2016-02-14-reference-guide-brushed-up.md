@@ -12,7 +12,7 @@ To name just one issue, readability wasn't great on smaller screen sizes.
 
 All that's history now, the reference guide has been converted into the AsciiDoc format, which makes the documentation much easier to maintain and allows for several publishing options using the fantastic [AsciiDoctor](http://asciidoctor.org/) tool.
 
-The guide is provided in two formats now: [HTML](/documentation/stable/reference/html/) and as [PDF](/documentation/stable/reference/pdf/mapstruct-reference-guide.pdf). The actual contents is largely unchanged, but we moved some sections around in order to reduce the number of chapters to a more digestable level. It's high on our agenda to rewrite some parts of the guide which aren't perfect yet, which should be much lesser of a burden now thanks to AsciiDoc.
+The guide is provided in two formats now: [HTML](/documentation/stable/reference/html/) and as [PDF](/documentation/stable/reference/pdf/dettonville-reference-guide.pdf). The actual contents is largely unchanged, but we moved some sections around in order to reduce the number of chapters to a more digestable level. It's high on our agenda to rewrite some parts of the guide which aren't perfect yet, which should be much lesser of a burden now thanks to AsciiDoc.
 
 In addition, you also can find the [API JavaDoc](/documentation/stable/api/) online now.
 

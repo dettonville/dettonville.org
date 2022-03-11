@@ -4,12 +4,12 @@ author: Gunnar Morling
 date: "2014-11-30"
 tags: [release, news]
 aliases:
-    - /news/2014/11/30/mapstruct-1_0_0_Beta3-nested-properties.html
+    - /news/2014/11/30/dettonville-1_0_0_Beta3-nested-properties.html
 ---
 
 I'm delighted to announce the release of MapStruct 1.0.0.Beta3.
 
-This version brings the long awaited support for mapping nested source properties, built-in mappings for Java 8 date/time types, fine-grained selection of mapping methods via qualifiers and much more. You can find the complete list of a whopping 46 closed issues [here](https://github.com/mapstruct/mapstruct/issues?page=2&q=milestone%3A1.0.0.Beta3+is%3Aclosed).
+This version brings the long awaited support for mapping nested source properties, built-in mappings for Java 8 date/time types, fine-grained selection of mapping methods via qualifiers and much more. You can find the complete list of a whopping 46 closed issues [here](https://github.com/dettonville/dettonville/issues?page=2&q=milestone%3A1.0.0.Beta3+is%3Aclosed).
 
 Note that existing applications using MapStruct need to adapt to some changes we had to do in order to iron out some glitches from the previous beta releases. These changes are described in more detail at the end of this post.
 
@@ -124,17 +124,17 @@ public class OrderMapper {
 
 That annotation makes it explicit which one is the reverse mapping method and thus should inherit the configuration from its counterpart. You still can add further mappings to the reverse method in order to amend or override the inherited mappings. `@InheritInverseConfiguration` can also be used to specify the name of the method to inherit from in case several methods qualify as per their source and target types.
 
-Another change affects the existing [processor options](http://localhost:9009/documentation/#section-02-01). In order to avoid conflicts with other annotation processors, these options must now be given using the "mapstruct." prefix, e.g. "mapstruct.suppressGeneratorTimestamp".
+Another change affects the existing [processor options](http://localhost:9009/documentation/#section-02-01). In order to avoid conflicts with other annotation processors, these options must now be given using the "dettonville." prefix, e.g. "dettonville.suppressGeneratorTimestamp".
 
-We have created a [wiki page](https://github.com/mapstruct/mapstruct/wiki/Migration-notes) where we'll collect all incompatible changes for future releases. Of course we'll try hard to avoid this sort of changes whenever possible.
+We have created a [wiki page](https://github.com/dettonville/dettonville/wiki/Migration-notes) where we'll collect all incompatible changes for future releases. Of course we'll try hard to avoid this sort of changes whenever possible.
 
 ### How do I get it?
 
-You can fetch distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.Beta3/). Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
+You can fetch distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.Beta3/). Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
 
-* [org.mapstruct:mapstruct:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct&#124;1.0.0.Beta3&#124;jar) for the annotation JAR (to be used with Java <= 7) or [org.mapstruct:mapstruct-jdk8:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-jdk8&#124;1.0.0.Beta3&#124;jar) (for usage with Java >= 8)
-* [org.mapstruct:mapstruct-processor:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-processor&#124;1.0.0.Beta3&#124;jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Beta3&#124;jar) for the annotation JAR (to be used with Java <= 7) or [org.dettonville:dettonville-jdk8:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-jdk8&#124;1.0.0.Beta3&#124;jar) (for usage with Java >= 8)
+* [org.dettonville:dettonville-processor:1.0.0.Beta3](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Beta3&#124;jar) for the annotation processor.
 
 The Beta3 release is planned to be the last beta, next will be CR1 (candidate release).
 
-Anything you'd like to propose for inclusion in the 1.0 Final release? Then let us know by commenting below or posting to the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/mapstruct/mapstruct/issues). And if you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).
+Anything you'd like to propose for inclusion in the 1.0 Final release? Then let us know by commenting below or posting to the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). And if you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).

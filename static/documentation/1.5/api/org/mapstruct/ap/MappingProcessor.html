@@ -6,7 +6,7 @@
 <title>MappingProcessor (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.MappingProcessor class">
+<meta name="keywords" content="org.dettonville.ap.MappingProcessor class">
 <meta name="keywords" content="SUPPRESS_GENERATOR_TIMESTAMP">
 <meta name="keywords" content="SUPPRESS_GENERATOR_VERSION_INFO_COMMENT">
 <meta name="keywords" content="UNMAPPED_TARGET_POLICY">
@@ -128,7 +128,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap</a></div>
 <h2 title="Class MappingProcessor" class="title">Class MappingProcessor</h2>
 </div>
 <div class="contentContainer">
@@ -139,7 +139,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/AbstractProcessor.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">javax.annotation.processing.AbstractProcessor</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.MappingProcessor</li>
+<li>org.dettonville.ap.MappingProcessor</li>
 </ul>
 </li>
 </ul>
@@ -153,8 +153,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">Processor</a></code></dd>
 </dl>
 <hr>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/SupportedAnnotationTypes.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">@SupportedAnnotationTypes</a>("org.mapstruct.Mapper")
-<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/SupportedOptions.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">@SupportedOptions</a>({"mapstruct.suppressGeneratorTimestamp","mapstruct.suppressGeneratorVersionInfoComment","mapstruct.unmappedTargetPolicy","mapstruct.unmappedSourcePolicy","mapstruct.defaultComponentModel","mapstruct.defaultInjectionStrategy","mapstruct.verbose"})
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/SupportedAnnotationTypes.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">@SupportedAnnotationTypes</a>("org.dettonville.Mapper")
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/SupportedOptions.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">@SupportedOptions</a>({"dettonville.suppressGeneratorTimestamp","dettonville.suppressGeneratorVersionInfoComment","dettonville.unmappedTargetPolicy","dettonville.unmappedSourcePolicy","dettonville.defaultComponentModel","dettonville.defaultInjectionStrategy","dettonville.verbose"})
 public class <span class="typeNameLabel">MappingProcessor</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/AbstractProcessor.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink">AbstractProcessor</a></pre>
 <div class="block">A JSR 269 annotation <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html?is-external=true" title="class or interface in javax.annotation.processing" class="externalLink"><code>Processor</code></a> which generates the implementations for mapper interfaces (interfaces
@@ -163,10 +163,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
  Implementation notes:
  <p>
  The generation happens by incrementally building up a model representation of each mapper to be generated (a
- <a href="internal/model/Mapper.html" title="class in org.mapstruct.ap.internal.model"><code>Mapper</code></a> object), which is then written into the resulting Java source file.
+ <a href="internal/model/Mapper.html" title="class in org.dettonville.ap.internal.model"><code>Mapper</code></a> object), which is then written into the resulting Java source file.
  <p>
  The model instantiation and processing happens in several phases/passes by applying a sequence of
- <a href="internal/processor/ModelElementProcessor.html" title="interface in org.mapstruct.ap.internal.processor"><code>ModelElementProcessor</code></a>s. The processors to apply are retrieved using the Java service loader mechanism and are
+ <a href="internal/processor/ModelElementProcessor.html" title="interface in org.dettonville.ap.internal.processor"><code>ModelElementProcessor</code></a>s. The processors to apply are retrieved using the Java service loader mechanism and are
  processed in order of their <a href="internal/processor/ModelElementProcessor.html#getPriority()"><code>priority</code></a>. The general processing flow is
  this:
  <ul>
@@ -176,7 +176,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
  <li>if no error occurred, write out the model into Java source files</li>
  </ul>
  <p>
- For reading annotation attributes, gems as generated with help of <a href="https://github.com/mapstruct/tools-gem">Gem Tools</a>. These gems allow comfortable access to annotations and
+ For reading annotation attributes, gems as generated with help of <a href="https://github.com/dettonville/tools-gem">Gem Tools</a>. These gems allow comfortable access to annotations and
  their attributes without depending on their class objects.
  <p>
  The creation of Java source files is done using the <a href="http://freemarker.org/"> FreeMarker</a> template engine.
@@ -350,7 +350,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> SUPPRESS_GENERATOR_TIMESTAMP</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.SUPPRESS_GENERATOR_TIMESTAMP">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.SUPPRESS_GENERATOR_TIMESTAMP">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -363,7 +363,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> SUPPRESS_GENERATOR_VERSION_INFO_COMMENT</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.SUPPRESS_GENERATOR_VERSION_INFO_COMMENT">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.SUPPRESS_GENERATOR_VERSION_INFO_COMMENT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -376,7 +376,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> UNMAPPED_TARGET_POLICY</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.UNMAPPED_TARGET_POLICY">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.UNMAPPED_TARGET_POLICY">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -389,7 +389,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> UNMAPPED_SOURCE_POLICY</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.UNMAPPED_SOURCE_POLICY">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.UNMAPPED_SOURCE_POLICY">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -402,7 +402,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> DEFAULT_COMPONENT_MODEL</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.DEFAULT_COMPONENT_MODEL">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.DEFAULT_COMPONENT_MODEL">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -415,7 +415,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> DEFAULT_INJECTION_STRATEGY</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.DEFAULT_INJECTION_STRATEGY">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.DEFAULT_INJECTION_STRATEGY">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -428,7 +428,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> ALWAYS_GENERATE_SERVICE_FILE</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.ALWAYS_GENERATE_SERVICE_FILE">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.ALWAYS_GENERATE_SERVICE_FILE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -441,7 +441,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/proc
 <pre>protected static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> VERBOSE</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.mapstruct.ap.MappingProcessor.VERBOSE">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.dettonville.ap.MappingProcessor.VERBOSE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>

@@ -22,32 +22,32 @@ You love MapStruct but miss a certain feature? You found a bug and want to repor
 </thead>
 <tbody>
   <tr>
-    <td width="20%">Source code</td><td><a href="https://github.com/mapstruct/mapstruct">https://github.com/mapstruct/mapstruct</a></td>
+    <td width="20%">Source code</td><td><a href="https://github.com/dettonville/dettonville">https://github.com/dettonville/dettonville</a></td>
   </tr>
   <tr>
-    <td width="20%">Issue tracker</td><td><a href="https://github.com/mapstruct/mapstruct/issues">https://github.com/mapstruct/mapstruct/issues</a></td>
+    <td width="20%">Issue tracker</td><td><a href="https://github.com/dettonville/dettonville/issues">https://github.com/dettonville/dettonville/issues</a></td>
   </tr>
   <tr>
-    <td width="20%">Discussions</td><td>Join the <a href="https://github.com/mapstruct/mapstruct/discussions">MapStruct GitHub Discussions</a></td>
+    <td width="20%">Discussions</td><td>Join the <a href="https://github.com/dettonville/dettonville/discussions">MapStruct GitHub Discussions</a></td>
   </tr>
   <tr>
-    <td width="20%">CI build</td><td><a href="https://github.com/mapstruct/mapstruct/actions?query=branch%3Amaster+workflow%3ACI"</a>https://github.com/mapstruct/mapstruct/actions?query=branch%3Amaster+workflow%3ACI</td>
+    <td width="20%">CI build</td><td><a href="https://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI"</a>https://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI</td>
   </tr>
   <tr>
-    <td width="20%">This web site</td><td><a href="https://github.com/mapstruct/mapstruct.org">https://github.com/mapstruct/mapstruct.org</a></td>
+    <td width="20%">This web site</td><td><a href="https://github.com/dettonville/dettonville.org">https://github.com/dettonville/dettonville.org</a></td>
   </tr>
 </tbody>
 </table>
 
-MapStruct follows the _Fork & Pull_ development approach. To get started just fork the [MapStruct repository](http://github.com/mapstruct/mapstruct) to your GitHub account and create a new topic branch for each change. Once you are done with your change, submit a [pull request](https://help.github.com/articles/using-pull-requests) against the MapStruct repo.
+MapStruct follows the _Fork & Pull_ development approach. To get started just fork the [MapStruct repository](http://github.com/dettonville/dettonville) to your GitHub account and create a new topic branch for each change. Once you are done with your change, submit a [pull request](https://help.github.com/articles/using-pull-requests) against the MapStruct repo.
 
 When doing changes, keep the following best practices in mind:
 
 * Provide test cases
-* Update the [reference documentation](mapstruct.org/documentation) on [mapstruct.org](mapstruct.org) where required
-* Discuss new features you'd like to implement at the [GitHub Discussions](https://github.com/mapstruct/mapstruct/discussions) before getting started
+* Update the [reference documentation](dettonville.org/documentation) on [dettonville.org](dettonville.org) where required
+* Discuss new features you'd like to implement at the [GitHub Discussions](https://github.com/dettonville/dettonville/discussions) before getting started
 * Create one pull request per feature
 * Provide a meaningful history, e.g. squash intermediary commits before submitting a pull request
 * Start your commit messages with "#&lt;issue no&gt;", e.g. "#123 Adding new mapping feature"
 * Have git automatically manage line endings as described [here](https://help.github.com/articles/dealing-with-line-endings)
-* Format your sources using the provided IntelliJ [code style template](https://github.com/mapstruct/mapstruct/blob/master/etc/mapstruct.xml). Eclipse users can import the [Eclipse code formatter settings](https://github.com/mapstruct/mapstruct/blob/master/etc/eclipse-formatter-config.xml) - it's close enough, but configure the Save Actions to only format edited lines. If you use another IDE stick to the used style as much as possible.
+* Format your sources using the provided IntelliJ [code style template](https://github.com/dettonville/dettonville/blob/master/etc/dettonville.xml). Eclipse users can import the [Eclipse code formatter settings](https://github.com/dettonville/dettonville/blob/master/etc/eclipse-formatter-config.xml) - it's close enough, but configure the Save Actions to only format edited lines. If you use another IDE stick to the used style as much as possible.

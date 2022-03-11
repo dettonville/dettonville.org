@@ -14,7 +14,7 @@ parent = "Documentation"
 
 ## Distribution Bundle
 
-You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from [GitHub](https://github.com/mapstruct/mapstruct/releases).
+You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from [GitHub](https://github.com/dettonville/dettonville/releases).
 
 ## Apache Maven
 
@@ -22,14 +22,14 @@ If you're using Maven to build your project add the following to your _pom.xml_ 
 
 {{< prettify xml >}}...
 <properties>
-    <org.mapstruct.version>{{% stableversion %}}</org.mapstruct.version>
+    <org.dettonville.version>{{% stableversion %}}</org.dettonville.version>
 </properties>
 ...
 <dependencies>
     <dependency>
-        <groupId>org.mapstruct</groupId>
-        <artifactId>mapstruct</artifactId>
-        <version>${org.mapstruct.version}</version>
+        <groupId>org.dettonville</groupId>
+        <artifactId>dettonville</artifactId>
+        <version>${org.dettonville.version}</version>
     </dependency>
 </dependencies>
 ...
@@ -44,9 +44,9 @@ If you're using Maven to build your project add the following to your _pom.xml_ 
                 <target>1.8</target> <!-- depending on your project -->
                 <annotationProcessorPaths>
                     <path>
-                        <groupId>org.mapstruct</groupId>
-                        <artifactId>mapstruct-processor</artifactId>
-                        <version>${org.mapstruct.version}</version>
+                        <groupId>org.dettonville</groupId>
+                        <artifactId>dettonville-processor</artifactId>
+                        <version>${org.dettonville.version}</version>
                     </path>
                     <!-- other annotation processors -->
                 </annotationProcessorPaths>
@@ -62,9 +62,9 @@ When using a modern version of Gradle (>= 4.6), you add something along the foll
 
 {{< prettify groovy >}}dependencies {
     ...
-    implementation 'org.mapstruct:mapstruct:{{% stableversion %}}'
+    implementation 'org.dettonville:dettonville:{{% stableversion %}}'
 
-    annotationProcessor 'org.mapstruct:mapstruct-processor:{{% stableversion %}}'
+    annotationProcessor 'org.dettonville:dettonville-processor:{{% stableversion %}}'
 }
 {{< /prettify >}}
 
@@ -78,13 +78,13 @@ For older versions of Gradle (< 4.6), use something like this:
 }
 dependencies {
     ...
-    compile 'org.mapstruct:mapstruct:{{% stableversion %}}'
+    compile 'org.dettonville:dettonville:{{% stableversion %}}'
  
-    apt 'org.mapstruct:mapstruct-processor:{{% stableversion %}}'
+    apt 'org.dettonville:dettonville-processor:{{% stableversion %}}'
 }
 {{< /prettify >}}
 
-You can find a complete example in the [mapstruct-examples](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-gradle) project on GitHub.
+You can find a complete example in the [dettonville-examples](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle) project on GitHub.
 
 ## Apache Ant
 
@@ -95,11 +95,11 @@ Add the `javac` task configured as follows to your _build.xml_ file in order to 
 <javac
     srcdir="src/main/java"
     destdir="target/classes"
-    classpath="path/to/mapstruct-{{% stableversion %}}.jar">
-    <compilerarg line="-processorpath path/to/mapstruct-processor-{{% stableversion %}}.jar"/>
+    classpath="path/to/dettonville-{{% stableversion %}}.jar">
+    <compilerarg line="-processorpath path/to/dettonville-processor-{{% stableversion %}}.jar"/>
     <compilerarg line="-s target/generated-sources"/>
 </javac>
 ...
 {{< /prettify >}}
 
-You can find a complete example in the [mapstruct-examples](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-ant) project on GitHub.
+You can find a complete example in the [dettonville-examples](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-ant) project on GitHub.

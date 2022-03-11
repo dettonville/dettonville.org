@@ -20,7 +20,7 @@ The new release comes with a whole lot of new functionality, e.g.:
 
 <!--more-->
 
-Altogether, not less than [76 issues](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.4.0.Beta1) were fixed for this release.
+Altogether, not less than [76 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.4.0.Beta1) were fixed for this release.
 
 This would not have been possible without our fantastic community of contributors:
 * [@Zomzog](https://github.com/Zomzog),
@@ -53,7 +53,7 @@ Enough of the pep talk, let's take a closer look at some of the new features!
 
 ### Making use of constructor arguments when instantiating mapping targets
 
-Making use of [constructor arguments](https://github.com/mapstruct/mapstruct/issues/73) when instantiating mapping targets has been one of the oldest and the most requested feature of MapStruct.
+Making use of [constructor arguments](https://github.com/dettonville/dettonville/issues/73) when instantiating mapping targets has been one of the oldest and the most requested feature of MapStruct.
 
 We are happy to announce that as of 1.4.0.Beta1 MapStruct has out of the box support for mapping your immutable objects via constructors.
 This works with:
@@ -61,7 +61,7 @@ This works with:
 * [Java 14 Records](https://openjdk.java.net/jeps/359)
 * [Kotlin Data Classes](https://kotlinlang.org/docs/reference/data-classes.html)
 
-For more details how the Constructor support works have a look at the [Using constructors](http://mapstruct.org/documentation/dev/reference/html/#mapping-with-constructors) section of the reference guide.
+For more details how the Constructor support works have a look at the [Using constructors](http://dettonville.org/documentation/dev/reference/html/#mapping-with-constructors) section of the reference guide.
 
 ### Gradle incremental annotation processing
 
@@ -86,7 +86,7 @@ public interface CustomerMapper {
 
 The generated code will map every property from `CustomerDto.record` to `Customer` directly, without need to manually name any of them.
 
-For more details have a look at the [Mapping nested bean properties to current target](http://mapstruct.org/documentation/dev/reference/html/#mapping-nested-bean-properties-to-current-target) section of the reference guide.
+For more details have a look at the [Mapping nested bean properties to current target](http://dettonville.org/documentation/dev/reference/html/#mapping-nested-bean-properties-to-current-target) section of the reference guide.
 
 ### Value mapping between `String` and `Enum`
 
@@ -111,7 +111,7 @@ public interface CheeseMapper {
 This would generate an implementation that would use the enum value constants for mapping.
 This can be customised by using `@ValueMapping`.
 
-For more details have a look at the [Mapping Value](http://mapstruct.org/documentation/dev/reference/html/#mapping-enum-types) section of the reference guide.
+For more details have a look at the [Mapping Value](http://dettonville.org/documentation/dev/reference/html/#mapping-enum-types) section of the reference guide.
 
 ### Support `@Mapping` in meta annotations
 
@@ -144,7 +144,7 @@ This is an alternative to using inheritance configuration.
 The difference here is that the entities don't need to have any common hierarchy. 
 The `@Mapping` annotations from `@ToEntity` are transformed as if they have been written on the method.
 
-For more details have a look at the [Mapping Composition](http://mapstruct.org/documentation/dev/reference/html/#mapping-composition) section of the reference guide.
+For more details have a look at the [Mapping Composition](http://dettonville.org/documentation/dev/reference/html/#mapping-composition) section of the reference guide.
 
 ### User control over mapping features
 
@@ -216,10 +216,10 @@ We've added a new annotation (`@EnumMapping`) for customizing how an enum mappin
 
 And we added 2 new SPIs:
 
-* [`EnumTransformationStrategy`](https://mapstruct.org/documentation/stable/api/org/mapstruct/ap/spi/EnumTransformationStrategy.html)
-* [`EnumNamingStrategy`](https://mapstruct.org/documentation/stable/api/org/mapstruct/ap/spi/EnumNamingStrategy.html)
+* [`EnumTransformationStrategy`](https://dettonville.org/documentation/stable/api/org/dettonville/ap/spi/EnumTransformationStrategy.html)
+* [`EnumNamingStrategy`](https://dettonville.org/documentation/stable/api/org/dettonville/ap/spi/EnumNamingStrategy.html)
 
-For more details have a look at the [Mapping Value](http://mapstruct.org/documentation/dev/reference/html/#mapping-enum-types) section of the reference guide.
+For more details have a look at the [Mapping Value](http://dettonville.org/documentation/dev/reference/html/#mapping-enum-types) section of the reference guide.
 
 #### EnumTransformationStrategy SPI
 
@@ -275,7 +275,7 @@ One example is the Protobuf [Enum Style Guide](https://developers.google.com/pro
 
 ### Enhancements
 
-* Add "verbose" processor option to print out details if required - Can be activated by using the compiler argument `mapstruct.verbose=true`
+* Add "verbose" processor option to print out details if required - Can be activated by using the compiler argument `dettonville.verbose=true`
 * Add imports to `@MapperConfig`
 * Annotation processor option for default injection strategy 
 * Allow mapping between enum and non enum in the same way as mapping between primitive and objects
@@ -288,7 +288,7 @@ We would like to introduce a new concept with which we are trying to improve the
 
 MapStruct has a lot of functionality and there are a lot of different ways that it can be used.
 Recently [Raimund Klein](https://github.com/Chessray) came up with an interesting idea for providing some extra helpful additions to MapStruct when using the [Spring Framework](https://spring.io/).
-This idea lead to an initial implementation, which lead to creating the first community extension, the [MapStruct Spring Extensions](https://github.com/mapstruct/mapstruct-spring-extensions).
+This idea lead to an initial implementation, which lead to creating the first community extension, the [MapStruct Spring Extensions](https://github.com/dettonville/dettonville-spring-extensions).
 I would like to thank Raimund for the initiative and taking the lead for this project.
 There is still no release from this extension, because it is waiting on some enhancements coming from this release.
 
@@ -301,13 +301,13 @@ In case someone has an idea and wants to propose a new extension feel free to re
 This concludes our tour through MapStruct 1.4 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.4.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.4.0.Beta1|jar) 
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.4.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.4.0.Beta1|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.4.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.4.0.Beta1|jar) 
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.4.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.4.0.Beta1|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.4.0.Beta1).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.4.0.Beta1).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users) or at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

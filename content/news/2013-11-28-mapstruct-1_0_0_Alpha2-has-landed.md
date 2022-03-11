@@ -4,17 +4,17 @@ author: Gunnar Morling
 date: "2013-11-28"
 tags: [release, news]
 aliases:
-    - /news/2013/11/28/mapstruct-1_0_0_Alpha2-has-landed.html
+    - /news/2013/11/28/dettonville-1_0_0_Alpha2-has-landed.html
 ---
 
 It is my great pleasure to announce the release of MapStruct 1.0.0.Alpha2.
 
 This took us a bit longer than expected, but the new release offers quite a few exciting new features we hope you'll enjoy. The JARs have already been synched to Maven Central. The coordinates are:
 
-* [org.mapstruct:mapstruct:1.0.0.Alpha2](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct&#124;1.0.0.Alpha2&#124;jar) for the annotation JAR and 
-* [org.mapstruct:mapstruct-processor:1.0.0.Alpha2](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-processor&#124;1.0.0.Alpha2&#124;jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.Alpha2](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Alpha2&#124;jar) for the annotation JAR and 
+* [org.dettonville:dettonville-processor:1.0.0.Alpha2](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Alpha2&#124;jar) for the annotation processor.
 
-Alternatively you can get a [distribution bundle](http://sourceforge.net/projects/mapstruct/files/1.0.0.Alpha2/) from SourceForge.
+Alternatively you can get a [distribution bundle](http://sourceforge.net/projects/dettonville/files/1.0.0.Alpha2/) from SourceForge.
 
 Beside several new mapping features (e.g. combining several sources into one target object) the release provides integration with CDI and Spring to make the retrieval of mapper objects more comfortable. We've added several new implicit data type conversions and there is now also support for converting `Map` objects.
 
@@ -66,7 +66,7 @@ Instead of instantiating a new `Order` object, the generated implementation of `
 
 Several new implicit type conversions have been added for the case that the source and target type of a mapped property differ. `BigDecimal` and `BigInteger` can now automatically be converted into other numeric types as well as into `String`. You can finde a list of all supported conversions in the [reference documentation](http://localhost:4242/documentation/#section-05-01).
 
-Please beware of a possible value or precision loss when performing such conversions from larger to smaller numeric types. It [is planned](https://github.com/mapstruct/mapstruct/issues/5) for the next milestone to optionally raise a warning in this case.
+Please beware of a possible value or precision loss when performing such conversions from larger to smaller numeric types. It [is planned](https://github.com/dettonville/dettonville/issues/5) for the next milestone to optionally raise a warning in this case.
 
 It is now also possible to convert `Date` into `String` and vice versa. For that purpose a new parameter has been added to the `@Mapping` annotation which allows to specify a format string as interpreted by `SimpleDateFormat`:
 
@@ -103,12 +103,12 @@ private OrderMapper orderMapper;
 
 Note that all other mappers a generated mapper class references are also obtained via the configured component model. So if you e.g. hook in hand-written mapper classes via `@Mapper#uses()` make sure that these mappers are compliant with the chosen component model, e.g. are CDI beans themselves. Refer to the documentation which [describes](/documentation/#section-04-02) all the specifics in detail.
 
-On a related note, if you prefer to work with the `Mappers` factory as before, you'll have to adapt your imports because this class has been moved to the new package `org.mapstruct.factory`.
+On a related note, if you prefer to work with the `Mappers` factory as before, you'll have to adapt your imports because this class has been moved to the new package `org.dettonville.factory`.
 
 ### Further info
 
-This concludes our tour through the new features in MapStruct 1.0.0.Alpha2. You can find the complete list of addressed issues in the [change log](https://github.com/mapstruct/mapstruct/issues?milestone=2&state=closed) on GitHub. The [reference documentation](/documentation) has been updated to cover all new functionality.
+This concludes our tour through the new features in MapStruct 1.0.0.Alpha2. You can find the complete list of addressed issues in the [change log](https://github.com/dettonville/dettonville/issues?milestone=2&state=closed) on GitHub. The [reference documentation](/documentation) has been updated to cover all new functionality.
 
-If you have any kind of feedback please make sure to let us know. Either post a comment here or open a discussion in the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/mapstruct/mapstruct/issues) and your pull request on GitHub is highly welcome! The [contribution guide](/contributing) has all the info you need to get started with hacking on MapStruct.
+If you have any kind of feedback please make sure to let us know. Either post a comment here or open a discussion in the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is highly welcome! The [contribution guide](/contributing) has all the info you need to get started with hacking on MapStruct.
 
 Many thanks to [Andreas Gudian](https://github.com/agudian) and [Lukasz Kryger](https://github.com/kryger) who contributed to this release, that's awesome!

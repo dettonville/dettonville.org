@@ -32,13 +32,13 @@ Happy coding with MapStruct 1.4.1!!
 
 You can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.4.1.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.4.1.Final|jar)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.4.1.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.4.1.Final|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.4.1.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.4.1.Final|jar)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.4.1.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.4.1.Final|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.4.1.Final).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.4.1.Final).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users) or at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

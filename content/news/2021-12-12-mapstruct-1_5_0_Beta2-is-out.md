@@ -16,7 +16,7 @@ The new release comes with new functionality and some bug fixes, e.g.:
 
 <!--more-->
 
-Altogether, not less than [32 issues](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.5.0.Beta2) were fixed for this release.
+Altogether, not less than [32 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.5.0.Beta2) were fixed for this release.
 
 This would not have been possible without our fantastic community of contributors:
 * [@amogh94](https://github.com/amogh94)
@@ -76,13 +76,13 @@ As of this release we have 1 more:
 This concludes our tour through MapStruct 1.5 Beta2.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.5.0.Beta2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.5.0.Beta2|jar) 
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.5.0.Beta2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.5.0.Beta2|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.5.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.5.0.Beta2|jar) 
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.5.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.5.0.Beta2|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.5.0.Beta2).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.5.0.Beta2).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users), the [GitHub Discussion](https://github.com/mapstruct/mapstruct/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/mapstruct)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users), the [GitHub Discussion](https://github.com/dettonville/dettonville/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

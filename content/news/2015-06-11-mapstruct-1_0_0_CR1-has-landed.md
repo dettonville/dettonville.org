@@ -4,7 +4,7 @@ author: Gunnar Morling
 date: "2015-06-11"
 tags: [release, news]
 aliases:
-    - /news/2015/06/11/mapstruct-1_0_0_CR1-has-landed.html
+    - /news/2015/06/11/dettonville-1_0_0_CR1-has-landed.html
 ---
 
 I am very happy to announce the first candidate release of MapStruct 1.0!
@@ -15,7 +15,7 @@ As we are approach MapStruct 1.0, this release is primarily focused on ironing o
 * The decorator feature can now also be used with Spring
 * Support for before- and after-mapping lifecycle hooks
 
-The complete list of 24 closed issues can be found in the [change log](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.CR1).
+The complete list of 24 closed issues can be found in the [change log](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.CR1).
 
 A big thank you to everyone contributing to this release: [Sjaak Derksen](https://github.com/sjaakd/), [Andreas Gudian](https://github.com/agudian), [Christian Schuster](https://github.com/chschu), [Paul Strugnell](https://github.com/ps-powa) and [Remko Plantenga](https://github.com/sonata82)!
 
@@ -23,10 +23,10 @@ A big thank you to everyone contributing to this release: [Sjaak Derksen](https:
 
 To fetch MapStruct 1.0.0.CR1 via Maven, Gradle or similar dependency management tools, use the following GAV coordinates:
 
-* [org.mapstruct:mapstruct:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.0.0.CR1|jar) for the annotation JAR (to be used with Java <= 7) or [org.mapstruct:mapstruct-jdk8:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-jdk8|1.0.0.CR1|jar) (for usage with Java >= 8)
-* [org.mapstruct:mapstruct-processor:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.0.0.CR1|jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.0.0.CR1|jar) for the annotation JAR (to be used with Java <= 7) or [org.dettonville:dettonville-jdk8:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.0.0.CR1|jar) (for usage with Java >= 8)
+* [org.dettonville:dettonville-processor:1.0.0.CR1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.0.0.CR1|jar) for the annotation processor.
 
-Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.CR1/).
+Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.CR1/).
 
 ### SPI for property accessor discovery
 
@@ -50,7 +50,7 @@ public interface AccessorNamingStrategy {
 }
 </pre>
 
-The MapStruct engine will pass all candidate methods of mapping source and target types to this SPI in order to detect their property accessors. Once you have created an implementation of the contract based on your project's specific property naming conventions ([an example](https://github.com/mapstruct/mapstruct/blob/master/integrationtest/src/test/resources/namingStrategyTest/strategy/src/main/java/org/mapstruct/itest/naming/CustomAccessorNamingStrategy.java) can be found in our test suite), it needs to be registered through the Java [service loader](http://docs.oracle.com/javase/8/docs/api/index.html?java/util/ServiceLoader.html) mechanism. To do so, create the file _META-INF/services/org.mapstruct.ap.spi.AccessorNamingStrategy_ with the fully-qualified name of your implementation as contents:
+The MapStruct engine will pass all candidate methods of mapping source and target types to this SPI in order to detect their property accessors. Once you have created an implementation of the contract based on your project's specific property naming conventions ([an example](https://github.com/dettonville/dettonville/blob/master/integrationtest/src/test/resources/namingStrategyTest/strategy/src/main/java/org/dettonville/itest/naming/CustomAccessorNamingStrategy.java) can be found in our test suite), it needs to be registered through the Java [service loader](http://docs.oracle.com/javase/8/docs/api/index.html?java/util/ServiceLoader.html) mechanism. To do so, create the file _META-INF/services/org.dettonville.ap.spi.AccessorNamingStrategy_ with the fully-qualified name of your implementation as contents:
 
 <pre class="prettyprint linenums">
 com.example.CustomAccessorNamingStrategy
@@ -129,11 +129,11 @@ Before and after mapping callback methods are a quite powerful mechanism to impl
 
 ### What's next?
 
-With CR 1 out, MapStruct 1.0 Final is getting in sight! Based on the number of bugs reported against CR1, we may either do another CR in two or three weeks or go straight to the Final. In parallel work on the MapStruct [Eclipse plug-in](https://github.com/mapstruct/mapstruct-eclipse) continues. We plan to do a first Alpha release of that very soon. Stay tuned!
+With CR 1 out, MapStruct 1.0 Final is getting in sight! Based on the number of bugs reported against CR1, we may either do another CR in two or three weeks or go straight to the Final. In parallel work on the MapStruct [Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse) continues. We plan to do a first Alpha release of that very soon. Stay tuned!
 
 Finally, some useful links:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

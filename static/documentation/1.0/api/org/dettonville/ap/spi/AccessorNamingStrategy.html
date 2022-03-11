@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>AccessorNamingStrategy (MapStruct 1.0.0.Final)</title>
 <meta name="date" content="2015-11-25">
-<meta name="keywords" content="org.mapstruct.ap.spi.AccessorNamingStrategy interface">
+<meta name="keywords" content="org.dettonville.ap.spi.AccessorNamingStrategy interface">
 <meta name="keywords" content="getMethodType()">
 <meta name="keywords" content="getPropertyName()">
 <meta name="keywords" content="getElementName()">
@@ -56,10 +56,10 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../org/mapstruct/ap/spi/MethodType.html" title="enum in org.mapstruct.ap.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/dettonville/ap/spi/MethodType.html" title="enum in org.dettonville.ap.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/mapstruct/ap/spi/AccessorNamingStrategy.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/dettonville/ap/spi/AccessorNamingStrategy.html" target="_top">Frames</a></li>
 <li><a href="AccessorNamingStrategy.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct.ap.spi</div>
+<div class="subTitle">org.dettonville.ap.spi</div>
 <h2 title="Interface AccessorNamingStrategy" class="title">Interface AccessorNamingStrategy</h2>
 </div>
 <div class="contentContainer">
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../org/mapstruct/ap/internal/naming/DefaultAccessorNamingStrategy.html" title="class in org.mapstruct.ap.internal.naming">DefaultAccessorNamingStrategy</a></dd>
+<dd><a href="../../../../org/dettonville/ap/internal/naming/DefaultAccessorNamingStrategy.html" title="class in org.dettonville.ap.internal.naming">DefaultAccessorNamingStrategy</a></dd>
 </dl>
 <hr>
 <br>
@@ -137,25 +137,25 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/mapstruct/ap/spi/AccessorNamingStrategy.html#getCollectionGetterName-java.lang.String-">getCollectionGetterName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;property)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/dettonville/ap/spi/AccessorNamingStrategy.html#getCollectionGetterName-java.lang.String-">getCollectionGetterName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;property)</code>
 <div class="block">Returns the getter name of the given collection property.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/mapstruct/ap/spi/AccessorNamingStrategy.html#getElementName-javax.lang.model.element.ExecutableElement-">getElementName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;adderMethod)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/dettonville/ap/spi/AccessorNamingStrategy.html#getElementName-javax.lang.model.element.ExecutableElement-">getElementName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;adderMethod)</code>
 <div class="block">Returns the element name of the given adder method.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../org/mapstruct/ap/spi/MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/mapstruct/ap/spi/AccessorNamingStrategy.html#getMethodType-javax.lang.model.element.ExecutableElement-">getMethodType</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;method)</code>
+<td class="colFirst"><code><a href="../../../../org/dettonville/ap/spi/MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/dettonville/ap/spi/AccessorNamingStrategy.html#getMethodType-javax.lang.model.element.ExecutableElement-">getMethodType</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;method)</code>
 <div class="block">Returns the type of the given method.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/mapstruct/ap/spi/AccessorNamingStrategy.html#getPropertyName-javax.lang.model.element.ExecutableElement-">getPropertyName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;getterOrSetterMethod)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/dettonville/ap/spi/AccessorNamingStrategy.html#getPropertyName-javax.lang.model.element.ExecutableElement-">getPropertyName</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;getterOrSetterMethod)</code>
 <div class="block">Returns the name of the property represented by the given getter or setter method.</div>
 </td>
 </tr>
@@ -180,7 +180,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getMethodType</h4>
-<pre><a href="../../../../org/mapstruct/ap/spi/MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a>&nbsp;getMethodType(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;method)</pre>
+<pre><a href="../../../../org/dettonville/ap/spi/MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a>&nbsp;getMethodType(<a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element">ExecutableElement</a>&nbsp;method)</pre>
 <div class="block">Returns the type of the given method.</div>
 </li>
 </ul>
@@ -250,10 +250,10 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../org/mapstruct/ap/spi/MethodType.html" title="enum in org.mapstruct.ap.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/dettonville/ap/spi/MethodType.html" title="enum in org.dettonville.ap.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/mapstruct/ap/spi/AccessorNamingStrategy.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/dettonville/ap/spi/AccessorNamingStrategy.html" target="_top">Frames</a></li>
 <li><a href="AccessorNamingStrategy.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -290,6 +290,6 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2015 <a href="http://mapstruct.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2015 <a href="http://dettonville.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

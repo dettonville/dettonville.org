@@ -19,21 +19,21 @@ The MapStruct team has decided to write only integration tests and almost no uni
 
 In order to achieve this the MapStruct team has built their own small testing framework on top of JUnit 4.
 
-Our test utils are located [here](https://github.com/mapstruct/mapstruct/tree/master/processor/src/test/java/org/mapstruct/ap/testutil).
+Our test utils are located [here](https://github.com/dettonville/dettonville/tree/master/processor/src/test/java/org/dettonville/ap/testutil).
 
 ## Writing a test
 
-In order to explain how to write a test we are going to use the [`EnumToEnumMappingTest`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/EnumToEnumMappingTest.java).
-The java classes and mappers for this are located [here](https://github.com/mapstruct/mapstruct/tree/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum).
+In order to explain how to write a test we are going to use the [`EnumToEnumMappingTest`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/EnumToEnumMappingTest.java).
+The java classes and mappers for this are located [here](https://github.com/dettonville/dettonville/tree/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum).
 
 ### Set-up
 
 First thing that we do is to define the POJOs. For this test we have:
 
-* [`OrderDto`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderDto.java)
-* [`OrderEntity`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderEntity.java)
-* [`ExternalOrderType`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/ExternalOrderType.java)
-* [`OrderType`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/OrderType.java)
+* [`OrderDto`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderDto.java)
+* [`OrderEntity`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderEntity.java)
+* [`ExternalOrderType`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/ExternalOrderType.java)
+* [`OrderType`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/OrderType.java)
 
 {{< prettify java >}}
 public class OrderDto {
@@ -64,7 +64,7 @@ public enum OrderType {
 ### Happy path testing
 
 Once we define our POJOs we need to write the mapper that we want to test.
-For this we will use the [`OrderMapper`](https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderMapper.java)
+For this we will use the [`OrderMapper`](https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderMapper.java)
 
 {{< prettify java >}}
 @Mapper
@@ -130,7 +130,7 @@ public void shouldGenerateEnumMappingMethod() {
 This test looks identical as a test written by a user in their own code.
 However, running this test will give us the following output:
 
-<img src="/images/testing-mapstruct-test-run-intellij-initial.png" style="padding-bottom: 3px;"/>
+<img src="/images/testing-dettonville-test-run-intellij-initial.png" style="padding-bottom: 3px;"/>
 
 There were actually 2 test runs and not 1. 
 One test (`jdk11`) is run using the javac compiler from the JDK,
@@ -163,8 +163,8 @@ public interface ErroneousOrderMapperUsingUnknownEnumConstants {
 
 When a user writes this mapper MapStruct will generate 2 compiler errors:
 
-* Constant FOO doesn't exist in enum type org.mapstruct.ap.test.value.OrderType.
-* Constant BAR doesn't exist in enum type org.mapstruct.ap.test.value.ExternalOrderType.
+* Constant FOO doesn't exist in enum type org.dettonville.ap.test.value.OrderType.
+* Constant BAR doesn't exist in enum type org.dettonville.ap.test.value.ExternalOrderType.
 
 In order to test this we will write the following method:
 
@@ -180,8 +180,8 @@ If we now run this test, the test will fail with the following output
 
 {{< prettify >}}
 org.junit.ComparisonFailure: [Compilation failed. Diagnostics: [
-    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:26 Constant FOO doesn't exist in enum type org.mapstruct.ap.test.value.OrderType.,
-    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:27 Constant BAR doesn't exist in enum type org.mapstruct.ap.test.value.ExternalOrderType.
+    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:26 Constant FOO doesn't exist in enum type org.dettonville.ap.test.value.OrderType.,
+    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:27 Constant BAR doesn't exist in enum type org.dettonville.ap.test.value.ExternalOrderType.
 ]]
 Expected :SUCCEEDED
 Actual   :FAILED
@@ -200,11 +200,11 @@ To do that the test needs to look like:
         @Diagnostic(type = ErroneousOrderMapperUsingUnknownEnumConstants.class,
             kind = Kind.ERROR,
             line = 26,
-            message = "Constant FOO doesn't exist in enum type org.mapstruct.ap.test.value.OrderType."),
+            message = "Constant FOO doesn't exist in enum type org.dettonville.ap.test.value.OrderType."),
         @Diagnostic(type = ErroneousOrderMapperUsingUnknownEnumConstants.class,
             kind = Kind.ERROR,
             line = 27,
-            message = "Constant BAR doesn't exist in enum type org.mapstruct.ap.test.value." +
+            message = "Constant BAR doesn't exist in enum type org.dettonville.ap.test.value." +
                 "ExternalOrderType.")
     }
 )

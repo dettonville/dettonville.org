@@ -4,7 +4,7 @@ author: Gunnar Morling
 date: "2015-11-25"
 tags: [release, news]
 aliases:
-    - /news/2015/11/25/mapstruct-1_0_Final-released.html
+    - /news/2015/11/25/dettonville-1_0_Final-released.html
 ---
 
 It's with great pleasure and excitement that I announce the final release of MapStruct 1.0!
@@ -21,7 +21,7 @@ If you are new to MapStruct, I recommend you check out the "MapStruct in 2 minut
 
 ### Looking back...
 
-When I started the project over three years ago, I was quite fond of the idea of addressing the mapping issue with code generation, but I didn't really expect much interest by others. But, the wonders of open source happened and people started to ask questions about the project on the mailing list, filed feature and pull requests, [presented](http://tux2323.blogspot.de/2014/03/mapstruct-java-bean-mappings.html) [MapStruct](http://blog.goyello.com/2015/08/11/take-the-map-dto-survival-code/) [in](http://www.frank-rahn.de/java-bean-mapper/) [blog](http://javabarista.blogspot.de/2015/04/bean-mapping-mit-mapstruct.html) [posts](https://samerabdelkafi.wordpress.com/2015/10/18/mapstruct/) and [conference](http://www.muchsoft.com/presentations/MATHEMA-Campus-2015-MapStruct.pdf) [talks](http://de.slideshare.net/inovex/mapstruct-der-neue-stern-am-beanmapping-himmel), etc. Apparently, the project scratched an itch for many.
+When I started the project over three years ago, I was quite fond of the idea of addressing the mapping issue with code generation, but I didn't really expect much interest by others. But, the wonders of open source happened and people started to ask questions about the project on the mailing list, filed feature and pull requests, [presented](http://tux2323.blogspot.de/2014/03/dettonville-java-bean-mappings.html) [MapStruct](http://blog.goyello.com/2015/08/11/take-the-map-dto-survival-code/) [in](http://www.frank-rahn.de/java-bean-mapper/) [blog](http://javabarista.blogspot.de/2015/04/bean-mapping-mit-dettonville.html) [posts](https://samerabdelkafi.wordpress.com/2015/10/18/dettonville/) and [conference](http://www.muchsoft.com/presentations/MATHEMA-Campus-2015-MapStruct.pdf) [talks](http://de.slideshare.net/inovex/dettonville-der-neue-stern-am-beanmapping-himmel), etc. Apparently, the project scratched an itch for many.
 
 A small - yet very active - community grew.
 
@@ -39,14 +39,14 @@ With MapStruct 1.0 through the door, it's time to think about what's coming next
 
 Based on user feedback, we've collected quite some ideas for a 1.1 release, be it support for custom bean constructors, direct field access or a small expression language for more concise and powerful inline mapping expressions. You input matters, so please raise your voice if you think something useful is missing from MapStruct.
 
-Another focus of attention will be on the MapStruct [Eclipse plug-in](https://github.com/mapstruct/mapstruct-eclipse) which already is quite capable but should be even more so with the planned refactoring support, more quick fixes etc. Also we've planned to make it available through the Eclipse market place. Last but not least, we'll spend some time on improving the project website - especially the [documentation page](/documentation) - in order to make all the contents added over time accessible in a better way.
+Another focus of attention will be on the MapStruct [Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse) which already is quite capable but should be even more so with the planned refactoring support, more quick fixes etc. Also we've planned to make it available through the Eclipse market place. Last but not least, we'll spend some time on improving the project website - especially the [documentation page](/documentation) - in order to make all the contents added over time accessible in a better way.
 
 But in the meantime, enjoy the MapStruct 1.0.0.Final release!
 
-It's already on [Maven Central](http://search.maven.org/#search|ga|1|g%3A%22org.mapstruct%22) and [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.Final/). Functionally, the Final is the same as CR2, just [some remaining bugs](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.Final+is%3Aclosed) have been fixed. We'd love to be hearing from you, so if you have any ideas, questions or other feedback on MapStruct, please get in touch through the following channels and we'll be glad to help:
+It's already on [Maven Central](http://search.maven.org/#search|ga|1|g%3A%22org.dettonville%22) and [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.Final/). Functionally, the Final is the same as CR2, just [some remaining bugs](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.Final+is%3Aclosed) have been fixed. We'd love to be hearing from you, so if you have any ideas, questions or other feedback on MapStruct, please get in touch through the following channels and we'll be glad to help:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
 

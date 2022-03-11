@@ -17,7 +17,7 @@ The enhancements include:
 
 <!--more-->
 
-Altogether, not less than [21 issues](https://github.com/mapstruct/mapstruct/milestone/29?closed=1) were fixed for this release.
+Altogether, not less than [21 issues](https://github.com/dettonville/dettonville/milestone/29?closed=1) were fixed for this release.
 
 ### What's inside
 
@@ -48,7 +48,7 @@ Recently we passed the 2000 stargazers milestone on GitHub.
 
 Most impressive though are the download numbers we get from the Maven Central repo.
 They have doubled since our last release and we have seen an amazing rate of our users upgrading to the latest release.
-As an example here are the numbers for the _org.mapstruct:mapstruct-processor_ artifact:
+As an example here are the numbers for the _org.dettonville:dettonville-processor_ artifact:
 
 <div style="text-align:center">
     <img src="/images/downloads_09-2018_09-2019.png" style="padding-bottom: 3px;"/>
@@ -60,13 +60,13 @@ Happy coding with MapStruct 1.3!!
 
 You can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.3.1.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.3.1.Final|jar)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.3.1.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.3.1.Final|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.3.1.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.3.1.Final|jar)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.3.1.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.3.1.Final|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.3.1.Final).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.3.1.Final).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group or in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

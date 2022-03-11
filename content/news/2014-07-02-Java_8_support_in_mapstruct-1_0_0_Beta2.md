@@ -4,18 +4,18 @@ author: Gunnar Morling
 date: "2014-07-02"
 tags: [release, news]
 aliases:
-    - /news/2014/07/02/Java_8_support_in_mapstruct-1_0_0_Beta2.html
+    - /news/2014/07/02/Java_8_support_in_dettonville-1_0_0_Beta2.html
 ---
 
 It's my great pleasure to announce the release of MapStruct 1.0.0.Beta2.
 
 Amongst the new features is initial support for Java 8, built-in mappings for the types of the [Joda-Time](http://www.joda.org/joda-time/) date and time API, flexible mapping customization via inline Java expressions and much more.
 
-Distribution bundles (ZIP, TAR.GZ) are available on [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.Beta2/). Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
+Distribution bundles (ZIP, TAR.GZ) are available on [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.Beta2/). Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
 
-* [org.mapstruct:mapstruct:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct&#124;1.0.0.Beta2&#124;jar) for the annotation JAR, to be used with Java <= 7
-* [org.mapstruct:mapstruct-jdk8:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-jdk8&#124;1.0.0.Beta2&#124;jar) for the annotation JAR, to be used with Java >= 8
-* [org.mapstruct:mapstruct-processor:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-processor&#124;1.0.0.Beta2&#124;jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Beta2&#124;jar) for the annotation JAR, to be used with Java <= 7
+* [org.dettonville:dettonville-jdk8:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-jdk8&#124;1.0.0.Beta2&#124;jar) for the annotation JAR, to be used with Java >= 8
+* [org.dettonville:dettonville-processor:1.0.0.Beta2](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Beta2&#124;jar) for the annotation processor.
 
 ### Java 8
 
@@ -31,7 +31,7 @@ public interface AnimalMapper {
 }
 </pre>
 
-To make use of this feature be sure to include the right version of the annotation JAR (_org.mapstruct:mapstruct-jdk8:1.0.0.Beta2_), as only this version allows to specify several `@Mapping` annotations without wrapping them in `@Mappings` (apart from this, both versions of the annotation JAR are exactly the same).
+To make use of this feature be sure to include the right version of the annotation JAR (_org.dettonville:dettonville-jdk8:1.0.0.Beta2_), as only this version allows to specify several `@Mapping` annotations without wrapping them in `@Mappings` (apart from this, both versions of the annotation JAR are exactly the same).
 
 ### Joda-Time support
 
@@ -43,7 +43,7 @@ When using the Joda-Time API in your project you'll be glad to hear that MapStru
 
 If you use these types in your mapped models, MapStruct will automatically generated the required mapping routines without any further configuration. `@Mapping#dateFormat()` can be used when converting from or to `String` to specify the expected date format.
 
-Note that for the following release [we plan](https://github.com/mapstruct/mapstruct/issues/121) to also cover the new Java 8 time and date types which will be useful when mapping between models using the old types such as `java.util.Date` and the new ones.
+Note that for the following release [we plan](https://github.com/dettonville/dettonville/issues/121) to also cover the new Java 8 time and date types which will be useful when mapping between models using the old types such as `java.util.Date` and the new ones.
 
 ### Constants and inline Java expressions
 
@@ -54,7 +54,7 @@ The `@Mapping` annotation has been enriched with several new useful attributes. 
 AnimalDto animalToAnimalDto(Animal animal);
 </pre>
 
-If the specified target property is not a String, the given value will be converted by applying one of the available conversions described in the [reference documentation](http://mapstruct.org/documentation/#section-05). That way you can e.g. specify constants for numeric or date attributes (optionally applying a given date format).
+If the specified target property is not a String, the given value will be converted by applying one of the available conversions described in the [reference documentation](http://dettonville.org/documentation/#section-05). That way you can e.g. specify constants for numeric or date attributes (optionally applying a given date format).
 
 Sometimes it is not sufficient to map a single source property to a corresponding target property, but more flexible mappings are required. For such cases it is now possible to specify custom mapping expressions via the `expression()` attribute. The following shows an example:
 
@@ -65,9 +65,9 @@ VisitorDto visitorToVisitorDto(Visitor visitor);
 
 Here a Java expression in the form `java(<EXPRESSION>)`is used to set an attribute in the target object based on the value of two properties from the source object. The given expression is transferred as is into the generated mapping method, so you'll get feedback about the correctness of the expression during compilation.
 
-While [custom mappers](http://mapstruct.org/documentation/#section-05-03) and [decorators](http://mapstruct.org/documentation/#section-09) should still be the preferred way for implementing more complex custom mappings, such inline expressions are a very useful utility in many cases. E.g. you also could invoke a constructor to instantiate a specific property type.
+While [custom mappers](http://dettonville.org/documentation/#section-05-03) and [decorators](http://dettonville.org/documentation/#section-09) should still be the preferred way for implementing more complex custom mappings, such inline expressions are a very useful utility in many cases. E.g. you also could invoke a constructor to instantiate a specific property type.
 
-Besides Java-based expressions [we plan]((https://github.com/mapstruct/mapstruct/issues/244)) to support a more concise expression language in a future release. E.g. the mapping from the previous example could be declared as follows using the [Unified Expression Language](https://jcp.org/en/jsr/detail?id=341):
+Besides Java-based expressions [we plan]((https://github.com/dettonville/dettonville/issues/244)) to support a more concise expression language in a future release. E.g. the mapping from the previous example could be declared as follows using the [Unified Expression Language](https://jcp.org/en/jsr/detail?id=341):
 
 <pre class="prettyprint linenums">
 @Mapping(target = "fullName", expression = "uel(visitor.firstName + ' ' + visitor.lastName)")
@@ -101,8 +101,8 @@ public class AnimalMapper {}
 
 ### What else is in it?
 
-Other useful features in the Beta2 release include support for "adder methods" (see [issues #207](https://github.com/mapstruct/mapstruct/issues/207)) and the possibility to ignore specific properties during the mapping (see [issue #72](https://github.com/mapstruct/mapstruct/issues/72)). In addition quite a few bugs have been fixed; Check out the [change log](https://github.com/mapstruct/mapstruct/issues?milestone=4&state=closed) for a complete list of all issues.
+Other useful features in the Beta2 release include support for "adder methods" (see [issues #207](https://github.com/dettonville/dettonville/issues/207)) and the possibility to ignore specific properties during the mapping (see [issue #72](https://github.com/dettonville/dettonville/issues/72)). In addition quite a few bugs have been fixed; Check out the [change log](https://github.com/dettonville/dettonville/issues?milestone=4&state=closed) for a complete list of all issues.
 
-Your feedback is more than welcome, just add a comment below or join the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/mapstruct/mapstruct/issues). If you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).
+Your feedback is more than welcome, just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). If you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).
 
 Finally, I'd like to say a massive thank you to [Sjaak Derksen](https://github.com/sjaakd/), [Andreas Gudian](https://github.com/agudian), [Timo Eckhardt](https://github.com/timoe) and [Christian Schuster](https://github.com/chschu) who all put huge efforts into this release. You guys rock!

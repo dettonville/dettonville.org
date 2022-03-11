@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>InheritConfiguration (MapStruct 1.2.0.Final)</title>
 <meta name="date" content="2017-10-17">
-<meta name="keywords" content="org.mapstruct.InheritConfiguration class">
+<meta name="keywords" content="org.dettonville.InheritConfiguration class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/DecoratedWith.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/InheritInverseConfiguration.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/DecoratedWith.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InheritInverseConfiguration.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/InheritConfiguration.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/InheritConfiguration.html" target="_top">Frames</a></li>
 <li><a href="InheritConfiguration.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type InheritConfiguration" class="title">Annotation Type InheritConfiguration</h2>
 </div>
 <div class="contentContainer">
@@ -102,12 +102,12 @@
 <pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#CLASS" title="class or interface in java.lang.annotation">CLASS</a>)
 public @interface <span class="memberNameLabel">InheritConfiguration</span></pre>
-<div class="block">Advises the code generator to apply the configuration (as given via <a href="../../org/mapstruct/Mapping.html" title="annotation in org.mapstruct"><code>Mapping</code></a>, <a href="../../org/mapstruct/IterableMapping.html" title="annotation in org.mapstruct"><code>IterableMapping</code></a> etc.)
+<div class="block">Advises the code generator to apply the configuration (as given via <a href="../../org/dettonville/Mapping.html" title="annotation in org.dettonville"><code>Mapping</code></a>, <a href="../../org/dettonville/IterableMapping.html" title="annotation in org.dettonville"><code>IterableMapping</code></a> etc.)
  from another mapping method (declared on the same mapper type) or prototype method (declared on a mapper config class
- referenced via <a href="../../org/mapstruct/Mapper.html#config--"><code>Mapper.config()</code></a>) to the annotated method as well.
+ referenced via <a href="../../org/dettonville/Mapper.html#config--"><code>Mapper.config()</code></a>) to the annotated method as well.
  <p>
  If no method can be identified unambiguously as configuration source (i.e. several candidate methods with matching
- source and target type exist), the name of the method to inherit from must be specified via <a href="../../org/mapstruct/InheritConfiguration.html#name--"><code>name()</code></a>.
+ source and target type exist), the name of the method to inherit from must be specified via <a href="../../org/dettonville/InheritConfiguration.html#name--"><code>name()</code></a>.
  <p>
  A typical use case is annotating an update method so it inherits all mappings from a corresponding "standard" mapping
  method:
@@ -148,7 +148,7 @@ public @interface <span class="memberNameLabel">InheritConfiguration</span></pre
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/InheritConfiguration.html#name--">name</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/InheritConfiguration.html#name--">name</a></span></code>
 <div class="block">The name of the mapping method to inherit the mappings from.</div>
 </td>
 </tr>
@@ -214,11 +214,11 @@ public @interface <span class="memberNameLabel">InheritConfiguration</span></pre
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/DecoratedWith.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/InheritInverseConfiguration.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/DecoratedWith.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InheritInverseConfiguration.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/InheritConfiguration.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/InheritConfiguration.html" target="_top">Frames</a></li>
 <li><a href="InheritConfiguration.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -253,6 +253,6 @@ public @interface <span class="memberNameLabel">InheritConfiguration</span></pre
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2017 <a href="http://mapstruct.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2017 <a href="http://dettonville.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

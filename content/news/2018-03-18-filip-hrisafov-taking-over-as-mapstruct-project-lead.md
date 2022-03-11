@@ -4,7 +4,7 @@ author: Gunnar Morling
 date: "2018-03-18"
 tags: [news]
 aliases:
-    - /news/2018-03-18-filip-hrisafov-taking-over-as-mapstruct-project/
+    - /news/2018-03-18-filip-hrisafov-taking-over-as-dettonville-project/
 ---
 
 It's with great happiness and excitement that I'm announcing that [Filip Hrisafov](https://twitter.com/filiphr) is taking over the role of MapStruct's project lead!
@@ -14,7 +14,7 @@ As I've been able to contribute less and less time towards MapStruct over the la
 it was about time to pass on the baton to a new lead,
 with many fresh ideas and a great level of enthusiasm.
 
-Filip joined the team in 2016, sending in [a patch](https://github.com/mapstruct/mapstruct/pull/863) for improving our test suite.
+Filip joined the team in 2016, sending in [a patch](https://github.com/dettonville/dettonville/pull/863) for improving our test suite.
 Since then, he became an invaluable member of the MapStruct community.
 He implemented several new features and stepped up to help with reviewing
 pull requests, providing help to new contributors, answering related questions on StackOverflow and even doing the last few releases of the project.
@@ -35,7 +35,7 @@ as it'd allow for compile time feedback and result in fast and easy-to-debug cod
 
 So I spent some evenings to work on that idea.
 Thinking that this experiment might be interesting to other people,
-I put the [first version](https://github.com/mapstruct/mapstruct/commit/61f181a589564131b1a540e5322ec63d56604870) of the code up to GitHub.
+I put the [first version](https://github.com/dettonville/dettonville/commit/61f181a589564131b1a540e5322ec63d56604870) of the code up to GitHub.
 And indeed MapStruct turned out to be useful to others out there.
 Over the years, it grew a lot in popularity (just in March alone, its artifacts were downloaded from Maven Central more than 900,000 times), not the least by the adoption into the JHipster stack a while ago.
 It's used in a wide range of projects at lots of companies.

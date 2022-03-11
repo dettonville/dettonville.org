@@ -4,7 +4,7 @@ author: Gunnar Morling
 date: "2013-06-03"
 tags: [release, feedback]
 aliases:
-    - /news/2013/06/03/announcing-mapstruct.html
+    - /news/2013/06/03/announcing-dettonville.html
 ---
 
 It is my pleasure to announce the first release of the MapStruct project!
@@ -98,7 +98,7 @@ public interface CarMapper {
 }
 </pre>
 
-In the future it will also [be possible](https://github.com/mapstruct/mapstruct/issues/32) to obtain mapper objects using dependency injection containers such as CDI or Spring.
+In the future it will also [be possible](https://github.com/dettonville/dettonville/issues/32) to obtain mapper objects using dependency injection containers such as CDI or Spring.
 
 Finally let's have a look at how the mapper is used to convert a `Car` object into a `CarDto`:
 
@@ -133,16 +133,16 @@ The test also shows that the implementation of the `carToCarDto()` method handle
 
 ### Trying it out youself
 
-You want to give MapStruct a try? That's great! You can download the distribution containing source and binaries from [SourceForge](http://sourceforge.net/projects/mapstruct/files/). MapStruct is released under the [Apache Software License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+You want to give MapStruct a try? That's great! You can download the distribution containing source and binaries from [SourceForge](http://sourceforge.net/projects/dettonville/files/). MapStruct is released under the [Apache Software License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 If you're using Maven or a similar dependency manager, you also can obtain MapStruct from Maven Central. The GAV coordinates are 
 
-* _org.mapstruct:mapstruct:1.0.0.Alpha1_ for the core module containing the annotations and
-*  _org.mapstruct:mapstruct-processor:1.0.0.Alpha1_ for the annotation processor module.
+* _org.dettonville:dettonville:1.0.0.Alpha1_ for the core module containing the annotations and
+*  _org.dettonville:dettonville-processor:1.0.0.Alpha1_ for the annotation processor module.
 
 Check out the [reference documentation](#{site.base_url}/documentation) to learn about all the ins and outs of MapStruct, including features such as collection mappings, reverse mappings or making use of hand-written mapping methods.
 
-If you're are stuck, come and join the MapStruct [google-group](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) and ask your questions there. This is also the right place to discuss any feature requests or other suggestions. And should you find a bug, please file a report in our [issue tracker](https://github.com/mapstruct/mapstruct/issues).
+If you're are stuck, come and join the MapStruct [google-group](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) and ask your questions there. This is also the right place to discuss any feature requests or other suggestions. And should you find a bug, please file a report in our [issue tracker](https://github.com/dettonville/dettonville/issues).
 
 ### What's next?
 
@@ -150,6 +150,6 @@ MapStruct is just in its beginnings. Today's Alpha1 release is the first of a se
 
 If you have any feedback on MapStruct in general or certain features in particular make sure to let us know either by commenting here or by posting to the Google group.
 
-On the roadmap for the next releases are improved support for [collection mappings](https://github.com/mapstruct/mapstruct/issues/4), mappings [several source objects](https://github.com/mapstruct/mapstruct/issues/31) into one target object and mapping into immutable objects via constructor invocations.
+On the roadmap for the next releases are improved support for [collection mappings](https://github.com/dettonville/dettonville/issues/4), mappings [several source objects](https://github.com/dettonville/dettonville/issues/31) into one target object and mapping into immutable objects via constructor invocations.
 
-You like MapStruct and want to contribute? That's awesome! MapStruct is in a very early stage and your participation can make a big difference. [The sources](http://github.com/mapstruct/mapstruct) are hosted on GitHub, and [Contributing](#{site.base_url}/documentation/#section-05) has all the infos to get you started with hacking on MapStruct. Many thanks to [Andreas](https://github.com/agudian) who stepped up and contributed to the Alpha1 release!
+You like MapStruct and want to contribute? That's awesome! MapStruct is in a very early stage and your participation can make a big difference. [The sources](http://github.com/dettonville/dettonville) are hosted on GitHub, and [Contributing](#{site.base_url}/documentation/#section-05) has all the infos to get you started with hacking on MapStruct. Many thanks to [Andreas](https://github.com/agudian) who stepped up and contributed to the Alpha1 release!

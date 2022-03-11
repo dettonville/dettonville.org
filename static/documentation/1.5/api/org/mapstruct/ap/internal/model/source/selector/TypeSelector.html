@@ -6,7 +6,7 @@
 <title>TypeSelector (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.internal.model.source.selector.TypeSelector class">
+<meta name="keywords" content="org.dettonville.ap.internal.model.source.selector.TypeSelector class">
 <meta name="keywords" content="getMatchingMethods()">
 <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../../jquery/jquery-ui.css" title="Style">
@@ -118,7 +118,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.internal.model.source.selector</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.internal.model.source.selector</a></div>
 <h2 title="Class TypeSelector" class="title">Class TypeSelector</h2>
 </div>
 <div class="contentContainer">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.internal.model.source.selector.TypeSelector</li>
+<li>org.dettonville.ap.internal.model.source.selector.TypeSelector</li>
 </ul>
 </li>
 </ul>
@@ -137,7 +137,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">TypeSelector</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Selects those methods from the given input set which match the given source and target types (via
- <a href="../MethodMatcher.html" title="class in org.mapstruct.ap.internal.model.source"><code>MethodMatcher</code></a>).</div>
+ <a href="../MethodMatcher.html" title="class in org.dettonville.ap.internal.model.source"><code>MethodMatcher</code></a>).</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Sjaak Derksen</dd>
@@ -162,8 +162,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapstruct.ap.internal.model.common.TypeFactory,org.mapstruct.ap.internal.util.FormattingMessager)">TypeSelector</a></span>&#8203;(<a href="../../common/TypeFactory.html" title="class in org.mapstruct.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
-            <a href="../../../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;messager)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.dettonville.ap.internal.model.common.TypeFactory,org.dettonville.ap.internal.util.FormattingMessager)">TypeSelector</a></span>&#8203;(<a href="../../common/TypeFactory.html" title="class in org.dettonville.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
+            <a href="../../../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;messager)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -185,13 +185,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>&lt;T extends <a href="../Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMatchingMethods(org.mapstruct.ap.internal.model.source.Method,java.util.List,java.util.List,org.mapstruct.ap.internal.model.common.Type,org.mapstruct.ap.internal.model.common.Type,org.mapstruct.ap.internal.model.source.selector.SelectionCriteria)">getMatchingMethods</a></span>&#8203;(<a href="../Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;methods,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&gt;&nbsp;sourceTypes,
-                  <a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;mappingTargetType,
-                  <a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;returnType,
-                  <a href="SelectionCriteria.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectionCriteria</a>&nbsp;criteria)</code></th>
+<td class="colFirst"><code>&lt;T extends <a href="../Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMatchingMethods(org.dettonville.ap.internal.model.source.Method,java.util.List,java.util.List,org.dettonville.ap.internal.model.common.Type,org.dettonville.ap.internal.model.common.Type,org.dettonville.ap.internal.model.source.selector.SelectionCriteria)">getMatchingMethods</a></span>&#8203;(<a href="../Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;methods,
+                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&gt;&nbsp;sourceTypes,
+                  <a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;mappingTargetType,
+                  <a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;returnType,
+                  <a href="SelectionCriteria.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectionCriteria</a>&nbsp;criteria)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -218,14 +218,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(org.mapstruct.ap.internal.model.common.TypeFactory,org.mapstruct.ap.internal.util.FormattingMessager)">
+<a id="&lt;init&gt;(org.dettonville.ap.internal.model.common.TypeFactory,org.dettonville.ap.internal.util.FormattingMessager)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TypeSelector</h4>
-<pre>public&nbsp;TypeSelector&#8203;(<a href="../../common/TypeFactory.html" title="class in org.mapstruct.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
-                    <a href="../../../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;messager)</pre>
+<pre>public&nbsp;TypeSelector&#8203;(<a href="../../common/TypeFactory.html" title="class in org.dettonville.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
+                    <a href="../../../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;messager)</pre>
 </li>
 </ul>
 </li>
@@ -238,18 +238,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getMatchingMethods(org.mapstruct.ap.internal.model.source.Method,java.util.List,java.util.List,org.mapstruct.ap.internal.model.common.Type,org.mapstruct.ap.internal.model.common.Type,org.mapstruct.ap.internal.model.source.selector.SelectionCriteria)">
+<a id="getMatchingMethods(org.dettonville.ap.internal.model.source.Method,java.util.List,java.util.List,org.dettonville.ap.internal.model.common.Type,org.dettonville.ap.internal.model.common.Type,org.dettonville.ap.internal.model.source.selector.SelectionCriteria)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getMatchingMethods</h4>
-<pre class="methodSignature">public&nbsp;&lt;T extends <a href="../Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;getMatchingMethods&#8203;(<a href="../Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
-                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;methods,
-                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&gt;&nbsp;sourceTypes,
-                                                                     <a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;mappingTargetType,
-                                                                     <a href="../../common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;returnType,
-                                                                     <a href="SelectionCriteria.html" title="class in org.mapstruct.ap.internal.model.source.selector">SelectionCriteria</a>&nbsp;criteria)</pre>
+<pre class="methodSignature">public&nbsp;&lt;T extends <a href="../Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;getMatchingMethods&#8203;(<a href="../Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="SelectedMethod.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectedMethod</a>&lt;T&gt;&gt;&nbsp;methods,
+                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&gt;&nbsp;sourceTypes,
+                                                                     <a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;mappingTargetType,
+                                                                     <a href="../../common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;returnType,
+                                                                     <a href="SelectionCriteria.html" title="class in org.dettonville.ap.internal.model.source.selector">SelectionCriteria</a>&nbsp;criteria)</pre>
 </li>
 </ul>
 </li>

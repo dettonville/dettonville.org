@@ -1,6 +1,6 @@
 +++
 date = "2016-02-14T16:11:58+05:30"
-title = "Updating mapstruct.org"
+title = "Updating dettonville.org"
 weight = 500
 teaser = "How to update this website"
 [menu]
@@ -8,7 +8,7 @@ teaser = "How to update this website"
 parent = "Development"
 +++
 
-As MapStruct itself, this web site is open-source, too. You can find it's source code [here](https://github.com/mapstruct/mapstruct.org).
+As MapStruct itself, this web site is open-source, too. You can find it's source code [here](https://github.com/dettonville/dettonville.org).
 
 The website is built using the [Hugo](http://gohugo.io/) static site generator. So it's recommended to spend a few minutes reading the [Getting Started](http://gohugo.io/overview/introduction/) section of the Hugo docs if you are not familiar with it yet.
 
@@ -26,7 +26,7 @@ Make sure that you are using Git 2.5 or later due the worktree feature used for 
 Check out the web site's source code and assign the name "upstream" to the remote repository by running:
 
 {{< prettify >}}
-git clone git@github.com:mapstruct/mapstruct.org.git
+git clone git@github.com:dettonville/dettonville.org.git
 git remote rename origin upstream
 {{< /prettify >}}
 
@@ -70,9 +70,9 @@ And then the remainder of the post.
 
 The [team page](/development/team) is a data-driven page. If you want to be listed on the page, add a new file to _data/team_ following the structure of the existing files in that directory.
 
-## Publishing to mapstruct.org
+## Publishing to dettonville.org
 
-The website is automatically published for every commit to master via [this GitHub Workflow](https://github.com/mapstruct/mapstruct.org/actions?query=workflow%3A%22GitHub+Pages%22).
+The website is automatically published for every commit to master via [this GitHub Workflow](https://github.com/dettonville/dettonville.org/actions?query=workflow%3A%22GitHub+Pages%22).
 The workflow generates the HTML with the `hugo` command in the _public_ directory.
 The contents of that directory are then pushed to the "gh-pages" branch of the website repository.
 

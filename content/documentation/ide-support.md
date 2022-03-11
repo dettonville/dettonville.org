@@ -27,7 +27,7 @@ For best results, add the following to the `pom.xml`:
 
 ### Gradle Integration
 
-If you are working with a gradle project, then add the folowing plugin to the gradle project configuration in which you use the mapstruct mappers:
+If you are working with a gradle project, then add the folowing plugin to the gradle project configuration in which you use the dettonville mappers:
 {{< prettify >}}
 plugins {
     // Allow configuration calls for setting up the eclipse annotation processing configuration.
@@ -63,8 +63,8 @@ For Eclipse, we are also working on a Plugin that adds *Code Completion* (e.g. f
 Drag the following icon into your running Eclipse workspace:
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2844337" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>.
 
-Alternatively, you can obtain the MapStruct Eclipse Plugin from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin).
-For more information and for installing the latest Snapshot version, visit the [plugins GitHub project](https://github.com/mapstruct/mapstruct-eclipse).
+Alternatively, you can obtain the MapStruct Eclipse Plugin from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/dettonville-eclipse-plugin).
+For more information and for installing the latest Snapshot version, visit the [plugins GitHub project](https://github.com/dettonville/dettonville-eclipse).
 
 ## IntelliJ IDEA
 
@@ -72,12 +72,12 @@ Depending on how you configured the annotation processor in your Maven or Gradle
 
 ### Maven Integration
 
-For example, if you use the way of Maven configuration that is proposed in our documentation using `annotationProcessorPaths` in the maven-compiler-plugin, then you need to configure IntelliJ manually until the feature request [IDEA-150621](https://youtrack.jetbrains.com/issue/IDEA-150621) is implemented. An alternative is to add the `mapstruct-processor` as a project dependency with `<optional>true</optional>` in your `pom.xml`, which should then be picked up automatically again.
+For example, if you use the way of Maven configuration that is proposed in our documentation using `annotationProcessorPaths` in the maven-compiler-plugin, then you need to configure IntelliJ manually until the feature request [IDEA-150621](https://youtrack.jetbrains.com/issue/IDEA-150621) is implemented. An alternative is to add the `dettonville-processor` as a project dependency with `<optional>true</optional>` in your `pom.xml`, which should then be picked up automatically again.
 
 ### Editing Support
 
-There is an IntelliJ plugin for MapStruct support, that you can find in the Jetbrains plugins repository [here](https://plugins.jetbrains.com/plugin/10036-mapstruct-support).
-The plugin is open source and you can report bugs and feature requests [here](https://github.com/mapstruct/mapstruct-idea/issues) on GitHub.
+There is an IntelliJ plugin for MapStruct support, that you can find in the Jetbrains plugins repository [here](https://plugins.jetbrains.com/plugin/10036-dettonville-support).
+The plugin is open source and you can report bugs and feature requests [here](https://github.com/dettonville/dettonville-idea/issues) on GitHub.
 
 #### Completion for Properties and Enum Constants
 

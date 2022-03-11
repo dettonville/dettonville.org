@@ -7,7 +7,7 @@ tags: [news, examples]
 
 This year is nearly over, but it was started with something new that came up in the Java world: [Quarkus](https://quarkus.io/). You may already have heard about it, if not, don’t worry, I will quickly summarize what it is.
 
-Additionally to this post you can also find a working example in our [examples repository](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-quarkus).
+Additionally to this post you can also find a working example in our [examples repository](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-quarkus).
 
 <!--more-->
 
@@ -33,7 +33,7 @@ And thats exactly the point where MapStruct jumps in as a reflection-free mappin
 ### How to integrate MapStruct in a Quarkus application
 So let us see how well MapStruct plays together with Quarkus!
 
-I made an example application that will show you how you can integrate MapStruct in your Quarkus application. You will find the complete demo application in our [examples repository](https://github.com/mapstruct/mapstruct-examples/mapstruct-quarkus).
+I made an example application that will show you how you can integrate MapStruct in your Quarkus application. You will find the complete demo application in our [examples repository](https://github.com/dettonville/dettonville-examples/dettonville-quarkus).
 
 The example should be a simple REST application just having a `/person` endpoint returning information about a person. Obviously, the internally used classes should not be exposed, but a DTO will be created and filled with information from a MapStruct mapper.
 
@@ -42,9 +42,9 @@ After reading the [Getting Started](https://quarkus.io/guides/getting-started-gu
 
 {{< prettify >}}
 mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create \
-  -DprojectGroupId=org.mapstruct.examples.quarkus \
-  -DprojectArtifactId=mapstruct-examples-quarkus \
-  -DclassName="org.mapstruct.example.quarkus.PersonResource" \
+  -DprojectGroupId=org.dettonville.examples.quarkus \
+  -DprojectArtifactId=dettonville-examples-quarkus \
+  -DclassName="org.dettonville.example.quarkus.PersonResource" \
   -Dpath="/person" \
   -Dextensions="resteasy-jsonb"
 {{< /prettify >}}
@@ -56,13 +56,13 @@ You just need to add MapStruct in your projects POM:
 
 {{< prettify xml >}}
 <dependency>
-  <groupId>org.mapstruct</groupId>
-  <artifactId>mapstruct</artifactId>
+  <groupId>org.dettonville</groupId>
+  <artifactId>dettonville</artifactId>
   <version>1.3.1.Final</version>
 </dependency>
 <dependency>
-  <groupId>org.mapstruct</groupId>
-  <artifactId>mapstruct-processor</artifactId>
+  <groupId>org.dettonville</groupId>
+  <artifactId>dettonville-processor</artifactId>
   <version>1.3.1.Final</version>
   <scope>provided</scope>
 </dependency>
@@ -192,7 +192,7 @@ You will notice that running the native compilation will take a while as it will
 The output after starting the app should look like this:
 
 {{< prettify >}}
-mapstruct-examples-quarkus 1.0-SNAPSHOT (running on Quarkus 1.0.1.Final) started in 0.006s. Listening on: http://0.0.0.0:8080
+dettonville-examples-quarkus 1.0-SNAPSHOT (running on Quarkus 1.0.1.Final) started in 0.006s. Listening on: http://0.0.0.0:8080
 Profile prod activated. 
 Installed features: [cdi, resteasy, resteasy-jsonb]
 {{< /prettify >}}
@@ -212,7 +212,7 @@ The important point is to use CDI. The default component model (that’s where y
 
 
 #### One small disadvantage still left
-In case you are an experienced MapStruct user you might have noticed that [the way how I added MapStruct](#adding-mapstruct) is a bit different to the way it is written in our [reference guide](http://mapstruct.org/documentation/stable/reference/html/#_apache_maven).
+In case you are an experienced MapStruct user you might have noticed that [the way how I added MapStruct](#adding-dettonville) is a bit different to the way it is written in our [reference guide](http://dettonville.org/documentation/stable/reference/html/#_apache_maven).
 
 The Quarkus development mode provides a hot-reload of your application, unfortunately it seems that the annotation processor will not be triggered again when you define the MapStruct processor within the annotation-processor path of the `maven-compiler-plugin` and you have to restart the application to see changes on the mappings.
 

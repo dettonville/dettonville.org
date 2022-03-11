@@ -528,7 +528,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_gradle">2.2. Gradle</a></li>
 <li><a href="#_apache_ant">2.3. Apache Ant</a></li>
 <li><a href="#configuration-options">2.4. Configuration options</a></li>
-<li><a href="#_using_mapstruct_on_java_9">2.5. Using MapStruct on Java 9</a></li>
+<li><a href="#_using_dettonville_on_java_9">2.5. Using MapStruct on Java 9</a></li>
 </ul>
 </li>
 <li><a href="#defining-mapper">3. Defining a mapper</a>
@@ -607,10 +607,10 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is the reference documentation of MapStruct, an annotation processor for generating type-safe, performant and dependency-free bean mapping code.
-This guide covers all the functionality provided by MapStruct. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">Google group</a> to get help.</p>
+This guide covers all the functionality provided by MapStruct. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">Google group</a> to get help.</p>
 </div>
 <div class="paragraph">
-<p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/mapstruct/mapstruct">MapStruct GitHub repostory</a>,
+<p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville">MapStruct GitHub repostory</a>,
 or, better yet, help the community and send a pull request for fixing it!</p>
 </div>
 <div class="paragraph">
@@ -660,10 +660,10 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 <div class="ulist">
 <ul>
 <li>
-<p><em>org.mapstruct:mapstruct</em>: contains the required annotations such as <code>@Mapping</code>; On Java 8 or later, use <em>org.mapstruct:mapstruct-jdk8</em> instead which takes advantage of language improvements introduced in Java 8</p>
+<p><em>org.dettonville:dettonville</em>: contains the required annotations such as <code>@Mapping</code>; On Java 8 or later, use <em>org.dettonville:dettonville-jdk8</em> instead which takes advantage of language improvements introduced in Java 8</p>
 </li>
 <li>
-<p><em>org.mapstruct:mapstruct-processor</em>: contains the annotation processor which generates mapper implementations</p>
+<p><em>org.dettonville:dettonville-processor</em>: contains the annotation processor which generates mapper implementations</p>
 </li>
 </ul>
 </div>
@@ -715,14 +715,14 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 </pre></td>
   <td class="code"><pre>...
 <span class="tag">&lt;properties&gt;</span>
-    <span class="tag">&lt;org.mapstruct.version&gt;</span>1.1.0.Final<span class="tag">&lt;/org.mapstruct.version&gt;</span>
+    <span class="tag">&lt;org.dettonville.version&gt;</span>1.1.0.Final<span class="tag">&lt;/org.dettonville.version&gt;</span>
 <span class="tag">&lt;/properties&gt;</span>
 ...
 <span class="tag">&lt;dependencies&gt;</span>
     <span class="tag">&lt;dependency&gt;</span>
-        <span class="tag">&lt;groupId&gt;</span>org.mapstruct<span class="tag">&lt;/groupId&gt;</span>
-        <span class="tag">&lt;artifactId&gt;</span>mapstruct-jdk8<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>${org.mapstruct.version}<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.dettonville<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>dettonville-jdk8<span class="tag">&lt;/artifactId&gt;</span>
+        <span class="tag">&lt;version&gt;</span>${org.dettonville.version}<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span>
 ...
@@ -737,9 +737,9 @@ or, better yet, help the community and send a pull request for fixing it!</p>
                 <span class="tag">&lt;target&gt;</span>1.8<span class="tag">&lt;/target&gt;</span>
                 <span class="tag">&lt;annotationProcessorPaths&gt;</span>
                     <span class="tag">&lt;path&gt;</span>
-                        <span class="tag">&lt;groupId&gt;</span>org.mapstruct<span class="tag">&lt;/groupId&gt;</span>
-                        <span class="tag">&lt;artifactId&gt;</span>mapstruct-processor<span class="tag">&lt;/artifactId&gt;</span>
-                        <span class="tag">&lt;version&gt;</span>${org.mapstruct.version}<span class="tag">&lt;/version&gt;</span>
+                        <span class="tag">&lt;groupId&gt;</span>org.dettonville<span class="tag">&lt;/groupId&gt;</span>
+                        <span class="tag">&lt;artifactId&gt;</span>dettonville-processor<span class="tag">&lt;/artifactId&gt;</span>
+                        <span class="tag">&lt;version&gt;</span>${org.dettonville.version}<span class="tag">&lt;/version&gt;</span>
                     <span class="tag">&lt;/path&gt;</span>
                 <span class="tag">&lt;/annotationProcessorPaths&gt;</span>
             <span class="tag">&lt;/configuration&gt;</span>
@@ -814,9 +814,9 @@ plugins {
 }
 dependencies {
     ...
-    compile <span class="string"><span class="delimiter">'</span><span class="content">org.mapstruct:mapstruct-jdk8:1.1.0.Final</span><span class="delimiter">'</span></span>
+    compile <span class="string"><span class="delimiter">'</span><span class="content">org.dettonville:dettonville-jdk8:1.1.0.Final</span><span class="delimiter">'</span></span>
 
-    apt <span class="string"><span class="delimiter">'</span><span class="content">org.mapstruct:mapstruct-processor:1.1.0.Final</span><span class="delimiter">'</span></span>
+    apt <span class="string"><span class="delimiter">'</span><span class="content">org.dettonville:dettonville-processor:1.1.0.Final</span><span class="delimiter">'</span></span>
 }
 ...</pre></td>
 </tr></table></code></pre>
@@ -825,7 +825,7 @@ dependencies {
 </div>
 </div>
 <div class="paragraph">
-<p>You can find a complete example in the <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-gradle">mapstruct-examples</a> project on GitHub.</p>
+<p>You can find a complete example in the <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle">dettonville-examples</a> project on GitHub.</p>
 </div>
 </div>
 <div class="sect2">
@@ -853,8 +853,8 @@ dependencies {
 <span class="tag">&lt;javac</span>
     <span class="attribute-name">srcdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">src/main/java</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">destdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">target/classes</span><span class="delimiter">&quot;</span></span>
-    <span class="attribute-name">classpath</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">path/to/mapstruct-jdk8-1.1.0.Final.jar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-    <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-processorpath path/to/mapstruct-processor-1.1.0.Final.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="attribute-name">classpath</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">path/to/dettonville-jdk8-1.1.0.Final.jar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-processorpath path/to/dettonville-processor-1.1.0.Final.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
     <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-s target/generated-sources</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
 <span class="tag">&lt;/javac&gt;</span>
 ...</pre></td>
@@ -864,7 +864,7 @@ dependencies {
 </div>
 </div>
 <div class="paragraph">
-<p>You can find a complete example in the <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-ant">mapstruct-examples</a> project on GitHub.</p>
+<p>You can find a complete example in the <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-ant">dettonville-examples</a> project on GitHub.</p>
 </div>
 </div>
 <div class="sect2">
@@ -918,17 +918,17 @@ dependencies {
         <span class="tag">&lt;target&gt;</span>1.8<span class="tag">&lt;/target&gt;</span>
         <span class="tag">&lt;annotationProcessorPaths&gt;</span>
             <span class="tag">&lt;path&gt;</span>
-                <span class="tag">&lt;groupId&gt;</span>org.mapstruct<span class="tag">&lt;/groupId&gt;</span>
-                <span class="tag">&lt;artifactId&gt;</span>mapstruct-processor<span class="tag">&lt;/artifactId&gt;</span>
-                <span class="tag">&lt;version&gt;</span>${org.mapstruct.version}<span class="tag">&lt;/version&gt;</span>
+                <span class="tag">&lt;groupId&gt;</span>org.dettonville<span class="tag">&lt;/groupId&gt;</span>
+                <span class="tag">&lt;artifactId&gt;</span>dettonville-processor<span class="tag">&lt;/artifactId&gt;</span>
+                <span class="tag">&lt;version&gt;</span>${org.dettonville.version}<span class="tag">&lt;/version&gt;</span>
             <span class="tag">&lt;/path&gt;</span>
         <span class="tag">&lt;/annotationProcessorPaths&gt;</span>
         <span class="tag">&lt;compilerArgs&gt;</span>
             <span class="tag">&lt;compilerArg&gt;</span>
-                -Amapstruct.suppressGeneratorTimestamp=true
+                -Adettonville.suppressGeneratorTimestamp=true
             <span class="tag">&lt;/compilerArg&gt;</span>
             <span class="tag">&lt;compilerArg&gt;</span>
-                -Amapstruct.suppressGeneratorVersionInfoComment=true
+                -Adettonville.suppressGeneratorVersionInfoComment=true
             <span class="tag">&lt;/compilerArg&gt;</span>
         <span class="tag">&lt;/compilerArgs&gt;</span>
     <span class="tag">&lt;/configuration&gt;</span>
@@ -957,8 +957,8 @@ dependencies {
   <td class="code"><pre>...
 compileJava {
     options.compilerArgs = [
-        <span class="string"><span class="delimiter">'</span><span class="content">-Amapstruct.suppressGeneratorTimestamp=true</span><span class="delimiter">'</span></span>,
-        <span class="string"><span class="delimiter">'</span><span class="content">-Amapstruct.suppressGeneratorVersionInfoComment=true</span><span class="delimiter">'</span></span>
+        <span class="string"><span class="delimiter">'</span><span class="content">-Adettonville.suppressGeneratorTimestamp=true</span><span class="delimiter">'</span></span>,
+        <span class="string"><span class="delimiter">'</span><span class="content">-Adettonville.suppressGeneratorVersionInfoComment=true</span><span class="delimiter">'</span></span>
     ]
 }
 ...</pre></td>
@@ -986,7 +986,7 @@ compileJava {
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapstruct.
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.
 suppressGeneratorTimestamp</code></p></td>
 <td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p>If set to <code>true</code>, the creation of a time stamp in the <code>@Generated</code> annotation in the generated mapper classes is suppressed.</p>
@@ -994,7 +994,7 @@ suppressGeneratorTimestamp</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapstruct.
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.
 suppressGeneratorVersionInfoComment</code></p></td>
 <td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p>If set to <code>true</code>, the creation of the <code>comment</code> attribute in the <code>@Generated</code> annotation in the generated mapper classes is suppressed. The comment contains information about the version of MapStruct and about the compiler used for the annotation processing.</p>
@@ -1002,7 +1002,7 @@ suppressGeneratorVersionInfoComment</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapstruct.defaultComponentModel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.defaultComponentModel</code></p></td>
 <td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p>The name of the component model (see <a href="#retrieving-mapper">Retrieving a mapper</a>) based on which mappers should be generated.</p>
 </div>
@@ -1031,7 +1031,7 @@ suppressGeneratorVersionInfoComment</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>default</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapstruct.unmappedTargetPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.unmappedTargetPolicy</code></p></td>
 <td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p>The default reporting policy to be applied in case an attribute of the target object of a mapping method is not populated with a source value.</p>
 </div>
@@ -1060,7 +1060,7 @@ suppressGeneratorVersionInfoComment</code></p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_using_mapstruct_on_java_9">2.5. Using MapStruct on Java 9</h3>
+<h3 id="_using_dettonville_on_java_9">2.5. Using MapStruct on Java 9</h3>
 <div class="paragraph">
 <p>MapStruct can be used with Java 9, but as that Java version has not been finalized yet, support for it is experimental.</p>
 </div>
@@ -1090,7 +1090,7 @@ suppressGeneratorVersionInfoComment</code></p></td>
 <div class="sect2">
 <h3 id="basic-mappings">3.1. Basic mappings</h3>
 <div class="paragraph">
-<p>To create a mapper simply define a Java interface with the required mapping method(s) and annotate it with the <code>org.mapstruct.Mapper</code> annotation:</p>
+<p>To create a mapper simply define a Java interface with the required mapping method(s) and annotate it with the <code>org.dettonville.Mapper</code> annotation:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 6. Maven configuration</div>
@@ -1506,7 +1506,7 @@ ChartEntry map(Chart chart, Song song, <span class="predefined-type">Integer</sp
 <div class="sect2">
 <h3 id="mappers-factory">4.1. The Mappers factory</h3>
 <div class="paragraph">
-<p>Mapper instances can be retrieved via the <code>org.mapstruct.factory.Mappers</code> class. Just invoke the <code>getMapper()</code> method, passing the interface type of the mapper to return:</p>
+<p>Mapper instances can be retrieved via the <code>org.dettonville.factory.Mappers</code> class. Just invoke the <code>getMapper()</code> method, passing the interface type of the mapper to return:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 13. Using the Mappers factory</div>
@@ -1581,7 +1581,7 @@ CarDto dto = CarMapper.INSTANCE.carToCarDto( car );</pre></td>
 <p>If you&#8217;re working with a dependency injection framework such as <a href="http://jcp.org/en/jsr/detail?id=346">CDI</a> (Contexts and Dependency Injection for Java<sup>TM</sup> EE) or the <a href="http://www.springsource.org/spring-framework">Spring Framework</a>, it is recommended to obtain mapper objects via dependency injection as well. For that purpose you can specify the component model which generated mapper classes should be based on either via <code>@Mapper#componentModel</code> or using a processor option as described in <a href="#configuration-options">Configuration options</a>.</p>
 </div>
 <div class="paragraph">
-<p>Currently there is support for CDI and Spring (the later either via its custom annotations or using the JSR 330 annotations). See <a href="#configuration-options">Configuration options</a> for the allowed values of the <code>componentModel</code> attribute which are the same as for the <code>mapstruct.defaultComponentModel</code> processor option. In both cases the required annotations will be added to the generated mapper implementations classes in order to make the same subject to dependency injection. The following shows an example using CDI:</p>
+<p>Currently there is support for CDI and Spring (the later either via its custom annotations or using the JSR 330 annotations). See <a href="#configuration-options">Configuration options</a> for the allowed values of the <code>componentModel</code> attribute which are the same as for the <code>dettonville.defaultComponentModel</code> processor option. In both cases the required annotations will be added to the generated mapper implementations classes in order to make the same subject to dependency injection. The following shows an example using CDI:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 16. A mapper using the CDI component model</div>
@@ -1669,7 +1669,7 @@ CarDto dto = CarMapper.INSTANCE.carToCarDto( car );</pre></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Converting from larger data types to smaller ones (e.g. from <code>long</code> to <code>int</code>) can cause a value or precision loss. There <a href="https://github.com/mapstruct/mapstruct/issues/5">will be</a> an option for raising a warning in such cases in a future MapStruct version.</p>
+<p>Converting from larger data types to smaller ones (e.g. from <code>long</code> to <code>int</code>) can cause a value or precision loss. There <a href="https://github.com/dettonville/dettonville/issues/5">will be</a> an option for raising a warning in such cases in a future MapStruct version.</p>
 </div>
 </td>
 </tr>
@@ -2112,7 +2112,7 @@ CarDto dto = CarMapper.INSTANCE.carToCarDto( car );</pre></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When working with JAXB, e.g. when converting a <code>String</code> to a corresponding <code>JAXBElement&lt;String&gt;</code>, MapStruct will take the <code>scope</code> and <code>name</code> attributes of <code>@XmlElementDecl</code> annotations into account when looking for a mapping method. This makes sure that the created <code>JAXBElement</code> instances will have the right QNAME value. You can find a test which maps JAXB objects <a href="https://github.com/mapstruct/mapstruct/blob/1.1.0.Final/integrationtest/src/test/java/org/mapstruct/itest/jaxb/JaxbBasedMapperTest.java">here</a>.</p>
+<p>When working with JAXB, e.g. when converting a <code>String</code> to a corresponding <code>JAXBElement&lt;String&gt;</code>, MapStruct will take the <code>scope</code> and <code>name</code> attributes of <code>@XmlElementDecl</code> annotations into account when looking for a mapping method. This makes sure that the created <code>JAXBElement</code> instances will have the right QNAME value. You can find a test which maps JAXB objects <a href="https://github.com/dettonville/dettonville/blob/1.1.0.Final/integrationtest/src/test/java/org/dettonville/itest/jaxb/JaxbBasedMapperTest.java">here</a>.</p>
 </div>
 </td>
 </tr>
@@ -4539,7 +4539,7 @@ When working with the component model <code>cdi</code>, use <a href="https://doc
 </div>
 </div>
 <div class="paragraph">
-<p>This can be achieved with implementing the SPI <code>org.mapstruct.ap.spi.AccessorNamingStrategy</code> as in the following example. Here&#8217;s an implemented <code>org.mapstruct.ap.spi.AccessorNamingStrategy</code>:</p>
+<p>This can be achieved with implementing the SPI <code>org.dettonville.ap.spi.AccessorNamingStrategy</code> as in the following example. Here&#8217;s an implemented <code>org.dettonville.ap.spi.AccessorNamingStrategy</code>:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 66. CustomAccessorNamingStrategy</div>
@@ -4602,10 +4602,10 @@ When working with the component model <code>cdi</code>, use <a href="https://doc
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>CustomAccessorNamingStrategy</code> makes use of the <code>DefaultAccessorNamingStrategy</code> (also available in mapstruct-processor) and relies on that class to leave most of the default behaviour unchanged.</p>
+<p>The <code>CustomAccessorNamingStrategy</code> makes use of the <code>DefaultAccessorNamingStrategy</code> (also available in dettonville-processor) and relies on that class to leave most of the default behaviour unchanged.</p>
 </div>
 <div class="paragraph">
-<p>To use a custom SPI implementation, it must be located in a seperate .jar file together with the file <code>META-INF/services/org.mapstruct.ap.spi.AccessorNamingStrategy</code> with the fully qualified name of your custom implementation as content (e.g. <code>org.mapstruct.example.CustomAccessorNamingStrategy</code>). This .jar file needs to be added to the annotation processor classpath (i.e. add it next to the place where you added the mapstruct-processor jar).</p>
+<p>To use a custom SPI implementation, it must be located in a seperate .jar file together with the file <code>META-INF/services/org.dettonville.ap.spi.AccessorNamingStrategy</code> with the fully qualified name of your custom implementation as content (e.g. <code>org.dettonville.example.CustomAccessorNamingStrategy</code>). This .jar file needs to be added to the annotation processor classpath (i.e. add it next to the place where you added the dettonville-processor jar).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -4614,7 +4614,7 @@ When working with the component model <code>cdi</code>, use <a href="https://doc
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Fore more details: There&#8217;s the above example is present in our our examples repository (<a href="https://github.com/mapstruct/mapstruct-examples" class="bare">https://github.com/mapstruct/mapstruct-examples</a>).
+Fore more details: There&#8217;s the above example is present in our our examples repository (<a href="https://github.com/dettonville/dettonville-examples" class="bare">https://github.com/dettonville/dettonville-examples</a>).
 </td>
 </tr>
 </table>

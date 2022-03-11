@@ -20,7 +20,7 @@ The new release comes with a whole lot of new functionality, e.g.:
 
 <!--more-->
 
-Altogether, not less than [44 issues](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.2.0.Beta1) were fixed for this release.
+Altogether, not less than [44 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.2.0.Beta1) were fixed for this release.
 
 This would not have been possible without our fantastic community of contributors:
 [Dmytro Polovinkin](https://github.com/navpil), [Maxim Kolesnikov](https://github.com/xCASx), [Pascal Grün](https://github.com/pascalgn), [Remo Meier](https://github.com/remmeier), as well as seasoned MapStruct hackers [Andreas Gudian](https://github.com/agudian), [Filip Hrisafov](https://github.com/filiphr) and [Sjaak Derksen](https://github.com/sjaakd).
@@ -30,7 +30,7 @@ Enough of the pep talk, let's take a closer look at some of the new features!
 
 ### Using MapStruct together with Project Lombok
 
-Being able to use MapStruct together with [Project Lombok](https://projectlombok.org/) within a single compilation unit has been a long-awaited and [intensely debated](https://github.com/mapstruct/mapstruct/issues/510) feature request.
+Being able to use MapStruct together with [Project Lombok](https://projectlombok.org/) within a single compilation unit has been a long-awaited and [intensely debated](https://github.com/dettonville/dettonville/issues/510) feature request.
 
 The challenge here was that Lombok actually _alters_ the AST of the compiled classes (something which has never been foreseen by the [annotation processing](https://www.jcp.org/en/jsr/detail?id=269) infrastructure).
 Other annotation processors such as MapStruct then wouldn't know about the elements added by Lombok (e.g. getters and setters for the `@Data` annotation).
@@ -38,12 +38,12 @@ Other annotation processors such as MapStruct then wouldn't know about the eleme
 To cut a long story short, thanks to a very productive collaboration with the Lombok team this could be resolved.
 MapStruct will now wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.
 
-You can find a small example project for using MapStruct together with Lombok [here](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-lombok).
+You can find a small example project for using MapStruct together with Lombok [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-lombok).
 Note that Lombok 1.16.14 or newer is required.
 
 ### Java 8 stream support
 
-Java 8's `Stream` type can [be used](https://github.com/mapstruct/mapstruct/issues/962) now as source and target of mapping methods:
+Java 8's `Stream` type can [be used](https://github.com/dettonville/dettonville/issues/962) now as source and target of mapping methods:
 
 {{< prettify java >}}
 @Mapper
@@ -63,12 +63,12 @@ If the "element type" differs between source and target stream/collection (`Orde
 Traditionally MapStruct relied on the JavaBeans convention and called getter and setter methods for propagating property values from source to target.
 Sometimes writing all the getters and setters may be a bit cumbersome, though, e.g. when it comes to "dumb" DTOs which should just hold a couple of property values.
 
-Using public fields is perfectly fine in such case, which is why direct field access is [supported by MapStruct now](https://github.com/mapstruct/mapstruct/issues/557).
+Using public fields is perfectly fine in such case, which is why direct field access is [supported by MapStruct now](https://github.com/dettonville/dettonville/issues/557).
 I.e. if your source or target beans do not define getters or setters for the properties but declare public fields,
 the generated code will directly access the fields.
 Note that no reflection will be used, i.e. we won't make private fields accessible.
 
-You can find a small example demonstrating field-based mapping [here](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-field-mapping/).
+You can find a small example demonstrating field-based mapping [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-field-mapping/).
 
 ### Automatic creation of sub-mapping methods
 
@@ -128,7 +128,7 @@ MapStruct will generate such method, applying the `@Mapping` configuration given
 This feature can save you quite some work if you are mapping large graphs.
 The implementation may still have some rough edges, so please give it a try and let us know if you see unexpected mapping code being generated.
 
-A more complex example for the auto-mapping feature can be found [here](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-nested-bean-mappings).
+A more complex example for the auto-mapping feature can be found [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-nested-bean-mappings).
 
 ### "Pass-through" context parameters
 
@@ -153,7 +153,7 @@ any parameters annotated with `@Context` will essentially be ignored apart from 
 
 Context parameters can also be used with mapping lifecycle methods (`@BeforeMapping`/`@AfterMapping`),
 which is super-useful for mapping object graphs that contain cycles.
-Check out [this project](https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-mapping-with-cycles) in the MapStruct examples repository
+Check out [this project](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-mapping-with-cycles) in the MapStruct examples repository
 which shows how to keep track of nodes that already have been mapped and re-use their mapped counterparts when visiting them another time in a cyclic tree.
 
 ### More powerful target bean factories
@@ -188,14 +188,14 @@ Factory methods which should receive the mapping source parameters must be annot
 This concludes our tour through MapStruct 1.2 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct-jdk8:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-jdk8|1.2.0.Beta1|jar) (for usage with Java >= 8) or [org.mapstruct:mapstruct:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.2.0.Beta1|jar) (for earlier Java versions)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.2.0.Beta1|jar)
+* Annotation JAR: [org.dettonville:dettonville-jdk8:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.2.0.Beta1|jar) (for usage with Java >= 8) or [org.dettonville:dettonville:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.2.0.Beta1|jar) (for earlier Java versions)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.2.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.2.0.Beta1|jar)
 
-For those not using a dependency management tool such as Maven or Gradle, we also provide distribution bundles (ZIP, TAR.GZ) on [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.2.0.Beta1/).
+For those not using a dependency management tool such as Maven or Gradle, we also provide distribution bundles (ZIP, TAR.GZ) on [SourceForge](http://sourceforge.net/projects/dettonville/files/1.2.0.Beta1/).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group or in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

@@ -9,8 +9,8 @@ teaser = "Useful information on the inner workings of MapStruct"
 parent = "Development"
 +++
 
-The MapStruct code base is thoroughly documented via JavaDoc. You can find the latest docs [here](https://mapstruct.ci.cloudbees.com/job/mapstruct-javadoc/javadoc/). The individual pages contain generated class diagrams showing type hierarchies and package contents.
+The MapStruct code base is thoroughly documented via JavaDoc. You can find the latest docs [here](https://dettonville.ci.cloudbees.com/job/dettonville-javadoc/javadoc/). The individual pages contain generated class diagrams showing type hierarchies and package contents.
 
-To get yourself acquainted with the code base, you could start by taking a look at the docs of [MappingProcessor](https://mapstruct.ci.cloudbees.com/job/mapstruct-javadoc/javadoc/index.html?org/mapstruct/ap/MappingProcessor.html) which give a high-level overview of the general architecture. Then check out the [org.mapstruct.ap.model](https://mapstruct.ci.cloudbees.com/job/mapstruct-javadoc/javadoc/index.html?org/mapstruct/ap/model/package-summary.html) and [org.mapstruct.ap.processor](https://mapstruct.ci.cloudbees.com/job/mapstruct-javadoc/javadoc/index.html?org/mapstruct/ap/processor/package-summary.html) packages.
+To get yourself acquainted with the code base, you could start by taking a look at the docs of [MappingProcessor](https://dettonville.ci.cloudbees.com/job/dettonville-javadoc/javadoc/index.html?org/dettonville/ap/MappingProcessor.html) which give a high-level overview of the general architecture. Then check out the [org.dettonville.ap.model](https://dettonville.ci.cloudbees.com/job/dettonville-javadoc/javadoc/index.html?org/dettonville/ap/model/package-summary.html) and [org.dettonville.ap.processor](https://dettonville.ci.cloudbees.com/job/dettonville-javadoc/javadoc/index.html?org/dettonville/ap/processor/package-summary.html) packages.
 
-If you have any questions don't hesitate [to ask](https://github.com/mapstruct/mapstruct/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/mapstruct), we are here to help!
+If you have any questions don't hesitate [to ask](https://github.com/dettonville/dettonville/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville), we are here to help!

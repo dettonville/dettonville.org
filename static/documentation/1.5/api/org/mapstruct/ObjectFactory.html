@@ -6,7 +6,7 @@
 <title>ObjectFactory (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ObjectFactory class">
+<meta name="keywords" content="org.dettonville.ObjectFactory class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
@@ -109,7 +109,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville</a></div>
 <h2 title="Annotation Type ObjectFactory" class="title">Annotation Type ObjectFactory</h2>
 </div>
 <div class="contentContainer">
@@ -125,15 +125,15 @@ public @interface <span class="memberNameLabel">ObjectFactory</span></pre>
  By default beans are created during the mapping process with the default constructor. If a factory method with a
  return type that is assignable to the required object type is present, then the factory method is used instead.
  <p>
- Factory methods can be defined without parameters, with an <code>@</code><a href="TargetType.html" title="annotation in org.mapstruct"><code>TargetType</code></a> parameter, a
- <code>@</code><a href="Context.html" title="annotation in org.mapstruct"><code>Context</code></a> parameter, or with the mapping source parameter. If any of those parameters are defined,
+ Factory methods can be defined without parameters, with an <code>@</code><a href="TargetType.html" title="annotation in org.dettonville"><code>TargetType</code></a> parameter, a
+ <code>@</code><a href="Context.html" title="annotation in org.dettonville"><code>Context</code></a> parameter, or with the mapping source parameter. If any of those parameters are defined,
  then the mapping method that is supposed to use the factory method needs to be declared with an assignable result
  type, assignable context parameter, and/or assignable source types.
  <p>
  <strong>Note:</strong> the usage of this annotation is <em>optional</em> when used in the <a href="Mapper.html#uses()"><code>Mapper.uses()</code></a>
  if no source parameters are part of the signature, i.e. it is declared without parameters or only with
- <code>@</code><a href="TargetType.html" title="annotation in org.mapstruct"><code>TargetType</code></a> and/or <code>@</code><a href="Context.html" title="annotation in org.mapstruct"><code>Context</code></a>. It is however <em>mandatory</em> when used inside
- an <code>@</code><a href="Context.html" title="annotation in org.mapstruct"><code>Context</code></a> annotated class.
+ <code>@</code><a href="TargetType.html" title="annotation in org.dettonville"><code>TargetType</code></a> and/or <code>@</code><a href="Context.html" title="annotation in org.dettonville"><code>Context</code></a>. It is however <em>mandatory</em> when used inside
+ an <code>@</code><a href="Context.html" title="annotation in org.dettonville"><code>Context</code></a> annotated class.
  <p>
  <strong>Example:</strong> Using a factory method for entities to check whether the entity already exists in the
  EntityManager and then returns the managed instance:

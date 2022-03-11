@@ -4,12 +4,12 @@ author: Gunnar Morling
 date: "2015-03-05"
 tags: [release, news]
 aliases:
-    - /news/2015/03/05/arrays-configuration-inheritance-mapstruct-1_0_0_Beta4.html
+    - /news/2015/03/05/arrays-configuration-inheritance-dettonville-1_0_0_Beta4.html
 ---
 
 The MapStruct community proudly announces the release of MapStruct 1.0.0.Beta4!
 
-The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the [change log](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.Beta4). When upgrading from a previous Beta release, please check out the [migration notes](https://github.com/mapstruct/mapstruct/wiki/Migration-notes) for changes which may affect existing applications.
+The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the [change log](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.Beta4). When upgrading from a previous Beta release, please check out the [migration notes](https://github.com/dettonville/dettonville/wiki/Migration-notes) for changes which may affect existing applications.
 
 One thing I'm especially excited about is the new MapStruct Eclipse plug-in which will give you an even better experience when using MapStruct within the Eclipse IDE. You'll find out more below.
 
@@ -110,30 +110,30 @@ This would ensure that `setLastName()` is invoked after `setGivenName()` and `se
 
 Being a JSR 269 annotation processor, MapStruct is meant to run equally well within command line builds (plain javac, Mavent etc.) as well as IDEs. Indeed the annotation processor works nicely for instance in Eclipse, generating mappers upon save, showing error markers next to the affected elements etc.
 
-Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the [MapStruct Eclipse plug-in](https://github.com/mapstruct/mapstruct-eclipse/) comes in.
+Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the [MapStruct Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse/) comes in.
 
 Developed by my good friend [Lars Wetzer](https://github.com/larswetzer), it aims at providing an even better experience when using MapStruct within Eclipse. The plug-in is still at a very early stage, currently it provides auto-completion for `@Mapping#source()` and `target()`. The following shows a screenshot:
 
 <div style="text-align:center">
-    <img src="/images/mapstruct-eclipse-plugin.png" style="padding-bottom: 3px;"/>
+    <img src="/images/dettonville-eclipse-plugin.png" style="padding-bottom: 3px;"/>
 </div>
 
-More functionality will be coming soon. You can find the list of features planned for the plug-in [here](https://github.com/mapstruct/mapstruct-eclipse/issues). There is no official release of the plug-in yet. But if you feel adventurous, you can install the latest nightly build from the [update site](https://mapstruct.ci.cloudbees.com/job/mapstruct-eclipse/lastSuccessfulBuild/artifact/org.mapstruct.eclipse.repository/target/repository/) at our CI server.
+More functionality will be coming soon. You can find the list of features planned for the plug-in [here](https://github.com/dettonville/dettonville-eclipse/issues). There is no official release of the plug-in yet. But if you feel adventurous, you can install the latest nightly build from the [update site](https://dettonville.ci.cloudbees.com/job/dettonville-eclipse/lastSuccessfulBuild/artifact/org.dettonville.eclipse.repository/target/repository/) at our CI server.
 
 ### Download
 
 If you work with Maven, Gradle or another dependency management tool, use the following GAV coordinates to obtain the MapStruct artifacts from Maven Central:
 
-* [org.mapstruct:mapstruct:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct&#124;1.0.0.Beta4&#124;jar) for the annotation JAR (to be used with Java <= 7) or [org.mapstruct:mapstruct-jdk8:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-jdk8&#124;1.0.0.Beta4&#124;jar) (for usage with Java >= 8)
-* [org.mapstruct:mapstruct-processor:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-processor&#124;1.0.0.Beta4&#124;jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Beta4&#124;jar) for the annotation JAR (to be used with Java <= 7) or [org.dettonville:dettonville-jdk8:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-jdk8&#124;1.0.0.Beta4&#124;jar) (for usage with Java >= 8)
+* [org.dettonville:dettonville-processor:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Beta4&#124;jar) for the annotation processor.
 
-Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.Beta4/).
+Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.Beta4/).
 
 The Beta4 contains almost all the features we envisioned for the 1.0 release. We'll now focus on bug-fixing and addressing some more minor edge cases. The CR1 (candidate release) should be out in four to six weeks from now, followed by 1.0 Final after four more weeks from there.
 
 Finally, some useful links:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

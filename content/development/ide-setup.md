@@ -21,7 +21,7 @@ You might face an error on IDEAs Message tab saying
 
 <img src="/images/idea-processor-error.png" style="padding-bottom: 3px;"/>
 
-If so, open the preferences window, navigate to Compiler -> Annotation processor and untick checkbox "Enable annotation processing" at "Annotation profile for mapstruct-integrationtest".
+If so, open the preferences window, navigate to Compiler -> Annotation processor and untick checkbox "Enable annotation processing" at "Annotation profile for dettonville-integrationtest".
 
 <img src="/images/idea-annotation-conf.png" style="padding-bottom: 3px;"/>
 

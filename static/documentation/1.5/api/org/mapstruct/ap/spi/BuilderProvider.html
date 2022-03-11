@@ -6,7 +6,7 @@
 <title>BuilderProvider (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.BuilderProvider interface">
+<meta name="keywords" content="org.dettonville.ap.spi.BuilderProvider interface">
 <meta name="keywords" content="init()">
 <meta name="keywords" content="findBuilderInfo()">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
@@ -119,7 +119,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Interface BuilderProvider" class="title">Interface BuilderProvider</h2>
 </div>
 <div class="contentContainer">
@@ -128,7 +128,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="DefaultBuilderProvider.html" title="class in org.mapstruct.ap.spi">DefaultBuilderProvider</a></code>, <code><a href="ImmutablesBuilderProvider.html" title="class in org.mapstruct.ap.spi">ImmutablesBuilderProvider</a></code>, <code><a href="NoOpBuilderProvider.html" title="class in org.mapstruct.ap.spi">NoOpBuilderProvider</a></code></dd>
+<dd><code><a href="DefaultBuilderProvider.html" title="class in org.dettonville.ap.spi">DefaultBuilderProvider</a></code>, <code><a href="ImmutablesBuilderProvider.html" title="class in org.dettonville.ap.spi">ImmutablesBuilderProvider</a></code>, <code><a href="NoOpBuilderProvider.html" title="class in org.dettonville.ap.spi">NoOpBuilderProvider</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">BuilderProvider</span></pre>
@@ -161,7 +161,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a></code></td>
+<td class="colFirst"><code><a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findBuilderInfo(javax.lang.model.type.TypeMirror)">findBuilderInfo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</code></th>
 <td class="colLast">
 <div class="block">Find the builder information, if any, for the <code>type</code>.</div>
@@ -169,7 +169,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the builder provider with the MapStruct processing environment.</div>
 </td>
@@ -191,13 +191,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
 <div class="block">Initializes the builder provider with the MapStruct processing environment.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -211,7 +211,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockListLast">
 <li class="blockList">
 <h4>findBuilderInfo</h4>
-<pre class="methodSignature"><a href="BuilderInfo.html" title="class in org.mapstruct.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</pre>
+<pre class="methodSignature"><a href="BuilderInfo.html" title="class in org.dettonville.ap.spi">BuilderInfo</a>&nbsp;findBuilderInfo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type" class="externalLink">TypeMirror</a>&nbsp;type)</pre>
 <div class="block">Find the builder information, if any, for the <code>type</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -219,9 +219,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the builder info for the <code>type</code> if it exists, or <code>null</code> if there is no builder</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="TypeHierarchyErroneousException.html" title="class in org.mapstruct.ap.spi">TypeHierarchyErroneousException</a></code> - if the type that needs to be visited is not ready yet, this signals the
+<dd><code><a href="TypeHierarchyErroneousException.html" title="class in org.dettonville.ap.spi">TypeHierarchyErroneousException</a></code> - if the type that needs to be visited is not ready yet, this signals the
  MapStruct processor to postpone the generation of the mappers to the next round</dd>
-<dd><code><a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.mapstruct.ap.spi">MoreThanOneBuilderCreationMethodException</a></code> - if <code>type</code> has more than one method that can create the
+<dd><code><a href="MoreThanOneBuilderCreationMethodException.html" title="class in org.dettonville.ap.spi">MoreThanOneBuilderCreationMethodException</a></code> - if <code>type</code> has more than one method that can create the
  builder</dd>
 </dl>
 </li>

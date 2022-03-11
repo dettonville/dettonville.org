@@ -4,7 +4,7 @@ author: Andreas Gudian
 date: "2015-08-27"
 tags: [release, news]
 aliases:
-    - /news/2015/08/27/mapstruct-1_0_0_CR2-released.html
+    - /news/2015/08/27/dettonville-1_0_0_CR2-released.html
 ---
 
 It is my pleasure to announce the second candidate release of MapStruct 1.0!
@@ -15,7 +15,7 @@ With this release, we're fixing several bugs that showed up after our first cand
 * Define default values for target properties in case the source property is `null`.
 * The decorator feature now fully works with Spring and JSR 330 and the documentation has been clarified on how to use decorators with all our supported component models (CDI, Spring, JSR 330, default).
 
-The complete list of 19 closed issues can be found in the [change log](https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.CR2).
+The complete list of 19 closed issues can be found in the [change log](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.CR2).
 
 The MapStruct team calls out a big _Thank you!_ to everyone contributing to this release: [Tomek Gubala](https://github.com/vgt-tomek), [Ivo Smid](https://github.com/bedla), [Mustafa Caylak] (https://github.com/luxmeter), and [Christophe Labouisse](https://github.com/ggtools)! 
 
@@ -23,10 +23,10 @@ The MapStruct team calls out a big _Thank you!_ to everyone contributing to this
 
 To fetch MapStruct 1.0.0.CR2 via Maven, Gradle or similar dependency management tools, use the following GAV coordinates:
 
-* [org.mapstruct:mapstruct:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.0.0.CR2|jar) for the annotation JAR (to be used with Java <= 7) or [org.mapstruct:mapstruct-jdk8:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-jdk8|1.0.0.CR2|jar) (for usage with Java >= 8)
-* [org.mapstruct:mapstruct-processor:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.0.0.CR2|jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.0.0.CR2|jar) for the annotation JAR (to be used with Java <= 7) or [org.dettonville:dettonville-jdk8:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.0.0.CR2|jar) (for usage with Java >= 8)
+* [org.dettonville:dettonville-processor:1.0.0.CR2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.0.0.CR2|jar) for the annotation processor.
 
-Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/mapstruct/files/1.0.0.CR2/) or from [BinTray](https://bintray.com/mapstruct/bundles/mapstruct-dist/1.0.0.CR2/).
+Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourceforge.net/projects/dettonville/files/1.0.0.CR2/) or from [BinTray](https://bintray.com/dettonville/bundles/dettonville-dist/1.0.0.CR2/).
 
 ### Configure package and class name for the generated mapper implementations
 
@@ -49,7 +49,7 @@ public interface PersonMapper {
 
 In the example above, the mapper implementation would be generated to the package `com.examples.mappers.internal` with the class name `MapStructPersonMapperImpl`. As you might have already guessed, the strings `<PACKAGE_NAME>` and `<CLASS_NAME>` are replaced with the package name and the class name of the mapper interface or abstract class for which the implementation is generated.
 
-These options are also available in the annotation `@MapperConfig`, so you can configure this once for all mappers that use the same [@MapperConfig](http://mapstruct.org/documentation/#section-shared-config) type.
+These options are also available in the annotation `@MapperConfig`, so you can configure this once for all mappers that use the same [@MapperConfig](http://dettonville.org/documentation/#section-shared-config) type.
 
 If you are using the component model `default` (i.e. `Mappers.get(...)`) to obtain your mapper instances, the generator will create an SPI file in _META-INF/services/_ for each mapper with a customized naming pattern. The implementation of `Mappers` finds those implementation classes using the `ServiceLoader` API.
 
@@ -71,11 +71,11 @@ The implementation that is generated for the example above would set the propert
 
 With CR2 out, we want to release MapStruct 1.0 Final as soon as possible. We won't add any new features or large refactorings for 1.0 and will allow only bugfixes. Based on the number of bugs reported against CR2, we should be ready to build the Final within the next couple of weeks.
 
-In the mean time, you're invited to try out the MapStruct [Eclipse plug-in](https://github.com/mapstruct/mapstruct-eclipse). Although it's in an early stage, it already contains some handy content-assists (e.g. for `source` and `target` property names in the `@Mapping` annotation) and quick-fixes for some common mapping errors detected by MapStruct.
+In the mean time, you're invited to try out the MapStruct [Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse). Although it's in an early stage, it already contains some handy content-assists (e.g. for `source` and `target` property names in the `@Mapping` annotation) and quick-fixes for some common mapping errors detected by MapStruct.
 
 Any feedback is welcome, just post a comment below or get in touch through the following channels:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
 * Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

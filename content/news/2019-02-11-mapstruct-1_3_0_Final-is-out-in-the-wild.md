@@ -22,8 +22,8 @@ Besides bug fixes, the 1.3 release brings some new exciting features:
 <!--more-->
 
 For more details checkout the individual release announcements for the
-[Beta1](/news/2018-07-15-mapstruct-1_3_0_Beta1-is-out-with-builder-support.md) and
-[Beta2](/news/2018-11-12-mapstruct-1_3_0_Beta2-is-out-with-java8-as-baseline.md) releases.
+[Beta1](/news/2018-07-15-dettonville-1_3_0_Beta1-is-out-with-builder-support.md) and
+[Beta2](/news/2018-11-12-dettonville-1_3_0_Beta2-is-out-with-java8-as-baseline.md) releases.
 
 ### What's inside
 
@@ -81,13 +81,13 @@ If you have any ideas or are willing to help out with any features feel free to 
 ### Stats
 
 We are very proud and thankful of our of our growing community. 
-It is really satisfying to see how everyone helps each other in our [Gitter Room](https://gitter.im/mapstruct/mapstruct-users), on [StackOverflow](https://stackoverflow.com/questions/tagged/mapstruct) or in our [Google group](https://groups.google.com/forum/#!forum/mapstruct-users).
+It is really satisfying to see how everyone helps each other in our [Gitter Room](https://gitter.im/dettonville/dettonville-users), on [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville) or in our [Google group](https://groups.google.com/forum/#!forum/dettonville-users).
 We currently have 1500+ stars and 50+ contributors on GitHub.
-More than 16000 people are using our [IntelliJ](https://plugins.jetbrains.com/plugin/10036-mapstruct-support) plugin. 
+More than 16000 people are using our [IntelliJ](https://plugins.jetbrains.com/plugin/10036-dettonville-support) plugin. 
 And don't worry we haven't forgotten about it, a new fresh version with builder and fluent setter support will be released shortly.
 
 Most impressive though are the download numbers we get from the Maven Central repo.
-As an example here are the numbers for the _org.mapstruct:mapstruct-processor_ artifact:
+As an example here are the numbers for the _org.dettonville:dettonville-processor_ artifact:
 
 <div style="text-align:center">
     <img src="/images/downloads_02-2018_01-2019.png" style="padding-bottom: 3px;"/>
@@ -128,13 +128,13 @@ Happy coding with MapStruct 1.3!!
 
 You can fetch the new release from Maven Central using the following GAV coordinates:
 
-* Annotation JAR: [org.mapstruct:mapstruct:1.3.0.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct|1.3.0.Final|jar)
-* Annotation processor JAR: [org.mapstruct:mapstruct-processor:1.3.0.Final](http://search.maven.org/#artifactdetails|org.mapstruct|mapstruct-processor|1.3.0.Final|jar)
+* Annotation JAR: [org.dettonville:dettonville:1.3.0.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.3.0.Final|jar)
+* Annotation processor JAR: [org.dettonville:dettonville-processor:1.3.0.Final](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.3.0.Final|jar)
 
-Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/mapstruct/mapstruct/releases/tag/1.3.0.Final).
+Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - [from GitHub](https://github.com/dettonville/dettonville/releases/tag/1.3.0.Final).
 
 If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:
 
-* Get help at the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group or in our [Gitter room](https://gitter.im/mapstruct/mapstruct-users)
-* Report bugs and feature requests via the [issue tracker](https://github.com/mapstruct/mapstruct/issues)
+* Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
+* Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
 * Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter

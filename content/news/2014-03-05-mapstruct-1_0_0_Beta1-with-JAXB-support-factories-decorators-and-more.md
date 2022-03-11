@@ -4,7 +4,7 @@ author: Gunnar Morling
 date: "2014-03-05"
 tags: [release, news]
 aliases:
-    - /news/2014/03/05/mapstruct-1_0_0_Beta1-with-JAXB-support-factories-decorators-and-more.html
+    - /news/2014/03/05/dettonville-1_0_0_Beta1-with-JAXB-support-factories-decorators-and-more.html
 ---
 
 The MapStruct team is very happy to announce the release of MapStruct 1.0.0.Beta1.
@@ -13,10 +13,10 @@ One core part of the new release is comprehensive support for mapping JAXB types
 
 The JARs should be synched to Maven Central soon. The coordinates are:
 
-* [org.mapstruct:mapstruct:1.0.0.Beta1](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct&#124;1.0.0.Beta1&#124;jar) for the annotation JAR and 
-* [org.mapstruct:mapstruct-processor:1.0.0.Beta1](http://search.maven.org/#artifactdetails&#124;org.mapstruct&#124;mapstruct-processor&#124;1.0.0.Beta1&#124;jar) for the annotation processor.
+* [org.dettonville:dettonville:1.0.0.Beta1](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Beta1&#124;jar) for the annotation JAR and 
+* [org.dettonville:dettonville-processor:1.0.0.Beta1](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Beta1&#124;jar) for the annotation processor.
 
-Alternatively you can download a [distribution bundle](http://sourceforge.net/projects/mapstruct/files/1.0.0.Beta1/) which contains everything required.
+Alternatively you can download a [distribution bundle](http://sourceforge.net/projects/dettonville/files/1.0.0.Beta1/) which contains everything required.
 
 Before diving into some of the new features, let me say a huge thank you to [Sjaak Derksen](https://github.com/sjaakd/) and [Andreas Gudian](https://github.com/agudian) who heavily contributed to this release. That's much appreciated! Also a big thanks to everyone else who opened feature requests or joined the discussion.
 
@@ -122,6 +122,6 @@ Note that the delegate feature is experimental as of this release and may change
 
 The Beta1 release comes with some more features which you may find helpful.
 
-You can now generate mappers from abstract classes (instead of interfaces) which is useful if you want to provide some manually implemented mapping methods. MapStruct also can generate now mapping methods between different [enum types](/documentation/#section-07). The complete change log is available [here](https://github.com/mapstruct/mapstruct/issues?milestone=3&state=closed). Be sure to check out the [reference documentation](/documentation) to learn more about all the new functionality.
+You can now generate mappers from abstract classes (instead of interfaces) which is useful if you want to provide some manually implemented mapping methods. MapStruct also can generate now mapping methods between different [enum types](/documentation/#section-07). The complete change log is available [here](https://github.com/dettonville/dettonville/issues?milestone=3&state=closed). Be sure to check out the [reference documentation](/documentation) to learn more about all the new functionality.
 
-As always any feedback is highly welcome. Just add a comment below or join the [mapstruct-users](https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/mapstruct/mapstruct/issues) and your pull request on GitHub is always welcome. The [development guide](/contributing) has also been updated and provides all the info you need to get started with hacking on MapStruct.
+As always any feedback is highly welcome. Just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is always welcome. The [development guide](/contributing) has also been updated and provides all the info you need to get started with hacking on MapStruct.

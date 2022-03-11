@@ -6,7 +6,7 @@
 <title>Context (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.Context class">
+<meta name="keywords" content="org.dettonville.Context class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
@@ -109,7 +109,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville</a></div>
 <h2 title="Annotation Type Context" class="title">Annotation Type Context</h2>
 </div>
 <div class="contentContainer">
@@ -121,15 +121,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation" class="externalLink">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#CLASS" title="class or interface in java.lang.annotation" class="externalLink">CLASS</a>)
 public @interface <span class="memberNameLabel">Context</span></pre>
 <div class="block">Marks a parameter of a method to be treated as <em>mapping context</em>. Such parameters are passed to other mapping
- methods, <code>@</code><a href="ObjectFactory.html" title="annotation in org.mapstruct"><code>ObjectFactory</code></a> methods or <code>@</code><a href="BeforeMapping.html" title="annotation in org.mapstruct"><code>BeforeMapping</code></a>/<code>@</code><a href="AfterMapping.html" title="annotation in org.mapstruct"><code>AfterMapping</code></a>
+ methods, <code>@</code><a href="ObjectFactory.html" title="annotation in org.dettonville"><code>ObjectFactory</code></a> methods or <code>@</code><a href="BeforeMapping.html" title="annotation in org.dettonville"><code>BeforeMapping</code></a>/<code>@</code><a href="AfterMapping.html" title="annotation in org.dettonville"><code>AfterMapping</code></a>
  methods when applicable and can thus be used in custom code.
  <p>
  The type of an <code>@Context</code> parameter is also inspected for
- <code>@</code><a href="BeforeMapping.html" title="annotation in org.mapstruct"><code>BeforeMapping</code></a>/<code>@</code><a href="AfterMapping.html" title="annotation in org.mapstruct"><code>AfterMapping</code></a> methods, which are called on the provided context
+ <code>@</code><a href="BeforeMapping.html" title="annotation in org.dettonville"><code>BeforeMapping</code></a>/<code>@</code><a href="AfterMapping.html" title="annotation in org.dettonville"><code>AfterMapping</code></a> methods, which are called on the provided context
  parameter value if applicable.
  <p>
  <strong>Note:</strong> no <code>null</code> checks are performed before calling before/after mapping methods or object
- factory methods on <code>@</code><a href="Context.html" title="annotation in org.mapstruct"><code>Context</code></a> annotated parameters. The caller needs to make sure that no <code>null</code>
+ factory methods on <code>@</code><a href="Context.html" title="annotation in org.dettonville"><code>Context</code></a> annotated parameters. The caller needs to make sure that no <code>null</code>
  are passed in that case.
  <p>
  For generated code to call a method that is declared with <code>@Context</code> parameters, the declaration of the mapping
@@ -137,7 +137,7 @@ public @interface <span class="memberNameLabel">Context</span></pre>
  will not create new instances of missing <code>@Context</code> parameters nor will it pass <code>null</code> instead.
  <p>
  <strong>Example 1:</strong> Using <code>@Context</code> parameters for passing data down to hand-written property mapping
- methods and <code>@</code><a href="BeforeMapping.html" title="annotation in org.mapstruct"><code>BeforeMapping</code></a> methods:
+ methods and <code>@</code><a href="BeforeMapping.html" title="annotation in org.dettonville"><code>BeforeMapping</code></a> methods:
 
  <pre>
  <code>
@@ -179,7 +179,7 @@ public @interface <span class="memberNameLabel">Context</span></pre>
  </pre>
  <p>
  <strong>Example 2:</strong> Using an <code>@Context</code> parameter with a type that provides its own <code>@</code>
- <a href="BeforeMapping.html" title="annotation in org.mapstruct"><code>BeforeMapping</code></a> methods to handle cycles in Graph structures:
+ <a href="BeforeMapping.html" title="annotation in org.dettonville"><code>BeforeMapping</code></a> methods to handle cycles in Graph structures:
 
  <pre>
  <code>
@@ -234,7 +234,7 @@ public @interface <span class="memberNameLabel">Context</span></pre>
  </pre>
  <p>
  <strong>Example 3:</strong> Using <code>@Context</code> parameters for creating an entity object by calling an
- <code>@</code><a href="ObjectFactory.html" title="annotation in org.mapstruct"><code>ObjectFactory</code></a> methods:
+ <code>@</code><a href="ObjectFactory.html" title="annotation in org.dettonville"><code>ObjectFactory</code></a> methods:
 
  <pre>
  <code>

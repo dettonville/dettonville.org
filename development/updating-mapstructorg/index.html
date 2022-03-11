@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Updating mapstruct.org &ndash; Dettonville</title>
+        <title>Updating dettonville.org &ndash; Dettonville</title>
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/uikit.gradient.min.css" />
         <link rel="stylesheet" href="/css/prettify.css" />
@@ -134,7 +134,7 @@ if (!doNotTrack) {
             </li>
                     
             <li class="uk-active">
-                <a href="/development/updating-mapstructorg/"> Updating mapstruct.org </a>
+                <a href="/development/updating-mapstructorg/"> Updating dettonville.org </a>
             </li>
                     
             <li>
@@ -157,14 +157,14 @@ if (!doNotTrack) {
 <div>
     <div class="uk-flex uk-flex-space-between">
         <div>
-            <h1>Updating mapstruct.org</h1>
+            <h1>Updating dettonville.org</h1>
         </div>
         <div class="uk-hidden-small uk-float-right ms-edit-on-github">
             <a href="https://github.com/dettonville/dettonville.org/tree/master/content/development/updating-mapstructorg.md" title="Open the source of this page on GitHub" target="_blank"><i class="fa fa-github"></i> Edit on GitHub</a>
         </div>
     </div>
 </div>
-<div><p>As MapStruct itself, this web site is open-source, too. You can find it&rsquo;s source code <a href="https://github.com/mapstruct/mapstruct.org">here</a>.</p>
+<div><p>As MapStruct itself, this web site is open-source, too. You can find it&rsquo;s source code <a href="https://github.com/dettonville/dettonville.org">here</a>.</p>
 <p>The website is built using the <a href="http://gohugo.io/">Hugo</a> static site generator. So it&rsquo;s recommended to spend a few minutes reading the <a href="http://gohugo.io/overview/introduction/">Getting Started</a> section of the Hugo docs if you are not familiar with it yet.</p>
 <p>The site is deployed to <a href="https://help.github.com/categories/github-pages-basics/">GitHub Pages</a> (as a &ldquo;project page&rdquo;, using the &ldquo;gh-pages&rdquo; branch).</p>
 <h2 id="set-up"><a class="ms-header-link" href="#set-up"><i class="fa fa-link"></i></a>Set-up</h2>
@@ -176,7 +176,7 @@ brew update &amp;&amp; brew install hugo
 <p>Make sure that you are using Git 2.5 or later due the worktree feature used for publication (see below).
 Check out the web site&rsquo;s source code and assign the name &ldquo;upstream&rdquo; to the remote repository by running:</p>
 <pre class="prettyprint linenums lang-">
-git clone git@github.com:mapstruct/mapstruct.org.git
+git clone git@github.com:dettonville/dettonville.org.git
 git remote rename origin upstream
 </pre>
 
@@ -210,8 +210,8 @@ And then the remainder of the post.
 
 <h2 id="adding-an-entry-to-the-team-page"><a class="ms-header-link" href="#adding-an-entry-to-the-team-page"><i class="fa fa-link"></i></a>Adding an entry to the team page</h2>
 <p>The <a href="/development/team">team page</a> is a data-driven page. If you want to be listed on the page, add a new file to <em>data/team</em> following the structure of the existing files in that directory.</p>
-<h2 id="publishing-to-mapstructorg"><a class="ms-header-link" href="#publishing-to-mapstructorg"><i class="fa fa-link"></i></a>Publishing to mapstruct.org</h2>
-<p>The website is automatically published for every commit to master via <a href="https://github.com/mapstruct/mapstruct.org/actions?query=workflow%3A%22GitHub+Pages%22">this GitHub Workflow</a>.
+<h2 id="publishing-to-dettonvilleorg"><a class="ms-header-link" href="#publishing-to-dettonvilleorg"><i class="fa fa-link"></i></a>Publishing to dettonville.org</h2>
+<p>The website is automatically published for every commit to master via <a href="https://github.com/dettonville/dettonville.org/actions?query=workflow%3A%22GitHub+Pages%22">this GitHub Workflow</a>.
 The workflow generates the HTML with the <code>hugo</code> command in the <em>public</em> directory.
 The contents of that directory are then pushed to the &ldquo;gh-pages&rdquo; branch of the website repository.</p>
 <p>To make publication as smooth as possible, the script <em>scripts/generate-site.sh</em> is taking care of the regeneration. It calls <code>hugo</code> and afterwards removes some generated files which are not needed.</p>
@@ -243,10 +243,10 @@ git push upstream master
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

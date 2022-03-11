@@ -161,7 +161,7 @@ if (!doNotTrack) {
 </pre>
 
 <h3 id="gradle-integration"><a class="ms-header-link" href="#gradle-integration"><i class="fa fa-link"></i></a>Gradle Integration</h3>
-<p>If you are working with a gradle project, then add the folowing plugin to the gradle project configuration in which you use the mapstruct mappers:
+<p>If you are working with a gradle project, then add the folowing plugin to the gradle project configuration in which you use the dettonville mappers:
 <pre class="prettyprint linenums lang-">
 plugins {
     // Allow configuration calls for setting up the eclipse annotation processing configuration.
@@ -189,15 +189,15 @@ Next check the project properties and make certain that the annotation processin
 <h4 id="installation"><a class="ms-header-link" href="#installation"><i class="fa fa-link"></i></a>Installation</h4>
 <p>Drag the following icon into your running Eclipse workspace:
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2844337" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>.</p>
-<p>Alternatively, you can obtain the MapStruct Eclipse Plugin from the <a href="https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin">Eclipse Marketplace</a>.
-For more information and for installing the latest Snapshot version, visit the <a href="https://github.com/mapstruct/mapstruct-eclipse">plugins GitHub project</a>.</p>
+<p>Alternatively, you can obtain the MapStruct Eclipse Plugin from the <a href="https://marketplace.eclipse.org/content/dettonville-eclipse-plugin">Eclipse Marketplace</a>.
+For more information and for installing the latest Snapshot version, visit the <a href="https://github.com/dettonville/dettonville-eclipse">plugins GitHub project</a>.</p>
 <h2 id="intellij-idea"><a class="ms-header-link" href="#intellij-idea"><i class="fa fa-link"></i></a>IntelliJ IDEA</h2>
 <p>Depending on how you configured the annotation processor in your Maven or Gradle project, IntelliJ may or may not pick it up automatically. You might need to make sure of it yourself in the project configuration.</p>
 <h3 id="maven-integration-1"><a class="ms-header-link" href="#maven-integration-1"><i class="fa fa-link"></i></a>Maven Integration</h3>
-<p>For example, if you use the way of Maven configuration that is proposed in our documentation using <code>annotationProcessorPaths</code> in the maven-compiler-plugin, then you need to configure IntelliJ manually until the feature request <a href="https://youtrack.jetbrains.com/issue/IDEA-150621">IDEA-150621</a> is implemented. An alternative is to add the <code>mapstruct-processor</code> as a project dependency with <code>&lt;optional&gt;true&lt;/optional&gt;</code> in your <code>pom.xml</code>, which should then be picked up automatically again.</p>
+<p>For example, if you use the way of Maven configuration that is proposed in our documentation using <code>annotationProcessorPaths</code> in the maven-compiler-plugin, then you need to configure IntelliJ manually until the feature request <a href="https://youtrack.jetbrains.com/issue/IDEA-150621">IDEA-150621</a> is implemented. An alternative is to add the <code>dettonville-processor</code> as a project dependency with <code>&lt;optional&gt;true&lt;/optional&gt;</code> in your <code>pom.xml</code>, which should then be picked up automatically again.</p>
 <h3 id="editing-support-1"><a class="ms-header-link" href="#editing-support-1"><i class="fa fa-link"></i></a>Editing Support</h3>
-<p>There is an IntelliJ plugin for MapStruct support, that you can find in the Jetbrains plugins repository <a href="https://plugins.jetbrains.com/plugin/10036-mapstruct-support">here</a>.
-The plugin is open source and you can report bugs and feature requests <a href="https://github.com/mapstruct/mapstruct-idea/issues">here</a> on GitHub.</p>
+<p>There is an IntelliJ plugin for MapStruct support, that you can find in the Jetbrains plugins repository <a href="https://plugins.jetbrains.com/plugin/10036-dettonville-support">here</a>.
+The plugin is open source and you can report bugs and feature requests <a href="https://github.com/dettonville/dettonville-idea/issues">here</a> on GitHub.</p>
 <h4 id="completion-for-properties-and-enum-constants-1"><a class="ms-header-link" href="#completion-for-properties-and-enum-constants-1"><i class="fa fa-link"></i></a>Completion for Properties and Enum Constants</h4>
 <div style="text-align:center">
     <img src="/images/idea/source-auto-complete.gif" alt="Code completion for source"/>
@@ -228,10 +228,10 @@ The plugin is open source and you can report bugs and feature requests <a href="
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

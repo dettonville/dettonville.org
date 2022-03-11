@@ -162,12 +162,12 @@ Basically, we&rsquo;ve been using an annotation processor to generate access to 
 this allows us to access the MapStruct annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
 This is a really old project and the only release on Maven Central is from March 2010.</p>
 <p>Thus we needed something newer and created our own utility.
-Say hi to <a href="https://github.com/mapstruct/tools-gem">Gem Tools</a>.</p>
+Say hi to <a href="https://github.com/dettonville/tools-gem">Gem Tools</a>.</p>
 <h3 id="why-create-a-new-tool"><a class="ms-header-link" href="#why-create-a-new-tool"><i class="fa fa-link"></i></a>Why create a new tool?</h3>
 <p>The Hickory Annotation processor is a really simple processor, which has served us for a really long time.
 We&rsquo;ve had no problems with it.
 However, we noticed that it is no longer easy for us to add new features quickly.
-Andrei had to close his PR <a href="https://github.com/mapstruct/mapstruct/pull/1923">#1923</a> due to different maintainability problems.
+Andrei had to close his PR <a href="https://github.com/dettonville/dettonville/pull/1923">#1923</a> due to different maintainability problems.
 The processor being old also meant that it had some warnings when compiling our code on newer Java versions.</p>
 <h3 id="benefits"><a class="ms-header-link" href="#benefits"><i class="fa fa-link"></i></a>Benefits</h3>
 <p>The benefits of the Gem Tools are that you can generate a gem for any annotation out there.
@@ -188,7 +188,7 @@ We are actually doing this create a gem for <code>javax.xml.bind.annotation.XmlE
 ...
 &lt;dependencies&gt;
     &lt;dependency&gt;
-        &lt;groupId&gt;org.mapstruct.tools.gem&lt;/groupId&gt;
+        &lt;groupId&gt;org.dettonville.tools.gem&lt;/groupId&gt;
         &lt;artifactId&gt;gem-api&lt;/artifactId&gt;
         &lt;version&gt;${tools.gem.version}&lt;/version&gt;
     &lt;/dependency&gt;
@@ -205,7 +205,7 @@ We are actually doing this create a gem for <code>javax.xml.bind.annotation.XmlE
                 &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;
                 &lt;annotationProcessorPaths&gt;
                     &lt;path&gt;
-                        &lt;groupId&gt;org.mapstruct.tools.gem&lt;/groupId&gt;
+                        &lt;groupId&gt;org.dettonville.tools.gem&lt;/groupId&gt;
                         &lt;artifactId&gt;gem-processor&lt;/artifactId&gt;
                         &lt;version&gt;${tools.gem.version}&lt;/version&gt;
                     &lt;/path&gt;
@@ -222,9 +222,9 @@ We are actually doing this create a gem for <code>javax.xml.bind.annotation.XmlE
 <pre class="prettyprint linenums lang-groovy">
 dependencies {
     ...
-    compile &#39;org.mapstruct.tools.gem:gem-api:1.0.0.Alpha1&#39;
+    compile &#39;org.dettonville.tools.gem:gem-api:1.0.0.Alpha1&#39;
 
-    annotationProcessor &#39;org.mapstruct.tools.gem:gem-processor:1.0.0.Alpha1&#39;
+    annotationProcessor &#39;org.dettonville.tools.gem:gem-processor:1.0.0.Alpha1&#39;
 }
 </pre>
 
@@ -333,7 +333,7 @@ public class MappingGem implements Gem {
 
     public static  &lt;T&gt; T  build(Element element, Builder&lt;T&gt; builder) {
         AnnotationMirror mirror = element.getAnnotationMirrors().stream()
-            .filter( a -&gt;  &#34;org.mapstruct.Mapping&#34;.contentEquals( ( ( TypeElement )a.getAnnotationType().asElement() ).getQualifiedName() ) )
+            .filter( a -&gt;  &#34;org.dettonville.Mapping&#34;.contentEquals( ( ( TypeElement )a.getAnnotationType().asElement() ).getQualifiedName() ) )
             .findAny()
             .orElse( null );
         return build( mirror, builder );
@@ -515,13 +515,13 @@ Feel Free to create issues and PRs with new functionality.</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>You can fetch the new release from Maven Central using the following GAV coordinates:</p>
 <ul>
-<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct.tools.gem%7Cgem-api%7C1.0.0.Alpha1%7Cjar">org.mapstruct.tools.gem:gem-api:1.0.0.Alpha1</a></li>
-<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct.tools.gem%7Cgem-processor%7C1.0.0.Alpha1%7Cjar">org.mapstruct.tools.gem:gem-processor:1.0.0.Alpha1</a></li>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville.tools.gem%7Cgem-api%7C1.0.0.Alpha1%7Cjar">org.dettonville.tools.gem:gem-api:1.0.0.Alpha1</a></li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville.tools.gem%7Cgem-processor%7C1.0.0.Alpha1%7Cjar">org.dettonville.tools.gem:gem-processor:1.0.0.Alpha1</a></li>
 </ul>
 <p>If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:</p>
 <ul>
-<li>Get help in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a></li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/tools-gem/issues">issue tracker</a></li>
+<li>Get help in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a></li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/tools-gem/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 </ul></div>
     </div>
@@ -574,10 +574,10 @@ Feel Free to create issues and PRs with new functionality.</p>
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

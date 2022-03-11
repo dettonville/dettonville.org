@@ -155,36 +155,36 @@ if (!doNotTrack) {
 
     <div>
         <div><p>I&rsquo;m very happy to announce the second candidate release of MapStruct 1.2!</p>
-<p>The CR2 release mostly provides bug fixes and other smaller improvements since the <a href="http://mapstruct.org/news/2017-07-25-mapstruct-1_2_0_CR1-released/">CR1</a>,
-e.g. related to the handling of <code>mappingInheritanceStrategy</code> (issue <a href="https://github.com/mapstruct/mapstruct/issues/1255">#1255</a>).
-Further fixes concern the handling nested target properties (<a href="https://github.com/mapstruct/mapstruct/issues/1269">#1269</a>).</p>
+<p>The CR2 release mostly provides bug fixes and other smaller improvements since the <a href="http://dettonville.org/news/2017-07-25-dettonville-1_2_0_CR1-released/">CR1</a>,
+e.g. related to the handling of <code>mappingInheritanceStrategy</code> (issue <a href="https://github.com/dettonville/dettonville/issues/1255">#1255</a>).
+Further fixes concern the handling nested target properties (<a href="https://github.com/dettonville/dettonville/issues/1269">#1269</a>).</p>
 <p>The most notable change in the release is the extension of the <code>mappingInheritenceStrategy</code>.
-With the inclusion of <a href="https://github.com/mapstruct/mapstruct/issues/1065">#1065</a> in <code>1.2.0.Beta2</code> we added support inheritance of reverse methods from <code>@MapperConfig</code>.
-This inadvertently lead to <a href="https://github.com/mapstruct/mapstruct/issues/1255">#1255</a>. Therefore, now there are 4 strategies:</p>
+With the inclusion of <a href="https://github.com/dettonville/dettonville/issues/1065">#1065</a> in <code>1.2.0.Beta2</code> we added support inheritance of reverse methods from <code>@MapperConfig</code>.
+This inadvertently lead to <a href="https://github.com/dettonville/dettonville/issues/1255">#1255</a>. Therefore, now there are 4 strategies:</p>
 <ul>
 <li><code>EXPLICIT</code> - Only inherits if explicitly stated (Same as before)</li>
 <li><code>AUTO_INHERIT_FROM_CONFIG</code> - Will automatically inherit <strong>only</strong> forward configuration (Behaviour is same as before)</li>
 <li><code>AUTO_INHERIT_REVERSE_FROM_CONFIG</code> - Will automatically inherit <strong>only</strong> reverse configuration (New strategy)</li>
 <li><code>AUTO_INHERIT_ALL_FROM_CONFIG</code> - Will automatically inherit <strong>both</strong> forward and reverse configuration (New Strategy)</li>
 </ul>
-<p>Overall, <a href="https://github.com/mapstruct/mapstruct/milestone/19?closed=1">6 issues</a> have been fixed with the CR2 release.
-Please see the <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.2.0.CR2">release notes</a> for more details on the issues fixed.</p>
+<p>Overall, <a href="https://github.com/dettonville/dettonville/milestone/19?closed=1">6 issues</a> have been fixed with the CR2 release.
+Please see the <a href="https://github.com/dettonville/dettonville/releases/tag/1.2.0.CR2">release notes</a> for more details on the issues fixed.</p>
 <p>Thanks to everyone contributing to this release: <a href="https://github.com/xyzst">Darren Rambaud</a> and the long-term MapStruct afficionados <a href="https://github.com/agudian">Andreas Gudian</a>, <a href="https://github.com/gunnarmorling">Gunnar Morling</a> and <a href="https://github.com/sjaakd">Sjaak Derksen</a>.</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>You can find MapStruct 1.2 CR 2 in Maven Central under the following GAV coordinates:</p>
 <ul>
-<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-jdk8%7C1.2.0.CR2%7Cjar">org.mapstruct:mapstruct-jdk8:1.2.0.CR2</a> (for usage with Java &gt;= 8) or <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.2.0.CR2%7Cjar">org.mapstruct:mapstruct:1.2.0.CR2</a> (for earlier Java versions)</li>
-<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.2.0.CR2%7Cjar">org.mapstruct:mapstruct-processor:1.2.0.CR2</a></li>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-jdk8%7C1.2.0.CR2%7Cjar">org.dettonville:dettonville-jdk8:1.2.0.CR2</a> (for usage with Java &gt;= 8) or <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.2.0.CR2%7Cjar">org.dettonville:dettonville:1.2.0.CR2</a> (for earlier Java versions)</li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.2.0.CR2%7Cjar">org.dettonville:dettonville-processor:1.2.0.CR2</a></li>
 </ul>
-<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.2.0.CR2">from GitHub</a>.</p>
+<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/dettonville/dettonville/releases/tag/1.2.0.CR2">from GitHub</a>.</p>
 <h3 id="next-steps"><a class="ms-header-link" href="#next-steps"><i class="fa fa-link"></i></a>Next steps</h3>
 <p>With this candidate release we believe that we&rsquo;re ready for releasing MapStruct 1.2 Final.</p>
 <p>We are confident that the final release will be out in in few weeks.</p>
 <p>Please give the candidate release a spin and let us know as soon as possible if you run into any trouble.
 To get in touch, post a comment below or use one the following channels:</p>
 <ul>
-<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group or in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a></li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group or in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a></li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 <li>Follow MapStruct on <a href="https://plus.google.com/u/0/118070742567787866481/posts">Google+</a></li>
 </ul></div>
@@ -238,10 +238,10 @@ To get in touch, post a comment below or use one the following channels:</p>
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

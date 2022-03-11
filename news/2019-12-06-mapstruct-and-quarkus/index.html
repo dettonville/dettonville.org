@@ -155,7 +155,7 @@ if (!doNotTrack) {
 
     <div>
         <div><p>This year is nearly over, but it was started with something new that came up in the Java world: <a href="https://quarkus.io/">Quarkus</a>. You may already have heard about it, if not, don’t worry, I will quickly summarize what it is.</p>
-<p>Additionally to this post you can also find a working example in our <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-quarkus">examples repository</a>.</p>
+<p>Additionally to this post you can also find a working example in our <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-quarkus">examples repository</a>.</p>
 <h3 id="quarkus"><a class="ms-header-link" href="#quarkus"><i class="fa fa-link"></i></a>Quarkus</h3>
 <blockquote>
 <p>Supersonic Subatomic Java</p>
@@ -171,15 +171,15 @@ This allows having the advantages of native applications also for Java-based app
 <p>And thats exactly the point where MapStruct jumps in as a reflection-free mapping library!</p>
 <h3 id="how-to-integrate-mapstruct-in-a-quarkus-application"><a class="ms-header-link" href="#how-to-integrate-mapstruct-in-a-quarkus-application"><i class="fa fa-link"></i></a>How to integrate MapStruct in a Quarkus application</h3>
 <p>So let us see how well MapStruct plays together with Quarkus!</p>
-<p>I made an example application that will show you how you can integrate MapStruct in your Quarkus application. You will find the complete demo application in our <a href="https://github.com/mapstruct/mapstruct-examples/mapstruct-quarkus">examples repository</a>.</p>
+<p>I made an example application that will show you how you can integrate MapStruct in your Quarkus application. You will find the complete demo application in our <a href="https://github.com/dettonville/dettonville-examples/dettonville-quarkus">examples repository</a>.</p>
 <p>The example should be a simple REST application just having a <code>/person</code> endpoint returning information about a person. Obviously, the internally used classes should not be exposed, but a DTO will be created and filled with information from a MapStruct mapper.</p>
 <h4 id="create-a-new-quarkus-application"><a class="ms-header-link" href="#create-a-new-quarkus-application"><i class="fa fa-link"></i></a>Create a new Quarkus application</h4>
 <p>After reading the <a href="https://quarkus.io/guides/getting-started-guide">Getting Started</a> on the Quarkus pages it was really easy to figure out how to create a new application. Just run the following command:</p>
 <pre class="prettyprint linenums lang-">
 mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create \
-  -DprojectGroupId=org.mapstruct.examples.quarkus \
-  -DprojectArtifactId=mapstruct-examples-quarkus \
-  -DclassName=&#34;org.mapstruct.example.quarkus.PersonResource&#34; \
+  -DprojectGroupId=org.dettonville.examples.quarkus \
+  -DprojectArtifactId=dettonville-examples-quarkus \
+  -DclassName=&#34;org.dettonville.example.quarkus.PersonResource&#34; \
   -Dpath=&#34;/person&#34; \
   -Dextensions=&#34;resteasy-jsonb&#34;
 </pre>
@@ -189,13 +189,13 @@ mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create \
 <p>You just need to add MapStruct in your projects POM:</p>
 <pre class="prettyprint linenums lang-xml">
 &lt;dependency&gt;
-  &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-  &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
+  &lt;groupId&gt;org.dettonville&lt;/groupId&gt;
+  &lt;artifactId&gt;dettonville&lt;/artifactId&gt;
   &lt;version&gt;1.3.1.Final&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
-  &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-  &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;
+  &lt;groupId&gt;org.dettonville&lt;/groupId&gt;
+  &lt;artifactId&gt;dettonville-processor&lt;/artifactId&gt;
   &lt;version&gt;1.3.1.Final&lt;/version&gt;
   &lt;scope&gt;provided&lt;/scope&gt;
 &lt;/dependency&gt;
@@ -298,7 +298,7 @@ mvn package -Pnative
 <p>You will notice that running the native compilation will take a while as it will not just compile your application as usual, it will afterwards create the native image. This process takes some time, but you will save this time afterwards in production when you need to (re)start your application plenty of times.</p>
 <p>The output after starting the app should look like this:</p>
 <pre class="prettyprint linenums lang-">
-mapstruct-examples-quarkus 1.0-SNAPSHOT (running on Quarkus 1.0.1.Final) started in 0.006s. Listening on: http://0.0.0.0:8080
+dettonville-examples-quarkus 1.0-SNAPSHOT (running on Quarkus 1.0.1.Final) started in 0.006s. Listening on: http://0.0.0.0:8080
 Profile prod activated. 
 Installed features: [cdi, resteasy, resteasy-jsonb]
 </pre>
@@ -311,7 +311,7 @@ Installed features: [cdi, resteasy, resteasy-jsonb]
 <p>So yes: <strong>MapStruct and Quarkus is definitely a match made in heaven!</strong></p>
 <p>The important point is to use CDI. The default component model (that’s where you retrieve the mapper with <code>Mappers.getMapper(PersonMapper.class)</code>) will not work out-of-the-box as this is the only part in MapStruct where reflection is used. If you still prefer this way you have to provide an own <a href="https://github.com/oracle/graal/blob/master/substratevm/REFLECTION.md">reflection configuration</a>. Maybe in the future MapStruct will also support this out-of-the box. But with version 1.3.1.Final it is not yet supported.</p>
 <h4 id="one-small-disadvantage-still-left"><a class="ms-header-link" href="#one-small-disadvantage-still-left"><i class="fa fa-link"></i></a>One small disadvantage still left</h4>
-<p>In case you are an experienced MapStruct user you might have noticed that <a href="#adding-mapstruct">the way how I added MapStruct</a> is a bit different to the way it is written in our <a href="http://mapstruct.org/documentation/stable/reference/html/#_apache_maven">reference guide</a>.</p>
+<p>In case you are an experienced MapStruct user you might have noticed that <a href="#adding-dettonville">the way how I added MapStruct</a> is a bit different to the way it is written in our <a href="http://dettonville.org/documentation/stable/reference/html/#_apache_maven">reference guide</a>.</p>
 <p>The Quarkus development mode provides a hot-reload of your application, unfortunately it seems that the annotation processor will not be triggered again when you define the MapStruct processor within the annotation-processor path of the <code>maven-compiler-plugin</code> and you have to restart the application to see changes on the mappings.</p>
 <p>Adding our processor as a regular dependency will ensure that the processor will be used in the dev-mode in case you make changes to a <code>@Mapper</code> annotated class. Unfortunately, one point is still not working out-of-the-box: When you change classes not annotated with <code>@Mapper</code> that would change the mapper implementation (like the DTO) the mapper will not be regenerated. I guess that Quarkus is not able to know that the changed DTO has a side effect on the corresponding mapper and as this one will not be regenerated the annotation processor will not update the mapper implementation (see <a href="https://github.com/quarkusio/quarkus/issues/1502">Quarkus issue #1502</a>).</p></div>
     </div>
@@ -364,10 +364,10 @@ Installed features: [cdi, resteasy, resteasy-jsonb]
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

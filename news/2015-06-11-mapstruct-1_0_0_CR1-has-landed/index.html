@@ -161,15 +161,15 @@ if (!doNotTrack) {
 <li>The decorator feature can now also be used with Spring</li>
 <li>Support for before- and after-mapping lifecycle hooks</li>
 </ul>
-<p>The complete list of 24 closed issues can be found in the <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.CR1">change log</a>.</p>
+<p>The complete list of 24 closed issues can be found in the <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.CR1">change log</a>.</p>
 <p>A big thank you to everyone contributing to this release: <a href="https://github.com/sjaakd/">Sjaak Derksen</a>, <a href="https://github.com/agudian">Andreas Gudian</a>, <a href="https://github.com/chschu">Christian Schuster</a>, <a href="https://github.com/ps-powa">Paul Strugnell</a> and <a href="https://github.com/sonata82">Remko Plantenga</a>!</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>To fetch MapStruct 1.0.0.CR1 via Maven, Gradle or similar dependency management tools, use the following GAV coordinates:</p>
 <ul>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.0.0.CR1%7Cjar">org.mapstruct:mapstruct:1.0.0.CR1</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-jdk8%7C1.0.0.CR1%7Cjar">org.mapstruct:mapstruct-jdk8:1.0.0.CR1</a> (for usage with Java &gt;= 8)</li>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.0.0.CR1%7Cjar">org.mapstruct:mapstruct-processor:1.0.0.CR1</a> for the annotation processor.</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.0.0.CR1%7Cjar">org.dettonville:dettonville:1.0.0.CR1</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-jdk8%7C1.0.0.CR1%7Cjar">org.dettonville:dettonville-jdk8:1.0.0.CR1</a> (for usage with Java &gt;= 8)</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.0.0.CR1%7Cjar">org.dettonville:dettonville-processor:1.0.0.CR1</a> for the annotation processor.</li>
 </ul>
-<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/mapstruct/files/1.0.0.CR1/">SourceForge</a>.</p>
+<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/dettonville/files/1.0.0.CR1/">SourceForge</a>.</p>
 <h3 id="spi-for-property-accessor-discovery"><a class="ms-header-link" href="#spi-for-property-accessor-discovery"><i class="fa fa-link"></i></a>SPI for property accessor discovery</h3>
 <p>By default, MapStruct expects property getters and setters adhering to the <a href="http://www.oracle.com/technetwork/java/javase/documentation/spec-136004.html">JavaBeans specification</a>.</p>
 <p>In some cases though models to be mapped derive from this convention. E.g. builder objects could expose property write accessors such as <code>withName()</code> (instead of <code>setName()</code>). O domain models could expose property read accessors just in the form of <code>name()</code> (instead of <code>getName()</code>).</p>
@@ -187,7 +187,7 @@ public interface AccessorNamingStrategy {
     String getCollectionGetterName(String property);
 }
 </pre>
-<p>The MapStruct engine will pass all candidate methods of mapping source and target types to this SPI in order to detect their property accessors. Once you have created an implementation of the contract based on your project&rsquo;s specific property naming conventions (<a href="https://github.com/mapstruct/mapstruct/blob/master/integrationtest/src/test/resources/namingStrategyTest/strategy/src/main/java/org/mapstruct/itest/naming/CustomAccessorNamingStrategy.java">an example</a> can be found in our test suite), it needs to be registered through the Java <a href="http://docs.oracle.com/javase/8/docs/api/index.html?java/util/ServiceLoader.html">service loader</a> mechanism. To do so, create the file <em>META-INF/services/org.mapstruct.ap.spi.AccessorNamingStrategy</em> with the fully-qualified name of your implementation as contents:</p>
+<p>The MapStruct engine will pass all candidate methods of mapping source and target types to this SPI in order to detect their property accessors. Once you have created an implementation of the contract based on your project&rsquo;s specific property naming conventions (<a href="https://github.com/dettonville/dettonville/blob/master/integrationtest/src/test/resources/namingStrategyTest/strategy/src/main/java/org/dettonville/itest/naming/CustomAccessorNamingStrategy.java">an example</a> can be found in our test suite), it needs to be registered through the Java <a href="http://docs.oracle.com/javase/8/docs/api/index.html?java/util/ServiceLoader.html">service loader</a> mechanism. To do so, create the file <em>META-INF/services/org.dettonville.ap.spi.AccessorNamingStrategy</em> with the fully-qualified name of your implementation as contents:</p>
 <pre class="prettyprint linenums">
 com.example.CustomAccessorNamingStrategy
 </pre>
@@ -250,11 +250,11 @@ public abstract class VehicleMapper {
 <p>All generated implementations of mapping methods with <code>AbstractVehicle</code> or a sub-type as source-type (such as <code>toCarDto()</code>) will invoke the method annotated with <code>@BeforeMapping</code> at the beginning. Similarly, all methods mapping <code>AbstractVehicle</code> or a sub-type into <code>AbstractVehicleDto</code> or a sub-type will invoke the method annotated with <code>@AfterMapping</code> at the end.</p>
 <p>Before and after mapping callback methods are a quite powerful mechanism to implement cross-cutting concerns common to a larger group of mapping methods. Refer to the JavaDocs of <code>@BeforeMapping</code> and <code>@AfterMapping</code> to learn more, e.g. about ordering of several lifecycle methods etc. Note that before and after mapping callback methods are considered and experimental features as of MapStruct 1.0. Based on feedback from using this feature in practice we may fine-tune semantics in a subsequent release.</p>
 <h3 id="whats-next"><a class="ms-header-link" href="#whats-next"><i class="fa fa-link"></i></a>What&rsquo;s next?</h3>
-<p>With CR 1 out, MapStruct 1.0 Final is getting in sight! Based on the number of bugs reported against CR1, we may either do another CR in two or three weeks or go straight to the Final. In parallel work on the MapStruct <a href="https://github.com/mapstruct/mapstruct-eclipse">Eclipse plug-in</a> continues. We plan to do a first Alpha release of that very soon. Stay tuned!</p>
+<p>With CR 1 out, MapStruct 1.0 Final is getting in sight! Based on the number of bugs reported against CR1, we may either do another CR in two or three weeks or go straight to the Final. In parallel work on the MapStruct <a href="https://github.com/dettonville/dettonville-eclipse">Eclipse plug-in</a> continues. We plan to do a first Alpha release of that very soon. Stay tuned!</p>
 <p>Finally, some useful links:</p>
 <ul>
-<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group</li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group</li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 <li>Follow MapStruct on <a href="https://plus.google.com/u/0/118070742567787866481/posts">Google+</a></li>
 </ul>
@@ -309,10 +309,10 @@ public abstract class VehicleMapper {
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

@@ -160,7 +160,7 @@ if (!doNotTrack) {
 
     <div>
         <div><p><em>Update Feb. 26, 2017: Since writing this post, usage of annotation processors with Gradle got much easier and the set-up described in the following isn&rsquo;t required anymore.</em>
-<em>The <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-gradle">example project</a> on GitHub has been updated accordingly.</em></p>
+<em>The <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle">example project</a> on GitHub has been updated accordingly.</em></p>
 <p>You work with <a href="http://www.gradle.org/">Gradle</a> to build your application and would like to make use of MapStruct to generate mappings between different representations of your model? Then read on to learn how to make MapStruct work with the Groovy based build tool.</p>
 <h3 id="background"><a class="ms-header-link" href="#background"><i class="fa fa-link"></i></a>Background</h3>
 <p>MapStruct is implemented in form of an annotation processor as specified by <a href="http://jcp.org/en/jsr/detail?id=269">JSR 269</a>. Annotation processors are plugged into the Java compiler and can inspect the sources during compilation as well as create new sources as it is done by MapStruct. JSR 269 processors can be integrated into basically any form of Java build as long as you work with Java 6 or later.</p>
@@ -171,21 +171,21 @@ if (!doNotTrack) {
 <pre class="prettyprint linenums">
 ext {
     javaLanguageLevel = '1.6'
-    generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
+    generatedMapperSourcesDir = "${buildDir}/generated-src/dettonville/main"
 }
 
 sourceCompatibility = rootProject.javaLanguageLevel
 </pre>
 <p>It&rsquo;s a good idea to declare a property which holds the language level. That way it can be referenced later on where required. We also define a property which specifies the target directory for the generated mapper classes.</p>
-<p>The next step is to add the MapStruct annotation module (<em>org.mapstruct:mapstruct:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate <a href="http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations">dependency configuration</a> which contains the MapStruct processor module (<em>org.mapstruct:mapstruct-processor:&lt;VERSION&gt;</em>):</p>
+<p>The next step is to add the MapStruct annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate <a href="http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations">dependency configuration</a> which contains the MapStruct processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):</p>
 <pre class="prettyprint linenums">
 configurations {
-    mapstruct
+    dettonville
 }
 
 dependencies {
-    compile( 'org.mapstruct:mapstruct:&lt;VERSION&gt;' )
-    mapstruct( 'org.mapstruct:mapstruct-processor:&lt;VERSION&gt;' )
+    compile( 'org.dettonville:dettonville:&lt;VERSION&gt;' )
+    dettonville( 'org.dettonville:dettonville-processor:&lt;VERSION&gt;' )
 }
 </pre>
 <p>The separate dependency configuration makes sure that the classes from the processor aren&rsquo;t visible to the compiled application. To make the generated sources available for the actual compilation step add the previously configured path to the main <a href="http://www.gradle.org/docs/current/userguide/java_plugin.html#N11D51">source set</a> like this:</p>
@@ -198,10 +198,10 @@ sourceSets.main {
 <p>We also store the original source directories in a property in order to reference them later on. Now it&rsquo;s time to set up a task for the invocation of the annotation processor. To do so, declare a task of the type <a href="http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.compile.JavaCompile.html">JavaCompile</a> like this:</p>
 <pre class="prettyprint linenums">
 task generateMainMapperClasses(type: JavaCompile) {
-    ext.aptDumpDir = file( "${buildDir}/tmp/apt/mapstruct" )
+    ext.aptDumpDir = file( "${buildDir}/tmp/apt/dettonville" )
     destinationDir = aptDumpDir
 
-    classpath = compileJava.classpath + configurations.mapstruct
+    classpath = compileJava.classpath + configurations.dettonville
     source = sourceSets.main.originalJavaSrcDirs
     ext.sourceDestDir = file ( "$generatedMapperSourcesDir" )
 
@@ -210,7 +210,7 @@ task generateMainMapperClasses(type: JavaCompile) {
             "-nowarn",
             "-proc:only",
             "-encoding", "UTF-8",
-            "-processor", "org.mapstruct.ap.MappingProcessor",
+            "-processor", "org.dettonville.ap.MappingProcessor",
             "-s", sourceDestDir.absolutePath,
             "-source", rootProject.javaLanguageLevel,
             "-target", rootProject.javaLanguageLevel,
@@ -227,7 +227,7 @@ task generateMainMapperClasses(type: JavaCompile) {
     }
 }
 </pre>
-<p>The task&rsquo;s classpath comprises both, the actual compilation classpath as well as the <code>mapstruct</code> configuration set up before. As source path the previously stored source directories are used.</p>
+<p>The task&rsquo;s classpath comprises both, the actual compilation classpath as well as the <code>dettonville</code> configuration set up before. As source path the previously stored source directories are used.</p>
 <p>The options passed to the compile task should be rather self-explanatory. Note that by passing <code>-proc:only</code>, the task will only invoke the given processor but perform no compilation (that will be done by the default compilation step later on).</p>
 <p>By declaring the <code>inputs</code> and <code>outputs</code> of the task we make sure Gradle&rsquo;s <a href="http://www.gradle.org/docs/current/userguide/more_about_tasks.html#sec:up_to_date_checks">incremental build</a> functionality is leveraged. That way Gradle will skip the task when running the build a second time and the generated output files still are up to date.</p>
 <p>Finally you need to make sure that the generation of mapper types happens before the compilation of all sources. This can be achieved by declaring the following dependency:</p>
@@ -235,16 +235,16 @@ task generateMainMapperClasses(type: JavaCompile) {
 compileJava.dependsOn generateMainMapperClasses
 </pre>
 <h3 id="give-it-a-shot"><a class="ms-header-link" href="#give-it-a-shot"><i class="fa fa-link"></i></a>Give it a shot</h3>
-<p>You can find the complete <a href="https://github.com/mapstruct/mapstruct-examples/blob/master/mapstruct-on-gradle/build.gradle">build.gradle</a> file on GitHub. It is part of an example project which generates a simple mapper class and executes some tests against it. To clone the example project just execute</p>
+<p>You can find the complete <a href="https://github.com/dettonville/dettonville-examples/blob/master/dettonville-on-gradle/build.gradle">build.gradle</a> file on GitHub. It is part of an example project which generates a simple mapper class and executes some tests against it. To clone the example project just execute</p>
 <pre class="prettyprint lang-sh linenums">
-git clone https://github.com/mapstruct/mapstruct-examples.git
+git clone https://github.com/dettonville/dettonville-examples.git
 </pre>
 <p>You can then build the example by running</p>
 <pre class="prettyprint lang-sh linenums">
-cd mapstruct-on-gradle &amp;&amp; ./gradlew build
+cd dettonville-on-gradle &amp;&amp; ./gradlew build
 </pre>
 <p>The project comes with the <a href="http://www.gradle.org/docs/current/userguide/userguide_single.html#gradle_wrapper">Gradle Wrapper</a>, a small utility which retrieves the right Gradle version upon the first build. So it is not required to install Gradle separately.</p>
-<p>In case you have questions, ideas or any other kind of feedback just add a comment to this post or leave a message in the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group.</p>
+<p>In case you have questions, ideas or any other kind of feedback just add a comment to this post or leave a message in the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group.</p>
 </div>
     </div>
     <div>
@@ -296,10 +296,10 @@ cd mapstruct-on-gradle &amp;&amp; ./gradlew build
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

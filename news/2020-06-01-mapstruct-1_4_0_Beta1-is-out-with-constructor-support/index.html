@@ -166,7 +166,7 @@ if (!doNotTrack) {
 <li>Support mapping from / to Java 14 records (preview feature)</li>
 <li>New <code>EnumTransformationStrategy</code> and <code>EnumNamingStrategy</code> SPIs</li>
 </ul>
-<p>Altogether, not less than <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.4.0.Beta1">76 issues</a> were fixed for this release.</p>
+<p>Altogether, not less than <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.4.0.Beta1">76 issues</a> were fixed for this release.</p>
 <p>This would not have been possible without our fantastic community of contributors:</p>
 <ul>
 <li><a href="https://github.com/Zomzog">@Zomzog</a>,</li>
@@ -194,14 +194,14 @@ With this release we also want to introduce a new community driven effort for di
 More about it below.</p>
 <p>Enough of the pep talk, let&rsquo;s take a closer look at some of the new features!</p>
 <h3 id="making-use-of-constructor-arguments-when-instantiating-mapping-targets"><a class="ms-header-link" href="#making-use-of-constructor-arguments-when-instantiating-mapping-targets"><i class="fa fa-link"></i></a>Making use of constructor arguments when instantiating mapping targets</h3>
-<p>Making use of <a href="https://github.com/mapstruct/mapstruct/issues/73">constructor arguments</a> when instantiating mapping targets has been one of the oldest and the most requested feature of MapStruct.</p>
+<p>Making use of <a href="https://github.com/dettonville/dettonville/issues/73">constructor arguments</a> when instantiating mapping targets has been one of the oldest and the most requested feature of MapStruct.</p>
 <p>We are happy to announce that as of 1.4.0.Beta1 MapStruct has out of the box support for mapping your immutable objects via constructors.
 This works with:</p>
 <ul>
 <li><a href="https://openjdk.java.net/jeps/359">Java 14 Records</a></li>
 <li><a href="https://kotlinlang.org/docs/reference/data-classes.html">Kotlin Data Classes</a></li>
 </ul>
-<p>For more details how the Constructor support works have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-with-constructors">Using constructors</a> section of the reference guide.</p>
+<p>For more details how the Constructor support works have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-with-constructors">Using constructors</a> section of the reference guide.</p>
 <h3 id="gradle-incremental-annotation-processing"><a class="ms-header-link" href="#gradle-incremental-annotation-processing"><i class="fa fa-link"></i></a>Gradle incremental annotation processing</h3>
 <p>Starting From Gradle 4.7, Gradle has supported <a href="https://docs.gradle.org/current/userguide/java_plugin.html#sec:incremental_annotation_processing">incremental annotation processing</a>.
 We are happy to say that starting from 1.4.0.Beta1 MapStruct is an isolating processor.
@@ -218,7 +218,7 @@ public interface CustomerMapper {
 </pre>
 
 <p>The generated code will map every property from <code>CustomerDto.record</code> to <code>Customer</code> directly, without need to manually name any of them.</p>
-<p>For more details have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-nested-bean-properties-to-current-target">Mapping nested bean properties to current target</a> section of the reference guide.</p>
+<p>For more details have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-nested-bean-properties-to-current-target">Mapping nested bean properties to current target</a> section of the reference guide.</p>
 <h3 id="value-mapping-between-string-and-enum"><a class="ms-header-link" href="#value-mapping-between-string-and-enum"><i class="fa fa-link"></i></a>Value mapping between <code>String</code> and <code>Enum</code></h3>
 <p>We&rsquo;ve had support for mapping between different enums for a while now.
 In this release we iterated over that and expanded to support mapping between <code>String</code> and <code>Enum</code>.</p>
@@ -239,7 +239,7 @@ public interface CheeseMapper {
 
 <p>This would generate an implementation that would use the enum value constants for mapping.
 This can be customised by using <code>@ValueMapping</code>.</p>
-<p>For more details have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-enum-types">Mapping Value</a> section of the reference guide.</p>
+<p>For more details have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-enum-types">Mapping Value</a> section of the reference guide.</p>
 <h3 id="support-mapping-in-meta-annotations"><a class="ms-header-link" href="#support-mapping-in-meta-annotations"><i class="fa fa-link"></i></a>Support <code>@Mapping</code> in meta annotations</h3>
 <p>Starting from 1.4.0.Beta1 there is an experimental support for <code>@Mapping</code> compositions.
 This allows reusing <code>@Mapping</code> via other annotations.</p>
@@ -267,7 +267,7 @@ public interface StorageMapper {
 <p>This is an alternative to using inheritance configuration.
 The difference here is that the entities don&rsquo;t need to have any common hierarchy.
 The <code>@Mapping</code> annotations from <code>@ToEntity</code> are transformed as if they have been written on the method.</p>
-<p>For more details have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-composition">Mapping Composition</a> section of the reference guide.</p>
+<p>For more details have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-composition">Mapping Composition</a> section of the reference guide.</p>
 <h3 id="user-control-over-mapping-features"><a class="ms-header-link" href="#user-control-over-mapping-features"><i class="fa fa-link"></i></a>User control over mapping features</h3>
 <p>MapStruct has an extensive support for implicit type conversions, reusing other mappers, 2 step conversion, etc.
 However, users were not able to control this.
@@ -330,10 +330,10 @@ For example using a prefix / suffix when mapping between different generated enu
 We&rsquo;ve added a new annotation (<code>@EnumMapping</code>) for customizing how an enum mapping should look like.</p>
 <p>And we added 2 new SPIs:</p>
 <ul>
-<li><a href="https://mapstruct.org/documentation/stable/api/org/mapstruct/ap/spi/EnumTransformationStrategy.html"><code>EnumTransformationStrategy</code></a></li>
-<li><a href="https://mapstruct.org/documentation/stable/api/org/mapstruct/ap/spi/EnumNamingStrategy.html"><code>EnumNamingStrategy</code></a></li>
+<li><a href="https://dettonville.org/documentation/stable/api/org/dettonville/ap/spi/EnumTransformationStrategy.html"><code>EnumTransformationStrategy</code></a></li>
+<li><a href="https://dettonville.org/documentation/stable/api/org/dettonville/ap/spi/EnumNamingStrategy.html"><code>EnumNamingStrategy</code></a></li>
 </ul>
-<p>For more details have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-enum-types">Mapping Value</a> section of the reference guide.</p>
+<p>For more details have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-enum-types">Mapping Value</a> section of the reference guide.</p>
 <h4 id="enumtransformationstrategy-spi"><a class="ms-header-link" href="#enumtransformationstrategy-spi"><i class="fa fa-link"></i></a>EnumTransformationStrategy SPI</h4>
 <p>This is an SPI which allows registering custom functions that can be applied when mapping between enums on a case by case basis.
 The following are the out of the box functions:</p>
@@ -383,7 +383,7 @@ It opens the door for even more customization and providing a way to auto map en
 <p>One example is the Protobuf <a href="https://developers.google.com/protocol-buffers/docs/style#enums">Enum Style Guide</a>.</p>
 <h3 id="enhancements"><a class="ms-header-link" href="#enhancements"><i class="fa fa-link"></i></a>Enhancements</h3>
 <ul>
-<li>Add &ldquo;verbose&rdquo; processor option to print out details if required - Can be activated by using the compiler argument <code>mapstruct.verbose=true</code></li>
+<li>Add &ldquo;verbose&rdquo; processor option to print out details if required - Can be activated by using the compiler argument <code>dettonville.verbose=true</code></li>
 <li>Add imports to <code>@MapperConfig</code></li>
 <li>Annotation processor option for default injection strategy</li>
 <li>Allow mapping between enum and non enum in the same way as mapping between primitive and objects</li>
@@ -394,7 +394,7 @@ It opens the door for even more customization and providing a way to auto map en
 We would like to introduce a new concept with which we are trying to improve the MapStruct experience.</p>
 <p>MapStruct has a lot of functionality and there are a lot of different ways that it can be used.
 Recently <a href="https://github.com/Chessray">Raimund Klein</a> came up with an interesting idea for providing some extra helpful additions to MapStruct when using the <a href="https://spring.io/">Spring Framework</a>.
-This idea lead to an initial implementation, which lead to creating the first community extension, the <a href="https://github.com/mapstruct/mapstruct-spring-extensions">MapStruct Spring Extensions</a>.
+This idea lead to an initial implementation, which lead to creating the first community extension, the <a href="https://github.com/dettonville/dettonville-spring-extensions">MapStruct Spring Extensions</a>.
 I would like to thank Raimund for the initiative and taking the lead for this project.
 There is still no release from this extension, because it is waiting on some enhancements coming from this release.</p>
 <p>The idea of these extensions is to have their own releases which are entirely independent of MapStruct core and are driven by the community.
@@ -404,14 +404,14 @@ In case someone has an idea and wants to propose a new extension feel free to re
 <p>This concludes our tour through MapStruct 1.4 Beta1.
 If you&rsquo;d like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:</p>
 <ul>
-<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.4.0.Beta1%7Cjar">org.mapstruct:mapstruct:1.4.0.Beta1</a></li>
-<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.4.0.Beta1%7Cjar">org.mapstruct:mapstruct-processor:1.4.0.Beta1</a></li>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.4.0.Beta1%7Cjar">org.dettonville:dettonville:1.4.0.Beta1</a></li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.4.0.Beta1%7Cjar">org.dettonville:dettonville-processor:1.4.0.Beta1</a></li>
 </ul>
-<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.4.0.Beta1">from GitHub</a>.</p>
+<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/dettonville/dettonville/releases/tag/1.4.0.Beta1">from GitHub</a>.</p>
 <p>If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:</p>
 <ul>
-<li>Get help in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a> or at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group</li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a> or at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group</li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 </ul></div>
     </div>
@@ -464,10 +464,10 @@ If you&rsquo;d like to try out the features described above, you can fetch the n
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

@@ -210,7 +210,7 @@ the generated code contains plain method invocations, just as if the mapper was 
 <div>
 <p>Yes.</p>
 <p>Check out the <a href="http://dettonville.org/documentation/ide-support/#eclipse">set-up instructions</a> for Eclipse.
-There is also a work-in-progress <a href="https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin#group-metrics-tab">Eclipse plug-in</a>
+There is also a work-in-progress <a href="https://marketplace.eclipse.org/content/dettonville-eclipse-plugin#group-metrics-tab">Eclipse plug-in</a>
 which facilitates the definition of mapper interfaces with auto-completion and some quick fixes.</p>
 </div>
 <h2 id="Can-I-use-MapStruct-together-with-Project-Lombok"><a class="ms-header-link" href="#Can-I-use-MapStruct-together-with-Project-Lombok"><i class="fa fa-link"></i></a>Can I use MapStruct together with Project Lombok?</h2>
@@ -220,8 +220,8 @@ which facilitates the definition of mapper interfaces with auto-completion and s
 AST modifications are not foreseen by Java annotation processing API,
 so quite some trickery was required within Lombok as well MapStruct to make both of them work together.
 Essentially, MapStruct will wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.</p>
-<p>An example for using the two projects together can be found <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-lombok">here</a>.</p>
-<p>If you are using Lombok 1.18.16 or newer you also need to add <a href="https://search.maven.org/artifact/org.projectlombok/lombok-mapstruct-binding">lombok-mapstruct-binding</a> in order to make Lombok and MapStruct work together.</p>
+<p>An example for using the two projects together can be found <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-lombok">here</a>.</p>
+<p>If you are using Lombok 1.18.16 or newer you also need to add <a href="https://search.maven.org/artifact/org.projectlombok/lombok-dettonville-binding">lombok-dettonville-binding</a> in order to make Lombok and MapStruct work together.</p>
 <p>If you are on an older version of MapStruct or Lombok,
 the solution is to put the JavaBeans to be amended by Lombok and the mapper interfaces
 to be processed by MapStruct into two separate modules of your project.
@@ -230,15 +230,15 @@ causing the bean classes to be complete when MapStruct runs during the compilati
 </div>
 <h2 id="Why-does-Named-not-work"><a class="ms-header-link" href="#Why-does-Named-not-work"><i class="fa fa-link"></i></a>Why does @Named not work?</h2>
 <div>
-<p>Check out that you are actually using <a href="http://mapstruct.org/documentation/stable/api/org/mapstruct/Named.html"><code>org.mapstruct.Named</code></a>
+<p>Check out that you are actually using <a href="http://dettonville.org/documentation/stable/api/org/dettonville/Named.html"><code>org.dettonville.Named</code></a>
 and  <strong>not</strong> <code>javax.inject.Named</code>.</p>
 </div>
 <h2 id="Why-do-I-get-this-error-Could-not-retrieve-Mapper-annotation-during-compilation"><a class="ms-header-link" href="#Why-do-I-get-this-error-Could-not-retrieve-Mapper-annotation-during-compilation"><i class="fa fa-link"></i></a>Why do I get this error: Could not retrieve @Mapper annotation during compilation?</h2>
 <div>
-<p>This can happen if you are using <a href="http://mvnrepository.com/artifact/org.mapstruct/mapstruct-jdk8"><code>mapstruct-jdk8</code></a> and
-some other dependency is using an older version of <a href="http://mvnrepository.com/artifact/org.mapstruct/mapstruct"><code>mapstruct</code></a>.
-To solve the problem find the dependency that is using <code>mapstruct</code> and exclude it.</p>
-<p>A known dependency that uses <code>mapstruct</code> and has this problem is <a href="http://mvnrepository.com/artifact/io.springfox/springfox-swagger2"><code>springfox-swagger2</code></a>.</p>
+<p>This can happen if you are using <a href="http://mvnrepository.com/artifact/org.dettonville/dettonville-jdk8"><code>dettonville-jdk8</code></a> and
+some other dependency is using an older version of <a href="http://mvnrepository.com/artifact/org.dettonville/dettonville"><code>dettonville</code></a>.
+To solve the problem find the dependency that is using <code>dettonville</code> and exclude it.</p>
+<p>A known dependency that uses <code>dettonville</code> and has this problem is <a href="http://mvnrepository.com/artifact/io.springfox/springfox-swagger2"><code>springfox-swagger2</code></a>.</p>
 <p>For Maven you need to exclude it like:</p>
 <pre class="prettyprint linenums lang-xml">
 &lt;dependency&gt;
@@ -247,8 +247,8 @@ To solve the problem find the dependency that is using <code>mapstruct</code> an
     &lt;version&gt;${swagger2.version}&lt;/version&gt;
     &lt;exclusions&gt;
         &lt;exclusion&gt;
-            &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-            &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
+            &lt;groupId&gt;org.dettonville&lt;/groupId&gt;
+            &lt;artifactId&gt;dettonville&lt;/artifactId&gt;
         &lt;/exclusion&gt;
     &lt;/exclusions&gt;
 &lt;/dependency&gt;
@@ -256,7 +256,7 @@ To solve the problem find the dependency that is using <code>mapstruct</code> an
 <p>For Gradle you need to exclude it like:</p>
 <pre class="prettyprint linenums lang-groovy">
 compile(&#39;io.springfox:springfox-swagger2:${swagger2.version}&#39;) {
-    exclude group: &#39;org.mapstruct&#39;, module: &#39;mapstruct&#39;
+    exclude group: &#39;org.dettonville&#39;, module: &#39;dettonville&#39;
 }
 </pre>
 </div>
@@ -566,10 +566,10 @@ TypeX doSomething(TypeY y) {
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

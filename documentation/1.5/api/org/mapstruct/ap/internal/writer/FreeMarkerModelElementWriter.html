@@ -6,7 +6,7 @@
 <title>FreeMarkerModelElementWriter (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.internal.writer.FreeMarkerModelElementWriter class">
+<meta name="keywords" content="org.dettonville.ap.internal.writer.FreeMarkerModelElementWriter class">
 <meta name="keywords" content="write()">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery/jquery-ui.css" title="Style">
@@ -118,7 +118,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.internal.writer</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.internal.writer</a></div>
 <h2 title="Class FreeMarkerModelElementWriter" class="title">Class FreeMarkerModelElementWriter</h2>
 </div>
 <div class="contentContainer">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.internal.writer.FreeMarkerModelElementWriter</li>
+<li>org.dettonville.ap.internal.writer.FreeMarkerModelElementWriter</li>
 </ul>
 </li>
 </ul>
@@ -136,9 +136,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">FreeMarkerModelElementWriter</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">Delegate for writing given <a href="Writable.html" title="interface in org.mapstruct.ap.internal.writer"><code>Writable</code></a>s into a <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>Writer</code></a> using
+<div class="block">Delegate for writing given <a href="Writable.html" title="interface in org.dettonville.ap.internal.writer"><code>Writable</code></a>s into a <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>Writer</code></a> using
  FreeMarker templates. Any parameters passed to the
- <a href="ModelIncludeDirective.html" title="class in org.mapstruct.ap.internal.writer"><code>ModelIncludeDirective</code></a> in addition to element itself can be accessed
+ <a href="ModelIncludeDirective.html" title="class in org.dettonville.ap.internal.writer"><code>ModelIncludeDirective</code></a> in addition to element itself can be accessed
  from within the template using the <code>ext</code> pseudo-element.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -187,8 +187,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(org.mapstruct.ap.internal.writer.FreeMarkerWritable,org.mapstruct.ap.internal.writer.Writable.Context,java.io.Writer)">write</a></span>&#8203;(<a href="FreeMarkerWritable.html" title="class in org.mapstruct.ap.internal.writer">FreeMarkerWritable</a>&nbsp;writable,
-     <a href="Writable.Context.html" title="interface in org.mapstruct.ap.internal.writer">Writable.Context</a>&nbsp;context,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(org.dettonville.ap.internal.writer.FreeMarkerWritable,org.dettonville.ap.internal.writer.Writable.Context,java.io.Writer)">write</a></span>&#8203;(<a href="FreeMarkerWritable.html" title="class in org.dettonville.ap.internal.writer">FreeMarkerWritable</a>&nbsp;writable,
+     <a href="Writable.Context.html" title="interface in org.dettonville.ap.internal.writer">Writable.Context</a>&nbsp;context,
      <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink">Writer</a>&nbsp;writer)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -235,14 +235,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="write(org.mapstruct.ap.internal.writer.FreeMarkerWritable,org.mapstruct.ap.internal.writer.Writable.Context,java.io.Writer)">
+<a id="write(org.dettonville.ap.internal.writer.FreeMarkerWritable,org.dettonville.ap.internal.writer.Writable.Context,java.io.Writer)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>write</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;write&#8203;(<a href="FreeMarkerWritable.html" title="class in org.mapstruct.ap.internal.writer">FreeMarkerWritable</a>&nbsp;writable,
-                  <a href="Writable.Context.html" title="interface in org.mapstruct.ap.internal.writer">Writable.Context</a>&nbsp;context,
+<pre class="methodSignature">public&nbsp;void&nbsp;write&#8203;(<a href="FreeMarkerWritable.html" title="class in org.dettonville.ap.internal.writer">FreeMarkerWritable</a>&nbsp;writable,
+                  <a href="Writable.Context.html" title="interface in org.dettonville.ap.internal.writer">Writable.Context</a>&nbsp;context,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink">Writer</a>&nbsp;writer)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang" class="externalLink">Exception</a></pre>
 <dl>

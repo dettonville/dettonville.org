@@ -6,7 +6,7 @@
 <title>AccessorNamingStrategy (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.AccessorNamingStrategy interface">
+<meta name="keywords" content="org.dettonville.ap.spi.AccessorNamingStrategy interface">
 <meta name="keywords" content="init()">
 <meta name="keywords" content="getMethodType()">
 <meta name="keywords" content="getPropertyName()">
@@ -122,7 +122,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Interface AccessorNamingStrategy" class="title">Interface AccessorNamingStrategy</h2>
 </div>
 <div class="contentContainer">
@@ -131,7 +131,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="DefaultAccessorNamingStrategy.html" title="class in org.mapstruct.ap.spi">DefaultAccessorNamingStrategy</a></code>, <code><a href="FreeBuilderAccessorNamingStrategy.html" title="class in org.mapstruct.ap.spi">FreeBuilderAccessorNamingStrategy</a></code>, <code><a href="ImmutablesAccessorNamingStrategy.html" title="class in org.mapstruct.ap.spi">ImmutablesAccessorNamingStrategy</a></code></dd>
+<dd><code><a href="DefaultAccessorNamingStrategy.html" title="class in org.dettonville.ap.spi">DefaultAccessorNamingStrategy</a></code>, <code><a href="FreeBuilderAccessorNamingStrategy.html" title="class in org.dettonville.ap.spi">FreeBuilderAccessorNamingStrategy</a></code>, <code><a href="ImmutablesAccessorNamingStrategy.html" title="class in org.dettonville.ap.spi">ImmutablesAccessorNamingStrategy</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">AccessorNamingStrategy</span></pre>
@@ -177,7 +177,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a></code></td>
+<td class="colFirst"><code><a href="MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMethodType(javax.lang.model.element.ExecutableElement)">getMethodType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</code></th>
 <td class="colLast">
 <div class="block">Returns the type of the given method.</div>
@@ -192,7 +192,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>default void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the accessor naming strategy with the MapStruct processing environment.</div>
 </td>
@@ -214,13 +214,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
 <div class="block">Initializes the accessor naming strategy with the MapStruct processing environment.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -236,7 +236,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getMethodType</h4>
-<pre class="methodSignature"><a href="MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a>&nbsp;getMethodType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</pre>
+<pre class="methodSignature"><a href="MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a>&nbsp;getMethodType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</pre>
 <div class="block">Returns the type of the given method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -293,7 +293,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getCollectionGetterName&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;property)</pre>
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">MapStuct will not call this method anymore. Use <a href="#getMethodType(javax.lang.model.element.ExecutableElement)"><code>getMethodType(ExecutableElement)</code></a> to
- determine the <a href="MethodType.html" title="enum in org.mapstruct.ap.spi"><code>MethodType</code></a>. When collections somehow need to be treated special, it should be done in
+ determine the <a href="MethodType.html" title="enum in org.dettonville.ap.spi"><code>MethodType</code></a>. When collections somehow need to be treated special, it should be done in
  <a href="#getMethodType(javax.lang.model.element.ExecutableElement)"><code>getMethodType(ExecutableElement)</code></a> as well. In the future, this method will be removed.</div>
 </div>
 <div class="block">Returns the getter name of the given collection property.

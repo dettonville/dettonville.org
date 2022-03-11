@@ -155,7 +155,7 @@ if (!doNotTrack) {
 
     <div>
         <div><p>The MapStruct community proudly announces the release of MapStruct 1.0.0.Beta4!</p>
-<p>The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.0.0.Beta4">change log</a>. When upgrading from a previous Beta release, please check out the <a href="https://github.com/mapstruct/mapstruct/wiki/Migration-notes">migration notes</a> for changes which may affect existing applications.</p>
+<p>The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.Beta4">change log</a>. When upgrading from a previous Beta release, please check out the <a href="https://github.com/dettonville/dettonville/wiki/Migration-notes">migration notes</a> for changes which may affect existing applications.</p>
 <p>One thing I&rsquo;m especially excited about is the new MapStruct Eclipse plug-in which will give you an even better experience when using MapStruct within the Eclipse IDE. You&rsquo;ll find out more below.</p>
 <p>This release has been a true team effort; Many, many thanks to <a href="https://github.com/sjaakd/">Sjaak Derksen</a>, <a href="https://github.com/agudian">Andreas Gudian</a>, <a href="https://github.com/timoe">Timo Eckhardt</a>, <a href="https://github.com/eforest">Ewald Volkert</a>, <a href="https://github.com/chschu">Christian Schuster</a>, <a href="https://github.com/shasait">Sebastian Hasait</a> and <a href="https://github.com/dilipkrish">Dilip Krishnan</a> who all worked on the Beta4 release.</p>
 <h3 id="array-mappings"><a class="ms-header-link" href="#array-mappings"><i class="fa fa-link"></i></a>Array mappings</h3>
@@ -227,24 +227,24 @@ AddressDto addressToDto(Address address);
 <p>This would ensure that <code>setLastName()</code> is invoked after <code>setGivenName()</code> and <code>setMiddleName()</code>, but no guarantee is given for the order of these two.</p>
 <h3 id="mapstruct-eclipse-plug-in"><a class="ms-header-link" href="#mapstruct-eclipse-plug-in"><i class="fa fa-link"></i></a>MapStruct Eclipse plug-in</h3>
 <p>Being a JSR 269 annotation processor, MapStruct is meant to run equally well within command line builds (plain javac, Mavent etc.) as well as IDEs. Indeed the annotation processor works nicely for instance in Eclipse, generating mappers upon save, showing error markers next to the affected elements etc.</p>
-<p>Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the <a href="https://github.com/mapstruct/mapstruct-eclipse/">MapStruct Eclipse plug-in</a> comes in.</p>
+<p>Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the <a href="https://github.com/dettonville/dettonville-eclipse/">MapStruct Eclipse plug-in</a> comes in.</p>
 <p>Developed by my good friend <a href="https://github.com/larswetzer">Lars Wetzer</a>, it aims at providing an even better experience when using MapStruct within Eclipse. The plug-in is still at a very early stage, currently it provides auto-completion for <code>@Mapping#source()</code> and <code>target()</code>. The following shows a screenshot:</p>
 <div style="text-align:center">
-    <img src="/images/mapstruct-eclipse-plugin.png" style="padding-bottom: 3px;"/>
+    <img src="/images/dettonville-eclipse-plugin.png" style="padding-bottom: 3px;"/>
 </div>
-<p>More functionality will be coming soon. You can find the list of features planned for the plug-in <a href="https://github.com/mapstruct/mapstruct-eclipse/issues">here</a>. There is no official release of the plug-in yet. But if you feel adventurous, you can install the latest nightly build from the <a href="https://mapstruct.ci.cloudbees.com/job/mapstruct-eclipse/lastSuccessfulBuild/artifact/org.mapstruct.eclipse.repository/target/repository/">update site</a> at our CI server.</p>
+<p>More functionality will be coming soon. You can find the list of features planned for the plug-in <a href="https://github.com/dettonville/dettonville-eclipse/issues">here</a>. There is no official release of the plug-in yet. But if you feel adventurous, you can install the latest nightly build from the <a href="https://dettonville.ci.cloudbees.com/job/dettonville-eclipse/lastSuccessfulBuild/artifact/org.dettonville.eclipse.repository/target/repository/">update site</a> at our CI server.</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>If you work with Maven, Gradle or another dependency management tool, use the following GAV coordinates to obtain the MapStruct artifacts from Maven Central:</p>
 <ul>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.0.0.Beta4%7Cjar">org.mapstruct:mapstruct:1.0.0.Beta4</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-jdk8%7C1.0.0.Beta4%7Cjar">org.mapstruct:mapstruct-jdk8:1.0.0.Beta4</a> (for usage with Java &gt;= 8)</li>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.0.0.Beta4%7Cjar">org.mapstruct:mapstruct-processor:1.0.0.Beta4</a> for the annotation processor.</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.0.0.Beta4%7Cjar">org.dettonville:dettonville:1.0.0.Beta4</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-jdk8%7C1.0.0.Beta4%7Cjar">org.dettonville:dettonville-jdk8:1.0.0.Beta4</a> (for usage with Java &gt;= 8)</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.0.0.Beta4%7Cjar">org.dettonville:dettonville-processor:1.0.0.Beta4</a> for the annotation processor.</li>
 </ul>
-<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/mapstruct/files/1.0.0.Beta4/">SourceForge</a>.</p>
+<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/dettonville/files/1.0.0.Beta4/">SourceForge</a>.</p>
 <p>The Beta4 contains almost all the features we envisioned for the 1.0 release. We&rsquo;ll now focus on bug-fixing and addressing some more minor edge cases. The CR1 (candidate release) should be out in four to six weeks from now, followed by 1.0 Final after four more weeks from there.</p>
 <p>Finally, some useful links:</p>
 <ul>
-<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group</li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group</li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 <li>Follow MapStruct on <a href="https://plus.google.com/u/0/118070742567787866481/posts">Google+</a></li>
 </ul>
@@ -299,10 +299,10 @@ AddressDto addressToDto(Address address);
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

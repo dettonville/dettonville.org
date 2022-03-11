@@ -15,7 +15,7 @@
       <guid>http://dettonville.org/documentation/installation/</guid>
       <description>Distribution Bundle You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from GitHub.
 Apache Maven If you&amp;rsquo;re using Maven to build your project add the following to your pom.xml to use MapStruct:
-... &amp;lt;properties&amp;gt; &amp;lt;org.mapstruct.version&amp;gt;1.4.2.Final&amp;lt;/org.mapstruct.version&amp;gt; &amp;lt;/properties&amp;gt; ... &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mapstruct&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mapstruct&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${org.mapstruct.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;annotationProcessorPaths&amp;gt; &amp;lt;path&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+... &amp;lt;properties&amp;gt; &amp;lt;org.dettonville.version&amp;gt;1.4.2.Final&amp;lt;/org.dettonville.version&amp;gt; &amp;lt;/properties&amp;gt; ... &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.dettonville&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;dettonville&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${org.dettonville.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;annotationProcessorPaths&amp;gt; &amp;lt;path&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ Apache Maven If you&amp;rsquo;re using Maven to build your project add the follo
       
       <guid>http://dettonville.org/development/contributing/</guid>
       <description>You love MapStruct but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That&amp;rsquo;s great! MapStruct is all open source and your help is highly appreciated.
-  WhatWhere     Source codehttps://github.com/mapstruct/mapstruct   Issue trackerhttps://github.com/mapstruct/mapstruct/issues   DiscussionsJoin the MapStruct GitHub Discussions   CI buildhttps://github.com/mapstruct/mapstruct/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/mapstruct/mapstruct.org    MapStruct follows the Fork &amp;amp; Pull development approach.</description>
+  WhatWhere     Source codehttps://github.com/dettonville/dettonville   Issue trackerhttps://github.com/dettonville/dettonville/issues   DiscussionsJoin the MapStruct GitHub Discussions   CI buildhttps://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/dettonville/dettonville.org    MapStruct follows the Fork &amp;amp; Pull development approach.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Apache Maven If you&amp;rsquo;re using Maven to build your project add the follo
       
       <guid>http://dettonville.org/community/getting-help/</guid>
       <description>You are using MapStruct and ran into a problem?
-First check out the reference guide. If that doesn&amp;rsquo;t help to answer your question you may join the MapStruct GitHub Discussions or hop by the MapStruct Gitter room. We also monitor the mapstruct tag on StackOverflow.
+First check out the reference guide. If that doesn&amp;rsquo;t help to answer your question you may join the MapStruct GitHub Discussions or hop by the MapStruct Gitter room. We also monitor the dettonville tag on StackOverflow.
 To report a bug or request a new feature use the MapStruct issue tracker. Note that bug reports should be accompanied by a test case demonstrating the issue.</description>
     </item>
     
@@ -58,7 +58,7 @@ To report a bug or request a new feature use the MapStruct issue tracker. Note t
       <pubDate>Sat, 31 Dec 2016 13:22:54 +0100</pubDate>
       
       <guid>http://dettonville.org/community/other-resources/</guid>
-      <description>Blog posts  Code generators: MapStruct 101 MapStruct: Transferring data from one bean to another Quick Guide to MapStruct Object mapping magic with MapStruct Bean Mapping mit MapStruct; Introduction to MapStruct (German) Mapping Dozer vs MapStruct mapstruct - Java bean mappings; First 3rd party post on MapStruct ever :) MapStruct; Introductory post on MapStruct with code examples Don’t get lost, take the map! – DTO survival code; DTO mapping with MapStruct Wer ist der optimale Java Bean Mapper?</description>
+      <description>Blog posts  Code generators: MapStruct 101 MapStruct: Transferring data from one bean to another Quick Guide to MapStruct Object mapping magic with MapStruct Bean Mapping mit MapStruct; Introduction to MapStruct (German) Mapping Dozer vs MapStruct dettonville - Java bean mappings; First 3rd party post on MapStruct ever :) MapStruct; Introductory post on MapStruct with code examples Don’t get lost, take the map! – DTO survival code; DTO mapping with MapStruct Wer ist der optimale Java Bean Mapper?</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ For best results, add the following to the pom.</description>
       
       <guid>http://dettonville.org/development/technical-documentation/</guid>
       <description>The MapStruct code base is thoroughly documented via JavaDoc. You can find the latest docs here. The individual pages contain generated class diagrams showing type hierarchies and package contents.
-To get yourself acquainted with the code base, you could start by taking a look at the docs of MappingProcessor which give a high-level overview of the general architecture. Then check out the org.mapstruct.ap.model and org.mapstruct.ap.processor packages.
+To get yourself acquainted with the code base, you could start by taking a look at the docs of MappingProcessor which give a high-level overview of the general architecture. Then check out the org.dettonville.ap.model and org.dettonville.ap.processor packages.
 If you have any questions don&amp;rsquo;t hesitate to ask or StackOverflow, we are here to help!</description>
     </item>
     
@@ -114,7 +114,7 @@ But there are subtle differences in the way different compilers implement the an
     </item>
     
     <item>
-      <title>Updating mapstruct.org</title>
+      <title>Updating dettonville.org</title>
       <link>http://dettonville.org/development/updating-mapstructorg/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
@@ -133,7 +133,7 @@ Set-up Install Hugo by following the instructions given on its homepage.</descri
       <guid>http://dettonville.org/development/ide-setup/</guid>
       <description>IntelliJ IDEA After you&amp;rsquo;ve cloned you can import it by selecting &amp;ldquo;File -&amp;gt; Import Module &amp;hellip;&amp;rdquo; and then selecting the top level aggregator pom.xml file located in the root folder. IDEA then will load MapStruct, resolve all dependencies and compile the source.
 You might face an error on IDEAs Message tab saying
-If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation processor and untick checkbox &amp;ldquo;Enable annotation processing&amp;rdquo; at &amp;ldquo;Annotation profile for mapstruct-integrationtest&amp;rdquo;.</description>
+If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation processor and untick checkbox &amp;ldquo;Enable annotation processing&amp;rdquo; at &amp;ldquo;Annotation profile for dettonville-integrationtest&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -152,9 +152,9 @@ If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation pr
       
       <guid>http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/</guid>
       <description>&lt;p&gt;It is my pleasure to announce the next official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
 &lt;p&gt;This release fixes a bug related to dealing with array types as mapping sources or targets.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,9 +197,9 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
       
       <guid>http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/</guid>
       <description>&lt;p&gt;It is my pleasure to announce the next official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
 &lt;p&gt;This release adds the possibility to provide &amp;ldquo;external&amp;rdquo; conversions to the generated &lt;code&gt;ConversionServiceAdapter&lt;/code&gt;. These could be Spring builtin ones or provided in some runtime dependency. See the &lt;a href=&#34;http://dettonville.org/documentation/spring-extensions/reference/html/&#34;&gt;reference guide&lt;/a&gt; for details.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -209,9 +209,9 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
       
       <guid>http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/</guid>
       <description>&lt;p&gt;It is my pleasure to announce the third official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
 &lt;p&gt;This third release fixes a circular dependency issue which occurred in non-trivial mapper hierarchies and would lead to mappers being hidden from the &lt;code&gt;ConversionService&lt;/code&gt;. Kudos go to &lt;a href=&#34;https://github.com/danielshiplett&#34;&gt;Daniel Shiplett&lt;/a&gt; and &lt;a href=&#34;https://github.com/PRIESt512&#34;&gt;Alexey&lt;/a&gt; for their help in chasing down the cause and resolving the issue.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -221,9 +221,9 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
       
       <guid>http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/</guid>
       <description>&lt;p&gt;It is my pleasure to announce the second official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
 &lt;p&gt;This second release allows specifying a defined name for the generated ConversionServiceAdapter bean. Kudos go to &lt;a href=&#34;https://github.com/dmham86&#34;&gt;David Hamilton&lt;/a&gt; for this contribution. Additionally, you will now find a &lt;a href=&#34;http://dettonville.org/documentation/spring-extensions/reference/html/&#34;&gt;reference guide&lt;/a&gt; on the main MapStruct homepage.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -244,9 +244,9 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
       
       <guid>http://dettonville.org/news/2020-12-03-mapstruct-spring-extensions-0-0-1-released/</guid>
       <description>&lt;p&gt;It is my pleasure to announce the first official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
 &lt;p&gt;This first release solves the issue described in the question linked above: How can we use MapStruct mappers defined as Spring &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert&#34;&gt;Converters&lt;/a&gt; in a Spring-idiomatic way when building a hierarchy of them?
-Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/mapstruct/mapstruct-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -290,7 +290,7 @@ This is our 4th release since november 2015.&lt;/p&gt;
       
       <guid>http://dettonville.org/news/2020-08-31-mapstruct-1_4_0_CR1-released/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of MapStruct 1.4!&lt;/p&gt;
-&lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;https://mapstruct.org/news/2020-07-19-mapstruct-1_4_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
+&lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;https://dettonville.org/news/2020-07-19-dettonville-1_4_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
 So what did we tackle in 1.4.0.RC1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Support for using a custom exception for an unexpected value mapping&lt;/li&gt;
@@ -361,7 +361,7 @@ Basically, we&amp;rsquo;ve been using an annotation processor to generate access
 this allows us to access the MapStruct annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
 This is a really old project and the only release on Maven Central is from March 2010.&lt;/p&gt;
 &lt;p&gt;Thus we needed something newer and created our own utility.
-Say hi to &lt;a href=&#34;https://github.com/mapstruct/tools-gem&#34;&gt;Gem Tools&lt;/a&gt;.&lt;/p&gt;</description>
+Say hi to &lt;a href=&#34;https://github.com/dettonville/tools-gem&#34;&gt;Gem Tools&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -371,7 +371,7 @@ Say hi to &lt;a href=&#34;https://github.com/mapstruct/tools-gem&#34;&gt;Gem Too
       
       <guid>http://dettonville.org/news/2019-12-06-mapstruct-and-quarkus/</guid>
       <description>&lt;p&gt;This year is nearly over, but it was started with something new that came up in the Java world: &lt;a href=&#34;https://quarkus.io/&#34;&gt;Quarkus&lt;/a&gt;. You may already have heard about it, if not, don’t worry, I will quickly summarize what it is.&lt;/p&gt;
-&lt;p&gt;Additionally to this post you can also find a working example in our &lt;a href=&#34;https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-quarkus&#34;&gt;examples repository&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Additionally to this post you can also find a working example in our &lt;a href=&#34;https://github.com/dettonville/dettonville-examples/tree/master/dettonville-quarkus&#34;&gt;examples repository&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -458,7 +458,7 @@ This is our 3rd release since november 2015.&lt;/p&gt;
 As I&amp;rsquo;ve been able to contribute less and less time towards MapStruct over the last year,
 it was about time to pass on the baton to a new lead,
 with many fresh ideas and a great level of enthusiasm.&lt;/p&gt;
-&lt;p&gt;Filip joined the team in 2016, sending in &lt;a href=&#34;https://github.com/mapstruct/mapstruct/pull/863&#34;&gt;a patch&lt;/a&gt; for improving our test suite.
+&lt;p&gt;Filip joined the team in 2016, sending in &lt;a href=&#34;https://github.com/dettonville/dettonville/pull/863&#34;&gt;a patch&lt;/a&gt; for improving our test suite.
 Since then, he became an invaluable member of the MapStruct community.
 He implemented several new features and stepped up to help with reviewing
 pull requests, providing help to new contributors, answering related questions on StackOverflow and even doing the last few releases of the project.&lt;/p&gt;
@@ -472,7 +472,7 @@ pull requests, providing help to new contributors, answering related questions o
       
       <guid>http://dettonville.org/news/2017-10-18-mapstruct-1_2_0_Final-is-out/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the final version MapStruct 1.2!&lt;/p&gt;
-&lt;p&gt;After less than a year from the &lt;a href=&#34;http://dettonville.org/news/2016-11-22-mapstruct-1_1_0_Final-seen-in-the-wild&#34;&gt;1.1.0.Final&lt;/a&gt; release, 3 Beta and 2 CR releases, MapStruct 1.2.0.Final is finally out :).&lt;/p&gt;
+&lt;p&gt;After less than a year from the &lt;a href=&#34;http://dettonville.org/news/2016-11-22-dettonville-1_1_0_Final-seen-in-the-wild&#34;&gt;1.1.0.Final&lt;/a&gt; release, 3 Beta and 2 CR releases, MapStruct 1.2.0.Final is finally out :).&lt;/p&gt;
 &lt;p&gt;Besides bug fixes, the 1.2 release brings some new interesting features:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;MapStruct can be used with Lombok out of the box&lt;/li&gt;
@@ -495,7 +495,7 @@ pull requests, providing help to new contributors, answering related questions o
       
       <guid>http://dettonville.org/news/2017-09-19-announcing-mapstruct-idea/</guid>
       <description>&lt;p&gt;I am very happy to announce the first version of the MapStruct IntelliJ IDEA plugin.
-Now we have official support for 2 IDEs, Eclipse being the first IDE for which we had support from earlier (plugin &lt;a href=&#34;https://marketplace.eclipse.org/content/mapstruct-eclipse-plugin&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+Now we have official support for 2 IDEs, Eclipse being the first IDE for which we had support from earlier (plugin &lt;a href=&#34;https://marketplace.eclipse.org/content/dettonville-eclipse-plugin&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;With the power of IntelliJ you now get completions in &lt;code&gt;@Mapping&lt;/code&gt; and &lt;code&gt;@ValueMapping&lt;/code&gt; annotations (also for nested mappings ;)).
 Apart from that you also get support for: finding usages of methods directly within annotations,
 going to declarations from annotations, highlighting support within annotations and refactoring support.&lt;/p&gt;</description>
@@ -508,9 +508,9 @@ going to declarations from annotations, highlighting support within annotations 
       
       <guid>http://dettonville.org/news/2017-08-28-mapstruct-1_2_0_cr2-released/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the second candidate release of MapStruct 1.2!&lt;/p&gt;
-&lt;p&gt;The CR2 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://mapstruct.org/news/2017-07-25-mapstruct-1_2_0_CR1-released/&#34;&gt;CR1&lt;/a&gt;,
-e.g. related to the handling of &lt;code&gt;mappingInheritanceStrategy&lt;/code&gt; (issue &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1255&#34;&gt;#1255&lt;/a&gt;).
-Further fixes concern the handling nested target properties (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1269&#34;&gt;#1269&lt;/a&gt;).&lt;/p&gt;</description>
+&lt;p&gt;The CR2 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://dettonville.org/news/2017-07-25-dettonville-1_2_0_CR1-released/&#34;&gt;CR1&lt;/a&gt;,
+e.g. related to the handling of &lt;code&gt;mappingInheritanceStrategy&lt;/code&gt; (issue &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1255&#34;&gt;#1255&lt;/a&gt;).
+Further fixes concern the handling nested target properties (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1269&#34;&gt;#1269&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -520,9 +520,9 @@ Further fixes concern the handling nested target properties (&lt;a href=&#34;htt
       
       <guid>http://dettonville.org/news/2017-07-25-mapstruct-1_2_0_CR1-released/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of MapStruct 1.2!&lt;/p&gt;
-&lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://mapstruct.org/news/2017-06-02-mapstruct-1_2_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
-e.g. related to the handling of the &lt;code&gt;@ObjectFactory&lt;/code&gt; annotation (issues &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1131&#34;&gt;#1131&lt;/a&gt; and &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1242&#34;&gt;#1242&lt;/a&gt;).
-Further fixes concern the handling of imports in the generated code (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1227&#34;&gt;#1227&lt;/a&gt;, &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/543&#34;&gt;#543&lt;/a&gt;) and the error reporting in case of incorrect mapper definitions (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1150&#34;&gt;#1150&lt;/a&gt;, &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1185&#34;&gt;#1185&lt;/a&gt;).&lt;/p&gt;</description>
+&lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://dettonville.org/news/2017-06-02-dettonville-1_2_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
+e.g. related to the handling of the &lt;code&gt;@ObjectFactory&lt;/code&gt; annotation (issues &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1131&#34;&gt;#1131&lt;/a&gt; and &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1242&#34;&gt;#1242&lt;/a&gt;).
+Further fixes concern the handling of imports in the generated code (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1227&#34;&gt;#1227&lt;/a&gt;, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/543&#34;&gt;#543&lt;/a&gt;) and the error reporting in case of incorrect mapper definitions (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1150&#34;&gt;#1150&lt;/a&gt;, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1185&#34;&gt;#1185&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -533,15 +533,15 @@ Further fixes concern the handling of imports in the generated code (&lt;a href=
       <guid>http://dettonville.org/news/2017-06-02-mapstruct-1_2_0_Beta3-is-out/</guid>
       <description>&lt;p&gt;The summer is nearly there, and so is MapStruct 1.2.
 Today it&amp;rsquo;s my pleasure to announce another release on our way to the Final: MapStruct 1.2 Beta 3!&lt;/p&gt;
-&lt;p&gt;This release continues to improve and stabilize the new feature of automatically creating &lt;a href=&#34;http://dettonville.org/news/2017-02-20-mapstruct-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods&#34;&gt;sub-mapping methods&lt;/a&gt;.
-By default, &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1154&#34;&gt;no sub-mapping methods are generated&lt;/a&gt; for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
-If more fine-grained control is needed, there is &lt;a href=&#34;http://mapstruct.org/documentation/dev/reference/html/#_mapping_exclusion_provider&#34;&gt;an SPI&lt;/a&gt; now which lets you define for which types sub-mapping methods should be created.
-Eventually, you also can &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/993&#34;&gt;turn off&lt;/a&gt; automatic sub-mappings completely if you prefer to have full control by explicitly defining all required bean mapping methods.&lt;/p&gt;
+&lt;p&gt;This release continues to improve and stabilize the new feature of automatically creating &lt;a href=&#34;http://dettonville.org/news/2017-02-20-dettonville-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods&#34;&gt;sub-mapping methods&lt;/a&gt;.
+By default, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1154&#34;&gt;no sub-mapping methods are generated&lt;/a&gt; for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
+If more fine-grained control is needed, there is &lt;a href=&#34;http://dettonville.org/documentation/dev/reference/html/#_mapping_exclusion_provider&#34;&gt;an SPI&lt;/a&gt; now which lets you define for which types sub-mapping methods should be created.
+Eventually, you also can &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/993&#34;&gt;turn off&lt;/a&gt; automatic sub-mappings completely if you prefer to have full control by explicitly defining all required bean mapping methods.&lt;/p&gt;
 &lt;p&gt;Besides that, several bugs were fixed:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The generated mappers were missing import statements in some cases (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1215&#34;&gt;#1215&lt;/a&gt;, &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1164&#34;&gt;#1164&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Field mappings didn&amp;rsquo;t work for nested target properties (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1155&#34;&gt;#1155&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Accessing a non-existent nested target property wasn&amp;rsquo;t handled gracefully (&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1153&#34;&gt;#1153&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The generated mappers were missing import statements in some cases (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1215&#34;&gt;#1215&lt;/a&gt;, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1164&#34;&gt;#1164&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Field mappings didn&amp;rsquo;t work for nested target properties (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1155&#34;&gt;#1155&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Accessing a non-existent nested target property wasn&amp;rsquo;t handled gracefully (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1153&#34;&gt;#1153&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -551,15 +551,15 @@ Eventually, you also can &lt;a href=&#34;https://github.com/mapstruct/mapstruct/
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-03-16-mapstruct-1_2_0_Beta2-released/</guid>
-      <description>&lt;p&gt;Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the &lt;a href=&#34;http://dettonville.org/news/2017-02-20-mapstruct-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/&#34;&gt;many new features&lt;/a&gt; offered by the new 1.2 release line.&lt;/p&gt;
-&lt;p&gt;We fixed &lt;a href=&#34;https://github.com/mapstruct/mapstruct/milestone/20?closed=1&#34;&gt;16 issues&lt;/a&gt;, most of them reported by users. The most infamous bugs reported and fixed are:&lt;/p&gt;
+      <description>&lt;p&gt;Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the &lt;a href=&#34;http://dettonville.org/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/&#34;&gt;many new features&lt;/a&gt; offered by the new 1.2 release line.&lt;/p&gt;
+&lt;p&gt;We fixed &lt;a href=&#34;https://github.com/dettonville/dettonville/milestone/20?closed=1&#34;&gt;16 issues&lt;/a&gt;, most of them reported by users. The most infamous bugs reported and fixed are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1121&#34;&gt;Some type conversions stopped working&lt;/a&gt; under some circumstances due to an odd JDK behaviour that we didn&amp;rsquo;t run into previously.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1104&#34;&gt;Unmapped target properties in name based mappings&lt;/a&gt; resulted in an error instead of being reported as configured with &lt;code&gt;unmappedTargetPolicy&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1103&#34;&gt;StackOverflowError&lt;/a&gt; was thrown while automatically generating methods in a type structure with circles.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1124&#34;&gt;&lt;code&gt;@Context&lt;/code&gt; parameters didn&amp;rsquo;t play along with nested property mappings&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1121&#34;&gt;Some type conversions stopped working&lt;/a&gt; under some circumstances due to an odd JDK behaviour that we didn&amp;rsquo;t run into previously.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1104&#34;&gt;Unmapped target properties in name based mappings&lt;/a&gt; resulted in an error instead of being reported as configured with &lt;code&gt;unmappedTargetPolicy&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1103&#34;&gt;StackOverflowError&lt;/a&gt; was thrown while automatically generating methods in a type structure with circles.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1124&#34;&gt;&lt;code&gt;@Context&lt;/code&gt; parameters didn&amp;rsquo;t play along with nested property mappings&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Plus, the newly introduced automapping feature now also &lt;a href=&#34;https://github.com/mapstruct/mapstruct/issues/1102&#34;&gt;creates Enum mapping methods&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Plus, the newly introduced automapping feature now also &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1102&#34;&gt;creates Enum mapping methods&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -599,7 +599,7 @@ Eventually, you also can &lt;a href=&#34;https://github.com/mapstruct/mapstruct/
       
       <guid>http://dettonville.org/news/2016-11-22-mapstruct-1_1_0_Final-seen-in-the-wild/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m more than thrilled to report that MapStruct 1.1 Final has been spotted in the wild!
-We grew that puppy for almost one year since the announcement of &lt;a href=&#34;http://dettonville.org/news/2015/11/25/mapstruct-1_0_Final-released.html&#34;&gt;MapStruct 1.0&lt;/a&gt;, so it was about time to let it go and put a final release into your hands.&lt;/p&gt;
+We grew that puppy for almost one year since the announcement of &lt;a href=&#34;http://dettonville.org/news/2015/11/25/dettonville-1_0_Final-released.html&#34;&gt;MapStruct 1.0&lt;/a&gt;, so it was about time to let it go and put a final release into your hands.&lt;/p&gt;
 &lt;p&gt;Besides a plethora of bug fixes the 1.1 release adds many new features which should be very welcome to users of MapStruct 1.0:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nested target properties&lt;/li&gt;
@@ -741,7 +741,7 @@ Note that existing applications using MapStruct need to adapt to some changes we
       <description>It&amp;rsquo;s my great pleasure to announce the release of MapStruct 1.0.0.Beta2.
 Amongst the new features is initial support for Java 8, built-in mappings for the types of the Joda-Time date and time API, flexible mapping customization via inline Java expressions and much more.
 Distribution bundles (ZIP, TAR.GZ) are available on SourceForge. Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
- org.mapstruct:mapstruct:1.0.0.Beta2 for the annotation JAR, to be used with Java &amp;lt;= 7 org.</description>
+ org.dettonville:dettonville:1.0.0.Beta2 for the annotation JAR, to be used with Java &amp;lt;= 7 org.</description>
     </item>
     
     <item>
@@ -762,7 +762,7 @@ One core part of the new release is comprehensive support for mapping JAXB types
       <guid>http://dettonville.org/news/2013-11-28-mapstruct-1_0_0_Alpha2-has-landed/</guid>
       <description>It is my great pleasure to announce the release of MapStruct 1.0.0.Alpha2.
 This took us a bit longer than expected, but the new release offers quite a few exciting new features we hope you&amp;rsquo;ll enjoy. The JARs have already been synched to Maven Central. The coordinates are:
- org.mapstruct:mapstruct:1.0.0.Alpha2 for the annotation JAR and org.mapstruct:mapstruct-processor:1.0.0.Alpha2 for the annotation processor.  Alternatively you can get a distribution bundle from SourceForge.
+ org.dettonville:dettonville:1.0.0.Alpha2 for the annotation JAR and org.dettonville:dettonville-processor:1.0.0.Alpha2 for the annotation processor.  Alternatively you can get a distribution bundle from SourceForge.
 Beside several new mapping features (e.</description>
     </item>
     
@@ -789,12 +789,12 @@ Examples include the conversion from JPA entities into data transfer or view obj
     </item>
     
     <item>
-      <title>mapstruct.org has landed!</title>
+      <title>dettonville.org has landed!</title>
       <link>http://dettonville.org/news/2013-05-22-website-live/</link>
       <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2013-05-22-website-live/</guid>
-      <description>MapStruct has now its own web site, mapstruct.org!</description>
+      <description>MapStruct has now its own web site, dettonville.org!</description>
     </item>
     
   </channel>

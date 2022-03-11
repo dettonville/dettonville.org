@@ -162,21 +162,21 @@ if (!doNotTrack) {
 <li>Handling of types with generically typed properties has been improved, so that you can now declare something like <code>SearchResult&lt;VesselDto&gt; vesselSearchResultToDto(SearchResult&lt;Vessel&gt; vessel)</code>.</li>
 <li>The preferred way of configuring the annotation processor in Maven projects has been updated to leverage the latest <code>maven-compiler-plugin</code> version&rsquo;s <code>annotationProcessorPaths</code> option, which makes the configuration a bit more smooth. <a href="/documentation/1.1/reference/html/index.html#setup">Check the updated documentation</a>.</li>
 </ul>
-<p>The complete list of 24 closed issues can be found in the <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.1.0.Beta1">change log</a>.</p>
+<p>The complete list of 24 closed issues can be found in the <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.1.0.Beta1">change log</a>.</p>
 <p>The MapStruct team calls out a big <em>Thank you!</em> to everyone contributing to this release: <a href="https://github.com/grandmasterpixel">Vincent Alexander Beelte</a>, <a href="https://github.com/greuelpirat">Oliver Ehrenmüller</a>, and <a href="https://github.com/samwright">Samuel Wright</a>!</p>
 <h3 id="whats-next"><a class="ms-header-link" href="#whats-next"><i class="fa fa-link"></i></a>What&rsquo;s next?</h3>
 <p>We plan the beta phase to be a short one, with a 1.1.0.CR1 release following in a couple of weeks.</p>
-<p>In the mean time, you&rsquo;re invited to try out the MapStruct <a href="https://github.com/mapstruct/mapstruct-eclipse">Eclipse plug-in</a>. Although it&rsquo;s in an early stage, it already contains some handy content-assists (e.g. for <code>source</code> and <code>target</code> property names in the <code>@Mapping</code> annotation) and quick-fixes for some common mapping errors detected by MapStruct.</p>
+<p>In the mean time, you&rsquo;re invited to try out the MapStruct <a href="https://github.com/dettonville/dettonville-eclipse">Eclipse plug-in</a>. Although it&rsquo;s in an early stage, it already contains some handy content-assists (e.g. for <code>source</code> and <code>target</code> property names in the <code>@Mapping</code> annotation) and quick-fixes for some common mapping errors detected by MapStruct.</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>To fetch MapStruct 1.1.0.Beta1 via Maven, Gradle or similar dependency management tools, use the following GAV coordinates:</p>
 <ul>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.1.0.Beta1%7Cjar">org.mapstruct:mapstruct:1.1.0.Beta1</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-jdk8%7C1.1.0.Beta1%7Cjar">org.mapstruct:mapstruct-jdk8:1.1.0.Beta1</a> (for usage with Java &gt;= 8)</li>
-<li><a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.1.0.Beta1%7Cjar">org.mapstruct:mapstruct-processor:1.1.0.Beta1</a> for the annotation processor.</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.1.0.Beta1%7Cjar">org.dettonville:dettonville:1.1.0.Beta1</a> for the annotation JAR (to be used with Java &lt;= 7) or <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-jdk8%7C1.1.0.Beta1%7Cjar">org.dettonville:dettonville-jdk8:1.1.0.Beta1</a> (for usage with Java &gt;= 8)</li>
+<li><a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.1.0.Beta1%7Cjar">org.dettonville:dettonville-processor:1.1.0.Beta1</a> for the annotation processor.</li>
 </ul>
-<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/mapstruct/files/1.1.0.Beta1/">SourceForge</a>.</p>
+<p>Alternatively, you can download distribution bundles (ZIP, TAR.GZ) from <a href="http://sourceforge.net/projects/dettonville/files/1.1.0.Beta1/">SourceForge</a>.</p>
 <ul>
-<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group or in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a></li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group or in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a></li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 <li>Follow MapStruct on <a href="https://plus.google.com/u/0/118070742567787866481/posts">Google+</a></li>
 </ul>
@@ -231,10 +231,10 @@ if (!doNotTrack) {
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

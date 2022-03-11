@@ -134,7 +134,7 @@ if (!doNotTrack) {
             </li>
                     
             <li>
-                <a href="/development/updating-mapstructorg/"> Updating mapstruct.org </a>
+                <a href="/development/updating-mapstructorg/"> Updating dettonville.org </a>
             </li>
                     
             <li>
@@ -173,17 +173,17 @@ this makes it easy for us to refactor code and be confident that the code we gen
 <li>We want to test with 2 different compilers (javac and ecj)</li>
 </ul>
 <p>In order to achieve this the MapStruct team has built their own small testing framework on top of JUnit 4.</p>
-<p>Our test utils are located <a href="https://github.com/mapstruct/mapstruct/tree/master/processor/src/test/java/org/mapstruct/ap/testutil">here</a>.</p>
+<p>Our test utils are located <a href="https://github.com/dettonville/dettonville/tree/master/processor/src/test/java/org/dettonville/ap/testutil">here</a>.</p>
 <h2 id="writing-a-test"><a class="ms-header-link" href="#writing-a-test"><i class="fa fa-link"></i></a>Writing a test</h2>
-<p>In order to explain how to write a test we are going to use the <a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/EnumToEnumMappingTest.java"><code>EnumToEnumMappingTest</code></a>.
-The java classes and mappers for this are located <a href="https://github.com/mapstruct/mapstruct/tree/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum">here</a>.</p>
+<p>In order to explain how to write a test we are going to use the <a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/EnumToEnumMappingTest.java"><code>EnumToEnumMappingTest</code></a>.
+The java classes and mappers for this are located <a href="https://github.com/dettonville/dettonville/tree/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum">here</a>.</p>
 <h3 id="set-up"><a class="ms-header-link" href="#set-up"><i class="fa fa-link"></i></a>Set-up</h3>
 <p>First thing that we do is to define the POJOs. For this test we have:</p>
 <ul>
-<li><a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderDto.java"><code>OrderDto</code></a></li>
-<li><a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderEntity.java"><code>OrderEntity</code></a></li>
-<li><a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/ExternalOrderType.java"><code>ExternalOrderType</code></a></li>
-<li><a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/OrderType.java"><code>OrderType</code></a></li>
+<li><a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderDto.java"><code>OrderDto</code></a></li>
+<li><a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderEntity.java"><code>OrderEntity</code></a></li>
+<li><a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/ExternalOrderType.java"><code>ExternalOrderType</code></a></li>
+<li><a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/OrderType.java"><code>OrderType</code></a></li>
 </ul>
 <pre class="prettyprint linenums lang-java">
 public class OrderDto {
@@ -213,7 +213,7 @@ public enum OrderType {
 
 <h3 id="happy-path-testing"><a class="ms-header-link" href="#happy-path-testing"><i class="fa fa-link"></i></a>Happy path testing</h3>
 <p>Once we define our POJOs we need to write the mapper that we want to test.
-For this we will use the <a href="https://github.com/mapstruct/mapstruct/blob/master/processor/src/test/java/org/mapstruct/ap/test/value/enum2enum/OrderMapper.java"><code>OrderMapper</code></a></p>
+For this we will use the <a href="https://github.com/dettonville/dettonville/blob/master/processor/src/test/java/org/dettonville/ap/test/value/enum2enum/OrderMapper.java"><code>OrderMapper</code></a></p>
 <pre class="prettyprint linenums lang-java">
 @Mapper
 public interface OrderMapper {
@@ -276,7 +276,7 @@ public void shouldGenerateEnumMappingMethod() {
 
 <p>This test looks identical as a test written by a user in their own code.
 However, running this test will give us the following output:</p>
-<img src="/images/testing-mapstruct-test-run-intellij-initial.png" style="padding-bottom: 3px;"/>
+<img src="/images/testing-dettonville-test-run-intellij-initial.png" style="padding-bottom: 3px;"/>
 <p>There were actually 2 test runs and not 1.
 One test (<code>jdk11</code>) is run using the javac compiler from the JDK,
 and one test (<code>eclipse11</code>) is run using the ecj compiler from Eclipse.
@@ -304,8 +304,8 @@ public interface ErroneousOrderMapperUsingUnknownEnumConstants {
 
 <p>When a user writes this mapper MapStruct will generate 2 compiler errors:</p>
 <ul>
-<li>Constant FOO doesn&rsquo;t exist in enum type org.mapstruct.ap.test.value.OrderType.</li>
-<li>Constant BAR doesn&rsquo;t exist in enum type org.mapstruct.ap.test.value.ExternalOrderType.</li>
+<li>Constant FOO doesn&rsquo;t exist in enum type org.dettonville.ap.test.value.OrderType.</li>
+<li>Constant BAR doesn&rsquo;t exist in enum type org.dettonville.ap.test.value.ExternalOrderType.</li>
 </ul>
 <p>In order to test this we will write the following method:</p>
 <pre class="prettyprint linenums lang-java">
@@ -318,8 +318,8 @@ public void shouldRaiseErrorIfUnknownEnumConstantsAreSpecifiedInMapping() {
 <p>If we now run this test, the test will fail with the following output</p>
 <pre class="prettyprint linenums lang-">
 org.junit.ComparisonFailure: [Compilation failed. Diagnostics: [
-    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:26 Constant FOO doesn&#39;t exist in enum type org.mapstruct.ap.test.value.OrderType.,
-    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:27 Constant BAR doesn&#39;t exist in enum type org.mapstruct.ap.test.value.ExternalOrderType.
+    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:26 Constant FOO doesn&#39;t exist in enum type org.dettonville.ap.test.value.OrderType.,
+    DiagnosticDescriptor: ERROR ErroneousOrderMapperUsingUnknownEnumConstants.java:27 Constant BAR doesn&#39;t exist in enum type org.dettonville.ap.test.value.ExternalOrderType.
 ]]
 Expected :SUCCEEDED
 Actual   :FAILED
@@ -337,11 +337,11 @@ To do that the test needs to look like:</p>
         @Diagnostic(type = ErroneousOrderMapperUsingUnknownEnumConstants.class,
             kind = Kind.ERROR,
             line = 26,
-            message = &#34;Constant FOO doesn&#39;t exist in enum type org.mapstruct.ap.test.value.OrderType.&#34;),
+            message = &#34;Constant FOO doesn&#39;t exist in enum type org.dettonville.ap.test.value.OrderType.&#34;),
         @Diagnostic(type = ErroneousOrderMapperUsingUnknownEnumConstants.class,
             kind = Kind.ERROR,
             line = 27,
-            message = &#34;Constant BAR doesn&#39;t exist in enum type org.mapstruct.ap.test.value.&#34; +
+            message = &#34;Constant BAR doesn&#39;t exist in enum type org.dettonville.ap.test.value.&#34; +
                 &#34;ExternalOrderType.&#34;)
     }
 )
@@ -386,10 +386,10 @@ It will look for a mapper within the same folder structure as its package.</p>
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

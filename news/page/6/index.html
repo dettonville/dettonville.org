@@ -158,9 +158,9 @@ if (!doNotTrack) {
 
     <div>
         <p>I&rsquo;m very happy to announce the first candidate release of MapStruct 1.2!</p>
-<p>The CR1 release mostly provides bug fixes and other smaller improvements since the <a href="http://mapstruct.org/news/2017-06-02-mapstruct-1_2_0_Beta3-is-out/">Beta 3</a>,
-e.g. related to the handling of the <code>@ObjectFactory</code> annotation (issues <a href="https://github.com/mapstruct/mapstruct/issues/1131">#1131</a> and <a href="https://github.com/mapstruct/mapstruct/issues/1242">#1242</a>).
-Further fixes concern the handling of imports in the generated code (<a href="https://github.com/mapstruct/mapstruct/issues/1227">#1227</a>, <a href="https://github.com/mapstruct/mapstruct/issues/543">#543</a>) and the error reporting in case of incorrect mapper definitions (<a href="https://github.com/mapstruct/mapstruct/issues/1150">#1150</a>, <a href="https://github.com/mapstruct/mapstruct/issues/1185">#1185</a>).</p>
+<p>The CR1 release mostly provides bug fixes and other smaller improvements since the <a href="http://dettonville.org/news/2017-06-02-dettonville-1_2_0_Beta3-is-out/">Beta 3</a>,
+e.g. related to the handling of the <code>@ObjectFactory</code> annotation (issues <a href="https://github.com/dettonville/dettonville/issues/1131">#1131</a> and <a href="https://github.com/dettonville/dettonville/issues/1242">#1242</a>).
+Further fixes concern the handling of imports in the generated code (<a href="https://github.com/dettonville/dettonville/issues/1227">#1227</a>, <a href="https://github.com/dettonville/dettonville/issues/543">#543</a>) and the error reporting in case of incorrect mapper definitions (<a href="https://github.com/dettonville/dettonville/issues/1150">#1150</a>, <a href="https://github.com/dettonville/dettonville/issues/1185">#1185</a>).</p>
     </div>
 
     <div>
@@ -196,15 +196,15 @@ Further fixes concern the handling of imports in the generated code (<a href="ht
     <div>
         <p>The summer is nearly there, and so is MapStruct 1.2.
 Today it&rsquo;s my pleasure to announce another release on our way to the Final: MapStruct 1.2 Beta 3!</p>
-<p>This release continues to improve and stabilize the new feature of automatically creating <a href="/news/2017-02-20-mapstruct-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods">sub-mapping methods</a>.
-By default, <a href="https://github.com/mapstruct/mapstruct/issues/1154">no sub-mapping methods are generated</a> for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
-If more fine-grained control is needed, there is <a href="http://mapstruct.org/documentation/dev/reference/html/#_mapping_exclusion_provider">an SPI</a> now which lets you define for which types sub-mapping methods should be created.
-Eventually, you also can <a href="https://github.com/mapstruct/mapstruct/issues/993">turn off</a> automatic sub-mappings completely if you prefer to have full control by explicitly defining all required bean mapping methods.</p>
+<p>This release continues to improve and stabilize the new feature of automatically creating <a href="/news/2017-02-20-dettonville-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods">sub-mapping methods</a>.
+By default, <a href="https://github.com/dettonville/dettonville/issues/1154">no sub-mapping methods are generated</a> for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
+If more fine-grained control is needed, there is <a href="http://dettonville.org/documentation/dev/reference/html/#_mapping_exclusion_provider">an SPI</a> now which lets you define for which types sub-mapping methods should be created.
+Eventually, you also can <a href="https://github.com/dettonville/dettonville/issues/993">turn off</a> automatic sub-mappings completely if you prefer to have full control by explicitly defining all required bean mapping methods.</p>
 <p>Besides that, several bugs were fixed:</p>
 <ul>
-<li>The generated mappers were missing import statements in some cases (<a href="https://github.com/mapstruct/mapstruct/issues/1215">#1215</a>, <a href="https://github.com/mapstruct/mapstruct/issues/1164">#1164</a>)</li>
-<li>Field mappings didn&rsquo;t work for nested target properties (<a href="https://github.com/mapstruct/mapstruct/issues/1155">#1155</a>)</li>
-<li>Accessing a non-existent nested target property wasn&rsquo;t handled gracefully (<a href="https://github.com/mapstruct/mapstruct/issues/1153">#1153</a>)</li>
+<li>The generated mappers were missing import statements in some cases (<a href="https://github.com/dettonville/dettonville/issues/1215">#1215</a>, <a href="https://github.com/dettonville/dettonville/issues/1164">#1164</a>)</li>
+<li>Field mappings didn&rsquo;t work for nested target properties (<a href="https://github.com/dettonville/dettonville/issues/1155">#1155</a>)</li>
+<li>Accessing a non-existent nested target property wasn&rsquo;t handled gracefully (<a href="https://github.com/dettonville/dettonville/issues/1153">#1153</a>)</li>
 </ul>
     </div>
 
@@ -239,15 +239,15 @@ Eventually, you also can <a href="https://github.com/mapstruct/mapstruct/issues/
 
 
     <div>
-        <p>Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the <a href="/news/2017-02-20-mapstruct-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/">many new features</a> offered by the new 1.2 release line.</p>
-<p>We fixed <a href="https://github.com/mapstruct/mapstruct/milestone/20?closed=1">16 issues</a>, most of them reported by users. The most infamous bugs reported and fixed are:</p>
+        <p>Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the <a href="/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/">many new features</a> offered by the new 1.2 release line.</p>
+<p>We fixed <a href="https://github.com/dettonville/dettonville/milestone/20?closed=1">16 issues</a>, most of them reported by users. The most infamous bugs reported and fixed are:</p>
 <ul>
-<li><a href="https://github.com/mapstruct/mapstruct/issues/1121">Some type conversions stopped working</a> under some circumstances due to an odd JDK behaviour that we didn&rsquo;t run into previously.</li>
-<li><a href="https://github.com/mapstruct/mapstruct/issues/1104">Unmapped target properties in name based mappings</a> resulted in an error instead of being reported as configured with <code>unmappedTargetPolicy</code>.</li>
-<li>A <a href="https://github.com/mapstruct/mapstruct/issues/1103">StackOverflowError</a> was thrown while automatically generating methods in a type structure with circles.</li>
-<li><a href="https://github.com/mapstruct/mapstruct/issues/1124"><code>@Context</code> parameters didn&rsquo;t play along with nested property mappings</a>.</li>
+<li><a href="https://github.com/dettonville/dettonville/issues/1121">Some type conversions stopped working</a> under some circumstances due to an odd JDK behaviour that we didn&rsquo;t run into previously.</li>
+<li><a href="https://github.com/dettonville/dettonville/issues/1104">Unmapped target properties in name based mappings</a> resulted in an error instead of being reported as configured with <code>unmappedTargetPolicy</code>.</li>
+<li>A <a href="https://github.com/dettonville/dettonville/issues/1103">StackOverflowError</a> was thrown while automatically generating methods in a type structure with circles.</li>
+<li><a href="https://github.com/dettonville/dettonville/issues/1124"><code>@Context</code> parameters didn&rsquo;t play along with nested property mappings</a>.</li>
 </ul>
-<p>Plus, the newly introduced automapping feature now also <a href="https://github.com/mapstruct/mapstruct/issues/1102">creates Enum mapping methods</a>.</p>
+<p>Plus, the newly introduced automapping feature now also <a href="https://github.com/dettonville/dettonville/issues/1102">creates Enum mapping methods</a>.</p>
     </div>
 
     <div>
@@ -425,10 +425,10 @@ Eventually, you also can <a href="https://github.com/mapstruct/mapstruct/issues/
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

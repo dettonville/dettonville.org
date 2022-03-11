@@ -224,7 +224,7 @@ public interface CarMapper {
     //...
 }
 </pre>
-<p>In the future it will also <a href="https://github.com/mapstruct/mapstruct/issues/32">be possible</a> to obtain mapper objects using dependency injection containers such as CDI or Spring.</p>
+<p>In the future it will also <a href="https://github.com/dettonville/dettonville/issues/32">be possible</a> to obtain mapper objects using dependency injection containers such as CDI or Spring.</p>
 <p>Finally let&rsquo;s have a look at how the mapper is used to convert a <code>Car</code> object into a <code>CarDto</code>:</p>
 <pre class="prettyprint linenums">
 @Test
@@ -253,19 +253,19 @@ public void shouldMapAttributeByName() {
 <p>Note that a dedicated mapper interface centered around the types of your application makes mappings type-safe, so unlike with a generic mapping API you can&rsquo;t accidentally map e.g. a <code>Car</code> into a <code>PersonDto</code>.</p>
 <p>The test also shows that the implementation of the <code>carToCarDto()</code> method handles the property name mappings (e.g. <code>numberOfSeats</code> vs. <code>seatCount</code>) as well as type conversions (for the <code>driver</code> and <code>category</code> attributes).</p>
 <h3 id="trying-it-out-youself"><a class="ms-header-link" href="#trying-it-out-youself"><i class="fa fa-link"></i></a>Trying it out youself</h3>
-<p>You want to give MapStruct a try? That&rsquo;s great! You can download the distribution containing source and binaries from <a href="http://sourceforge.net/projects/mapstruct/files/">SourceForge</a>. MapStruct is released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</p>
+<p>You want to give MapStruct a try? That&rsquo;s great! You can download the distribution containing source and binaries from <a href="http://sourceforge.net/projects/dettonville/files/">SourceForge</a>. MapStruct is released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</p>
 <p>If you&rsquo;re using Maven or a similar dependency manager, you also can obtain MapStruct from Maven Central. The GAV coordinates are</p>
 <ul>
-<li><em>org.mapstruct:mapstruct:1.0.0.Alpha1</em> for the core module containing the annotations and</li>
-<li><em>org.mapstruct:mapstruct-processor:1.0.0.Alpha1</em> for the annotation processor module.</li>
+<li><em>org.dettonville:dettonville:1.0.0.Alpha1</em> for the core module containing the annotations and</li>
+<li><em>org.dettonville:dettonville-processor:1.0.0.Alpha1</em> for the annotation processor module.</li>
 </ul>
 <p>Check out the <a href="#%7Bsite.base_url%7D/documentation">reference documentation</a> to learn about all the ins and outs of MapStruct, including features such as collection mappings, reverse mappings or making use of hand-written mapping methods.</p>
-<p>If you&rsquo;re are stuck, come and join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">google-group</a> and ask your questions there. This is also the right place to discuss any feature requests or other suggestions. And should you find a bug, please file a report in our <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a>.</p>
+<p>If you&rsquo;re are stuck, come and join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">google-group</a> and ask your questions there. This is also the right place to discuss any feature requests or other suggestions. And should you find a bug, please file a report in our <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a>.</p>
 <h3 id="whats-next"><a class="ms-header-link" href="#whats-next"><i class="fa fa-link"></i></a>What&rsquo;s next?</h3>
 <p>MapStruct is just in its beginnings. Today&rsquo;s Alpha1 release is the first of a series of preview releases towards 1.0.0.Final.</p>
 <p>If you have any feedback on MapStruct in general or certain features in particular make sure to let us know either by commenting here or by posting to the Google group.</p>
-<p>On the roadmap for the next releases are improved support for <a href="https://github.com/mapstruct/mapstruct/issues/4">collection mappings</a>, mappings <a href="https://github.com/mapstruct/mapstruct/issues/31">several source objects</a> into one target object and mapping into immutable objects via constructor invocations.</p>
-<p>You like MapStruct and want to contribute? That&rsquo;s awesome! MapStruct is in a very early stage and your participation can make a big difference. <a href="http://github.com/mapstruct/mapstruct">The sources</a> are hosted on GitHub, and <a href="#%7Bsite.base_url%7D/documentation/#section-05">Contributing</a> has all the infos to get you started with hacking on MapStruct. Many thanks to <a href="https://github.com/agudian">Andreas</a> who stepped up and contributed to the Alpha1 release!</p>
+<p>On the roadmap for the next releases are improved support for <a href="https://github.com/dettonville/dettonville/issues/4">collection mappings</a>, mappings <a href="https://github.com/dettonville/dettonville/issues/31">several source objects</a> into one target object and mapping into immutable objects via constructor invocations.</p>
+<p>You like MapStruct and want to contribute? That&rsquo;s awesome! MapStruct is in a very early stage and your participation can make a big difference. <a href="http://github.com/dettonville/dettonville">The sources</a> are hosted on GitHub, and <a href="#%7Bsite.base_url%7D/documentation/#section-05">Contributing</a> has all the infos to get you started with hacking on MapStruct. Many thanks to <a href="https://github.com/agudian">Andreas</a> who stepped up and contributed to the Alpha1 release!</p>
 </div>
     </div>
     <div>
@@ -277,7 +277,7 @@ public void shouldMapAttributeByName() {
             
             
             <li>
-                <a href="http://dettonville.org/news/2013-05-22-website-live/" title="mapstruct.org has landed!"><i class="uk-icon-angle-double-right"></i></a>
+                <a href="http://dettonville.org/news/2013-05-22-website-live/" title="dettonville.org has landed!"><i class="uk-icon-angle-double-right"></i></a>
             </li>
             
 
@@ -317,10 +317,10 @@ public void shouldMapAttributeByName() {
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

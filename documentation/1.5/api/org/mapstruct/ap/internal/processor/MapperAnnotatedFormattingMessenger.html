@@ -6,7 +6,7 @@
 <title>MapperAnnotatedFormattingMessenger (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.internal.processor.MapperAnnotatedFormattingMessenger class">
+<meta name="keywords" content="org.dettonville.ap.internal.processor.MapperAnnotatedFormattingMessenger class">
 <meta name="keywords" content="printMessage()">
 <meta name="keywords" content="note()">
 <meta name="keywords" content="isErroneous()">
@@ -120,7 +120,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.internal.processor</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.internal.processor</a></div>
 <h2 title="Class MapperAnnotatedFormattingMessenger" class="title">Class MapperAnnotatedFormattingMessenger</h2>
 </div>
 <div class="contentContainer">
@@ -128,7 +128,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.internal.processor.MapperAnnotatedFormattingMessenger</li>
+<li>org.dettonville.ap.internal.processor.MapperAnnotatedFormattingMessenger</li>
 </ul>
 </li>
 </ul>
@@ -137,12 +137,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">MapperAnnotatedFormattingMessenger</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></pre>
+implements <a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></pre>
 <div class="block">Handles redirection of errors/warnings so that they're shown on the mapper instead of hidden on a superclass.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -168,9 +168,9 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapstruct.ap.internal.util.FormattingMessager,javax.lang.model.element.TypeElement,org.mapstruct.ap.internal.util.TypeUtils)">MapperAnnotatedFormattingMessenger</a></span>&#8203;(<a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;delegateMessager,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.dettonville.ap.internal.util.FormattingMessager,javax.lang.model.element.TypeElement,org.dettonville.ap.internal.util.TypeUtils)">MapperAnnotatedFormattingMessenger</a></span>&#8203;(<a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;delegateMessager,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">TypeElement</a>&nbsp;mapperTypeElement,
-                                  <a href="../util/TypeUtils.html" title="interface in org.mapstruct.ap.internal.util">TypeUtils</a>&nbsp;typeUtils)</code></th>
+                                  <a href="../util/TypeUtils.html" title="interface in org.dettonville.ap.internal.util">TypeUtils</a>&nbsp;typeUtils)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -198,8 +198,8 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">note</a></span>&#8203;(int&nbsp;level,
-    <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;log,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">note</a></span>&#8203;(int&nbsp;level,
+    <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;log,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Just log as plain note</div>
@@ -207,10 +207,10 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationValue.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationValue</a>&nbsp;v,
-            <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+            <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -220,9 +220,9 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
-            <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+            <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -231,8 +231,8 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
-            <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+            <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -241,7 +241,7 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind.</div>
@@ -271,15 +271,15 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(org.mapstruct.ap.internal.util.FormattingMessager,javax.lang.model.element.TypeElement,org.mapstruct.ap.internal.util.TypeUtils)">
+<a id="&lt;init&gt;(org.dettonville.ap.internal.util.FormattingMessager,javax.lang.model.element.TypeElement,org.dettonville.ap.internal.util.TypeUtils)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MapperAnnotatedFormattingMessenger</h4>
-<pre>public&nbsp;MapperAnnotatedFormattingMessenger&#8203;(<a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;delegateMessager,
+<pre>public&nbsp;MapperAnnotatedFormattingMessenger&#8203;(<a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;delegateMessager,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">TypeElement</a>&nbsp;mapperTypeElement,
-                                          <a href="../util/TypeUtils.html" title="interface in org.mapstruct.ap.internal.util">TypeUtils</a>&nbsp;typeUtils)</pre>
+                                          <a href="../util/TypeUtils.html" title="interface in org.dettonville.ap.internal.util">TypeUtils</a>&nbsp;typeUtils)</pre>
 </li>
 </ul>
 </li>
@@ -292,19 +292,19 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>printMessage</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;printMessage&#8203;(<a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<pre class="methodSignature">public&nbsp;void&nbsp;printMessage&#8203;(<a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
 <div class="block">Prints a message of the specified kind.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>msg</code> - the message</dd>
 <dd><code>args</code> - Arguments referenced by the format specifiers in the format string. If there are more arguments
@@ -312,21 +312,21 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>printMessage</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
-                         <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                         <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
 <div class="block">Prints a message of the specified kind at the location of the
  element.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the element to use as a position hint</dd>
 <dd><code>msg</code> - the message</dd>
@@ -335,7 +335,7 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -343,14 +343,14 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <h4>printMessage</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
-                         <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                         <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
 <div class="block">Prints a message of the specified kind at the location of the
  annotation positionHint of the annotated element.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the annotated element</dd>
 <dd><code>a</code> - the annotation to use as a position hint (can be null)</dd>
@@ -360,7 +360,7 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -369,15 +369,15 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <pre class="methodSignature">public&nbsp;void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationValue.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationValue</a>&nbsp;v,
-                         <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                         <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
 <div class="block">Prints a message of the specified kind at the location of the
  annotation value inside the annotation positionHint of the annotated
  element.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the annotated element</dd>
 <dd><code>a</code> - the annotation containing the annotation value</dd>
@@ -388,20 +388,20 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 </dl>
 </li>
 </ul>
-<a id="note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>note</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;note&#8203;(int&nbsp;level,
-                 <a href="../util/Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;log,
+                 <a href="../util/Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;log,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../util/FormattingMessager.html#note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">FormattingMessager</a></code></span></div>
 <div class="block">Just log as plain note</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">note</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">note</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>level</code> - nesting level</dd>
 <dd><code>log</code> - the log message</dd>
@@ -418,7 +418,7 @@ implements <a href="../util/FormattingMessager.html" title="interface in org.map
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isErroneous()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../util/FormattingMessager.html#isErroneous()">isErroneous</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a></code></dd>
+<dd><code><a href="../util/FormattingMessager.html#isErroneous()">isErroneous</a></code>&nbsp;in interface&nbsp;<code><a href="../util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a></code></dd>
 </dl>
 </li>
 </ul>

@@ -164,7 +164,7 @@ if (!doNotTrack) {
 <li>Recursive source presence tracking</li>
 <li>Improvements in the builders support</li>
 </ul>
-<p>Altogether, no less than <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.3.0.Beta2">35 issues</a> were fixed for this release.</p>
+<p>Altogether, no less than <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.3.0.Beta2">35 issues</a> were fixed for this release.</p>
 <p>This would not have been possible without our fantastic community of contributors:
 <a href="https://github.com/neoXfire">Florian Tavares</a>,
 <a href="https://github.com/chris922">Christian Bandowski</a>,
@@ -179,8 +179,8 @@ It has helped us in ironing out our Builders support.</p>
 <h3 id="java-8-baseline"><a class="ms-header-link" href="#java-8-baseline"><i class="fa fa-link"></i></a>Java 8 Baseline</h3>
 <p>Java 8 has been around for a long time and MapStruct has been working nicely with it for a long time.
 Using it as a baseline would allow us to use some of it features and make it easier for us to maintain it for you.</p>
-<p>The <code>mapstruct-jdk8</code> module has been relocated to <code>mapstruct</code>.
-Upgrade your dependencies to use the <code>mapstruct</code> module.</p>
+<p>The <code>dettonville-jdk8</code> module has been relocated to <code>dettonville</code>.
+Upgrade your dependencies to use the <code>dettonville</code> module.</p>
 <h3 id="control-how-null-or-not-present-properties-are-updated-within-a-target-bean"><a class="ms-header-link" href="#control-how-null-or-not-present-properties-are-updated-within-a-target-bean"><i class="fa fa-link"></i></a>Control how null or not present properties are updated within a target bean</h3>
 <p>We have added a <code>NullValuePropertyMappingStrategy</code> that can be used to control how <code>null</code> or not present source properties are updated within a target.
 The possibilities are:</p>
@@ -231,9 +231,9 @@ public class CustomerMapperImpl implements CustomerMapper {
 }
 </pre>
 
-<p><strong>NB</strong>: In 1.2.0.Final with <a href="https://github.com/mapstruct/mapstruct/issues/1273">#1273</a> we added support for using <code>NullValueMappingStrategy#RETURN_DEFAULT</code> to control how collections / maps default values are set in the scenario described above.
+<p><strong>NB</strong>: In 1.2.0.Final with <a href="https://github.com/dettonville/dettonville/issues/1273">#1273</a> we added support for using <code>NullValueMappingStrategy#RETURN_DEFAULT</code> to control how collections / maps default values are set in the scenario described above.
 We realised that this was a mistake on our side. The <code>NullValueMappingStrategy</code> is intended to be used on the result of the entire bean mapping mehod given a <code>null</code> source bean mapping argument (source bean). Specifically for update methods, the <code>NullValuePropertyMappingStrategy#SET_TO_DEFAULT</code> is intended to complement this functionality: giving control over the property mappings in case of <code>null</code> property source.
-See <a href="https://github.com/mapstruct/mapstruct/issues/1273#issuecomment-433495265">this</a> for more information.</p>
+See <a href="https://github.com/dettonville/dettonville/issues/1273#issuecomment-433495265">this</a> for more information.</p>
 <h3 id="warnings-for-precision-loss"><a class="ms-header-link" href="#warnings-for-precision-loss"><i class="fa fa-link"></i></a>Warnings for precision loss</h3>
 <p>The <code>@Mapper</code> and <code>@MapperConfig</code> now have new <code>typeConversionPolicy</code> option that could be set to control how lossy (narrowing) conversion
 (e.g. <code>long</code> to <code>int</code>) should be reported.</p>
@@ -248,7 +248,7 @@ There was an issue with generic builders, which is now fixed.
 Fluent setters were not working for methods starting with <code>is</code>.
 Some imports for Immutables were missing.
 Support for FreeBuilder has been enhanced by using a custom <code>FreeBuilderAccessorNamingStrategy</code> that disables the check for fluent setters.
-(see <a href="https://github.com/mapstruct/mapstruct/commit/104ebf88da8c6145b790905f0c1db66a3cd35a6b">this</a> for more information).</p>
+(see <a href="https://github.com/dettonville/dettonville/commit/104ebf88da8c6145b790905f0c1db66a3cd35a6b">this</a> for more information).</p>
 <p>For people that provide their own <code>BuilderProvider</code>.
 We have changed the signature of the <code>findBuilderInfo</code> method.
 The <code>Elements</code> and <code>Types</code> utils are no longer passed in the method, but rather the SPI is initialized with the <code>MapStructProcessingEnvironment</code> before each annotation processing round.
@@ -261,14 +261,14 @@ We don&rsquo;t anticipate more issues with the builders support and if the feedb
 <p>This concludes our tour through MapStruct 1.3 Beta2.
 If you&rsquo;d like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:</p>
 <ul>
-<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.3.0.Beta2%7Cjar">org.mapstruct:mapstruct:1.3.0.Beta2</a></li>
-<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.3.0.Beta2%7Cjar">org.mapstruct:mapstruct-processor:1.3.0.Beta2</a></li>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.3.0.Beta2%7Cjar">org.dettonville:dettonville:1.3.0.Beta2</a></li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.3.0.Beta2%7Cjar">org.dettonville:dettonville-processor:1.3.0.Beta2</a></li>
 </ul>
-<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.3.0.Beta2">from GitHub</a>.</p>
+<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/dettonville/dettonville/releases/tag/1.3.0.Beta2">from GitHub</a>.</p>
 <p>If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:</p>
 <ul>
-<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group or in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a></li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help at the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group or in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a></li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 <li>Follow MapStruct on <a href="https://plus.google.com/u/0/118070742567787866481/posts">Google+</a></li>
 </ul></div>
@@ -322,10 +322,10 @@ If you&rsquo;d like to try out the features described above, you can fetch the n
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

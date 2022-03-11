@@ -163,7 +163,7 @@ if (!doNotTrack) {
 <li>New built-in conversions</li>
 <li>Value mapping enhancements</li>
 </ul>
-<p>Altogether, not less than <a href="https://github.com/mapstruct/mapstruct/issues?q=milestone%3A1.5.0.Beta1">41 issues</a> were fixed for this release.</p>
+<p>Altogether, not less than <a href="https://github.com/dettonville/dettonville/issues?q=milestone%3A1.5.0.Beta1">41 issues</a> were fixed for this release.</p>
 <p>This would not have been possible without our fantastic community of contributors:</p>
 <ul>
 <li>
@@ -210,7 +210,7 @@ Since then, we have officially released 3 versions of the MapStruct Spring Exten
 I would like to thank Raimund Klein for successfully leading this MapStruct extension.</p>
 <p>Enough of the pep talk, let&rsquo;s take a closer look at some of the new features and enhancement!</p>
 <h3 id="mapping-from-map-to-bean"><a class="ms-header-link" href="#mapping-from-map-to-bean"><i class="fa fa-link"></i></a>Mapping from Map to Bean</h3>
-<p><a href="https://github.com/mapstruct/mapstruct/issues/1075">Mapping from Map to Bean</a> has been one of the top requested features for MapStruct.</p>
+<p><a href="https://github.com/dettonville/dettonville/issues/1075">Mapping from Map to Bean</a> has been one of the top requested features for MapStruct.</p>
 <p>We are happy to announce that as of 1.5.0.Beta1 MapStruct has out of the box support for mapping maps into objects.
 Currently, we support mapping from <code>Map&lt;String, ???&gt;</code> into an object.
 Maps that do not have a <code>String</code> as a key will generate a warning and will not be used in the generated code.
@@ -249,14 +249,14 @@ public class CustomerMapperImpl implements CustomerMapper {
 }
 </pre>
 
-<p>For more details how Mapping Map to Bean works have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#mapping-map-to-bean">Mapping Map to Bean</a> section of the reference guide.</p>
+<p>For more details how Mapping Map to Bean works have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#mapping-map-to-bean">Mapping Map to Bean</a> section of the reference guide.</p>
 <h3 id="conditional-mapping"><a class="ms-header-link" href="#conditional-mapping"><i class="fa fa-link"></i></a>Conditional Mapping</h3>
 <p>We&rsquo;ve had support for conditional mapping with the help of so called presence check methods on your objects.
 Methods like that have the format of <code>boolean hasXXX()</code> where <code>XXX</code> is the name of the property.
 However, this is sometimes limiting since you do not have the possibility to change your object, or you want to have a global check and do not map empty strings.</p>
 <p>In this release we have added support for conditional mapping outside your objects.
 You can now write custom conditional methods that will be used for checking if a property is present or not in the generated code.
-A custom condition method is a method that is annotated with <code>org.mapstruct.Condition</code> and returns <code>boolean</code>.</p>
+A custom condition method is a method that is annotated with <code>org.dettonville.Condition</code> and returns <code>boolean</code>.</p>
 <p>For example if you want to map a String property only when it is not null and it is not empty then you can do something like:</p>
 <pre class="prettyprint linenums lang-java">
 @Mapper
@@ -297,7 +297,7 @@ public class CarMapperImpl implements CarMapper {
 
 <p>Methods annotated with <code>@Condition</code> work in similar way as other methods (object factories, lifecycle, mapping) in MapStruct.
 This means that you can include the source parameter, the <code>@MappingTarget</code>, use qualifiers, define your conditions in other classes and use them via <code>Mapper#uses</code></p>
-<p>For more details how conditional mapping works have a look at the <a href="http://mapstruct.org/documentation/dev/reference/html/#conditional-mapping">Conditional Mapping</a> section of the reference guide.</p>
+<p>For more details how conditional mapping works have a look at the <a href="http://dettonville.org/documentation/dev/reference/html/#conditional-mapping">Conditional Mapping</a> section of the reference guide.</p>
 <h3 id="mapping-iterable-into-an-object"><a class="ms-header-link" href="#mapping-iterable-into-an-object"><i class="fa fa-link"></i></a>Mapping Iterable&lt;?&gt; into an Object</h3>
 <pre class="prettyprint linenums lang-java">
 @Mapper
@@ -396,23 +396,23 @@ We have adapted our entire build to work on Java 11, this means that we had to r
 The reason for removing them is that the Doclet we were using no longer works on Java 11 and we would like to use the improved Javadoc generation of Java 11.</p>
 <p>We have also refactored the way we handle detect generics.</p>
 <h3 id="mapstruct-discussions"><a class="ms-header-link" href="#mapstruct-discussions"><i class="fa fa-link"></i></a>MapStruct Discussions</h3>
-<p>We would also like to let you know that we have opened the Discussions section of our GitHub repository and would like to <a href="https://github.com/mapstruct/mapstruct/discussions/2518">Welcome you to MapStruct Discussions!</a>.</p>
-<p>We have had (and still have) the <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">mapstruct-users</a> group.
+<p>We would also like to let you know that we have opened the Discussions section of our GitHub repository and would like to <a href="https://github.com/dettonville/dettonville/discussions/2518">Welcome you to MapStruct Discussions!</a>.</p>
+<p>We have had (and still have) the <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">dettonville-users</a> group.
 However, we believe that switching to GitHub Discussions will bring more engagement from our community and will be easier for us to maintain it.</p>
 <p>We would like to use these discussions to interact with the community, get ideas from all of you, see best practices, discuss potential new features, ideas, etc.</p>
-<p>If you have questions about using MapStruct please continue using <a href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a>.</p>
+<p>If you have questions about using MapStruct please continue using <a href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a>.</p>
 <h3 id="download"><a class="ms-header-link" href="#download"><i class="fa fa-link"></i></a>Download</h3>
 <p>This concludes our tour through MapStruct 1.5 Beta1.
 If you&rsquo;d like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:</p>
 <ul>
-<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct%7C1.5.0.Beta1%7Cjar">org.mapstruct:mapstruct:1.5.0.Beta1</a></li>
-<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.mapstruct%7Cmapstruct-processor%7C1.5.0.Beta1%7Cjar">org.mapstruct:mapstruct-processor:1.5.0.Beta1</a></li>
+<li>Annotation JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville%7C1.5.0.Beta1%7Cjar">org.dettonville:dettonville:1.5.0.Beta1</a></li>
+<li>Annotation processor JAR: <a href="http://search.maven.org/#artifactdetails%7Corg.dettonville%7Cdettonville-processor%7C1.5.0.Beta1%7Cjar">org.dettonville:dettonville-processor:1.5.0.Beta1</a></li>
 </ul>
-<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/mapstruct/mapstruct/releases/tag/1.5.0.Beta1">from GitHub</a>.</p>
+<p>Alternatively, you can get ZIP and TAR.GZ distribution bundles - containing all the JARs, documentation etc. - <a href="https://github.com/dettonville/dettonville/releases/tag/1.5.0.Beta1">from GitHub</a>.</p>
 <p>If you run into any trouble or would like to report a bug, feature request or similar, use the following channels to get in touch:</p>
 <ul>
-<li>Get help in our <a href="https://gitter.im/mapstruct/mapstruct-users">Gitter room</a>, the <a href="https://github.com/mapstruct/mapstruct/discussions">GitHub Discussion</a> or <a href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
-<li>Report bugs and feature requests via the <a href="https://github.com/mapstruct/mapstruct/issues">issue tracker</a></li>
+<li>Get help in our <a href="https://gitter.im/dettonville/dettonville-users">Gitter room</a>, the <a href="https://github.com/dettonville/dettonville/discussions">GitHub Discussion</a> or <a href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
+<li>Report bugs and feature requests via the <a href="https://github.com/dettonville/dettonville/issues">issue tracker</a></li>
 <li>Follow <a href="https://twitter.com/GetMapStruct">@GetMapStruct</a> on Twitter</li>
 </ul></div>
     </div>
@@ -465,10 +465,10 @@ If you&rsquo;d like to try out the features described above, you can fetch the n
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

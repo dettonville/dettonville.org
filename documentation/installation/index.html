@@ -149,19 +149,19 @@ if (!doNotTrack) {
     </div>
 </div>
 <div><h2 id="distribution-bundle"><a class="ms-header-link" href="#distribution-bundle"><i class="fa fa-link"></i></a>Distribution Bundle</h2>
-<p>You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from <a href="https://github.com/mapstruct/mapstruct/releases">GitHub</a>.</p>
+<p>You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from <a href="https://github.com/dettonville/dettonville/releases">GitHub</a>.</p>
 <h2 id="apache-maven"><a class="ms-header-link" href="#apache-maven"><i class="fa fa-link"></i></a>Apache Maven</h2>
 <p>If you&rsquo;re using Maven to build your project add the following to your <em>pom.xml</em> to use MapStruct:</p>
 <pre class="prettyprint linenums lang-xml">...
 &lt;properties&gt;
-    &lt;org.mapstruct.version&gt;1.4.2.Final&lt;/org.mapstruct.version&gt;
+    &lt;org.dettonville.version&gt;1.4.2.Final&lt;/org.dettonville.version&gt;
 &lt;/properties&gt;
 ...
 &lt;dependencies&gt;
     &lt;dependency&gt;
-        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-        &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
-        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;
+        &lt;groupId&gt;org.dettonville&lt;/groupId&gt;
+        &lt;artifactId&gt;dettonville&lt;/artifactId&gt;
+        &lt;version&gt;${org.dettonville.version}&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;
 ...
@@ -176,9 +176,9 @@ if (!doNotTrack) {
                 &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;
                 &lt;annotationProcessorPaths&gt;
                     &lt;path&gt;
-                        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-                        &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;
-                        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;
+                        &lt;groupId&gt;org.dettonville&lt;/groupId&gt;
+                        &lt;artifactId&gt;dettonville-processor&lt;/artifactId&gt;
+                        &lt;version&gt;${org.dettonville.version}&lt;/version&gt;
                     &lt;/path&gt;
                     &lt;!-- other annotation processors --&gt;
                 &lt;/annotationProcessorPaths&gt;
@@ -192,9 +192,9 @@ if (!doNotTrack) {
 <p>When using a modern version of Gradle (&gt;= 4.6), you add something along the following lines to your <em>build.gradle</em>:</p>
 <pre class="prettyprint linenums lang-groovy">dependencies {
     ...
-    implementation &#39;org.mapstruct:mapstruct:1.4.2.Final&#39;
+    implementation &#39;org.dettonville:dettonville:1.4.2.Final&#39;
 
-    annotationProcessor &#39;org.mapstruct:mapstruct-processor:1.4.2.Final&#39;
+    annotationProcessor &#39;org.dettonville:dettonville-processor:1.4.2.Final&#39;
 }
 </pre>
 
@@ -206,13 +206,13 @@ if (!doNotTrack) {
 }
 dependencies {
     ...
-    compile &#39;org.mapstruct:mapstruct:1.4.2.Final&#39;
+    compile &#39;org.dettonville:dettonville:1.4.2.Final&#39;
  
-    apt &#39;org.mapstruct:mapstruct-processor:1.4.2.Final&#39;
+    apt &#39;org.dettonville:dettonville-processor:1.4.2.Final&#39;
 }
 </pre>
 
-<p>You can find a complete example in the <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-gradle">mapstruct-examples</a> project on GitHub.</p>
+<p>You can find a complete example in the <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle">dettonville-examples</a> project on GitHub.</p>
 <h2 id="apache-ant"><a class="ms-header-link" href="#apache-ant"><i class="fa fa-link"></i></a>Apache Ant</h2>
 <p>Add the <code>javac</code> task configured as follows to your <em>build.xml</em> file in order to enable MapStruct in your Ant-based project. Adjust the paths as required for your project layout.</p>
 <pre class="prettyprint linenums lang-xml">
@@ -220,14 +220,14 @@ dependencies {
 &lt;javac
     srcdir=&#34;src/main/java&#34;
     destdir=&#34;target/classes&#34;
-    classpath=&#34;path/to/mapstruct-1.4.2.Final.jar&#34;&gt;
-    &lt;compilerarg line=&#34;-processorpath path/to/mapstruct-processor-1.4.2.Final.jar&#34;/&gt;
+    classpath=&#34;path/to/dettonville-1.4.2.Final.jar&#34;&gt;
+    &lt;compilerarg line=&#34;-processorpath path/to/dettonville-processor-1.4.2.Final.jar&#34;/&gt;
     &lt;compilerarg line=&#34;-s target/generated-sources&#34;/&gt;
 &lt;/javac&gt;
 ...
 </pre>
 
-<p>You can find a complete example in the <a href="https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-on-ant">mapstruct-examples</a> project on GitHub.</p>
+<p>You can find a complete example in the <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-ant">dettonville-examples</a> project on GitHub.</p>
 </div>
 
         </div>
@@ -241,10 +241,10 @@ dependencies {
                         <div class="uk-width-1-1 ">
                             <ul class="uk-subnav uk-subnav-line uk-flex-center ms-subnav-footer">
                                 <li><a class="ms-link-footer" href="/documentation/installation">Documentation</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct">Source Code</a></li>
-                                <li><a class="ms-link-footer" href="https://github.com/mapstruct/mapstruct/discussions">Discussions</a></li>
-                                <li><a class="ms-link-footer" href="https://gitter.im/mapstruct/mapstruct-users">Gitter</a></li>
-                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/mapstruct">StackOverflow</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville">Source Code</a></li>
+                                <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
+                                <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
+                                <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
                                 <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
                             </ul>
                         </div>

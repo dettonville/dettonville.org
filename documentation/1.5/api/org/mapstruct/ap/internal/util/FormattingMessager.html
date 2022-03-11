@@ -6,7 +6,7 @@
 <title>FormattingMessager (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.internal.util.FormattingMessager interface">
+<meta name="keywords" content="org.dettonville.ap.internal.util.FormattingMessager interface">
 <meta name="keywords" content="printMessage()">
 <meta name="keywords" content="note()">
 <meta name="keywords" content="isErroneous()">
@@ -120,7 +120,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.internal.util</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.internal.util</a></div>
 <h2 title="Interface FormattingMessager" class="title">Interface FormattingMessager</h2>
 </div>
 <div class="contentContainer">
@@ -129,7 +129,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../processor/MapperAnnotatedFormattingMessenger.html" title="class in org.mapstruct.ap.internal.processor">MapperAnnotatedFormattingMessenger</a></code></dd>
+<dd><code><a href="../processor/MapperAnnotatedFormattingMessenger.html" title="class in org.dettonville.ap.internal.processor">MapperAnnotatedFormattingMessenger</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">FormattingMessager</span></pre>
@@ -166,8 +166,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">note</a></span>&#8203;(int&nbsp;level,
-    <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;log,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">note</a></span>&#8203;(int&nbsp;level,
+    <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;log,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Just log as plain note</div>
@@ -175,10 +175,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationValue.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationValue</a>&nbsp;v,
-            <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+            <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -188,9 +188,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
-            <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+            <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -199,8 +199,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
-            <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
+            <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind at the location of the
@@ -209,7 +209,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">printMessage</a></span>&#8203;(<a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
 <div class="block">Prints a message of the specified kind.</div>
@@ -232,13 +232,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="printMessage(org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>printMessage</h4>
-<pre class="methodSignature">void&nbsp;printMessage&#8203;(<a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+<pre class="methodSignature">void&nbsp;printMessage&#8203;(<a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Prints a message of the specified kind.</div>
 <dl>
@@ -249,14 +249,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>printMessage</h4>
 <pre class="methodSignature">void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
-                  <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                  <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Prints a message of the specified kind at the location of the
  element.</div>
@@ -269,7 +269,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -277,7 +277,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>printMessage</h4>
 <pre class="methodSignature">void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
-                  <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                  <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Prints a message of the specified kind at the location of the
  annotation positionHint of the annotated element.</div>
@@ -291,7 +291,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="printMessage(javax.lang.model.element.Element,javax.lang.model.element.AnnotationMirror,javax.lang.model.element.AnnotationValue,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -300,7 +300,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">void&nbsp;printMessage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">Element</a>&nbsp;e,
                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationMirror.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationMirror</a>&nbsp;a,
                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/AnnotationValue.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">AnnotationValue</a>&nbsp;v,
-                  <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;msg,
+                  <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;msg,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Prints a message of the specified kind at the location of the
  annotation value inside the annotation positionHint of the annotated
@@ -316,14 +316,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="note(int,org.mapstruct.ap.internal.util.Message,java.lang.Object...)">
+<a id="note(int,org.dettonville.ap.internal.util.Message,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>note</h4>
 <pre class="methodSignature">void&nbsp;note&#8203;(int&nbsp;level,
-          <a href="Message.html" title="enum in org.mapstruct.ap.internal.util">Message</a>&nbsp;log,
+          <a href="Message.html" title="enum in org.dettonville.ap.internal.util">Message</a>&nbsp;log,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Just log as plain note</div>
 <dl>

@@ -14,7 +14,7 @@
       
       <guid>http://dettonville.org/development/contributing/</guid>
       <description>You love MapStruct but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That&amp;rsquo;s great! MapStruct is all open source and your help is highly appreciated.
-  WhatWhere     Source codehttps://github.com/mapstruct/mapstruct   Issue trackerhttps://github.com/mapstruct/mapstruct/issues   DiscussionsJoin the MapStruct GitHub Discussions   CI buildhttps://github.com/mapstruct/mapstruct/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/mapstruct/mapstruct.org    MapStruct follows the Fork &amp;amp; Pull development approach.</description>
+  WhatWhere     Source codehttps://github.com/dettonville/dettonville   Issue trackerhttps://github.com/dettonville/dettonville/issues   DiscussionsJoin the MapStruct GitHub Discussions   CI buildhttps://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/dettonville/dettonville.org    MapStruct follows the Fork &amp;amp; Pull development approach.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       
       <guid>http://dettonville.org/development/technical-documentation/</guid>
       <description>The MapStruct code base is thoroughly documented via JavaDoc. You can find the latest docs here. The individual pages contain generated class diagrams showing type hierarchies and package contents.
-To get yourself acquainted with the code base, you could start by taking a look at the docs of MappingProcessor which give a high-level overview of the general architecture. Then check out the org.mapstruct.ap.model and org.mapstruct.ap.processor packages.
+To get yourself acquainted with the code base, you could start by taking a look at the docs of MappingProcessor which give a high-level overview of the general architecture. Then check out the org.dettonville.ap.model and org.dettonville.ap.processor packages.
 If you have any questions don&amp;rsquo;t hesitate to ask or StackOverflow, we are here to help!</description>
     </item>
     
@@ -59,7 +59,7 @@ But there are subtle differences in the way different compilers implement the an
     </item>
     
     <item>
-      <title>Updating mapstruct.org</title>
+      <title>Updating dettonville.org</title>
       <link>http://dettonville.org/development/updating-mapstructorg/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
@@ -78,7 +78,7 @@ Set-up Install Hugo by following the instructions given on its homepage.</descri
       <guid>http://dettonville.org/development/ide-setup/</guid>
       <description>IntelliJ IDEA After you&amp;rsquo;ve cloned you can import it by selecting &amp;ldquo;File -&amp;gt; Import Module &amp;hellip;&amp;rdquo; and then selecting the top level aggregator pom.xml file located in the root folder. IDEA then will load MapStruct, resolve all dependencies and compile the source.
 You might face an error on IDEAs Message tab saying
-If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation processor and untick checkbox &amp;ldquo;Enable annotation processing&amp;rdquo; at &amp;ldquo;Annotation profile for mapstruct-integrationtest&amp;rdquo;.</description>
+If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation processor and untick checkbox &amp;ldquo;Enable annotation processing&amp;rdquo; at &amp;ldquo;Annotation profile for dettonville-integrationtest&amp;rdquo;.</description>
     </item>
     
     <item>

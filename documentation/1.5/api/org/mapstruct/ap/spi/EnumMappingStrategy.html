@@ -6,7 +6,7 @@
 <title>EnumMappingStrategy (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.EnumMappingStrategy interface">
+<meta name="keywords" content="org.dettonville.ap.spi.EnumMappingStrategy interface">
 <meta name="keywords" content="init()">
 <meta name="keywords" content="getDefaultNullEnumConstant()">
 <meta name="keywords" content="getEnumConstant()">
@@ -121,7 +121,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Interface EnumMappingStrategy" class="title">Interface EnumMappingStrategy</h2>
 </div>
 <div class="contentContainer">
@@ -130,10 +130,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="DefaultEnumMappingStrategy.html" title="class in org.mapstruct.ap.spi">DefaultEnumMappingStrategy</a></code></dd>
+<dd><code><a href="DefaultEnumMappingStrategy.html" title="class in org.dettonville.ap.spi">DefaultEnumMappingStrategy</a></code></dd>
 </dl>
 <hr>
-<pre><a href="../../util/Experimental.html" title="annotation in org.mapstruct.util">@Experimental</a>("This SPI can have it\'s signature changed in subsequent releases")
+<pre><a href="../../util/Experimental.html" title="annotation in org.dettonville.util">@Experimental</a>("This SPI can have it\'s signature changed in subsequent releases")
 public interface <span class="typeNameLabel">EnumMappingStrategy</span></pre>
 <div class="block">A service provider interface for the mapping between different enum constants</div>
 <dl>
@@ -187,7 +187,7 @@ public interface <span class="typeNameLabel">EnumMappingStrategy</span></pre>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the enum value mapping strategy</div>
 </td>
@@ -209,13 +209,13 @@ public interface <span class="typeNameLabel">EnumMappingStrategy</span></pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<pre class="methodSignature">default&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
 <div class="block">Initializes the enum value mapping strategy</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

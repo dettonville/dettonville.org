@@ -6,7 +6,7 @@
 <title>DefaultAccessorNamingStrategy (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.spi.DefaultAccessorNamingStrategy class">
+<meta name="keywords" content="org.dettonville.ap.spi.DefaultAccessorNamingStrategy class">
 <meta name="keywords" content="elementUtils">
 <meta name="keywords" content="typeUtils">
 <meta name="keywords" content="init()">
@@ -130,7 +130,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.spi</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.spi</a></div>
 <h2 title="Class DefaultAccessorNamingStrategy" class="title">Class DefaultAccessorNamingStrategy</h2>
 </div>
 <div class="contentContainer">
@@ -138,7 +138,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.spi.DefaultAccessorNamingStrategy</li>
+<li>org.dettonville.ap.spi.DefaultAccessorNamingStrategy</li>
 </ul>
 </li>
 </ul>
@@ -147,17 +147,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="FreeBuilderAccessorNamingStrategy.html" title="class in org.mapstruct.ap.spi">FreeBuilderAccessorNamingStrategy</a></code>, <code><a href="ImmutablesAccessorNamingStrategy.html" title="class in org.mapstruct.ap.spi">ImmutablesAccessorNamingStrategy</a></code></dd>
+<dd><code><a href="FreeBuilderAccessorNamingStrategy.html" title="class in org.dettonville.ap.spi">FreeBuilderAccessorNamingStrategy</a></code>, <code><a href="ImmutablesAccessorNamingStrategy.html" title="class in org.dettonville.ap.spi">ImmutablesAccessorNamingStrategy</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">DefaultAccessorNamingStrategy</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></pre>
-<div class="block">The default JavaBeans-compliant implementation of the <a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi"><code>AccessorNamingStrategy</code></a> service provider interface.</div>
+implements <a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></pre>
+<div class="block">The default JavaBeans-compliant implementation of the <a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi"><code>AccessorNamingStrategy</code></a> service provider interface.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Christian Schuster, Sjaak Derken</dd>
@@ -246,7 +246,7 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a></code></td>
+<td class="colFirst"><code><a href="MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMethodType(javax.lang.model.element.ExecutableElement)">getMethodType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</code></th>
 <td class="colLast">
 <div class="block">Returns the type of the given method.</div>
@@ -268,7 +268,7 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></span>&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</code></th>
 <td class="colLast">
 <div class="block">Initializes the accessor naming strategy with the MapStruct processing environment.</div>
 </td>
@@ -378,18 +378,18 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">
+<a id="init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.mapstruct.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="AccessorNamingStrategy.html#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">AccessorNamingStrategy</a></code></span></div>
+<pre class="methodSignature">public&nbsp;void&nbsp;init&#8203;(<a href="MapStructProcessingEnvironment.html" title="interface in org.dettonville.ap.spi">MapStructProcessingEnvironment</a>&nbsp;processingEnvironment)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="AccessorNamingStrategy.html#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">AccessorNamingStrategy</a></code></span></div>
 <div class="block">Initializes the accessor naming strategy with the MapStruct processing environment.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="AccessorNamingStrategy.html#init(org.mapstruct.ap.spi.MapStructProcessingEnvironment)">init</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html#init(org.dettonville.ap.spi.MapStructProcessingEnvironment)">init</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>processingEnvironment</code> - environment for facilities</dd>
 </dl>
@@ -401,12 +401,12 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
 <ul class="blockList">
 <li class="blockList">
 <h4>getMethodType</h4>
-<pre class="methodSignature">public&nbsp;<a href="MethodType.html" title="enum in org.mapstruct.ap.spi">MethodType</a>&nbsp;getMethodType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</pre>
+<pre class="methodSignature">public&nbsp;<a href="MethodType.html" title="enum in org.dettonville.ap.spi">MethodType</a>&nbsp;getMethodType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/ExecutableElement.html?is-external=true" title="class or interface in javax.lang.model.element" class="externalLink">ExecutableElement</a>&nbsp;method)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="AccessorNamingStrategy.html#getMethodType(javax.lang.model.element.ExecutableElement)">AccessorNamingStrategy</a></code></span></div>
 <div class="block">Returns the type of the given method.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="AccessorNamingStrategy.html#getMethodType(javax.lang.model.element.ExecutableElement)">getMethodType</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html#getMethodType(javax.lang.model.element.ExecutableElement)">getMethodType</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>method</code> - to be analyzed.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -521,7 +521,7 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
  the property name.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="AccessorNamingStrategy.html#getPropertyName(javax.lang.model.element.ExecutableElement)">getPropertyName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html#getPropertyName(javax.lang.model.element.ExecutableElement)">getPropertyName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>getterOrSetterMethod</code> - getter or setter method.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -541,7 +541,7 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
  element name will be 'element'.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="AccessorNamingStrategy.html#getElementName(javax.lang.model.element.ExecutableElement)">getElementName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html#getElementName(javax.lang.model.element.ExecutableElement)">getElementName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>adderMethod</code> - getter or setter method.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -578,7 +578,7 @@ implements <a href="AccessorNamingStrategy.html" title="interface in org.mapstru
  The default implementation will e.g. return "getItems" for "items".</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="AccessorNamingStrategy.html#getCollectionGetterName(java.lang.String)">getCollectionGetterName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.mapstruct.ap.spi">AccessorNamingStrategy</a></code></dd>
+<dd><code><a href="AccessorNamingStrategy.html#getCollectionGetterName(java.lang.String)">getCollectionGetterName</a></code>&nbsp;in interface&nbsp;<code><a href="AccessorNamingStrategy.html" title="interface in org.dettonville.ap.spi">AccessorNamingStrategy</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>property</code> - to be getterOrSetterMethod.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

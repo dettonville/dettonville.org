@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>EnumMapping (MapStruct 1.4.2.Final)</title>
 <meta name="date" content="2021-01-31">
-<meta name="keywords" content="org.mapstruct.EnumMapping class">
+<meta name="keywords" content="org.dettonville.EnumMapping class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/DecoratedWith.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/InheritConfiguration.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/DecoratedWith.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InheritConfiguration.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/EnumMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/EnumMapping.html" target="_top">Frames</a></li>
 <li><a href="EnumMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type EnumMapping" class="title">Annotation Type EnumMapping</h2>
 </div>
 <div class="contentContainer">
@@ -201,19 +201,19 @@ public @interface <span class="memberNameLabel">EnumMapping</span></pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/EnumMapping.html#configuration--">configuration</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/EnumMapping.html#configuration--">configuration</a></span></code>
 <div class="block">The configuration that should be passed on the appropriate name transformation strategy.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/EnumMapping.html#nameTransformationStrategy--">nameTransformationStrategy</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/EnumMapping.html#nameTransformationStrategy--">nameTransformationStrategy</a></span></code>
 <div class="block">Specifies the name transformation strategy that should be used for implicit mapping between enums.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/EnumMapping.html#unexpectedValueMappingException--">unexpectedValueMappingException</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/EnumMapping.html#unexpectedValueMappingException--">unexpectedValueMappingException</a></span></code>
 <div class="block">Exception that should be thrown by the generated code if no mapping matches.</div>
 </td>
 </tr>
@@ -242,13 +242,13 @@ public @interface <span class="memberNameLabel">EnumMapping</span></pre>
 <div class="block">Specifies the name transformation strategy that should be used for implicit mapping between enums.
  Known strategies are:
  <ul>
-     <li><a href="../../org/mapstruct/MappingConstants.html#SUFFIX_TRANSFORMATION"><code>MappingConstants.SUFFIX_TRANSFORMATION</code></a> - applies the given <a href="../../org/mapstruct/EnumMapping.html#configuration--"><code>configuration()</code></a> as a
+     <li><a href="../../org/dettonville/MappingConstants.html#SUFFIX_TRANSFORMATION"><code>MappingConstants.SUFFIX_TRANSFORMATION</code></a> - applies the given <a href="../../org/dettonville/EnumMapping.html#configuration--"><code>configuration()</code></a> as a
      suffix to the source enum</li>
-     <li><a href="../../org/mapstruct/MappingConstants.html#STRIP_SUFFIX_TRANSFORMATION"><code>MappingConstants.STRIP_SUFFIX_TRANSFORMATION</code></a> - strips the the given <a href="../../org/mapstruct/EnumMapping.html#configuration--"><code>configuration()</code></a>
+     <li><a href="../../org/dettonville/MappingConstants.html#STRIP_SUFFIX_TRANSFORMATION"><code>MappingConstants.STRIP_SUFFIX_TRANSFORMATION</code></a> - strips the the given <a href="../../org/dettonville/EnumMapping.html#configuration--"><code>configuration()</code></a>
      from the end of the source enum</li>
-     <li><a href="../../org/mapstruct/MappingConstants.html#PREFIX_TRANSFORMATION"><code>MappingConstants.PREFIX_TRANSFORMATION</code></a> - applies the given <a href="../../org/mapstruct/EnumMapping.html#configuration--"><code>configuration()</code></a> as a
+     <li><a href="../../org/dettonville/MappingConstants.html#PREFIX_TRANSFORMATION"><code>MappingConstants.PREFIX_TRANSFORMATION</code></a> - applies the given <a href="../../org/dettonville/EnumMapping.html#configuration--"><code>configuration()</code></a> as a
      prefix to the source enum</li>
-     <li><a href="../../org/mapstruct/MappingConstants.html#STRIP_PREFIX_TRANSFORMATION"><code>MappingConstants.STRIP_PREFIX_TRANSFORMATION</code></a> - strips the given <a href="../../org/mapstruct/EnumMapping.html#configuration--"><code>configuration()</code></a> from
+     <li><a href="../../org/dettonville/MappingConstants.html#STRIP_PREFIX_TRANSFORMATION"><code>MappingConstants.STRIP_PREFIX_TRANSFORMATION</code></a> - strips the given <a href="../../org/dettonville/EnumMapping.html#configuration--"><code>configuration()</code></a> from
      the start of the source enum</li>
  </ul>
 
@@ -296,8 +296,8 @@ public @interface <span class="memberNameLabel">EnumMapping</span></pre>
 <h4>unexpectedValueMappingException</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&nbsp;unexpectedValueMappingException</pre>
 <div class="block">Exception that should be thrown by the generated code if no mapping matches.
- If no exception is configured, the exception given via <a href="../../org/mapstruct/MapperConfig.html#unexpectedValueMappingException--"><code>MapperConfig.unexpectedValueMappingException()</code></a> or
- <a href="../../org/mapstruct/Mapper.html#unexpectedValueMappingException--"><code>Mapper.unexpectedValueMappingException()</code></a> will be used, using <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> by default.
+ If no exception is configured, the exception given via <a href="../../org/dettonville/MapperConfig.html#unexpectedValueMappingException--"><code>MapperConfig.unexpectedValueMappingException()</code></a> or
+ <a href="../../org/dettonville/Mapper.html#unexpectedValueMappingException--"><code>Mapper.unexpectedValueMappingException()</code></a> will be used, using <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> by default.
 
  <p>
  Note:
@@ -348,11 +348,11 @@ public @interface <span class="memberNameLabel">EnumMapping</span></pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/DecoratedWith.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/InheritConfiguration.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/DecoratedWith.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/InheritConfiguration.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/EnumMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/EnumMapping.html" target="_top">Frames</a></li>
 <li><a href="EnumMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -387,6 +387,6 @@ public @interface <span class="memberNameLabel">EnumMapping</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://mapstruct.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://dettonville.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

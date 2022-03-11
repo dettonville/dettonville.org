@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MapMapping (MapStruct 1.3.1.Final)</title>
 <meta name="date" content="2019-09-29">
-<meta name="keywords" content="org.mapstruct.MapMapping class">
+<meta name="keywords" content="org.dettonville.MapMapping class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/IterableMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/Mapper.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/IterableMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/Mapper.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/MapMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/MapMapping.html" target="_top">Frames</a></li>
 <li><a href="MapMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type MapMapping" class="title">Annotation Type MapMapping</h2>
 </div>
 <div class="contentContainer">
@@ -130,76 +130,76 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#keyDateFormat--">keyDateFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#keyDateFormat--">keyDateFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text"><code>SimpleDateFormat</code></a> if the annotated method maps from a map with key type
  <code>String</code> to an map with key type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#keyNumberFormat--">keyNumberFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#keyNumberFormat--">keyNumberFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text"><code>DecimalFormat</code></a> if the annotated method maps from a
   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang"><code>Number</code></a> to a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#keyQualifiedBy--">keyQualifiedBy</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#keyQualifiedBy--">keyQualifiedBy</a></span></code>
 <div class="block">A key value qualifier can be specified to aid the selection process of a suitable mapper.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#keyQualifiedByName--">keyQualifiedByName</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#keyQualifiedByName--">keyQualifiedByName</a></span></code>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this map mapping method's key
  type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the class-level) a
- <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
+ <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#keyTargetType--">keyTargetType</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#keyTargetType--">keyTargetType</a></span></code>
 <div class="block">Specifies the type of the key to be used in the result of the mapping method in case multiple mapping
  methods qualify.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source value to this map mapping.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#valueDateFormat--">valueDateFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#valueDateFormat--">valueDateFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text"><code>SimpleDateFormat</code></a> if the annotated method maps from a map with value
  type <code>String</code> to an map with value type <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#valueNumberFormat--">valueNumberFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#valueNumberFormat--">valueNumberFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text"><code>DecimalFormat</code></a> if the annotated method maps from a
   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang"><code>Number</code></a> to a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#valueQualifiedBy--">valueQualifiedBy</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#valueQualifiedBy--">valueQualifiedBy</a></span></code>
 <div class="block">A value qualifier can be specified to aid the selection process of a suitable mapper for the values in the map.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#valueQualifiedByName--">valueQualifiedByName</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#valueQualifiedByName--">valueQualifiedByName</a></span></code>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this map mapping method's
  value type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the class-level)
- a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
+ a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/MapMapping.html#valueTargetType--">valueTargetType</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/MapMapping.html#valueTargetType--">valueTargetType</a></span></code>
 <div class="block">Specifies the type of the value to be used in the result of the mapping method in case multiple mapping
  methods qualify.</div>
 </td>
@@ -342,7 +342,7 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;keyQualifiedByName</pre>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this map mapping method's key
  type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the class-level) a
- <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.
+ <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.
  <p>
  Note that annotation-based qualifiers are generally preferable as they allow more easily to find references and
  are safe for refactorings, but name-based qualifiers can be a less verbose alternative when requiring a large
@@ -351,8 +351,8 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>One or more qualifier name(s)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/MapMapping.html#keyQualifiedBy--"><code>keyQualifiedBy()</code></a>, 
-<a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a></dd>
+<dd><a href="../../org/dettonville/MapMapping.html#keyQualifiedBy--"><code>keyQualifiedBy()</code></a>,
+<a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -397,7 +397,7 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;valueQualifiedByName</pre>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method to map this map mapping method's
  value type, MapStruct will only consider those methods carrying directly or indirectly (i.e. on the class-level)
- a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation for each of the specified qualifier names.
+ a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation for each of the specified qualifier names.
  <p>
  Note that annotation-based qualifiers are generally preferable as they allow more easily to find references and
  are safe for refactorings, but name-based qualifiers can be a less verbose alternative when requiring a large
@@ -406,8 +406,8 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>One or more qualifier name(s)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/MapMapping.html#valueQualifiedBy--"><code>valueQualifiedBy()</code></a>, 
-<a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a></dd>
+<dd><a href="../../org/dettonville/MapMapping.html#valueQualifiedBy--"><code>valueQualifiedBy()</code></a>,
+<a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -468,10 +468,10 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>nullValueMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source value to this map mapping. If no
- strategy is configured, the strategy given via <a href="../../org/mapstruct/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> or
- <a href="../../org/mapstruct/Mapper.html#nullValueMappingStrategy--"><code>Mapper.nullValueMappingStrategy()</code></a> will be applied, using <a href="../../org/mapstruct/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a>
+ strategy is configured, the strategy given via <a href="../../org/dettonville/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> or
+ <a href="../../org/dettonville/Mapper.html#nullValueMappingStrategy--"><code>Mapper.nullValueMappingStrategy()</code></a> will be applied, using <a href="../../org/dettonville/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a>
  by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -479,7 +479,7 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValueMappingStrategy.RETURN_NULL</dd>
+<dd>org.dettonville.NullValueMappingStrategy.RETURN_NULL</dd>
 </dl>
 </li>
 </ul>
@@ -511,11 +511,11 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/IterableMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/Mapper.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/IterableMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/Mapper.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/MapMapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/MapMapping.html" target="_top">Frames</a></li>
 <li><a href="MapMapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -550,6 +550,6 @@ public @interface <span class="memberNameLabel">MapMapping</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2019 <a href="http://mapstruct.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2019 <a href="http://dettonville.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

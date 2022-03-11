@@ -6,7 +6,7 @@
 <title>IterableCreation (MapStruct 1.5.0.Beta2)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="dc.created" content="2021-12-12">
-<meta name="keywords" content="org.mapstruct.ap.internal.model.IterableCreation class">
+<meta name="keywords" content="org.dettonville.ap.internal.model.IterableCreation class">
 <meta name="keywords" content="create()">
 <meta name="keywords" content="getResultType()">
 <meta name="keywords" content="getSourceParameter()">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.mapstruct.ap.internal.model</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.dettonville.ap.internal.model</a></div>
 <h2 title="Class IterableCreation" class="title">Class IterableCreation</h2>
 </div>
 <div class="contentContainer">
@@ -134,13 +134,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../writer/FreeMarkerWritable.html" title="class in org.mapstruct.ap.internal.writer">org.mapstruct.ap.internal.writer.FreeMarkerWritable</a></li>
+<li><a href="../writer/FreeMarkerWritable.html" title="class in org.dettonville.ap.internal.writer">org.dettonville.ap.internal.writer.FreeMarkerWritable</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="common/ModelElement.html" title="class in org.mapstruct.ap.internal.model.common">org.mapstruct.ap.internal.model.common.ModelElement</a></li>
+<li><a href="common/ModelElement.html" title="class in org.dettonville.ap.internal.model.common">org.dettonville.ap.internal.model.common.ModelElement</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.internal.model.IterableCreation</li>
+<li>org.dettonville.ap.internal.model.IterableCreation</li>
 </ul>
 </li>
 </ul>
@@ -153,11 +153,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../writer/Writable.html" title="interface in org.mapstruct.ap.internal.writer">Writable</a></code></dd>
+<dd><code><a href="../writer/Writable.html" title="interface in org.dettonville.ap.internal.writer">Writable</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">IterableCreation</span>
-extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.internal.model.common">ModelElement</a></pre>
+extends <a href="common/ModelElement.html" title="class in org.dettonville.ap.internal.model.common">ModelElement</a></pre>
 <div class="block">Model element that can be used to create a type of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Iterable</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>Map</code></a>. If an implementation
  type is used and the target type has a constructor with <code>int</code> as parameter and the source parameter is of
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>Collection</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>Map</code></a> or <code>Array</code> type then MapStruct will use that constructor
@@ -180,11 +180,11 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 </a>
 <h3>Nested Class Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a id="nested.classes.inherited.from.class.org.mapstruct.ap.internal.writer.Writable">
+<li class="blockList"><a id="nested.classes.inherited.from.class.org.dettonville.ap.internal.writer.Writable">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;org.mapstruct.ap.internal.writer.<a href="../writer/Writable.html" title="interface in org.mapstruct.ap.internal.writer">Writable</a></h3>
-<code><a href="../writer/Writable.Context.html" title="interface in org.mapstruct.ap.internal.writer">Writable.Context</a></code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.dettonville.ap.internal.writer.<a href="../writer/Writable.html" title="interface in org.dettonville.ap.internal.writer">Writable</a></h3>
+<code><a href="../writer/Writable.Context.html" title="interface in org.dettonville.ap.internal.writer">Writable.Context</a></code></li>
 </ul>
 </li>
 </ul>
@@ -204,36 +204,36 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="IterableCreation.html" title="class in org.mapstruct.ap.internal.model">IterableCreation</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(org.mapstruct.ap.internal.model.NormalTypeMappingMethod,org.mapstruct.ap.internal.model.common.Parameter)">create</a></span>&#8203;(<a href="NormalTypeMappingMethod.html" title="class in org.mapstruct.ap.internal.model">NormalTypeMappingMethod</a>&nbsp;mappingMethod,
-      <a href="common/Parameter.html" title="class in org.mapstruct.ap.internal.model.common">Parameter</a>&nbsp;sourceParameter)</code></th>
+<td class="colFirst"><code>static <a href="IterableCreation.html" title="class in org.dettonville.ap.internal.model">IterableCreation</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(org.dettonville.ap.internal.model.NormalTypeMappingMethod,org.dettonville.ap.internal.model.common.Parameter)">create</a></span>&#8203;(<a href="NormalTypeMappingMethod.html" title="class in org.dettonville.ap.internal.model">NormalTypeMappingMethod</a>&nbsp;mappingMethod,
+      <a href="common/Parameter.html" title="class in org.dettonville.ap.internal.model.common">Parameter</a>&nbsp;sourceParameter)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a></code></td>
+<td class="colFirst"><code><a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEnumSetElementType()">getEnumSetElementType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="MethodReference.html" title="class in org.mapstruct.ap.internal.model">MethodReference</a></code></td>
+<td class="colFirst"><code><a href="MethodReference.html" title="class in org.dettonville.ap.internal.model">MethodReference</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFactoryMethod()">getFactoryMethod</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getImportTypes()">getImportTypes</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a set containing those <a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common"><code>Type</code></a>s referenced by this model element for which an import statement needs
+<div class="block">Returns a set containing those <a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common"><code>Type</code></a>s referenced by this model element for which an import statement needs
  to be declared.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a></code></td>
+<td class="colFirst"><code><a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResultType()">getResultType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="common/Parameter.html" title="class in org.mapstruct.ap.internal.model.common">Parameter</a></code></td>
+<td class="colFirst"><code><a href="common/Parameter.html" title="class in org.dettonville.ap.internal.model.common">Parameter</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSourceParameter()">getSourceParameter</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -254,11 +254,11 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.org.mapstruct.ap.internal.writer.FreeMarkerWritable">
+<li class="blockList"><a id="methods.inherited.from.class.org.dettonville.ap.internal.writer.FreeMarkerWritable">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.mapstruct.ap.internal.writer.<a href="../writer/FreeMarkerWritable.html" title="class in org.mapstruct.ap.internal.writer">FreeMarkerWritable</a></h3>
-<code><a href="../writer/FreeMarkerWritable.html#getTemplateName()">getTemplateName</a>, <a href="../writer/FreeMarkerWritable.html#getTemplateNameForClass(java.lang.Class)">getTemplateNameForClass</a>, <a href="../writer/FreeMarkerWritable.html#write(org.mapstruct.ap.internal.writer.Writable.Context,java.io.Writer)">write</a></code></li>
+<h3>Methods inherited from class&nbsp;org.dettonville.ap.internal.writer.<a href="../writer/FreeMarkerWritable.html" title="class in org.dettonville.ap.internal.writer">FreeMarkerWritable</a></h3>
+<code><a href="../writer/FreeMarkerWritable.html#getTemplateName()">getTemplateName</a>, <a href="../writer/FreeMarkerWritable.html#getTemplateNameForClass(java.lang.Class)">getTemplateNameForClass</a>, <a href="../writer/FreeMarkerWritable.html#write(org.dettonville.ap.internal.writer.Writable.Context,java.io.Writer)">write</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -283,14 +283,14 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="create(org.mapstruct.ap.internal.model.NormalTypeMappingMethod,org.mapstruct.ap.internal.model.common.Parameter)">
+<a id="create(org.dettonville.ap.internal.model.NormalTypeMappingMethod,org.dettonville.ap.internal.model.common.Parameter)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>create</h4>
-<pre class="methodSignature">public static&nbsp;<a href="IterableCreation.html" title="class in org.mapstruct.ap.internal.model">IterableCreation</a>&nbsp;create&#8203;(<a href="NormalTypeMappingMethod.html" title="class in org.mapstruct.ap.internal.model">NormalTypeMappingMethod</a>&nbsp;mappingMethod,
-                                      <a href="common/Parameter.html" title="class in org.mapstruct.ap.internal.model.common">Parameter</a>&nbsp;sourceParameter)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="IterableCreation.html" title="class in org.dettonville.ap.internal.model">IterableCreation</a>&nbsp;create&#8203;(<a href="NormalTypeMappingMethod.html" title="class in org.dettonville.ap.internal.model">NormalTypeMappingMethod</a>&nbsp;mappingMethod,
+                                      <a href="common/Parameter.html" title="class in org.dettonville.ap.internal.model.common">Parameter</a>&nbsp;sourceParameter)</pre>
 </li>
 </ul>
 <a id="getResultType()">
@@ -299,7 +299,7 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <ul class="blockList">
 <li class="blockList">
 <h4>getResultType</h4>
-<pre class="methodSignature">public&nbsp;<a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;getResultType()</pre>
+<pre class="methodSignature">public&nbsp;<a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;getResultType()</pre>
 </li>
 </ul>
 <a id="getSourceParameter()">
@@ -308,7 +308,7 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <ul class="blockList">
 <li class="blockList">
 <h4>getSourceParameter</h4>
-<pre class="methodSignature">public&nbsp;<a href="common/Parameter.html" title="class in org.mapstruct.ap.internal.model.common">Parameter</a>&nbsp;getSourceParameter()</pre>
+<pre class="methodSignature">public&nbsp;<a href="common/Parameter.html" title="class in org.dettonville.ap.internal.model.common">Parameter</a>&nbsp;getSourceParameter()</pre>
 </li>
 </ul>
 <a id="getFactoryMethod()">
@@ -317,7 +317,7 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <ul class="blockList">
 <li class="blockList">
 <h4>getFactoryMethod</h4>
-<pre class="methodSignature">public&nbsp;<a href="MethodReference.html" title="class in org.mapstruct.ap.internal.model">MethodReference</a>&nbsp;getFactoryMethod()</pre>
+<pre class="methodSignature">public&nbsp;<a href="MethodReference.html" title="class in org.dettonville.ap.internal.model">MethodReference</a>&nbsp;getFactoryMethod()</pre>
 </li>
 </ul>
 <a id="isCanUseSize()">
@@ -344,13 +344,13 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <ul class="blockList">
 <li class="blockList">
 <h4>getImportTypes</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&gt;&nbsp;getImportTypes()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&gt;&nbsp;getImportTypes()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="common/ModelElement.html#getImportTypes()">ModelElement</a></code></span></div>
-<div class="block">Returns a set containing those <a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common"><code>Type</code></a>s referenced by this model element for which an import statement needs
+<div class="block">Returns a set containing those <a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common"><code>Type</code></a>s referenced by this model element for which an import statement needs
  to be declared.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="common/ModelElement.html#getImportTypes()">getImportTypes</a></code>&nbsp;in class&nbsp;<code><a href="common/ModelElement.html" title="class in org.mapstruct.ap.internal.model.common">ModelElement</a></code></dd>
+<dd><code><a href="common/ModelElement.html#getImportTypes()">getImportTypes</a></code>&nbsp;in class&nbsp;<code><a href="common/ModelElement.html" title="class in org.dettonville.ap.internal.model.common">ModelElement</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A set with type referenced by this model element. Must not be <code>null</code>.</dd>
 </dl>
@@ -362,7 +362,7 @@ extends <a href="common/ModelElement.html" title="class in org.mapstruct.ap.inte
 <ul class="blockList">
 <li class="blockList">
 <h4>getEnumSetElementType</h4>
-<pre class="methodSignature">public&nbsp;<a href="common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;getEnumSetElementType()</pre>
+<pre class="methodSignature">public&nbsp;<a href="common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;getEnumSetElementType()</pre>
 </li>
 </ul>
 <a id="isEnumSet()">

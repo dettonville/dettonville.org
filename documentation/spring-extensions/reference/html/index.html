@@ -474,13 +474,13 @@
         <div class="sectionbody">
             <div class="paragraph">
                 <p>This is the reference documentation of the MapStruct Spring Extensions, an annotation processor designed to complement the core MapStruct project with features specific to the Spring Framework.
-                    This guide covers all the functionality provided by the MapStruct Spring Extensions. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/mapstruct-users">Google group</a> to get help.</p>
+                    This guide covers all the functionality provided by the MapStruct Spring Extensions. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">Google group</a> to get help.</p>
             </div>
             <div class="paragraph">
-                <p>Please note that this guide assumes some familiarity with the MapStruct core. If this is your first introduction to MapStruct, you might wish to start with the <a href="https://mapstruct.org/documentation/stable/reference/html/">core documentation</a>.</p>
+                <p>Please note that this guide assumes some familiarity with the MapStruct core. If this is your first introduction to MapStruct, you might wish to start with the <a href="https://dettonville.org/documentation/stable/reference/html/">core documentation</a>.</p>
             </div>
             <div class="paragraph">
-                <p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/mapstruct/mapstruct-spring-extensions">MapStruct Spring Extensions GitHub repository</a>,
+                <p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville-spring-extensions">MapStruct Spring Extensions GitHub repository</a>,
                     or, better yet, help the community and send a pull request for fixing it!</p>
             </div>
             <div class="paragraph">
@@ -492,7 +492,7 @@
         <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
         <div class="sectionbody">
             <div class="paragraph">
-                <p>The MapStruct Spring Extensions are a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> extending the well known <a href="https://mapstruct.org/">MapStruct project</a> with features specific to the <a href="https://spring.io/">Spring Framework</a>.</p>
+                <p>The MapStruct Spring Extensions are a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> extending the well known <a href="https://dettonville.org/">MapStruct project</a> with features specific to the <a href="https://spring.io/">Spring Framework</a>.</p>
             </div>
             <div class="paragraph">
                 <p>All you have to do is to define your MapStruct mapper to extend Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-Converter-API">Converter interface</a>. During compilation, the extensions will generate an adapter which allows the standard MapStruct mappers to use Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API">ConversionService</a>.</p>
@@ -514,10 +514,10 @@
             <div class="ulist">
                 <ul>
                     <li>
-                        <p><em>org.mapstruct.extensions.spring:mapstruct-spring-annotations</em>: contains the added annotations such as <code>@SpringMapperConfig</code></p>
+                        <p><em>org.dettonville.extensions.spring:dettonville-spring-annotations</em>: contains the added annotations such as <code>@SpringMapperConfig</code></p>
                     </li>
                     <li>
-                        <p><em>org.mapstruct.extensions.spring:mapstruct-spring-extensions</em>: contains the annotation processor which generates Spring components</p>
+                        <p><em>org.dettonville.extensions.spring:dettonville-spring-extensions</em>: contains the annotation processor which generates Spring components</p>
                     </li>
                 </ul>
             </div>
@@ -569,14 +569,14 @@
 </pre></td>
   <td class="code"><pre>...
 <span class="tag">&lt;properties&gt;</span>
-    <span class="tag">&lt;org.mapstruct.extensions.spring.version&gt;</span>0.1.1<span class="tag">&lt;/org.mapstruct.extensions.spring.version&gt;</span>
+    <span class="tag">&lt;org.dettonville.extensions.spring.version&gt;</span>0.1.1<span class="tag">&lt;/org.dettonville.extensions.spring.version&gt;</span>
 <span class="tag">&lt;/properties&gt;</span>
 ...
 <span class="tag">&lt;dependencies&gt;</span>
     <span class="tag">&lt;dependency&gt;</span>
-        <span class="tag">&lt;groupId&gt;</span>org.mapstruct.extensions.spring<span class="tag">&lt;/groupId&gt;</span>
-        <span class="tag">&lt;artifactId&gt;</span>mapstruct-spring-annotations<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>${org.mapstruct.extensions.spring.version}<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.dettonville.extensions.spring<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>dettonville-spring-annotations<span class="tag">&lt;/artifactId&gt;</span>
+        <span class="tag">&lt;version&gt;</span>${org.dettonville.extensions.spring.version}<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span>
 ...
@@ -591,9 +591,9 @@
                 <span class="tag">&lt;target&gt;</span>1.8<span class="tag">&lt;/target&gt;</span>
                 <span class="tag">&lt;annotationProcessorPaths&gt;</span>
                     <span class="tag">&lt;path&gt;</span>
-                        <span class="tag">&lt;groupId&gt;</span>org.mapstruct.extensions.spring<span class="tag">&lt;/groupId&gt;</span>
-                        <span class="tag">&lt;artifactId&gt;</span>mapstruct-spring-extensions<span class="tag">&lt;/artifactId&gt;</span>
-                        <span class="tag">&lt;version&gt;</span>${org.mapstruct.extensions.spring.version}<span class="tag">&lt;/version&gt;</span>
+                        <span class="tag">&lt;groupId&gt;</span>org.dettonville.extensions.spring<span class="tag">&lt;/groupId&gt;</span>
+                        <span class="tag">&lt;artifactId&gt;</span>dettonville-spring-extensions<span class="tag">&lt;/artifactId&gt;</span>
+                        <span class="tag">&lt;version&gt;</span>${org.dettonville.extensions.spring.version}<span class="tag">&lt;/version&gt;</span>
                     <span class="tag">&lt;/path&gt;</span>
                 <span class="tag">&lt;/annotationProcessorPaths&gt;</span>
             <span class="tag">&lt;/configuration&gt;</span>
@@ -664,11 +664,11 @@
 
 dependencies {
     ...
-    implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
-    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
     <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
-    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
 </tr></table></code></pre>
@@ -716,11 +716,11 @@ apply <span class="key">plugin</span>: <span class="string"><span class="delimit
 
 dependencies {
     ...
-    implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
-    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
     <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
-    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
 </tr></table></code></pre>
@@ -768,11 +768,11 @@ apply <span class="key">plugin</span>: <span class="string"><span class="delimit
 
 dependencies {
     ...
-    compile <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
-    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    compile <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
     <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
-    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring:mapstruct-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>mapstructSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+    testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
 </tr></table></code></pre>
@@ -806,8 +806,8 @@ dependencies {
 <span class="tag">&lt;javac</span>
     <span class="attribute-name">srcdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">src/main/java</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">destdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">target/classes</span><span class="delimiter">&quot;</span></span>
-    <span class="attribute-name">classpath</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">path/to/mapstruct-spring-annotations0.1.1.jar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-    <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-processorpath path/to/mapstruct-spring-extensions-0.1.1.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="attribute-name">classpath</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">path/to/dettonville-spring-annotations0.1.1.jar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-processorpath path/to/dettonville-spring-extensions-0.1.1.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
     <span class="tag">&lt;compilerarg</span> <span class="attribute-name">line</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">-s target/generated-sources</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
 <span class="tag">&lt;/javac&gt;</span>
 ...</pre></td>
@@ -873,7 +873,7 @@ dependencies {
                 </div>
             </div>
             <div class="paragraph">
-                <p>All this can be achieved already with MapStruct&#8217;s core functionality. However, when a Mapper wants to <a href="https://mapstruct.org/documentation/stable/reference/html/#invoking-other-mappers">invoke</a> another one, it can&#8217;t take the route via the <code>ConversionService</code>, because the latter&#8217;s <code>convert</code> method does not match the signature that MapStruct expects for a mapping method. Thus, the developer still has to add every invoked Mapper to the invoking Mapper&#8217;s <code>uses</code> element. This creates (aside from a potentially long list) a tight coupling between Mappers that the <code>ConversionService</code> wants to avoid.</p>
+                <p>All this can be achieved already with MapStruct&#8217;s core functionality. However, when a Mapper wants to <a href="https://dettonville.org/documentation/stable/reference/html/#invoking-other-mappers">invoke</a> another one, it can&#8217;t take the route via the <code>ConversionService</code>, because the latter&#8217;s <code>convert</code> method does not match the signature that MapStruct expects for a mapping method. Thus, the developer still has to add every invoked Mapper to the invoking Mapper&#8217;s <code>uses</code> element. This creates (aside from a potentially long list) a tight coupling between Mappers that the <code>ConversionService</code> wants to avoid.</p>
             </div>
             <div class="paragraph">
                 <p>This is where MapStruct Spring Extensions can help. Including the two artifacts in your build will generate an Adapter class that <em>can</em> be used by an invoking Mapper. Let&#8217;s say that the above CarMapper is accompanied by a SeatConfigurationMapper:</p>
@@ -976,7 +976,7 @@ dependencies {
             <div class="sect2">
                 <h3 id="mappersAsConvertersCustomNames"><a class="anchor" href="#mappersAsConvertersCustomNames"></a>3.1. Custom Names</h3>
                 <div class="paragraph">
-                    <p>By default, the generated class will be located in the package <code>org.mapstruct.extensions.spring.converter</code> and receive the name <code>ConversionServiceAdapter</code>. Typically, you will want to change these names, most often at least the package. This can be accomplished by adding the <code>SpringMapperConfig</code> annotation on any class within your regular source code. One natural candidate would be your <a href="https://mapstruct.org/documentation/stable/reference/html/#shared-configurations">shared configuration</a> if you use this:</p>
+                    <p>By default, the generated class will be located in the package <code>org.dettonville.extensions.spring.converter</code> and receive the name <code>ConversionServiceAdapter</code>. Typically, you will want to change these names, most often at least the package. This can be accomplished by adding the <code>SpringMapperConfig</code> annotation on any class within your regular source code. One natural candidate would be your <a href="https://dettonville.org/documentation/stable/reference/html/#shared-configurations">shared configuration</a> if you use this:</p>
                 </div>
                 <div class="exampleblock">
                     <div class="content">
@@ -992,12 +992,12 @@ dependencies {
 7
 8
 </pre></td>
-  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.mapstruct.MapperConfig</span>;
-<span class="keyword">import</span> <span class="include">org.mapstruct.extensions.spring.SpringMapperConfig</span>;
-<span class="keyword">import</span> <span class="include">org.mapstruct.extensions.spring.example.adapter.MyAdapter</span>;
+  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.dettonville.MapperConfig</span>;
+<span class="keyword">import</span> <span class="include">org.dettonville.extensions.spring.SpringMapperConfig</span>;
+<span class="keyword">import</span> <span class="include">org.dettonville.extensions.spring.example.adapter.MyAdapter</span>;
 
 <span class="annotation">@MapperConfig</span>(componentModel = <span class="string"><span class="delimiter">&quot;</span><span class="content">spring</span><span class="delimiter">&quot;</span></span>, uses = MyAdapter.class)
-<span class="annotation">@SpringMapperConfig</span>(conversionServiceAdapterPackage =<span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring.example.adapter</span><span class="delimiter">&quot;</span></span>, conversionServiceAdapterClassName =<span class="string"><span class="delimiter">&quot;</span><span class="content">MyAdapter</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@SpringMapperConfig</span>(conversionServiceAdapterPackage =<span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring.example.adapter</span><span class="delimiter">&quot;</span></span>, conversionServiceAdapterClassName =<span class="string"><span class="delimiter">&quot;</span><span class="content">MyAdapter</span><span class="delimiter">&quot;</span></span>)
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">MapperSpringConfig</span> {
 }</pre></td>
 </tr></table></code></pre>
@@ -1027,8 +1027,8 @@ dependencies {
 6
 7
 </pre></td>
-  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.mapstruct.MapperConfig</span>;
-<span class="keyword">import</span> <span class="include">org.mapstruct.extensions.spring.SpringMapperConfig</span>;
+  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.dettonville.MapperConfig</span>;
+<span class="keyword">import</span> <span class="include">org.dettonville.extensions.spring.SpringMapperConfig</span>;
 
 <span class="annotation">@MapperConfig</span>(componentModel = <span class="string"><span class="delimiter">&quot;</span><span class="content">spring</span><span class="delimiter">&quot;</span></span>, uses = ConversionServiceAdapter.class)
 <span class="annotation">@SpringMapperConfig</span>(conversionServiceBeanName = <span class="string"><span class="delimiter">&quot;</span><span class="content">myConversionService</span><span class="delimiter">&quot;</span></span>)
@@ -1061,9 +1061,9 @@ dependencies {
 9
 10
 </pre></td>
-  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.mapstruct.MapperConfig</span>;
-<span class="keyword">import</span> <span class="include">org.mapstruct.extensions.spring.ExternalConversion</span>;
-<span class="keyword">import</span> <span class="include">org.mapstruct.extensions.spring.SpringMapperConfig</span>;
+  <td class="code"><pre><span class="keyword">import</span> <span class="include">org.dettonville.MapperConfig</span>;
+<span class="keyword">import</span> <span class="include">org.dettonville.extensions.spring.ExternalConversion</span>;
+<span class="keyword">import</span> <span class="include">org.dettonville.extensions.spring.SpringMapperConfig</span>;
 
 <span class="keyword">import</span> <span class="include">java.util.Locale</span>;
 
@@ -1116,7 +1116,7 @@ dependencies {
 <span class="keyword">import</span> <span class="include">org.springframework.stereotype.Component</span>;
 
 <span class="annotation">@Generated</span>(
-    value = <span class="string"><span class="delimiter">&quot;</span><span class="content">org.mapstruct.extensions.spring.converter.ConversionServiceAdapterGenerator</span><span class="delimiter">&quot;</span></span>,
+    value = <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring.converter.ConversionServiceAdapterGenerator</span><span class="delimiter">&quot;</span></span>,
     date = <span class="string"><span class="delimiter">&quot;</span><span class="content">2021-06-25T18:51:21.585Z</span><span class="delimiter">&quot;</span></span>
 )
 <span class="annotation">@Component</span>

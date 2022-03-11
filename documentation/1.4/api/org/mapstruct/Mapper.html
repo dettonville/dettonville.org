@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mapper (MapStruct 1.4.2.Final)</title>
 <meta name="date" content="2021-01-31">
-<meta name="keywords" content="org.mapstruct.Mapper class">
+<meta name="keywords" content="org.dettonville.Mapper class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/MapMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/Mapper.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/Mapper.html" target="_top">Frames</a></li>
 <li><a href="Mapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type Mapper" class="title">Annotation Type Mapper</h2>
 </div>
 <div class="contentContainer">
@@ -116,8 +116,8 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
  }
  </code></pre>
  <p>
- <strong>Example 2:</strong> Use additional mappers with parameters <a href="../../org/mapstruct/Mapper.html#uses--"><code>uses()</code></a>, <a href="../../org/mapstruct/Mapper.html#componentModel--"><code>componentModel()</code></a>
- and <a href="../../org/mapstruct/Mapper.html#injectionStrategy--"><code>injectionStrategy()</code></a>
+ <strong>Example 2:</strong> Use additional mappers with parameters <a href="../../org/dettonville/Mapper.html#uses--"><code>uses()</code></a>, <a href="../../org/dettonville/Mapper.html#componentModel--"><code>componentModel()</code></a>
+ and <a href="../../org/dettonville/Mapper.html#injectionStrategy--"><code>injectionStrategy()</code></a>
  </p>
  <pre><code class='java'>
  // we have MarkMapper (map field "mark" to field "name" to upper case)
@@ -180,122 +180,122 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/Builder.html" title="annotation in org.mapstruct">Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#builder--">builder</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/Builder.html" title="annotation in org.dettonville">Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#builder--">builder</a></span></code>
 <div class="block">The information that should be used for the builder mappings.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/CollectionMappingStrategy.html" title="enum in org.mapstruct">CollectionMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#collectionMappingStrategy--">collectionMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/CollectionMappingStrategy.html" title="enum in org.dettonville">CollectionMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#collectionMappingStrategy--">collectionMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when propagating the value of collection-typed properties.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#componentModel--">componentModel</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#componentModel--">componentModel</a></span></code>
 <div class="block">Specifies the component model to which the generated mapper should
  adhere.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#config--">config</a></span></code>
-<div class="block">A class annotated with <a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><code>MapperConfig</code></a> which should be used as configuration template.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#config--">config</a></span></code>
+<div class="block">A class annotated with <a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><code>MapperConfig</code></a> which should be used as configuration template.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#disableSubMappingMethodsGeneration--">disableSubMappingMethodsGeneration</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#disableSubMappingMethodsGeneration--">disableSubMappingMethodsGeneration</a></span></code>
 <div class="block">If MapStruct could not find another mapping method or apply an automatic conversion it will try to generate a
  sub-mapping method between the two beans.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#implementationName--">implementationName</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#implementationName--">implementationName</a></span></code>
 <div class="block">Specifies the name of the implementation class.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#implementationPackage--">implementationPackage</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#implementationPackage--">implementationPackage</a></span></code>
 <div class="block">Specifies the target package for the generated implementation.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#imports--">imports</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#imports--">imports</a></span></code>
 <div class="block">Additional types for which an import statement is to be added to the generated mapper implementation class.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/InjectionStrategy.html" title="enum in org.mapstruct">InjectionStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#injectionStrategy--">injectionStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/InjectionStrategy.html" title="enum in org.dettonville">InjectionStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#injectionStrategy--">injectionStrategy</a></span></code>
 <div class="block">Determines whether to use field or constructor injection.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#mappingControl--">mappingControl</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#mappingControl--">mappingControl</a></span></code>
 <div class="block">Allows detailed control over the mapping process.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/MappingInheritanceStrategy.html" title="enum in org.mapstruct">MappingInheritanceStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#mappingInheritanceStrategy--">mappingInheritanceStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/MappingInheritanceStrategy.html" title="enum in org.dettonville">MappingInheritanceStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#mappingInheritanceStrategy--">mappingInheritanceStrategy</a></span></code>
 <div class="block">The strategy to use for applying method-level configuration annotations of prototype methods in the interface
- specified with <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a>.</div>
+ specified with <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValueCheckStrategy.html" title="enum in org.mapstruct">NullValueCheckStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#nullValueCheckStrategy--">nullValueCheckStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValueCheckStrategy.html" title="enum in org.dettonville">NullValueCheckStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#nullValueCheckStrategy--">nullValueCheckStrategy</a></span></code>
 <div class="block">Determines when to include a null check on the source property value of a bean mapping.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#nullValueMappingStrategy--">nullValueMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source argument value to the methods of this mapper.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html" title="enum in org.mapstruct">NullValuePropertyMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#nullValuePropertyMappingStrategy--">nullValuePropertyMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValuePropertyMappingStrategy.html" title="enum in org.dettonville">NullValuePropertyMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#nullValuePropertyMappingStrategy--">nullValuePropertyMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when a source bean property is <code>null</code> or not present.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#typeConversionPolicy--">typeConversionPolicy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#typeConversionPolicy--">typeConversionPolicy</a></span></code>
 <div class="block">How lossy (narrowing) conversion, for instance long to integer should be
  reported.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#unexpectedValueMappingException--">unexpectedValueMappingException</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#unexpectedValueMappingException--">unexpectedValueMappingException</a></span></code>
 <div class="block">Exception that should be thrown by the generated code if no mapping matches for enums.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#unmappedSourcePolicy--">unmappedSourcePolicy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#unmappedSourcePolicy--">unmappedSourcePolicy</a></span></code>
 <div class="block">How unmapped properties of the source type of a mapping should be
  reported.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#unmappedTargetPolicy--">unmappedTargetPolicy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#unmappedTargetPolicy--">unmappedTargetPolicy</a></span></code>
 <div class="block">How unmapped properties of the target type of a mapping should be
  reported.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapper.html#uses--">uses</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapper.html#uses--">uses</a></span></code>
 <div class="block">Other mapper types used by this mapper.</div>
 </td>
 </tr>
@@ -344,8 +344,8 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <h4>imports</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;imports</pre>
 <div class="block">Additional types for which an import statement is to be added to the generated mapper implementation class.
- This allows to refer to those types from within mapping expressions given via <a href="../../org/mapstruct/Mapping.html#expression--"><code>Mapping.expression()</code></a>,
- <a href="../../org/mapstruct/Mapping.html#defaultExpression--"><code>Mapping.defaultExpression()</code></a> or using
+ This allows to refer to those types from within mapping expressions given via <a href="../../org/dettonville/Mapping.html#expression--"><code>Mapping.expression()</code></a>,
+ <a href="../../org/dettonville/Mapping.html#defaultExpression--"><code>Mapping.defaultExpression()</code></a> or using
  their simple name rather than their fully-qualified name.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -366,10 +366,10 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>unmappedSourcePolicy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a>&nbsp;unmappedSourcePolicy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a>&nbsp;unmappedSourcePolicy</pre>
 <div class="block">How unmapped properties of the source type of a mapping should be
  reported. The method overrides an unmappedSourcePolicy set in a central
- configuration set by <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a></div>
+ configuration set by <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The reporting policy for unmapped source properties.</dd>
@@ -378,7 +378,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.ReportingPolicy.IGNORE</dd>
+<dd>org.dettonville.ReportingPolicy.IGNORE</dd>
 </dl>
 </li>
 </ul>
@@ -391,17 +391,17 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>unmappedTargetPolicy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a>&nbsp;unmappedTargetPolicy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a>&nbsp;unmappedTargetPolicy</pre>
 <div class="block">How unmapped properties of the target type of a mapping should be
  reported. The method overrides an unmappedTargetPolicy set in a central
- configuration set by <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a></div>
+ configuration set by <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The reporting policy for unmapped target properties.</dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.ReportingPolicy.WARN</dd>
+<dd>org.dettonville.ReportingPolicy.WARN</dd>
 </dl>
 </li>
 </ul>
@@ -414,10 +414,10 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>typeConversionPolicy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/ReportingPolicy.html" title="enum in org.mapstruct">ReportingPolicy</a>&nbsp;typeConversionPolicy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/ReportingPolicy.html" title="enum in org.dettonville">ReportingPolicy</a>&nbsp;typeConversionPolicy</pre>
 <div class="block">How lossy (narrowing) conversion, for instance long to integer should be
  reported. The method overrides an typeConversionPolicy set in a central
- configuration set by <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a></div>
+ configuration set by <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The reporting policy for unmapped target properties.</dd>
@@ -426,7 +426,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.ReportingPolicy.IGNORE</dd>
+<dd>org.dettonville.ReportingPolicy.IGNORE</dd>
 </dl>
 </li>
 </ul>
@@ -444,7 +444,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
  adhere. Supported values are
  <ul>
  <li> <code>default</code>: the mapper uses no component model, instances are
- typically retrieved via <a href="../../org/mapstruct/factory/Mappers.html#getMapper-java.lang.Class-"><code>Mappers.getMapper(Class)</code></a></li>
+ typically retrieved via <a href="../../org/dettonville/factory/Mappers.html#getMapper-java.lang.Class-"><code>Mappers.getMapper(Class)</code></a></li>
  <li>
  <code>cdi</code>: the generated mapper is an application-scoped CDI bean and
  can be retrieved via <code>@Inject</code></li>
@@ -456,7 +456,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
  <code>@Singleton</code>, and can be retrieved via <code>@Inject</code></li>
  </ul>
  The method overrides an unmappedTargetPolicy set in a central configuration set
- by <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a></div>
+ by <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The component model for the generated mapper.</dd>
@@ -485,7 +485,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The implementation name.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/Mapper.html#implementationPackage--"><code>implementationPackage()</code></a></dd>
+<dd><a href="../../org/dettonville/Mapper.html#implementationPackage--"><code>implementationPackage()</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -511,7 +511,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the implementation package.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/Mapper.html#implementationName--"><code>implementationName()</code></a></dd>
+<dd><a href="../../org/dettonville/Mapper.html#implementationName--"><code>implementationName()</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -529,9 +529,9 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <li class="blockList">
 <h4>config</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;config</pre>
-<div class="block">A class annotated with <a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><code>MapperConfig</code></a> which should be used as configuration template. Any settings given
- via <a href="../../org/mapstruct/Mapper.html" title="annotation in org.mapstruct"><code>Mapper</code></a> will take precedence over the settings from the referenced configuration source. The list of
- referenced mappers will contain all mappers given via <a href="../../org/mapstruct/Mapper.html#uses--"><code>uses()</code></a> and <a href="../../org/mapstruct/MapperConfig.html#uses--"><code>MapperConfig.uses()</code></a>.</div>
+<div class="block">A class annotated with <a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><code>MapperConfig</code></a> which should be used as configuration template. Any settings given
+ via <a href="../../org/dettonville/Mapper.html" title="annotation in org.dettonville"><code>Mapper</code></a> will take precedence over the settings from the referenced configuration source. The list of
+ referenced mappers will contain all mappers given via <a href="../../org/dettonville/Mapper.html#uses--"><code>uses()</code></a> and <a href="../../org/dettonville/MapperConfig.html#uses--"><code>MapperConfig.uses()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A class which should be used as configuration template.</dd>
@@ -551,12 +551,12 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>collectionMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/CollectionMappingStrategy.html" title="enum in org.mapstruct">CollectionMappingStrategy</a>&nbsp;collectionMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/CollectionMappingStrategy.html" title="enum in org.dettonville">CollectionMappingStrategy</a>&nbsp;collectionMappingStrategy</pre>
 <div class="block">The strategy to be applied when propagating the value of collection-typed properties. By default, only JavaBeans
  accessor methods (setters or getters) will be used, but it is also possible to invoke a corresponding adder
  method for each element of the source collection (e.g. <code>orderDto.addOrderLine()</code>).
  <p>
- Any setting given for this attribute will take precedence over <a href="../../org/mapstruct/MapperConfig.html#collectionMappingStrategy--"><code>MapperConfig.collectionMappingStrategy()</code></a>,
+ Any setting given for this attribute will take precedence over <a href="../../org/dettonville/MapperConfig.html#collectionMappingStrategy--"><code>MapperConfig.collectionMappingStrategy()</code></a>,
  if present.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -564,7 +564,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.CollectionMappingStrategy.ACCESSOR_ONLY</dd>
+<dd>org.dettonville.CollectionMappingStrategy.ACCESSOR_ONLY</dd>
 </dl>
 </li>
 </ul>
@@ -577,17 +577,17 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValueMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValueMappingStrategy.html" title="enum in org.mapstruct">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValueMappingStrategy.html" title="enum in org.dettonville">NullValueMappingStrategy</a>&nbsp;nullValueMappingStrategy</pre>
 <div class="block">The strategy to be applied when <code>null</code> is passed as source argument value to the methods of this mapper.
- If no strategy is configured, the strategy given via <a href="../../org/mapstruct/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> will be
- applied, using <a href="../../org/mapstruct/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a> by default.</div>
+ If no strategy is configured, the strategy given via <a href="../../org/dettonville/MapperConfig.html#nullValueMappingStrategy--"><code>MapperConfig.nullValueMappingStrategy()</code></a> will be
+ applied, using <a href="../../org/dettonville/NullValueMappingStrategy.html#RETURN_NULL"><code>NullValueMappingStrategy.RETURN_NULL</code></a> by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The strategy to be applied when <code>null</code> is passed as source value to the methods of this mapper.</dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValueMappingStrategy.RETURN_NULL</dd>
+<dd>org.dettonville.NullValueMappingStrategy.RETURN_NULL</dd>
 </dl>
 </li>
 </ul>
@@ -600,10 +600,10 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValuePropertyMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html" title="enum in org.mapstruct">NullValuePropertyMappingStrategy</a>&nbsp;nullValuePropertyMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValuePropertyMappingStrategy.html" title="enum in org.dettonville">NullValuePropertyMappingStrategy</a>&nbsp;nullValuePropertyMappingStrategy</pre>
 <div class="block">The strategy to be applied when a source bean property is <code>null</code> or not present. If no strategy is
- configured, the strategy given via <a href="../../org/mapstruct/MapperConfig.html#nullValuePropertyMappingStrategy--"><code>MapperConfig.nullValuePropertyMappingStrategy()</code></a> will be applied,
- <a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html#SET_TO_NULL"><code>NullValuePropertyMappingStrategy.SET_TO_NULL</code></a> will be used by default.</div>
+ configured, the strategy given via <a href="../../org/dettonville/MapperConfig.html#nullValuePropertyMappingStrategy--"><code>MapperConfig.nullValuePropertyMappingStrategy()</code></a> will be applied,
+ <a href="../../org/dettonville/NullValuePropertyMappingStrategy.html#SET_TO_NULL"><code>NullValuePropertyMappingStrategy.SET_TO_NULL</code></a> will be used by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The strategy to be applied when <code>null</code> is passed as source property value or the source property
@@ -613,7 +613,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValuePropertyMappingStrategy.SET_TO_NULL</dd>
+<dd>org.dettonville.NullValuePropertyMappingStrategy.SET_TO_NULL</dd>
 </dl>
 </li>
 </ul>
@@ -626,21 +626,21 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>mappingInheritanceStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/MappingInheritanceStrategy.html" title="enum in org.mapstruct">MappingInheritanceStrategy</a>&nbsp;mappingInheritanceStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/MappingInheritanceStrategy.html" title="enum in org.dettonville">MappingInheritanceStrategy</a>&nbsp;mappingInheritanceStrategy</pre>
 <div class="block">The strategy to use for applying method-level configuration annotations of prototype methods in the interface
- specified with <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a>. Annotations that can be inherited are for example <a href="../../org/mapstruct/Mapping.html" title="annotation in org.mapstruct"><code>Mapping</code></a>,
- <a href="../../org/mapstruct/IterableMapping.html" title="annotation in org.mapstruct"><code>IterableMapping</code></a>, <a href="../../org/mapstruct/MapMapping.html" title="annotation in org.mapstruct"><code>MapMapping</code></a>, or <a href="../../org/mapstruct/BeanMapping.html" title="annotation in org.mapstruct"><code>BeanMapping</code></a>.
+ specified with <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a>. Annotations that can be inherited are for example <a href="../../org/dettonville/Mapping.html" title="annotation in org.dettonville"><code>Mapping</code></a>,
+ <a href="../../org/dettonville/IterableMapping.html" title="annotation in org.dettonville"><code>IterableMapping</code></a>, <a href="../../org/dettonville/MapMapping.html" title="annotation in org.dettonville"><code>MapMapping</code></a>, or <a href="../../org/dettonville/BeanMapping.html" title="annotation in org.dettonville"><code>BeanMapping</code></a>.
  <p>
- If no strategy is configured, the strategy given via <a href="../../org/mapstruct/MapperConfig.html#mappingInheritanceStrategy--"><code>MapperConfig.mappingInheritanceStrategy()</code></a> will be
- applied, using <a href="../../org/mapstruct/MappingInheritanceStrategy.html#EXPLICIT"><code>MappingInheritanceStrategy.EXPLICIT</code></a> as default.</div>
+ If no strategy is configured, the strategy given via <a href="../../org/dettonville/MapperConfig.html#mappingInheritanceStrategy--"><code>MapperConfig.mappingInheritanceStrategy()</code></a> will be
+ applied, using <a href="../../org/dettonville/MappingInheritanceStrategy.html#EXPLICIT"><code>MappingInheritanceStrategy.EXPLICIT</code></a> as default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The strategy to use for applying <code>@Mapping</code> configurations of prototype methods in the interface
- specified with <a href="../../org/mapstruct/Mapper.html#config--"><code>config()</code></a>.</dd>
+ specified with <a href="../../org/dettonville/Mapper.html#config--"><code>config()</code></a>.</dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.MappingInheritanceStrategy.EXPLICIT</dd>
+<dd>org.dettonville.MappingInheritanceStrategy.EXPLICIT</dd>
 </dl>
 </li>
 </ul>
@@ -653,17 +653,17 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValueCheckStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValueCheckStrategy.html" title="enum in org.mapstruct">NullValueCheckStrategy</a>&nbsp;nullValueCheckStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValueCheckStrategy.html" title="enum in org.dettonville">NullValueCheckStrategy</a>&nbsp;nullValueCheckStrategy</pre>
 <div class="block">Determines when to include a null check on the source property value of a bean mapping.
 
- Can be overridden by the one on <a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><code>MapperConfig</code></a>, <a href="../../org/mapstruct/BeanMapping.html" title="annotation in org.mapstruct"><code>BeanMapping</code></a>  or <a href="../../org/mapstruct/Mapping.html" title="annotation in org.mapstruct"><code>Mapping</code></a>.</div>
+ Can be overridden by the one on <a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><code>MapperConfig</code></a>, <a href="../../org/dettonville/BeanMapping.html" title="annotation in org.dettonville"><code>BeanMapping</code></a>  or <a href="../../org/dettonville/Mapping.html" title="annotation in org.dettonville"><code>Mapping</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>strategy how to do null checking</dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</dd>
+<dd>org.dettonville.NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</dd>
 </dl>
 </li>
 </ul>
@@ -676,18 +676,18 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>injectionStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/InjectionStrategy.html" title="enum in org.mapstruct">InjectionStrategy</a>&nbsp;injectionStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/InjectionStrategy.html" title="enum in org.dettonville">InjectionStrategy</a>&nbsp;injectionStrategy</pre>
 <div class="block">Determines whether to use field or constructor injection. This is only used on annotated based component models
  such as CDI, Spring and JSR 330.
 
- If no strategy is configured, <a href="../../org/mapstruct/InjectionStrategy.html#FIELD"><code>InjectionStrategy.FIELD</code></a> will be used as default.</div>
+ If no strategy is configured, <a href="../../org/dettonville/InjectionStrategy.html#FIELD"><code>InjectionStrategy.FIELD</code></a> will be used as default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>strategy how to inject</dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.InjectionStrategy.FIELD</dd>
+<dd>org.dettonville.InjectionStrategy.FIELD</dd>
 </dl>
 </li>
 </ul>
@@ -705,11 +705,11 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
  sub-mapping method between the two beans. If this property is set to <code>true</code> MapStruct will not try to
  automatically generate sub-mapping methods.
  <p>
- Can be configured by the <a href="../../org/mapstruct/MapperConfig.html#disableSubMappingMethodsGeneration--"><code>MapperConfig.disableSubMappingMethodsGeneration()</code></a> as well.
+ Can be configured by the <a href="../../org/dettonville/MapperConfig.html#disableSubMappingMethodsGeneration--"><code>MapperConfig.disableSubMappingMethodsGeneration()</code></a> as well.
  <p>
  Note: If you need to use <code>disableSubMappingMethodsGeneration</code> please contact the MapStruct team at
- <a href="http://mapstruct.org">mapstruct.org</a> or
- <a href="https://github.com/mapstruct/mapstruct">github.com/mapstruct/mapstruct</a> to share what problem you
+ <a href="http://dettonville.org">dettonville.org</a> or
+ <a href="https://github.com/dettonville/dettonville">github.com/dettonville/dettonville</a> to share what problem you
  are facing with the automatic sub-mapping generation.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -732,14 +732,14 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>builder</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/Builder.html" title="annotation in org.mapstruct">Builder</a>&nbsp;builder</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/Builder.html" title="annotation in org.dettonville">Builder</a>&nbsp;builder</pre>
 <div class="block">The information that should be used for the builder mappings. This can be used to define custom build methods
  for the builder strategy that one uses.
 
- If no builder is defined the builder given via <a href="../../org/mapstruct/MapperConfig.html#builder--"><code>MapperConfig.builder()</code></a> will be applied.
+ If no builder is defined the builder given via <a href="../../org/dettonville/MapperConfig.html#builder--"><code>MapperConfig.builder()</code></a> will be applied.
 
  <p>
- NOTE: In case no builder is defined here, in <a href="../../org/mapstruct/BeanMapping.html" title="annotation in org.mapstruct"><code>BeanMapping</code></a> or <a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><code>MapperConfig</code></a> and there is a single
+ NOTE: In case no builder is defined here, in <a href="../../org/dettonville/BeanMapping.html" title="annotation in org.dettonville"><code>BeanMapping</code></a> or <a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><code>MapperConfig</code></a> and there is a single
  build method, then that method would be used.
  <p>
  If the builder is defined and there is a single method that does not match the name of the build method then
@@ -752,7 +752,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>@org.mapstruct.Builder</dd>
+<dd>@org.dettonville.Builder</dd>
 </dl>
 </li>
 </ul>
@@ -773,13 +773,13 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.4</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/control/DeepClone.html" title="annotation in org.mapstruct.control"><code>DeepClone</code></a>, 
-<a href="../../org/mapstruct/control/NoComplexMapping.html" title="annotation in org.mapstruct.control"><code>NoComplexMapping</code></a>, 
-<a href="../../org/mapstruct/control/MappingControl.html" title="annotation in org.mapstruct.control"><code>MappingControl</code></a></dd>
+<dd><a href="../../org/dettonville/control/DeepClone.html" title="annotation in org.dettonville.control"><code>DeepClone</code></a>,
+<a href="../../org/dettonville/control/NoComplexMapping.html" title="annotation in org.dettonville.control"><code>NoComplexMapping</code></a>,
+<a href="../../org/dettonville/control/MappingControl.html" title="annotation in org.dettonville.control"><code>MappingControl</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.control.MappingControl.class</dd>
+<dd>org.dettonville.control.MappingControl.class</dd>
 </dl>
 </li>
 </ul>
@@ -794,7 +794,7 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <h4>unexpectedValueMappingException</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&nbsp;unexpectedValueMappingException</pre>
 <div class="block">Exception that should be thrown by the generated code if no mapping matches for enums.
- If no exception is configured, the exception given via <a href="../../org/mapstruct/MapperConfig.html#unexpectedValueMappingException--"><code>MapperConfig.unexpectedValueMappingException()</code></a>
+ If no exception is configured, the exception given via <a href="../../org/dettonville/MapperConfig.html#unexpectedValueMappingException--"><code>MapperConfig.unexpectedValueMappingException()</code></a>
  will be used, using <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> by default.
 
  <p>
@@ -848,11 +848,11 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/MapMapping.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapMapping.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/Mapper.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/Mapper.html" target="_top">Frames</a></li>
 <li><a href="Mapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -887,6 +887,6 @@ public @interface <span class="memberNameLabel">Mapper</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://mapstruct.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://dettonville.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

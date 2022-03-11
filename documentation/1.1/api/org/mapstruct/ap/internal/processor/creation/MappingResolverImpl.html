@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MappingResolverImpl (MapStruct 1.1.0.Final)</title>
 <meta name="date" content="2016-11-18">
-<meta name="keywords" content="org.mapstruct.ap.internal.processor.creation.MappingResolverImpl class">
+<meta name="keywords" content="org.dettonville.ap.internal.processor.creation.MappingResolverImpl class">
 <meta name="keywords" content="getTargetAssignment()">
 <meta name="keywords" content="getUsedVirtualMappings()">
 <meta name="keywords" content="getFactoryMethod()">
@@ -58,7 +58,7 @@ var activeTableTab = "activeTableTab";
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../../../index.html?org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html" target="_top">Frames</a></li>
+<li><a href="../../../../../../index.html?org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html" target="_top">Frames</a></li>
 <li><a href="MappingResolverImpl.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -97,7 +97,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct.ap.internal.processor.creation</div>
+<div class="subTitle">org.dettonville.ap.internal.processor.creation</div>
 <h2 title="Class MappingResolverImpl" class="title">Class MappingResolverImpl</h2>
 </div>
 <div class="contentContainer">
@@ -105,7 +105,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapstruct.ap.internal.processor.creation.MappingResolverImpl</li>
+<li>org.dettonville.ap.internal.processor.creation.MappingResolverImpl</li>
 </ul>
 </li>
 </ul>
@@ -114,14 +114,14 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model">MappingBuilderContext.MappingResolver</a></dd>
+<dd><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model">MappingBuilderContext.MappingResolver</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">MappingResolverImpl</span>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model">MappingBuilderContext.MappingResolver</a></pre>
-<div class="block">The one and only implementation of <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model"><code>MappingBuilderContext.MappingResolver</code></a>. The class has been split into an interface an
+implements <a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model">MappingBuilderContext.MappingResolver</a></pre>
+<div class="block">The one and only implementation of <a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model"><code>MappingBuilderContext.MappingResolver</code></a>. The class has been split into an interface an
  implementation for the sake of avoiding package dependencies. Specifically, this implementation refers to classes
  which should not be exposed to the <code>model</code> package.</div>
 <dl>
@@ -146,12 +146,12 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html#MappingResolverImpl-org.mapstruct.ap.internal.util.FormattingMessager-javax.lang.model.util.Elements-javax.lang.model.util.Types-org.mapstruct.ap.internal.model.common.TypeFactory-java.util.List-java.util.List-">MappingResolverImpl</a></span>(<a href="../../../../../../org/mapstruct/ap/internal/util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;messager,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html#MappingResolverImpl-org.dettonville.ap.internal.util.FormattingMessager-javax.lang.model.util.Elements-javax.lang.model.util.Types-org.dettonville.ap.internal.model.common.TypeFactory-java.util.List-java.util.List-">MappingResolverImpl</a></span>(<a href="../../../../../../org/dettonville/ap/internal/util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;messager,
                    <a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util">Elements</a>&nbsp;elementUtils,
                    <a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util">Types</a>&nbsp;typeUtils,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/common/TypeFactory.html" title="class in org.mapstruct.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
-                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/source/SourceMethod.html" title="class in org.mapstruct.ap.internal.model.source">SourceMethod</a>&gt;&nbsp;sourceModel,
-                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/MapperReference.html" title="class in org.mapstruct.ap.internal.model">MapperReference</a>&gt;&nbsp;mapperReferences)</code>&nbsp;</td>
+                   <a href="../../../../../../org/dettonville/ap/internal/model/common/TypeFactory.html" title="class in org.dettonville.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/source/SourceMethod.html" title="class in org.dettonville.ap.internal.model.source">SourceMethod</a>&gt;&nbsp;sourceModel,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/MapperReference.html" title="class in org.dettonville.ap.internal.model">MapperReference</a>&gt;&nbsp;mapperReferences)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -169,30 +169,30 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/mapstruct/ap/internal/model/MethodReference.html" title="class in org.mapstruct.ap.internal.model">MethodReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html#getFactoryMethod-org.mapstruct.ap.internal.model.source.Method-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.source.SelectionParameters-">getFactoryMethod</a></span>(<a href="../../../../../../org/mapstruct/ap/internal/model/source/Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
-                <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;targetType,
-                <a href="../../../../../../org/mapstruct/ap/internal/model/source/SelectionParameters.html" title="class in org.mapstruct.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters)</code>
+<td class="colFirst"><code><a href="../../../../../../org/dettonville/ap/internal/model/MethodReference.html" title="class in org.dettonville.ap.internal.model">MethodReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html#getFactoryMethod-org.dettonville.ap.internal.model.source.Method-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.source.SelectionParameters-">getFactoryMethod</a></span>(<a href="../../../../../../org/dettonville/ap/internal/model/source/Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+                <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;targetType,
+                <a href="../../../../../../org/dettonville/ap/internal/model/source/SelectionParameters.html" title="class in org.dettonville.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters)</code>
 <div class="block">returns a no arg factory method</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/mapstruct/ap/internal/model/assignment/Assignment.html" title="interface in org.mapstruct.ap.internal.model.assignment">Assignment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html#getTargetAssignment-org.mapstruct.ap.internal.model.source.Method-java.lang.String-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.common.Type-java.lang.String-org.mapstruct.ap.internal.model.source.FormattingParameters-org.mapstruct.ap.internal.model.source.SelectionParameters-org.mapstruct.ap.internal.model.SourceRHS-boolean-">getTargetAssignment</a></span>(<a href="../../../../../../org/mapstruct/ap/internal/model/source/Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+<td class="colFirst"><code><a href="../../../../../../org/dettonville/ap/internal/model/assignment/Assignment.html" title="interface in org.dettonville.ap.internal.model.assignment">Assignment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html#getTargetAssignment-org.dettonville.ap.internal.model.source.Method-java.lang.String-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.common.Type-java.lang.String-org.dettonville.ap.internal.model.source.FormattingParameters-org.dettonville.ap.internal.model.source.SelectionParameters-org.dettonville.ap.internal.model.SourceRHS-boolean-">getTargetAssignment</a></span>(<a href="../../../../../../org/dettonville/ap/internal/model/source/Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mappedElement,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;sourceType,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;targetType,
+                   <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;sourceType,
+                   <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;targetType,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;targetPropertyName,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/source/FormattingParameters.html" title="class in org.mapstruct.ap.internal.model.source">FormattingParameters</a>&nbsp;formattingParameters,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/source/SelectionParameters.html" title="class in org.mapstruct.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters,
-                   <a href="../../../../../../org/mapstruct/ap/internal/model/SourceRHS.html" title="class in org.mapstruct.ap.internal.model">SourceRHS</a>&nbsp;sourceRHS,
+                   <a href="../../../../../../org/dettonville/ap/internal/model/source/FormattingParameters.html" title="class in org.dettonville.ap.internal.model.source">FormattingParameters</a>&nbsp;formattingParameters,
+                   <a href="../../../../../../org/dettonville/ap/internal/model/source/SelectionParameters.html" title="class in org.dettonville.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters,
+                   <a href="../../../../../../org/dettonville/ap/internal/model/SourceRHS.html" title="class in org.dettonville.ap.internal.model">SourceRHS</a>&nbsp;sourceRHS,
                    boolean&nbsp;preferUpdateMapping)</code>
 <div class="block">returns a parameter assignment</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/VirtualMappingMethod.html" title="class in org.mapstruct.ap.internal.model">VirtualMappingMethod</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html#getUsedVirtualMappings--">getUsedVirtualMappings</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/VirtualMappingMethod.html" title="class in org.dettonville.ap.internal.model">VirtualMappingMethod</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html#getUsedVirtualMappings--">getUsedVirtualMappings</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -216,18 +216,18 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="MappingResolverImpl-org.mapstruct.ap.internal.util.FormattingMessager-javax.lang.model.util.Elements-javax.lang.model.util.Types-org.mapstruct.ap.internal.model.common.TypeFactory-java.util.List-java.util.List-">
+<a name="MappingResolverImpl-org.dettonville.ap.internal.util.FormattingMessager-javax.lang.model.util.Elements-javax.lang.model.util.Types-org.dettonville.ap.internal.model.common.TypeFactory-java.util.List-java.util.List-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MappingResolverImpl</h4>
-<pre>public&nbsp;MappingResolverImpl(<a href="../../../../../../org/mapstruct/ap/internal/util/FormattingMessager.html" title="interface in org.mapstruct.ap.internal.util">FormattingMessager</a>&nbsp;messager,
+<pre>public&nbsp;MappingResolverImpl(<a href="../../../../../../org/dettonville/ap/internal/util/FormattingMessager.html" title="interface in org.dettonville.ap.internal.util">FormattingMessager</a>&nbsp;messager,
                            <a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util">Elements</a>&nbsp;elementUtils,
                            <a href="http://docs.oracle.com/javase/7/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util">Types</a>&nbsp;typeUtils,
-                           <a href="../../../../../../org/mapstruct/ap/internal/model/common/TypeFactory.html" title="class in org.mapstruct.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
-                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/source/SourceMethod.html" title="class in org.mapstruct.ap.internal.model.source">SourceMethod</a>&gt;&nbsp;sourceModel,
-                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/MapperReference.html" title="class in org.mapstruct.ap.internal.model">MapperReference</a>&gt;&nbsp;mapperReferences)</pre>
+                           <a href="../../../../../../org/dettonville/ap/internal/model/common/TypeFactory.html" title="class in org.dettonville.ap.internal.model.common">TypeFactory</a>&nbsp;typeFactory,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/source/SourceMethod.html" title="class in org.dettonville.ap.internal.model.source">SourceMethod</a>&gt;&nbsp;sourceModel,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/MapperReference.html" title="class in org.dettonville.ap.internal.model">MapperReference</a>&gt;&nbsp;mapperReferences)</pre>
 </li>
 </ul>
 </li>
@@ -238,26 +238,26 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getTargetAssignment-org.mapstruct.ap.internal.model.source.Method-java.lang.String-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.common.Type-java.lang.String-org.mapstruct.ap.internal.model.source.FormattingParameters-org.mapstruct.ap.internal.model.source.SelectionParameters-org.mapstruct.ap.internal.model.SourceRHS-boolean-">
+<a name="getTargetAssignment-org.dettonville.ap.internal.model.source.Method-java.lang.String-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.common.Type-java.lang.String-org.dettonville.ap.internal.model.source.FormattingParameters-org.dettonville.ap.internal.model.source.SelectionParameters-org.dettonville.ap.internal.model.SourceRHS-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTargetAssignment</h4>
-<pre>public&nbsp;<a href="../../../../../../org/mapstruct/ap/internal/model/assignment/Assignment.html" title="interface in org.mapstruct.ap.internal.model.assignment">Assignment</a>&nbsp;getTargetAssignment(<a href="../../../../../../org/mapstruct/ap/internal/model/source/Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+<pre>public&nbsp;<a href="../../../../../../org/dettonville/ap/internal/model/assignment/Assignment.html" title="interface in org.dettonville.ap.internal.model.assignment">Assignment</a>&nbsp;getTargetAssignment(<a href="../../../../../../org/dettonville/ap/internal/model/source/Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mappedElement,
-                                      <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;sourceType,
-                                      <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;targetType,
+                                      <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;sourceType,
+                                      <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;targetType,
                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;targetPropertyName,
-                                      <a href="../../../../../../org/mapstruct/ap/internal/model/source/FormattingParameters.html" title="class in org.mapstruct.ap.internal.model.source">FormattingParameters</a>&nbsp;formattingParameters,
-                                      <a href="../../../../../../org/mapstruct/ap/internal/model/source/SelectionParameters.html" title="class in org.mapstruct.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters,
-                                      <a href="../../../../../../org/mapstruct/ap/internal/model/SourceRHS.html" title="class in org.mapstruct.ap.internal.model">SourceRHS</a>&nbsp;sourceRHS,
+                                      <a href="../../../../../../org/dettonville/ap/internal/model/source/FormattingParameters.html" title="class in org.dettonville.ap.internal.model.source">FormattingParameters</a>&nbsp;formattingParameters,
+                                      <a href="../../../../../../org/dettonville/ap/internal/model/source/SelectionParameters.html" title="class in org.dettonville.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters,
+                                      <a href="../../../../../../org/dettonville/ap/internal/model/SourceRHS.html" title="class in org.dettonville.ap.internal.model">SourceRHS</a>&nbsp;sourceRHS,
                                       boolean&nbsp;preferUpdateMapping)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html#getTargetAssignment-org.mapstruct.ap.internal.model.source.Method-java.lang.String-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.common.Type-java.lang.String-org.mapstruct.ap.internal.model.source.FormattingParameters-org.mapstruct.ap.internal.model.source.SelectionParameters-org.mapstruct.ap.internal.model.SourceRHS-boolean-">MappingBuilderContext.MappingResolver</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html#getTargetAssignment-org.dettonville.ap.internal.model.source.Method-java.lang.String-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.common.Type-java.lang.String-org.dettonville.ap.internal.model.source.FormattingParameters-org.dettonville.ap.internal.model.source.SelectionParameters-org.dettonville.ap.internal.model.SourceRHS-boolean-">MappingBuilderContext.MappingResolver</a></code></span></div>
 <div class="block">returns a parameter assignment</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html#getTargetAssignment-org.mapstruct.ap.internal.model.source.Method-java.lang.String-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.common.Type-java.lang.String-org.mapstruct.ap.internal.model.source.FormattingParameters-org.mapstruct.ap.internal.model.source.SelectionParameters-org.mapstruct.ap.internal.model.SourceRHS-boolean-">getTargetAssignment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
+<dd><code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html#getTargetAssignment-org.dettonville.ap.internal.model.source.Method-java.lang.String-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.common.Type-java.lang.String-org.dettonville.ap.internal.model.source.FormattingParameters-org.dettonville.ap.internal.model.source.SelectionParameters-org.dettonville.ap.internal.model.SourceRHS-boolean-">getTargetAssignment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>mappingMethod</code> - target mapping method</dd>
 <dd><code>mappedElement</code> - used for error messages</dd>
@@ -285,27 +285,27 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <ul class="blockList">
 <li class="blockList">
 <h4>getUsedVirtualMappings</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/mapstruct/ap/internal/model/VirtualMappingMethod.html" title="class in org.mapstruct.ap.internal.model">VirtualMappingMethod</a>&gt;&nbsp;getUsedVirtualMappings()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/dettonville/ap/internal/model/VirtualMappingMethod.html" title="class in org.dettonville.ap.internal.model">VirtualMappingMethod</a>&gt;&nbsp;getUsedVirtualMappings()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html#getUsedVirtualMappings--">getUsedVirtualMappings</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
+<dd><code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html#getUsedVirtualMappings--">getUsedVirtualMappings</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="getFactoryMethod-org.mapstruct.ap.internal.model.source.Method-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.source.SelectionParameters-">
+<a name="getFactoryMethod-org.dettonville.ap.internal.model.source.Method-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.source.SelectionParameters-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getFactoryMethod</h4>
-<pre>public&nbsp;<a href="../../../../../../org/mapstruct/ap/internal/model/MethodReference.html" title="class in org.mapstruct.ap.internal.model">MethodReference</a>&nbsp;getFactoryMethod(<a href="../../../../../../org/mapstruct/ap/internal/model/source/Method.html" title="interface in org.mapstruct.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
-                                        <a href="../../../../../../org/mapstruct/ap/internal/model/common/Type.html" title="class in org.mapstruct.ap.internal.model.common">Type</a>&nbsp;targetType,
-                                        <a href="../../../../../../org/mapstruct/ap/internal/model/source/SelectionParameters.html" title="class in org.mapstruct.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html#getFactoryMethod-org.mapstruct.ap.internal.model.source.Method-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.source.SelectionParameters-">MappingBuilderContext.MappingResolver</a></code></span></div>
+<pre>public&nbsp;<a href="../../../../../../org/dettonville/ap/internal/model/MethodReference.html" title="class in org.dettonville.ap.internal.model">MethodReference</a>&nbsp;getFactoryMethod(<a href="../../../../../../org/dettonville/ap/internal/model/source/Method.html" title="interface in org.dettonville.ap.internal.model.source">Method</a>&nbsp;mappingMethod,
+                                        <a href="../../../../../../org/dettonville/ap/internal/model/common/Type.html" title="class in org.dettonville.ap.internal.model.common">Type</a>&nbsp;targetType,
+                                        <a href="../../../../../../org/dettonville/ap/internal/model/source/SelectionParameters.html" title="class in org.dettonville.ap.internal.model.source">SelectionParameters</a>&nbsp;selectionParameters)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html#getFactoryMethod-org.dettonville.ap.internal.model.source.Method-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.source.SelectionParameters-">MappingBuilderContext.MappingResolver</a></code></span></div>
 <div class="block">returns a no arg factory method</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html#getFactoryMethod-org.mapstruct.ap.internal.model.source.Method-org.mapstruct.ap.internal.model.common.Type-org.mapstruct.ap.internal.model.source.SelectionParameters-">getFactoryMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/mapstruct/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.mapstruct.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
+<dd><code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html#getFactoryMethod-org.dettonville.ap.internal.model.source.Method-org.dettonville.ap.internal.model.common.Type-org.dettonville.ap.internal.model.source.SelectionParameters-">getFactoryMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/dettonville/ap/internal/model/MappingBuilderContext.MappingResolver.html" title="interface in org.dettonville.ap.internal.model">MappingBuilderContext.MappingResolver</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>mappingMethod</code> - target mapping method</dd>
 <dd><code>targetType</code> - return type to match</dd>
@@ -347,7 +347,7 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../../../index.html?org/mapstruct/ap/internal/processor/creation/MappingResolverImpl.html" target="_top">Frames</a></li>
+<li><a href="../../../../../../index.html?org/dettonville/ap/internal/processor/creation/MappingResolverImpl.html" target="_top">Frames</a></li>
 <li><a href="MappingResolverImpl.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -384,6 +384,6 @@ implements <a href="../../../../../../org/mapstruct/ap/internal/model/MappingBui
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2016 <a href="http://mapstruct.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2016 <a href="http://dettonville.org/">Gunnar Morling</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mapping (MapStruct 1.4.2.Final)</title>
 <meta name="date" content="2021-01-31">
-<meta name="keywords" content="org.mapstruct.Mapping class">
+<meta name="keywords" content="org.dettonville.Mapping class">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -45,11 +45,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MappingConstants.html" title="class in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MappingConstants.html" title="class in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/Mapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/Mapping.html" target="_top">Frames</a></li>
 <li><a href="Mapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -86,7 +86,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.mapstruct</div>
+<div class="subTitle">org.dettonville</div>
 <h2 title="Annotation Type Mapping" class="title">Annotation Type Mapping</h2>
 </div>
 <div class="contentContainer">
@@ -100,18 +100,18 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html?is-external=true" title="class or interface in java.lang.annotation">@Repeatable</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="../../org/mapstruct/Mappings.html" title="annotation in org.mapstruct">Mappings.class</a>)
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html?is-external=true" title="class or interface in java.lang.annotation">@Repeatable</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="../../org/dettonville/Mappings.html" title="annotation in org.dettonville">Mappings.class</a>)
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#CLASS" title="class or interface in java.lang.annotation">CLASS</a>)
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>={<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#ANNOTATION_TYPE" title="class or interface in java.lang.annotation">ANNOTATION_TYPE</a>})
 public @interface <span class="memberNameLabel">Mapping</span></pre>
 <div class="block">Configures the mapping of one bean attribute or enum constant.
  <p>
- The name of the mapped attribute or constant is to be specified via <a href="../../org/mapstruct/Mapping.html#target--"><code>target()</code></a>. For mapped bean attributes it
+ The name of the mapped attribute or constant is to be specified via <a href="../../org/dettonville/Mapping.html#target--"><code>target()</code></a>. For mapped bean attributes it
  is assumed by default that the attribute has the same name in the source bean. Alternatively, one of
- <a href="../../org/mapstruct/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a> or <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a> can be specified to define the property source.
+ <a href="../../org/dettonville/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a> or <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a> can be specified to define the property source.
  </p>
  <p>
- In addition, the attributes <a href="../../org/mapstruct/Mapping.html#dateFormat--"><code>dateFormat()</code></a> and <a href="../../org/mapstruct/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a> may be used to further define the
+ In addition, the attributes <a href="../../org/dettonville/Mapping.html#dateFormat--"><code>dateFormat()</code></a> and <a href="../../org/dettonville/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a> may be used to further define the
  mapping.
  </p>
 
@@ -138,7 +138,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  <p><strong>Example 2:</strong> Mapping properties with different names</p>
  <pre><code class='java'>
  // We need map Human.companyName to HumanDto.company
- // we can use &#64;Mapping with parameters <a href="../../org/mapstruct/Mapping.html#source--"><code>source()</code></a> and <a href="../../org/mapstruct/Mapping.html#source--"><code>source()</code></a>
+ // we can use &#64;Mapping with parameters <a href="../../org/dettonville/Mapping.html#source--"><code>source()</code></a> and <a href="../../org/dettonville/Mapping.html#source--"><code>source()</code></a>
  &#64;Mapper
  public interface HumanMapper {
     &#64;Mapping(source="companyName", target="company")
@@ -159,7 +159,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  </p>
  <pre><code class='java'>
  // We need map Human.name to HumanDto.countNameSymbols.
- // we can use <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a> for it
+ // we can use <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a> for it
  &#64;Mapper
  public interface HumanMapper {
     &#64;Mapping(target="countNameSymbols", expression="java(human.getName().length())")
@@ -179,7 +179,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  </p>
  <pre><code class='java'>
  // We need map HumanDto.name to string constant "Unknown"
- // we can use <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a> for it
+ // we can use <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a> for it
  &#64;Mapper
  public interface HumanMapper {
     &#64;Mapping(target="name", constant="Unknown")
@@ -199,7 +199,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  </p>
  <pre><code class='java'>
  // We need map Human.name to HumanDto.fullName, but if Human.name == null, then set value "Somebody"
- // we can use <a href="../../org/mapstruct/Mapping.html#defaultValue--"><code>defaultValue()</code></a> or <a href="../../org/mapstruct/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a> for it
+ // we can use <a href="../../org/dettonville/Mapping.html#defaultValue--"><code>defaultValue()</code></a> or <a href="../../org/dettonville/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a> for it
  &#64;Mapper
  public interface HumanMapper {
     &#64;Mapping(source="name", target="name", defaultValue="Somebody")
@@ -220,7 +220,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  }
  </code></pre>
 
- <b>IMPORTANT NOTE:</b> the enum mapping capability is deprecated and replaced by <a href="../../org/mapstruct/ValueMapping.html" title="annotation in org.mapstruct"><code>ValueMapping</code></a> it
+ <b>IMPORTANT NOTE:</b> the enum mapping capability is deprecated and replaced by <a href="../../org/dettonville/ValueMapping.html" title="annotation in org.dettonville"><code>ValueMapping</code></a> it
  will be removed in subsequent versions.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -246,7 +246,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#target--">target</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#target--">target</a></span></code>
 <div class="block">The target name of the configured property as defined by the JavaBeans specification.</div>
 </td>
 </tr>
@@ -267,96 +267,96 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#constant--">constant</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#constant--">constant</a></span></code>
 <div class="block">A constant <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> based on which the specified target property is to be set.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#dateFormat--">dateFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#dateFormat--">dateFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html?is-external=true" title="class or interface in java.text"><code>SimpleDateFormat</code></a> if the attribute is mapped from <code>String</code> to
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#defaultExpression--">defaultExpression</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#defaultExpression--">defaultExpression</a></span></code>
 <div class="block">A defaultExpression <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> based on which the specified target property is to be set
  if and only if the specified source property is null.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#defaultValue--">defaultValue</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#defaultValue--">defaultValue</a></span></code>
 <div class="block">In case the source property is <code>null</code>, the provided default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> value is set.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#dependsOn--">dependsOn</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#dependsOn--">dependsOn</a></span></code>
 <div class="block">One or more properties of the result type on which the mapped property depends.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#expression--">expression</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#expression--">expression</a></span></code>
 <div class="block">An expression <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> based on which the specified target property is to be set.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#ignore--">ignore</a></span></code>
-<div class="block">Whether the property specified via <a href="../../org/mapstruct/Mapping.html#target--"><code>target()</code></a> should be ignored by the generated mapping method or not.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#ignore--">ignore</a></span></code>
+<div class="block">Whether the property specified via <a href="../../org/dettonville/Mapping.html#target--"><code>target()</code></a> should be ignored by the generated mapping method or not.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#mappingControl--">mappingControl</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#mappingControl--">mappingControl</a></span></code>
 <div class="block">Allows detailed control over the mapping process.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValueCheckStrategy.html" title="enum in org.mapstruct">NullValueCheckStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#nullValueCheckStrategy--">nullValueCheckStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValueCheckStrategy.html" title="enum in org.dettonville">NullValueCheckStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#nullValueCheckStrategy--">nullValueCheckStrategy</a></span></code>
 <div class="block">Determines when to include a null check on the source property value of a bean mapping.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html" title="enum in org.mapstruct">NullValuePropertyMappingStrategy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#nullValuePropertyMappingStrategy--">nullValuePropertyMappingStrategy</a></span></code>
+<td class="colFirst"><code><a href="../../org/dettonville/NullValuePropertyMappingStrategy.html" title="enum in org.dettonville">NullValuePropertyMappingStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#nullValuePropertyMappingStrategy--">nullValuePropertyMappingStrategy</a></span></code>
 <div class="block">The strategy to be applied when the source property is <code>null</code> or not present.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#numberFormat--">numberFormat</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#numberFormat--">numberFormat</a></span></code>
 <div class="block">A format string as processable by <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text"><code>DecimalFormat</code></a> if the annotated method maps from a
   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang"><code>Number</code></a> to a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> or vice-versa.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#qualifiedBy--">qualifiedBy</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#qualifiedBy--">qualifiedBy</a></span></code>
 <div class="block">A qualifier can be specified to aid the selection process of a suitable mapper.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#qualifiedByName--">qualifiedByName</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#qualifiedByName--">qualifiedByName</a></span></code>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method for a given property, MapStruct will
- only consider those methods carrying directly or indirectly (i.e. on the class-level) a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation
+ only consider those methods carrying directly or indirectly (i.e. on the class-level) a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation
  for each of the specified qualifier names.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#resultType--">resultType</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#resultType--">resultType</a></span></code>
 <div class="block">Specifies the result type of the mapping method to be used in case multiple mapping methods qualify.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../org/mapstruct/Mapping.html#source--">source</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/dettonville/Mapping.html#source--">source</a></span></code>
 <div class="block">The source to use for this mapping.</div>
 </td>
 </tr>
@@ -414,7 +414,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  <li>When no matching property is found, MapStruct looks for a matching parameter name instead.</li>
  <li>When used to map an enum constant, the name of the constant member is to be given.</li>
  </ol>
- This attribute can not be used together with <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a> or <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a>.</div>
+ This attribute can not be used together with <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a> or <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The source name of the configured property or enum constant.</dd>
@@ -505,8 +505,8 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  </li>
  </ol>
  <p>
- This attribute can not be used together with <a href="../../org/mapstruct/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/mapstruct/Mapping.html#defaultValue--"><code>defaultValue()</code></a>,
- <a href="../../org/mapstruct/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a> or <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a>.</div>
+ This attribute can not be used together with <a href="../../org/dettonville/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/dettonville/Mapping.html#defaultValue--"><code>defaultValue()</code></a>,
+ <a href="../../org/dettonville/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a> or <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A constant <code>String</code> constant specifying the value for the designated target property</dd>
@@ -543,10 +543,10 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  <code>targetBean.setSomeProp( new TimeAndFormat( s.getTime(), s.getFormat() ) )</code>.
  <p>
  Any types referenced in expressions must be given via their fully-qualified name. Alternatively, types can be
- imported via <a href="../../org/mapstruct/Mapper.html#imports--"><code>Mapper.imports()</code></a>.
+ imported via <a href="../../org/dettonville/Mapper.html#imports--"><code>Mapper.imports()</code></a>.
  <p>
- This attribute can not be used together with <a href="../../org/mapstruct/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/mapstruct/Mapping.html#defaultValue--"><code>defaultValue()</code></a>,
- <a href="../../org/mapstruct/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a>, <a href="../../org/mapstruct/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>, <a href="../../org/mapstruct/Mapping.html#qualifiedByName--"><code>qualifiedByName()</code></a> or <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a>.</div>
+ This attribute can not be used together with <a href="../../org/dettonville/Mapping.html#source--"><code>source()</code></a>, <a href="../../org/dettonville/Mapping.html#defaultValue--"><code>defaultValue()</code></a>,
+ <a href="../../org/dettonville/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a>, <a href="../../org/dettonville/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>, <a href="../../org/dettonville/Mapping.html#qualifiedByName--"><code>qualifiedByName()</code></a> or <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An expression specifying the value for the designated target property</dd>
@@ -584,10 +584,10 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  <code>targetBean.setSomeProp( new TimeAndFormat( s.getTime(), s.getFormat() ) )</code>.
  <p>
  Any types referenced in expressions must be given via their fully-qualified name. Alternatively, types can be
- imported via <a href="../../org/mapstruct/Mapper.html#imports--"><code>Mapper.imports()</code></a>.
+ imported via <a href="../../org/dettonville/Mapper.html#imports--"><code>Mapper.imports()</code></a>.
  <p>
- This attribute can not be used together with <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a>, <a href="../../org/mapstruct/Mapping.html#defaultValue--"><code>defaultValue()</code></a>
- or <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a>.</div>
+ This attribute can not be used together with <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a>, <a href="../../org/dettonville/Mapping.html#defaultValue--"><code>defaultValue()</code></a>
+ or <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An expression specifying a defaultValue for the designated target property if the designated source
@@ -611,7 +611,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <li class="blockList">
 <h4>ignore</h4>
 <pre>public abstract&nbsp;boolean&nbsp;ignore</pre>
-<div class="block">Whether the property specified via <a href="../../org/mapstruct/Mapping.html#target--"><code>target()</code></a> should be ignored by the generated mapping method or not.
+<div class="block">Whether the property specified via <a href="../../org/dettonville/Mapping.html#target--"><code>target()</code></a> should be ignored by the generated mapping method or not.
  This can be useful when certain attributes should not be propagated from source or target or when properties in
  the target object are populated using a decorator and thus would be reported as unmapped target property by
  default.</div>
@@ -642,7 +642,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the qualifiers</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/Qualifier.html" title="annotation in org.mapstruct"><code>Qualifier</code></a></dd>
+<dd><a href="../../org/dettonville/Qualifier.html" title="annotation in org.dettonville"><code>Qualifier</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -661,7 +661,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <h4>qualifiedByName</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;qualifiedByName</pre>
 <div class="block">String-based form of qualifiers; When looking for a suitable mapping method for a given property, MapStruct will
- only consider those methods carrying directly or indirectly (i.e. on the class-level) a <a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a> annotation
+ only consider those methods carrying directly or indirectly (i.e. on the class-level) a <a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a> annotation
  for each of the specified qualifier names.
  <p>
  Note that annotation-based qualifiers are generally preferable as they allow more easily to find references and
@@ -671,8 +671,8 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>One or more qualifier name(s)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>, 
-<a href="../../org/mapstruct/Named.html" title="annotation in org.mapstruct"><code>Named</code></a></dd>
+<dd><a href="../../org/dettonville/Mapping.html#qualifiedBy--"><code>qualifiedBy()</code></a>,
+<a href="../../org/dettonville/Named.html" title="annotation in org.dettonville"><code>Named</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
@@ -763,8 +763,8 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
  </li>
  </ol>
  <p>
- This attribute can not be used together with <a href="../../org/mapstruct/Mapping.html#constant--"><code>constant()</code></a>, <a href="../../org/mapstruct/Mapping.html#expression--"><code>expression()</code></a>
- or <a href="../../org/mapstruct/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a>.</div>
+ This attribute can not be used together with <a href="../../org/dettonville/Mapping.html#constant--"><code>constant()</code></a>, <a href="../../org/dettonville/Mapping.html#expression--"><code>expression()</code></a>
+ or <a href="../../org/dettonville/Mapping.html#defaultExpression--"><code>defaultExpression()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Default value to set in case the source property is <code>null</code>.</dd>
@@ -784,10 +784,10 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValueCheckStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValueCheckStrategy.html" title="enum in org.mapstruct">NullValueCheckStrategy</a>&nbsp;nullValueCheckStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValueCheckStrategy.html" title="enum in org.dettonville">NullValueCheckStrategy</a>&nbsp;nullValueCheckStrategy</pre>
 <div class="block">Determines when to include a null check on the source property value of a bean mapping.
 
- Can be overridden by the one on <a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><code>MapperConfig</code></a>, <a href="../../org/mapstruct/Mapper.html" title="annotation in org.mapstruct"><code>Mapper</code></a> or <a href="../../org/mapstruct/BeanMapping.html" title="annotation in org.mapstruct"><code>BeanMapping</code></a>.</div>
+ Can be overridden by the one on <a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><code>MapperConfig</code></a>, <a href="../../org/dettonville/Mapper.html" title="annotation in org.dettonville"><code>Mapper</code></a> or <a href="../../org/dettonville/BeanMapping.html" title="annotation in org.dettonville"><code>BeanMapping</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>strategy how to do null checking</dd>
@@ -796,7 +796,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</dd>
+<dd>org.dettonville.NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</dd>
 </dl>
 </li>
 </ul>
@@ -809,13 +809,13 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullValuePropertyMappingStrategy</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html" title="enum in org.mapstruct">NullValuePropertyMappingStrategy</a>&nbsp;nullValuePropertyMappingStrategy</pre>
+<pre>public abstract&nbsp;<a href="../../org/dettonville/NullValuePropertyMappingStrategy.html" title="enum in org.dettonville">NullValuePropertyMappingStrategy</a>&nbsp;nullValuePropertyMappingStrategy</pre>
 <div class="block">The strategy to be applied when the source property is <code>null</code> or not present. If no strategy is configured,
- the strategy given via <a href="../../org/mapstruct/MapperConfig.html#nullValuePropertyMappingStrategy--"><code>MapperConfig.nullValuePropertyMappingStrategy()</code></a>,
- <a href="../../org/mapstruct/BeanMapping.html#nullValuePropertyMappingStrategy--"><code>BeanMapping.nullValuePropertyMappingStrategy()</code></a> or
- <a href="../../org/mapstruct/Mapper.html#nullValuePropertyMappingStrategy--"><code>Mapper.nullValuePropertyMappingStrategy()</code></a> will be applied.
+ the strategy given via <a href="../../org/dettonville/MapperConfig.html#nullValuePropertyMappingStrategy--"><code>MapperConfig.nullValuePropertyMappingStrategy()</code></a>,
+ <a href="../../org/dettonville/BeanMapping.html#nullValuePropertyMappingStrategy--"><code>BeanMapping.nullValuePropertyMappingStrategy()</code></a> or
+ <a href="../../org/dettonville/Mapper.html#nullValuePropertyMappingStrategy--"><code>Mapper.nullValuePropertyMappingStrategy()</code></a> will be applied.
 
- <a href="../../org/mapstruct/NullValuePropertyMappingStrategy.html#SET_TO_NULL"><code>NullValuePropertyMappingStrategy.SET_TO_NULL</code></a> will be used by default.</div>
+ <a href="../../org/dettonville/NullValuePropertyMappingStrategy.html#SET_TO_NULL"><code>NullValuePropertyMappingStrategy.SET_TO_NULL</code></a> will be used by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The strategy to be applied when <code>null</code> is passed as source property value or the source property
@@ -825,7 +825,7 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.NullValuePropertyMappingStrategy.SET_TO_NULL</dd>
+<dd>org.dettonville.NullValuePropertyMappingStrategy.SET_TO_NULL</dd>
 </dl>
 </li>
 </ul>
@@ -846,13 +846,13 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.4</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../org/mapstruct/control/DeepClone.html" title="annotation in org.mapstruct.control"><code>DeepClone</code></a>, 
-<a href="../../org/mapstruct/control/NoComplexMapping.html" title="annotation in org.mapstruct.control"><code>NoComplexMapping</code></a>, 
-<a href="../../org/mapstruct/control/MappingControl.html" title="annotation in org.mapstruct.control"><code>MappingControl</code></a></dd>
+<dd><a href="../../org/dettonville/control/DeepClone.html" title="annotation in org.dettonville.control"><code>DeepClone</code></a>,
+<a href="../../org/dettonville/control/NoComplexMapping.html" title="annotation in org.dettonville.control"><code>NoComplexMapping</code></a>,
+<a href="../../org/dettonville/control/MappingControl.html" title="annotation in org.dettonville.control"><code>MappingControl</code></a></dd>
 </dl>
 <dl>
 <dt>Default:</dt>
-<dd>org.mapstruct.control.MappingControl.class</dd>
+<dd>org.dettonville.control.MappingControl.class</dd>
 </dl>
 </li>
 </ul>
@@ -884,11 +884,11 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapstruct/MapperConfig.html" title="annotation in org.mapstruct"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../org/mapstruct/MappingConstants.html" title="class in org.mapstruct"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MapperConfig.html" title="annotation in org.dettonville"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../org/dettonville/MappingConstants.html" title="class in org.dettonville"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapstruct/Mapping.html" target="_top">Frames</a></li>
+<li><a href="../../index.html?org/dettonville/Mapping.html" target="_top">Frames</a></li>
 <li><a href="Mapping.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -923,6 +923,6 @@ public @interface <span class="memberNameLabel">Mapping</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://mapstruct.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012-2021 <a href="http://dettonville.org/">MapStruct Authors</a>; All rights reserved. Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License 2.0</a>.</small></p>
 </body>
 </html>

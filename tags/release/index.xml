@@ -8,24 +8,24 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/release/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MapStruct Spring Extensions 0.1.1 released</title>
+      <title>Dettonville Spring Extensions 0.1.1 released</title>
       <link>http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/</link>
       <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the next official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+      <description>&lt;p&gt;It is my pleasure to announce the next official release of Dettonville Spring Extensions.
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the Dettonville organization.&lt;/p&gt;
 &lt;p&gt;This release fixes a bug related to dealing with array types as mapping sources or targets.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between Dettonville&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Support for subclass mapping, various enhancements and much more: MapStruct 1.5.0.Beta2 is out</title>
+      <title>Support for subclass mapping, various enhancements and much more: Dettonville 1.5.0.Beta2 is out</title>
       <link>http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second Beta release of MapStruct 1.5.&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second Beta release of Dettonville 1.5.&lt;/p&gt;
 &lt;p&gt;The new release comes with new functionality and some bug fixes, e.g.:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Support for subclass mapping&lt;/li&gt;
@@ -36,12 +36,12 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
     </item>
     
     <item>
-      <title>Support for mapping from Map to bean, conditional mapping and much more: MapStruct 1.5.0.Beta1 is out</title>
+      <title>Support for mapping from Map to bean, conditional mapping and much more: Dettonville 1.5.0.Beta1 is out</title>
       <link>http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/</link>
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the first Beta release of MapStruct 1.5.&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the first Beta release of Dettonville 1.5.&lt;/p&gt;
 &lt;p&gt;The new release comes with a lot of new functionality, e.g.:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Support for mapping from &lt;code&gt;Map&amp;lt;String, ???&amp;gt;&lt;/code&gt; to a bean&lt;/li&gt;
@@ -53,83 +53,83 @@ What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/33614
     </item>
     
     <item>
-      <title>MapStruct Spring Extensions 0.1.0 released</title>
+      <title>Dettonville Spring Extensions 0.1.0 released</title>
       <link>http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/</link>
       <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the next official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+      <description>&lt;p&gt;It is my pleasure to announce the next official release of Dettonville Spring Extensions.
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the Dettonville organization.&lt;/p&gt;
 &lt;p&gt;This release adds the possibility to provide &amp;ldquo;external&amp;rdquo; conversions to the generated &lt;code&gt;ConversionServiceAdapter&lt;/code&gt;. These could be Spring builtin ones or provided in some runtime dependency. See the &lt;a href=&#34;http://dettonville.org/documentation/spring-extensions/reference/html/&#34;&gt;reference guide&lt;/a&gt; for details.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between Dettonville&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct Spring Extensions 0.0.3 released</title>
+      <title>Dettonville Spring Extensions 0.0.3 released</title>
       <link>http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/</link>
       <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the third official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
+      <description>&lt;p&gt;It is my pleasure to announce the third official release of Dettonville Spring Extensions.
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the Dettonville organization.&lt;/p&gt;
 &lt;p&gt;This third release fixes a circular dependency issue which occurred in non-trivial mapper hierarchies and would lead to mappers being hidden from the &lt;code&gt;ConversionService&lt;/code&gt;. Kudos go to &lt;a href=&#34;https://github.com/danielshiplett&#34;&gt;Daniel Shiplett&lt;/a&gt; and &lt;a href=&#34;https://github.com/PRIESt512&#34;&gt;Alexey&lt;/a&gt; for their help in chasing down the cause and resolving the issue.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between Dettonville&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct Spring Extensions 0.0.2 released</title>
+      <title>Dettonville Spring Extensions 0.0.2 released</title>
       <link>http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/</link>
       <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the second official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
-&lt;p&gt;This second release allows specifying a defined name for the generated ConversionServiceAdapter bean. Kudos go to &lt;a href=&#34;https://github.com/dmham86&#34;&gt;David Hamilton&lt;/a&gt; for this contribution. Additionally, you will now find a &lt;a href=&#34;http://dettonville.org/documentation/spring-extensions/reference/html/&#34;&gt;reference guide&lt;/a&gt; on the main MapStruct homepage.&lt;/p&gt;
-&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+      <description>&lt;p&gt;It is my pleasure to announce the second official release of Dettonville Spring Extensions.
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the Dettonville organization.&lt;/p&gt;
+&lt;p&gt;This second release allows specifying a defined name for the generated ConversionServiceAdapter bean. Kudos go to &lt;a href=&#34;https://github.com/dmham86&#34;&gt;David Hamilton&lt;/a&gt; for this contribution. Additionally, you will now find a &lt;a href=&#34;http://dettonville.org/documentation/spring-extensions/reference/html/&#34;&gt;reference guide&lt;/a&gt; on the main Dettonville homepage.&lt;/p&gt;
+&lt;p&gt;Including the annotations and extensions defined in this project will generate a class acting as bridge between Dettonville&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.4.2.Final bug fix released</title>
+      <title>Dettonville 1.4.2.Final bug fix released</title>
       <link>http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the 1.4.2.Final bug fix release of MapStruct.&lt;/p&gt;
+      <description>&lt;p&gt;It is my pleasure to announce the 1.4.2.Final bug fix release of Dettonville.&lt;/p&gt;
 &lt;p&gt;This release includes 2 enhancements, 10 bug fixes, and some documentation fixes.&lt;/p&gt;
 &lt;p&gt;The most notable enhancement is the relaxing of the strictness for &lt;code&gt;Mapping#qualifiedByName&lt;/code&gt; and &lt;code&gt;Mapping#qualifier&lt;/code&gt; for collection mappings.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct Spring Extensions 0.0.1 released</title>
+      <title>Dettonville Spring Extensions 0.0.1 released</title>
       <link>http://dettonville.org/news/2020-12-03-mapstruct-spring-extensions-0-0-1-released/</link>
       <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-12-03-mapstruct-spring-extensions-0-0-1-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the first official release of MapStruct Spring Extensions.
-What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the MapStruct organization.&lt;/p&gt;
-&lt;p&gt;This first release solves the issue described in the question linked above: How can we use MapStruct mappers defined as Spring &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert&#34;&gt;Converters&lt;/a&gt; in a Spring-idiomatic way when building a hierarchy of them?
-Including the annotations and extensions defined in this project will generate a class acting as bridge between MapStruct&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
+      <description>&lt;p&gt;It is my pleasure to announce the first official release of Dettonville Spring Extensions.
+What started out as a &lt;a href=&#34;https://stackoverflow.com/q/58081224/3361467&#34;&gt;StackOverflow question&lt;/a&gt; over a year ago has turned into its own &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions&#34;&gt;(sub-)project&lt;/a&gt; within the Dettonville organization.&lt;/p&gt;
+&lt;p&gt;This first release solves the issue described in the question linked above: How can we use Dettonville mappers defined as Spring &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert&#34;&gt;Converters&lt;/a&gt; in a Spring-idiomatic way when building a hierarchy of them?
+Including the annotations and extensions defined in this project will generate a class acting as bridge between Dettonville&amp;rsquo;s conventions and Spring&amp;rsquo;s &lt;a href=&#34;https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API&#34;&gt;ConversionService API&lt;/a&gt; that in turn can be added to any Mapper&amp;rsquo;s &lt;code&gt;uses&lt;/code&gt; attribute. See the &lt;a href=&#34;https://github.com/dettonville/dettonville-spring-extensions/tree/master/examples&#34;&gt;examples&lt;/a&gt; for details.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.4.1.Final bug fix released</title>
+      <title>Dettonville 1.4.1.Final bug fix released</title>
       <link>http://dettonville.org/news/2020-10-11-mapstruct-1_4_1_Final-bug-fix-released/</link>
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-10-11-mapstruct-1_4_1_Final-bug-fix-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the 1.4.1.Final bug fix release of MapStruct.
+      <description>&lt;p&gt;It is my pleasure to announce the 1.4.1.Final bug fix release of Dettonville.
 Even though we did 3 Beta and 1 CR release we still managed to introduce some regressions.&lt;/p&gt;
 &lt;p&gt;This release includes 6 bug fixes.&lt;/p&gt;
 &lt;p&gt;The most notable fix is the support for the IntelliJ incremental annotation processing.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.4.0.Final is out</title>
+      <title>Dettonville 1.4.0.Final is out</title>
       <link>http://dettonville.org/news/2020-09-28-mapstruct-1_4_0_Final-is-out/</link>
       <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-09-28-mapstruct-1_4_0_Final-is-out/</guid>
-      <description>&lt;p&gt;Long overdue it is our pleasure to announce the final version MapStruct 1.4.
+      <description>&lt;p&gt;Long overdue it is our pleasure to announce the final version Dettonville 1.4.
 This is our 4th release since november 2015.&lt;/p&gt;
 &lt;p&gt;Besides bug fixes, the 1.4 release brings some new exciting features:&lt;/p&gt;
 &lt;ul&gt;
@@ -146,12 +146,12 @@ This is our 4th release since november 2015.&lt;/p&gt;
     </item>
     
     <item>
-      <title>MapStruct 1.4.0.CR1 released</title>
+      <title>Dettonville 1.4.0.CR1 released</title>
       <link>http://dettonville.org/news/2020-08-31-mapstruct-1_4_0_CR1-released/</link>
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-08-31-mapstruct-1_4_0_CR1-released/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of MapStruct 1.4!&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of Dettonville 1.4!&lt;/p&gt;
 &lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;https://dettonville.org/news/2020-07-19-dettonville-1_4_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
 So what did we tackle in 1.4.0.RC1&lt;/p&gt;
 &lt;ul&gt;
@@ -162,12 +162,12 @@ So what did we tackle in 1.4.0.RC1&lt;/p&gt;
     </item>
     
     <item>
-      <title>MapStruct 1.4.0.Beta3 is out</title>
+      <title>Dettonville 1.4.0.Beta3 is out</title>
       <link>http://dettonville.org/news/2020-07-19-mapstruct-1_4_0_Beta3-is-out/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-07-19-mapstruct-1_4_0_Beta3-is-out/</guid>
-      <description>&lt;p&gt;Today we release a new beta version of MapStruct 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta3&lt;/p&gt;
+      <description>&lt;p&gt;Today we release a new beta version of Dettonville 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta3&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Improve selection of mapping constructor&lt;/li&gt;
 &lt;li&gt;Improve error messages for 2 step mapping methods&lt;/li&gt;
@@ -176,12 +176,12 @@ So what did we tackle in 1.4.0.RC1&lt;/p&gt;
     </item>
     
     <item>
-      <title>MapStruct 1.4.0.Beta2 is out</title>
+      <title>Dettonville 1.4.0.Beta2 is out</title>
       <link>http://dettonville.org/news/2020-06-01-mapstruct-1_4_0_Beta2-is-out/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-06-01-mapstruct-1_4_0_Beta2-is-out/</guid>
-      <description>&lt;p&gt;Today we release a new beta version of MapStruct 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta2&lt;/p&gt;
+      <description>&lt;p&gt;Today we release a new beta version of Dettonville 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta2&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Improve performance for 2 step mapping methods&lt;/li&gt;
 &lt;li&gt;Having 2 step mapping methods, based on a generic -in between- type. For example: source (String) -&amp;gt; Embeded mapStringToEmbeded(String s) -&amp;gt; &lt;T&gt; List&lt;T&gt; toSingleElementList( T e ) -&amp;gt; target (List&lt;Embeded&gt;)&lt;/li&gt;
@@ -190,12 +190,12 @@ So what did we tackle in 1.4.0.RC1&lt;/p&gt;
     </item>
     
     <item>
-      <title>Support for constructors, Gradle incremental compilation and much more: MapStruct 1.4.0.Beta1 is out</title>
+      <title>Support for constructors, Gradle incremental compilation and much more: Dettonville 1.4.0.Beta1 is out</title>
       <link>http://dettonville.org/news/2020-06-01-mapstruct-1_4_0_Beta1-is-out-with-constructor-support/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-06-01-mapstruct-1_4_0_Beta1-is-out-with-constructor-support/</guid>
-      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of MapStruct 1.4.&lt;/p&gt;
+      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of Dettonville 1.4.&lt;/p&gt;
 &lt;p&gt;The new release comes with a whole lot of new functionality, e.g.:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Making use of constructor arguments when instantiating mapping targets&lt;/li&gt;
@@ -215,25 +215,25 @@ So what did we tackle in 1.4.0.RC1&lt;/p&gt;
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2020-02-03-announcing-gem-tools/</guid>
-      <description>&lt;p&gt;Lately, we have been busy working on the release of MapStruct 1.4, adding new features and trying to
+      <description>&lt;p&gt;Lately, we have been busy working on the release of Dettonville 1.4, adding new features and trying to
 simplify our codebase so we can maintain it easier and add features faster.&lt;/p&gt;
 &lt;p&gt;From the start of the project we have been using a utility tool &lt;a href=&#34;https://web.archive.org/web/20070724060104/https://hickory.dev.java.net/&#34;&gt;Hickory&lt;/a&gt;
 for generating Prisms (partial reflection access to annotations) during compilation time.
-Basically, we&amp;rsquo;ve been using an annotation processor to generate access to the MapStruct annotations,
-this allows us to access the MapStruct annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
+Basically, we&amp;rsquo;ve been using an annotation processor to generate access to the Dettonville annotations,
+this allows us to access the Dettonville annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
 This is a really old project and the only release on Maven Central is from March 2010.&lt;/p&gt;
 &lt;p&gt;Thus we needed something newer and created our own utility.
 Say hi to &lt;a href=&#34;https://github.com/dettonville/tools-gem&#34;&gt;Gem Tools&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.3.1.Final bug fix released</title>
+      <title>Dettonville 1.3.1.Final bug fix released</title>
       <link>http://dettonville.org/news/2019-09-29-mapstruct-1_3_1_Final-bug-fix-released/</link>
       <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2019-09-29-mapstruct-1_3_1_Final-bug-fix-released/</guid>
-      <description>&lt;p&gt;It is my pleasure to announce the 1.3.1.Final bug fix release of MapStruct.
-Since the Final release of MapStruct 1.3.0.Final we have received amazing feedback from the community.&lt;/p&gt;
+      <description>&lt;p&gt;It is my pleasure to announce the 1.3.1.Final bug fix release of Dettonville.
+Since the Final release of Dettonville 1.3.0.Final we have received amazing feedback from the community.&lt;/p&gt;
 &lt;p&gt;This release includes 3 enhancements, 12 bug fixes and 7 documentation improvements.&lt;/p&gt;
 &lt;p&gt;The enhancements include:&lt;/p&gt;
 &lt;ul&gt;
@@ -243,12 +243,12 @@ Since the Final release of MapStruct 1.3.0.Final we have received amazing feedba
     </item>
     
     <item>
-      <title>MapStruct 1.3.0.Final is out in the wild</title>
+      <title>Dettonville 1.3.0.Final is out in the wild</title>
       <link>http://dettonville.org/news/2019-02-11-mapstruct-1_3_0_Final-is-out-in-the-wild/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2019-02-11-mapstruct-1_3_0_Final-is-out-in-the-wild/</guid>
-      <description>&lt;p&gt;Long overdue it is our pleasure to announce the final version MapStruct 1.3.
+      <description>&lt;p&gt;Long overdue it is our pleasure to announce the final version Dettonville 1.3.
 This is our 3rd release since november 2015.&lt;/p&gt;
 &lt;p&gt;Besides bug fixes, the 1.3 release brings some new exciting features:&lt;/p&gt;
 &lt;ul&gt;
@@ -264,12 +264,12 @@ This is our 3rd release since november 2015.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Java 8 as a baseline, null value property mappings improved builders support and much more: MapStruct 1.3.0.Beta2 is out</title>
+      <title>Java 8 as a baseline, null value property mappings improved builders support and much more: Dettonville 1.3.0.Beta2 is out</title>
       <link>http://dettonville.org/news/2018-11-12-mapstruct-1_3_0_Beta2-is-out-with-java8-as-baseline/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2018-11-12-mapstruct-1_3_0_Beta2-is-out-with-java8-as-baseline/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second Beta release of MapStruct 1.3.&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second Beta release of Dettonville 1.3.&lt;/p&gt;
 &lt;p&gt;With the new Release we have finally made the switch to Java 8 as a baseline.&lt;/p&gt;
 &lt;p&gt;There are a whole lot of new enhancements as well, e.g.:&lt;/p&gt;
 &lt;ul&gt;
@@ -282,12 +282,12 @@ This is our 3rd release since november 2015.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Support for builders, mapper constructor injection and much more: MapStruct 1.3.0.Beta1 is out</title>
+      <title>Support for builders, mapper constructor injection and much more: Dettonville 1.3.0.Beta1 is out</title>
       <link>http://dettonville.org/news/2018-07-15-mapstruct-1_3_0_Beta1-is-out-with-builder-support/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2018-07-15-mapstruct-1_3_0_Beta1-is-out-with-builder-support/</guid>
-      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of MapStruct 1.3.&lt;/p&gt;
+      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of Dettonville 1.3.&lt;/p&gt;
 &lt;p&gt;The new release comes with a whole lot of new functionality, e.g.:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Mapping of (immutable) objects using builders&lt;/li&gt;
@@ -300,16 +300,16 @@ This is our 3rd release since november 2015.&lt;/p&gt;
     </item>
     
     <item>
-      <title>MapStruct 1.2.0.Final is out</title>
+      <title>Dettonville 1.2.0.Final is out</title>
       <link>http://dettonville.org/news/2017-10-18-mapstruct-1_2_0_Final-is-out/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-10-18-mapstruct-1_2_0_Final-is-out/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the final version MapStruct 1.2!&lt;/p&gt;
-&lt;p&gt;After less than a year from the &lt;a href=&#34;http://dettonville.org/news/2016-11-22-dettonville-1_1_0_Final-seen-in-the-wild&#34;&gt;1.1.0.Final&lt;/a&gt; release, 3 Beta and 2 CR releases, MapStruct 1.2.0.Final is finally out :).&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the final version Dettonville 1.2!&lt;/p&gt;
+&lt;p&gt;After less than a year from the &lt;a href=&#34;http://dettonville.org/news/2016-11-22-dettonville-1_1_0_Final-seen-in-the-wild&#34;&gt;1.1.0.Final&lt;/a&gt; release, 3 Beta and 2 CR releases, Dettonville 1.2.0.Final is finally out :).&lt;/p&gt;
 &lt;p&gt;Besides bug fixes, the 1.2 release brings some new interesting features:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;MapStruct can be used with Lombok out of the box&lt;/li&gt;
+&lt;li&gt;Dettonville can be used with Lombok out of the box&lt;/li&gt;
 &lt;li&gt;Java 8 Stream support&lt;/li&gt;
 &lt;li&gt;Mappings based on public fields&lt;/li&gt;
 &lt;li&gt;Automatic creation of nested mapping methods&lt;/li&gt;
@@ -323,12 +323,12 @@ This is our 3rd release since november 2015.&lt;/p&gt;
     </item>
     
     <item>
-      <title>MapStruct support for IntelliJ IDEA</title>
+      <title>Dettonville support for IntelliJ IDEA</title>
       <link>http://dettonville.org/news/2017-09-19-announcing-mapstruct-idea/</link>
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-09-19-announcing-mapstruct-idea/</guid>
-      <description>&lt;p&gt;I am very happy to announce the first version of the MapStruct IntelliJ IDEA plugin.
+      <description>&lt;p&gt;I am very happy to announce the first version of the Dettonville IntelliJ IDEA plugin.
 Now we have official support for 2 IDEs, Eclipse being the first IDE for which we had support from earlier (plugin &lt;a href=&#34;https://marketplace.eclipse.org/content/dettonville-eclipse-plugin&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;With the power of IntelliJ you now get completions in &lt;code&gt;@Mapping&lt;/code&gt; and &lt;code&gt;@ValueMapping&lt;/code&gt; annotations (also for nested mappings ;)).
 Apart from that you also get support for: finding usages of methods directly within annotations,
@@ -336,37 +336,37 @@ going to declarations from annotations, highlighting support within annotations 
     </item>
     
     <item>
-      <title>MapStruct 1.2.0.CR2 released</title>
+      <title>Dettonville 1.2.0.CR2 released</title>
       <link>http://dettonville.org/news/2017-08-28-mapstruct-1_2_0_cr2-released/</link>
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-08-28-mapstruct-1_2_0_cr2-released/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the second candidate release of MapStruct 1.2!&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the second candidate release of Dettonville 1.2!&lt;/p&gt;
 &lt;p&gt;The CR2 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://dettonville.org/news/2017-07-25-dettonville-1_2_0_CR1-released/&#34;&gt;CR1&lt;/a&gt;,
 e.g. related to the handling of &lt;code&gt;mappingInheritanceStrategy&lt;/code&gt; (issue &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1255&#34;&gt;#1255&lt;/a&gt;).
 Further fixes concern the handling nested target properties (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1269&#34;&gt;#1269&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.2.0.CR1 released</title>
+      <title>Dettonville 1.2.0.CR1 released</title>
       <link>http://dettonville.org/news/2017-07-25-mapstruct-1_2_0_CR1-released/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-07-25-mapstruct-1_2_0_CR1-released/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of MapStruct 1.2!&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m very happy to announce the first candidate release of Dettonville 1.2!&lt;/p&gt;
 &lt;p&gt;The CR1 release mostly provides bug fixes and other smaller improvements since the &lt;a href=&#34;http://dettonville.org/news/2017-06-02-dettonville-1_2_0_Beta3-is-out/&#34;&gt;Beta 3&lt;/a&gt;,
 e.g. related to the handling of the &lt;code&gt;@ObjectFactory&lt;/code&gt; annotation (issues &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1131&#34;&gt;#1131&lt;/a&gt; and &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1242&#34;&gt;#1242&lt;/a&gt;).
 Further fixes concern the handling of imports in the generated code (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1227&#34;&gt;#1227&lt;/a&gt;, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/543&#34;&gt;#543&lt;/a&gt;) and the error reporting in case of incorrect mapper definitions (&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1150&#34;&gt;#1150&lt;/a&gt;, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1185&#34;&gt;#1185&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.2.0.Beta3 is out</title>
+      <title>Dettonville 1.2.0.Beta3 is out</title>
       <link>http://dettonville.org/news/2017-06-02-mapstruct-1_2_0_Beta3-is-out/</link>
       <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-06-02-mapstruct-1_2_0_Beta3-is-out/</guid>
-      <description>&lt;p&gt;The summer is nearly there, and so is MapStruct 1.2.
-Today it&amp;rsquo;s my pleasure to announce another release on our way to the Final: MapStruct 1.2 Beta 3!&lt;/p&gt;
+      <description>&lt;p&gt;The summer is nearly there, and so is Dettonville 1.2.
+Today it&amp;rsquo;s my pleasure to announce another release on our way to the Final: Dettonville 1.2 Beta 3!&lt;/p&gt;
 &lt;p&gt;This release continues to improve and stabilize the new feature of automatically creating &lt;a href=&#34;http://dettonville.org/news/2017-02-20-dettonville-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods&#34;&gt;sub-mapping methods&lt;/a&gt;.
 By default, &lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1154&#34;&gt;no sub-mapping methods are generated&lt;/a&gt; for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
 If more fine-grained control is needed, there is &lt;a href=&#34;http://dettonville.org/documentation/dev/reference/html/#_mapping_exclusion_provider&#34;&gt;an SPI&lt;/a&gt; now which lets you define for which types sub-mapping methods should be created.
@@ -380,12 +380,12 @@ Eventually, you also can &lt;a href=&#34;https://github.com/dettonville/dettonvi
     </item>
     
     <item>
-      <title>MapStruct 1.2.0.Beta2 released</title>
+      <title>Dettonville 1.2.0.Beta2 released</title>
       <link>http://dettonville.org/news/2017-03-16-mapstruct-1_2_0_Beta2-released/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-03-16-mapstruct-1_2_0_Beta2-released/</guid>
-      <description>&lt;p&gt;Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the &lt;a href=&#34;http://dettonville.org/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/&#34;&gt;many new features&lt;/a&gt; offered by the new 1.2 release line.&lt;/p&gt;
+      <description>&lt;p&gt;Just shy of a month after the first Beta release of Dettonville 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the &lt;a href=&#34;http://dettonville.org/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/&#34;&gt;many new features&lt;/a&gt; offered by the new 1.2 release line.&lt;/p&gt;
 &lt;p&gt;We fixed &lt;a href=&#34;https://github.com/dettonville/dettonville/milestone/20?closed=1&#34;&gt;16 issues&lt;/a&gt;, most of them reported by users. The most infamous bugs reported and fixed are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/dettonville/dettonville/issues/1121&#34;&gt;Some type conversions stopped working&lt;/a&gt; under some circumstances due to an odd JDK behaviour that we didn&amp;rsquo;t run into previously.&lt;/li&gt;
@@ -397,15 +397,15 @@ Eventually, you also can &lt;a href=&#34;https://github.com/dettonville/dettonvi
     </item>
     
     <item>
-      <title>Support for Lombok, direct field access and much more: MapStruct 1.2.0.Beta1 is out</title>
+      <title>Support for Lombok, direct field access and much more: Dettonville 1.2.0.Beta1 is out</title>
       <link>http://dettonville.org/news/2017-02-20-mapstruct-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/</link>
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-02-20-mapstruct-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/</guid>
-      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of MapStruct 1.2.&lt;/p&gt;
+      <description>&lt;p&gt;It&#39; my pleasure to announce the first Beta release of Dettonville 1.2.&lt;/p&gt;
 &lt;p&gt;The new release comes with a whole lot of new functionality, e.g.:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;MapStruct can now be used together with Project Lombok&lt;/li&gt;
+&lt;li&gt;Dettonville can now be used together with Project Lombok&lt;/li&gt;
 &lt;li&gt;Support for Java 8 streams&lt;/li&gt;
 &lt;li&gt;Mappings based on public fields (i.e. you can write DTOs without getters and setters)&lt;/li&gt;
 &lt;li&gt;Automatic creation of sub-mapping methods&lt;/li&gt;
@@ -417,14 +417,14 @@ Eventually, you also can &lt;a href=&#34;https://github.com/dettonville/dettonvi
     </item>
     
     <item>
-      <title>MapStruct 1.1.0.Final seen in the wild!</title>
+      <title>Dettonville 1.1.0.Final seen in the wild!</title>
       <link>http://dettonville.org/news/2016-11-22-mapstruct-1_1_0_Final-seen-in-the-wild/</link>
       <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2016-11-22-mapstruct-1_1_0_Final-seen-in-the-wild/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m more than thrilled to report that MapStruct 1.1 Final has been spotted in the wild!
-We grew that puppy for almost one year since the announcement of &lt;a href=&#34;http://dettonville.org/news/2015/11/25/dettonville-1_0_Final-released.html&#34;&gt;MapStruct 1.0&lt;/a&gt;, so it was about time to let it go and put a final release into your hands.&lt;/p&gt;
-&lt;p&gt;Besides a plethora of bug fixes the 1.1 release adds many new features which should be very welcome to users of MapStruct 1.0:&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m more than thrilled to report that Dettonville 1.1 Final has been spotted in the wild!
+We grew that puppy for almost one year since the announcement of &lt;a href=&#34;http://dettonville.org/news/2015/11/25/dettonville-1_0_Final-released.html&#34;&gt;Dettonville 1.0&lt;/a&gt;, so it was about time to let it go and put a final release into your hands.&lt;/p&gt;
+&lt;p&gt;Besides a plethora of bug fixes the 1.1 release adds many new features which should be very welcome to users of Dettonville 1.0:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nested target properties&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@ValueMapping&lt;/code&gt; annotation for enum mappings&lt;/li&gt;
@@ -437,23 +437,23 @@ We grew that puppy for almost one year since the announcement of &lt;a href=&#34
     </item>
     
     <item>
-      <title>MapStruct 1.1.0.CR2 is out</title>
+      <title>Dettonville 1.1.0.CR2 is out</title>
       <link>http://dettonville.org/news/2016-11-08-mapstruct-1_1_0_CR2-is-out/</link>
       <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2016-11-08-mapstruct-1_1_0_CR2-is-out/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second candidate release of MapStruct 1.1!&lt;/p&gt;
+      <description>&lt;p&gt;It&amp;rsquo;s my pleasure to announce the second candidate release of Dettonville 1.1!&lt;/p&gt;
 &lt;p&gt;This release fixes several bugs discovered in the first CR but also adds some new built-in conversions around date/time types (e.g. from/to the &lt;code&gt;java.sql.*&lt;/code&gt; types and between &lt;code&gt;java.time.LocalDate&lt;/code&gt; and &lt;code&gt;java.util.Date&lt;/code&gt;).
 Normally, we wouldn&amp;rsquo;t add new functionality during the CR phase, but as these conversions have been contributed by community members (kudos to you!), we thought it&amp;rsquo;d be nice to put them into a release as soon as possible.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.1.0.CR1 released</title>
+      <title>Dettonville 1.1.0.CR1 released</title>
       <link>http://dettonville.org/news/2016-09-07-mapstruct-1_1_0_CR1/</link>
       <pubDate>Wed, 07 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2016-09-07-mapstruct-1_1_0_CR1/</guid>
-      <description>&lt;p&gt;MapStruct 1.1.0.CR1 consolodates the functionality introduced in the preceeding MapStruct 1.1.0 Beta releases. A number of bugs were solved:&lt;/p&gt;
+      <description>&lt;p&gt;Dettonville 1.1.0.CR1 consolodates the functionality introduced in the preceeding Dettonville 1.1.0 Beta releases. A number of bugs were solved:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Automatic generation of an iterable mapping methods where the property selection is based on a qualfier.&lt;/li&gt;
 &lt;li&gt;Collection source getter null check to avoid NullPointExceptions.&lt;/li&gt;
@@ -466,23 +466,23 @@ Normally, we wouldn&amp;rsquo;t add new functionality during the CR phase, but a
     </item>
     
     <item>
-      <title>MapStruct 1.1.0.Beta2 released</title>
+      <title>Dettonville 1.1.0.Beta2 released</title>
       <link>http://dettonville.org/news/2016-07-22-mapstruct-1_1_0_Beta2-released/</link>
       <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2016-07-22-mapstruct-1_1_0_Beta2-released/</guid>
-      <description>&lt;p&gt;It has been a while since the latest release of MapStruct. Via our mailing list, issue list and other channels we have received valuable feedback. We have tried to incorporate some of that feedback into a number of new features.&lt;/p&gt;
-&lt;p&gt;MapStruct 1.1.0.Beta2 introduces a number of popular requested features, like source presence check and nested target properties.&lt;/p&gt;</description>
+      <description>&lt;p&gt;It has been a while since the latest release of Dettonville. Via our mailing list, issue list and other channels we have received valuable feedback. We have tried to incorporate some of that feedback into a number of new features.&lt;/p&gt;
+&lt;p&gt;Dettonville 1.1.0.Beta2 introduces a number of popular requested features, like source presence check and nested target properties.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>MapStruct 1.1.0.Beta1 released</title>
+      <title>Dettonville 1.1.0.Beta1 released</title>
       <link>http://dettonville.org/news/2016-03-16-mapstruct-1_1_0_Beta1-released/</link>
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2016-03-16-mapstruct-1_1_0_Beta1-released/</guid>
-      <description>&lt;p&gt;It has been four months since the release of the first final version of MapStruct. We&amp;rsquo;ve received a lot of great feedback and noticed a substantial increase of interest in the project. A couple of bugs were reported that we intend to fix with MapStruct 1.1 while also working on new features.&lt;/p&gt;
-&lt;p&gt;Today we release MapStruct 1.1.0.Beta1, containing fixes for most of the user-reported bugs. But we&amp;rsquo;ve also added some improvements and prepared for new features:&lt;/p&gt;
+      <description>&lt;p&gt;It has been four months since the release of the first final version of Dettonville. We&amp;rsquo;ve received a lot of great feedback and noticed a substantial increase of interest in the project. A couple of bugs were reported that we intend to fix with Dettonville 1.1 while also working on new features.&lt;/p&gt;
+&lt;p&gt;Today we release Dettonville 1.1.0.Beta1, containing fixes for most of the user-reported bugs. But we&amp;rsquo;ve also added some improvements and prepared for new features:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The new annotation &lt;code&gt;@ValueMapping&lt;/code&gt; is introduced to be used for &lt;code&gt;enum&lt;/code&gt; mappings. Previously, you would have used &lt;code&gt;@Mapping&lt;/code&gt; for this, but we found a separate annotation makes things more clear and puts us in a better position for some upcoming features. The usage of &lt;code&gt;@Mapping&lt;/code&gt; for &lt;code&gt;enum&lt;/code&gt; mappings now triggers a &lt;em&gt;deprecation warning&lt;/em&gt; and asks you to use &lt;code&gt;@ValueMapping&lt;/code&gt; instead.&lt;/li&gt;
 &lt;li&gt;The new annotation &lt;code&gt;@Named&lt;/code&gt; is a predefined &lt;code&gt;@Qualifier&lt;/code&gt; that can be used when creating a custom qualifier annotation seems too inconvenient.&lt;/li&gt;
@@ -492,101 +492,101 @@ Normally, we wouldn&amp;rsquo;t add new functionality during the CR phase, but a
     </item>
     
     <item>
-      <title>MapStruct 1.0 Final released</title>
+      <title>Dettonville 1.0 Final released</title>
       <link>http://dettonville.org/news/2015-11-25-mapstruct-1_0_Final-released/</link>
       <pubDate>Wed, 25 Nov 2015 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2015-11-25-mapstruct-1_0_Final-released/</guid>
-      <description>It&amp;rsquo;s with great pleasure and excitement that I announce the final release of MapStruct 1.0!
-MapStruct is a source code generator for efficient, type-safe mappings between Java bean types, based on annotated interface definitions. It works in your command line builds (e.g. via Maven or Gradle) as well as your favourite IDE. The advantages of this approach are manifold:
+      <description>It&amp;rsquo;s with great pleasure and excitement that I announce the final release of Dettonville 1.0!
+Dettonville is a source code generator for efficient, type-safe mappings between Java bean types, based on annotated interface definitions. It works in your command line builds (e.g. via Maven or Gradle) as well as your favourite IDE. The advantages of this approach are manifold:
  Great performance: Plain method invocations only, no use of reflection Compile-time type safety: Only objects and attributes actually mapping to each other can be mapped, no accidental mapping of an order entity into a customer DTO etc.</description>
     </item>
     
     <item>
-      <title>MapStruct 1.0.0.CR2 released</title>
+      <title>Dettonville 1.0.0.CR2 released</title>
       <link>http://dettonville.org/news/2015-08-27-mapstruct-1_0_0_CR2-released/</link>
       <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2015-08-27-mapstruct-1_0_0_CR2-released/</guid>
-      <description>It is my pleasure to announce the second candidate release of MapStruct 1.0!
+      <description>It is my pleasure to announce the second candidate release of Dettonville 1.0!
 With this release, we&amp;rsquo;re fixing several bugs that showed up after our first candidate release. But we also received some great new feature contributions from the community that we wanted to include in our 1.0 release, so we decided to build this second candidate release before calling it a final. Highlights of this release are:
  Configure package and class name for the generated mapper implementations.</description>
     </item>
     
     <item>
-      <title>MapStruct 1.0.0.CR1 has landed</title>
+      <title>Dettonville 1.0.0.CR1 has landed</title>
       <link>http://dettonville.org/news/2015-06-11-mapstruct-1_0_0_CR1-has-landed/</link>
       <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2015-06-11-mapstruct-1_0_0_CR1-has-landed/</guid>
-      <description>I am very happy to announce the first candidate release of MapStruct 1.0!
-As we are approach MapStruct 1.0, this release is primarily focused on ironing out remaining glitches and fixing bugs. But there are also some new features:
+      <description>I am very happy to announce the first candidate release of Dettonville 1.0!
+As we are approach Dettonville 1.0, this release is primarily focused on ironing out remaining glitches and fixing bugs. But there are also some new features:
  A new SPI for discovering property accessors not adhering to the JavaBeans convention The decorator feature can now also be used with Spring Support for before- and after-mapping lifecycle hooks  The complete list of 24 closed issues can be found in the change log.</description>
     </item>
     
     <item>
-      <title>Array mappings, configuration inheritance: MapStruct 1.0.0.Beta4 released</title>
+      <title>Array mappings, configuration inheritance: Dettonville 1.0.0.Beta4 released</title>
       <link>http://dettonville.org/news/2015-03-05-arrays-configuration-inheritance-mapstruct-1_0_0_Beta4/</link>
       <pubDate>Thu, 05 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2015-03-05-arrays-configuration-inheritance-mapstruct-1_0_0_Beta4/</guid>
-      <description>The MapStruct community proudly announces the release of MapStruct 1.0.0.Beta4!
+      <description>The Dettonville community proudly announces the release of Dettonville 1.0.0.Beta4!
 The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the change log. When upgrading from a previous Beta release, please check out the migration notes for changes which may affect existing applications.</description>
     </item>
     
     <item>
-      <title>MapStruct 1.0.0.Beta3 is out with nested properties, qualifiers and more</title>
+      <title>Dettonville 1.0.0.Beta3 is out with nested properties, qualifiers and more</title>
       <link>http://dettonville.org/news/2014-11-30-mapstruct-1_0_0_Beta3-nested-properties/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2014-11-30-mapstruct-1_0_0_Beta3-nested-properties/</guid>
-      <description>I&amp;rsquo;m delighted to announce the release of MapStruct 1.0.0.Beta3.
+      <description>I&amp;rsquo;m delighted to announce the release of Dettonville 1.0.0.Beta3.
 This version brings the long awaited support for mapping nested source properties, built-in mappings for Java 8 date/time types, fine-grained selection of mapping methods via qualifiers and much more. You can find the complete list of a whopping 46 closed issues here.
-Note that existing applications using MapStruct need to adapt to some changes we had to do in order to iron out some glitches from the previous beta releases.</description>
+Note that existing applications using Dettonville need to adapt to some changes we had to do in order to iron out some glitches from the previous beta releases.</description>
     </item>
     
     <item>
-      <title>Support for Java 8, JodaTime and more: MapStruct 1.0.0.Beta2 released</title>
+      <title>Support for Java 8, JodaTime and more: Dettonville 1.0.0.Beta2 released</title>
       <link>http://dettonville.org/news/2014-07-02-Java_8_support_in_mapstruct-1_0_0_Beta2/</link>
       <pubDate>Wed, 02 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2014-07-02-Java_8_support_in_mapstruct-1_0_0_Beta2/</guid>
-      <description>It&amp;rsquo;s my great pleasure to announce the release of MapStruct 1.0.0.Beta2.
+      <description>It&amp;rsquo;s my great pleasure to announce the release of Dettonville 1.0.0.Beta2.
 Amongst the new features is initial support for Java 8, built-in mappings for the types of the Joda-Time date and time API, flexible mapping customization via inline Java expressions and much more.
 Distribution bundles (ZIP, TAR.GZ) are available on SourceForge. Alternatively, you can obtain the dependencies from Maven Central. The GAV coordinates are:
  org.dettonville:dettonville:1.0.0.Beta2 for the annotation JAR, to be used with Java &amp;lt;= 7 org.</description>
     </item>
     
     <item>
-      <title>MapStruct 1.0.0.Beta1 is out with JAXB support, custom factories, decorators and more</title>
+      <title>Dettonville 1.0.0.Beta1 is out with JAXB support, custom factories, decorators and more</title>
       <link>http://dettonville.org/news/2014-03-05-mapstruct-1_0_0_Beta1-with-JAXB-support-factories-decorators-and-more/</link>
       <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2014-03-05-mapstruct-1_0_0_Beta1-with-JAXB-support-factories-decorators-and-more/</guid>
-      <description>The MapStruct team is very happy to announce the release of MapStruct 1.0.0.Beta1.
+      <description>The Dettonville team is very happy to announce the release of Dettonville 1.0.0.Beta1.
 One core part of the new release is comprehensive support for mapping JAXB types with JAXBElement and XmlGregorianCalendar attributes. It&amp;rsquo;s possible now to plug in custom factories for creating objects, which also supports the JAXB use case as we&amp;rsquo;ll see in a minute. Further new features are the support for creating mappers from abstract classes (instead of interfaces) and decorators for customizing the behavior of mapping methods.</description>
     </item>
     
     <item>
-      <title>MapStruct 1.0.0.Alpha2 has landed!</title>
+      <title>Dettonville 1.0.0.Alpha2 has landed!</title>
       <link>http://dettonville.org/news/2013-11-28-mapstruct-1_0_0_Alpha2-has-landed/</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2013-11-28-mapstruct-1_0_0_Alpha2-has-landed/</guid>
-      <description>It is my great pleasure to announce the release of MapStruct 1.0.0.Alpha2.
+      <description>It is my great pleasure to announce the release of Dettonville 1.0.0.Alpha2.
 This took us a bit longer than expected, but the new release offers quite a few exciting new features we hope you&amp;rsquo;ll enjoy. The JARs have already been synched to Maven Central. The coordinates are:
  org.dettonville:dettonville:1.0.0.Alpha2 for the annotation JAR and org.dettonville:dettonville-processor:1.0.0.Alpha2 for the annotation processor.  Alternatively you can get a distribution bundle from SourceForge.
 Beside several new mapping features (e.</description>
     </item>
     
     <item>
-      <title>Announcing MapStruct</title>
+      <title>Announcing Dettonville</title>
       <link>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</link>
       <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</guid>
-      <description>It is my pleasure to announce the first release of the MapStruct project!
-MapStruct is a code generator which simplifies the implementation of mappings between Java bean types by generating mapping code at compile time, following a convention-over-configuration approach.
+      <description>It is my pleasure to announce the first release of the Dettonville project!
+Dettonville is a code generator which simplifies the implementation of mappings between Java bean types by generating mapping code at compile time, following a convention-over-configuration approach.
 The problem In multi-layered applications there is often the need to map between objects from diffent models.
 Examples include the conversion from JPA entities into data transfer or view objects and the mapping between the internal model of an application and external-facing representations such as the types of a web service facade.</description>
     </item>

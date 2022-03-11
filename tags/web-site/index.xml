@@ -13,7 +13,7 @@
       <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2017-01-02-new-year-new-website/</guid>
-      <description>&lt;p&gt;The MapStruct team wishes a Happy New Year to all our users out there!&lt;/p&gt;
+      <description>&lt;p&gt;The Dettonville team wishes a Happy New Year to all our users out there!&lt;/p&gt;
 &lt;p&gt;To start the new year fresh, we&amp;rsquo;ve given some love to our website. While its looks only slightly changed, its inner workings have been overhauled from ground up. It&amp;rsquo;s driven by &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; now, a static website generator written in Go which is very popular these days.&lt;/p&gt;</description>
     </item>
     
@@ -23,7 +23,7 @@
       <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
       
       <guid>http://dettonville.org/news/2013-05-22-website-live/</guid>
-      <description>MapStruct has now its own web site, dettonville.org!</description>
+      <description>Dettonville has now its own web site, dettonville.org!</description>
     </item>
     
   </channel>

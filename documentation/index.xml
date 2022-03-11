@@ -13,8 +13,8 @@
       <pubDate>Fri, 22 Feb 2019 14:00:00 +0100</pubDate>
       
       <guid>http://dettonville.org/documentation/installation/</guid>
-      <description>Distribution Bundle You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from GitHub.
-Apache Maven If you&amp;rsquo;re using Maven to build your project add the following to your pom.xml to use MapStruct:
+      <description>Distribution Bundle You can obtain a distribution bundle containing the Dettonville binaries, source code and API documentation from GitHub.
+Apache Maven If you&amp;rsquo;re using Maven to build your project add the following to your pom.xml to use Dettonville:
 ... &amp;lt;properties&amp;gt; &amp;lt;org.dettonville.version&amp;gt;1.4.2.Final&amp;lt;/org.dettonville.version&amp;gt; &amp;lt;/properties&amp;gt; ... &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.dettonville&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;dettonville&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${org.dettonville.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt; &amp;lt;!-- depending on your project --&amp;gt; &amp;lt;annotationProcessorPaths&amp;gt; &amp;lt;path&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
@@ -37,7 +37,7 @@ Apache Maven If you&amp;rsquo;re using Maven to build your project add the follo
       <pubDate>Wed, 04 Jan 2017 21:20:00 +0100</pubDate>
       
       <guid>http://dettonville.org/documentation/ide-support/</guid>
-      <description>One of the big advantages of MapStruct is the early feedback on problems with the mapping configuration. To fully leverage this in your IDE, make sure the annotation processor runs with each compilation.
+      <description>One of the big advantages of Dettonville is the early feedback on problems with the mapping configuration. To fully leverage this in your IDE, make sure the annotation processor runs with each compilation.
 Eclipse Maven Integration If you are working with a Maven project, then make sure you have the latest version of the m2e-apt plugin installed, which picks up and applies the annotation processor settings automatically.
 For best results, add the following to the pom.</description>
     </item>

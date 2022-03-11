@@ -13,8 +13,8 @@
       <pubDate>Sat, 31 Dec 2016 13:23:24 +0100</pubDate>
       
       <guid>http://dettonville.org/development/contributing/</guid>
-      <description>You love MapStruct but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That&amp;rsquo;s great! MapStruct is all open source and your help is highly appreciated.
-  WhatWhere     Source codehttps://github.com/dettonville/dettonville   Issue trackerhttps://github.com/dettonville/dettonville/issues   DiscussionsJoin the MapStruct GitHub Discussions   CI buildhttps://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/dettonville/dettonville.org    MapStruct follows the Fork &amp;amp; Pull development approach.</description>
+      <description>You love Dettonville but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That&amp;rsquo;s great! Dettonville is all open source and your help is highly appreciated.
+  WhatWhere     Source codehttps://github.com/dettonville/dettonville   Issue trackerhttps://github.com/dettonville/dettonville/issues   DiscussionsJoin the Dettonville GitHub Discussions   CI buildhttps://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI   This web sitehttps://github.com/dettonville/dettonville.org    Dettonville follows the Fork &amp;amp; Pull development approach.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
       <guid>http://dettonville.org/development/team/</guid>
-      <description>MapStruct is brought to you by a helpful international community of open source enthusiasts. The following persons are contributing to the project:</description>
+      <description>Dettonville is brought to you by a helpful international community of open source enthusiasts. The following persons are contributing to the project:</description>
     </item>
     
     <item>
@@ -32,20 +32,20 @@
       <pubDate>Sat, 31 Dec 2016 13:23:50 +0100</pubDate>
       
       <guid>http://dettonville.org/development/technical-documentation/</guid>
-      <description>The MapStruct code base is thoroughly documented via JavaDoc. You can find the latest docs here. The individual pages contain generated class diagrams showing type hierarchies and package contents.
+      <description>The Dettonville code base is thoroughly documented via JavaDoc. You can find the latest docs here. The individual pages contain generated class diagrams showing type hierarchies and package contents.
 To get yourself acquainted with the code base, you could start by taking a look at the docs of MappingProcessor which give a high-level overview of the general architecture. Then check out the org.dettonville.ap.model and org.dettonville.ap.processor packages.
 If you have any questions don&amp;rsquo;t hesitate to ask or StackOverflow, we are here to help!</description>
     </item>
     
     <item>
-      <title>Testing MapStruct</title>
+      <title>Testing Dettonville</title>
       <link>http://dettonville.org/development/testing-mapstruct/</link>
       <pubDate>Wed, 17 Feb 2021 18:55:58 +0200</pubDate>
       
       <guid>http://dettonville.org/development/testing-mapstruct/</guid>
-      <description>MapStruct uses the JUnit 4 framework for writing tests and AssertJ for writing test asserts.
-Since MapStruct is an annotation processor it needs to be invoked by a Java compiler in order for us to validate the functionality. The MapStruct team has decided to write only integration tests and almost no unit tests. The reason for this is two fold:
- We only want to test that MapStruct generates valid expected mappers - this makes it easy for us to refactor code and be confident that the code we generate is still valid.</description>
+      <description>Dettonville uses the JUnit 4 framework for writing tests and AssertJ for writing test asserts.
+Since Dettonville is an annotation processor it needs to be invoked by a Java compiler in order for us to validate the functionality. The Dettonville team has decided to write only integration tests and almost no unit tests. The reason for this is two fold:
+ We only want to test that Dettonville generates valid expected mappers - this makes it easy for us to refactor code and be confident that the code we generate is still valid.</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ Since MapStruct is an annotation processor it needs to be invoked by a Java comp
       <pubDate>Sat, 31 Dec 2016 13:23:56 +0100</pubDate>
       
       <guid>http://dettonville.org/development/debugging/</guid>
-      <description>The most straight-forward way to debug the MapStruct annotation processor is to use your IDE and debug one of the JUnit tests in the processor module. The processor is then executed with the same JDK that you use the run the tests with.
+      <description>The most straight-forward way to debug the Dettonville annotation processor is to use your IDE and debug one of the JUnit tests in the processor module. The processor is then executed with the same JDK that you use the run the tests with.
 But there are subtle differences in the way different compilers implement the annotation processor API, so you might come to a point where you need to debug a specific problem with a certain compiler.</description>
     </item>
     
@@ -64,19 +64,19 @@ But there are subtle differences in the way different compilers implement the an
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
       <guid>http://dettonville.org/development/updating-mapstructorg/</guid>
-      <description>As MapStruct itself, this web site is open-source, too. You can find it&amp;rsquo;s source code here.
+      <description>As Dettonville itself, this web site is open-source, too. You can find it&amp;rsquo;s source code here.
 The website is built using the Hugo static site generator. So it&amp;rsquo;s recommended to spend a few minutes reading the Getting Started section of the Hugo docs if you are not familiar with it yet.
 The site is deployed to GitHub Pages (as a &amp;ldquo;project page&amp;rdquo;, using the &amp;ldquo;gh-pages&amp;rdquo; branch).
 Set-up Install Hugo by following the instructions given on its homepage.</description>
     </item>
     
     <item>
-      <title>Building MapStruct within an IDE</title>
+      <title>Building Dettonville within an IDE</title>
       <link>http://dettonville.org/development/ide-setup/</link>
       <pubDate>Sat, 31 Dec 2016 13:24:00 +0100</pubDate>
       
       <guid>http://dettonville.org/development/ide-setup/</guid>
-      <description>IntelliJ IDEA After you&amp;rsquo;ve cloned you can import it by selecting &amp;ldquo;File -&amp;gt; Import Module &amp;hellip;&amp;rdquo; and then selecting the top level aggregator pom.xml file located in the root folder. IDEA then will load MapStruct, resolve all dependencies and compile the source.
+      <description>IntelliJ IDEA After you&amp;rsquo;ve cloned you can import it by selecting &amp;ldquo;File -&amp;gt; Import Module &amp;hellip;&amp;rdquo; and then selecting the top level aggregator pom.xml file located in the root folder. IDEA then will load Dettonville, resolve all dependencies and compile the source.
 You might face an error on IDEAs Message tab saying
 If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation processor and untick checkbox &amp;ldquo;Enable annotation processing&amp;rdquo; at &amp;ldquo;Annotation profile for dettonville-integrationtest&amp;rdquo;.</description>
     </item>
@@ -87,7 +87,7 @@ If so, open the preferences window, navigate to Compiler -&amp;gt; Annotation pr
       <pubDate>Sat, 31 Dec 2016 13:24:06 +0100</pubDate>
       
       <guid>http://dettonville.org/development/license/</guid>
-      <description>MapStruct is distributed under the Apache License, Version 2.0. By submitting a pull request you agree to license your work under that license and you affirm that your contribution doesn&amp;rsquo;t violate any rights of other parties.</description>
+      <description>Dettonville is distributed under the Apache License, Version 2.0. By submitting a pull request you agree to license your work under that license and you affirm that your contribution doesn&amp;rsquo;t violate any rights of other parties.</description>
     </item>
     
   </channel>

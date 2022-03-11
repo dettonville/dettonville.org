@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.15">
-<meta name="author" content="Gunnar Morling, Andreas Gudian, Sjaak Derksen, Filip Hrisafov and the MapStruct community">
-<title>MapStruct 1.5.0.Beta2 Reference Guide</title>
+<meta name="author" content="Gunnar Morling, Andreas Gudian, Sjaak Derksen, Filip Hrisafov and the Dettonville community">
+<title>Dettonville 1.5.0.Beta2 Reference Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -528,9 +528,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>MapStruct 1.5.0.Beta2 Reference Guide</h1>
+<h1>Dettonville 1.5.0.Beta2 Reference Guide</h1>
 <div class="details">
-<span id="author" class="author">Gunnar Morling, Andreas Gudian, Sjaak Derksen, Filip Hrisafov and the MapStruct community</span><br>
+<span id="author" class="author">Gunnar Morling, Andreas Gudian, Sjaak Derksen, Filip Hrisafov and the Dettonville community</span><br>
 <span id="revdate">2021-12-12</span>
 </div>
 <div id="toc" class="toc2">
@@ -544,7 +544,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_gradle">2.2. Gradle</a></li>
 <li><a href="#_apache_ant">2.3. Apache Ant</a></li>
 <li><a href="#configuration-options">2.4. Configuration options</a></li>
-<li><a href="#_using_dettonville_with_the_java_module_system">2.5. Using MapStruct with the Java Module System</a></li>
+<li><a href="#_using_dettonville_with_the_java_module_system">2.5. Using Dettonville with the Java Module System</a></li>
 </ul>
 </li>
 <li><a href="#defining-mapper">3. Defining a mapper</a>
@@ -626,7 +626,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#customizing-mappings-with-before-and-after">12.2. Mapping customization with before-mapping and after-mapping methods</a></li>
 </ul>
 </li>
-<li><a href="#using-spi">13. Using the MapStruct SPI</a>
+<li><a href="#using-spi">13. Using the Dettonville SPI</a>
 <ul class="sectlevel2">
 <li><a href="#_custom_accessor_naming_strategy">13.1. Custom Accessor Naming Strategy</a></li>
 <li><a href="#_mapping_exclusion_provider">Mapping Exclusion Provider</a></li>
@@ -649,11 +649,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <h2 id="Preface"><a class="anchor" href="#Preface"></a>Preface</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the reference documentation of MapStruct, an annotation processor for generating type-safe, performant and dependency-free bean mapping code.
-This guide covers all the functionality provided by MapStruct. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://github.com/dettonville/dettonville/discussions">GitHub Discussions</a> to get help.</p>
+<p>This is the reference documentation of Dettonville, an annotation processor for generating type-safe, performant and dependency-free bean mapping code.
+This guide covers all the functionality provided by Dettonville. In case this guide doesn&#8217;t answer all your questions just join the Dettonville <a href="https://github.com/dettonville/dettonville/discussions">GitHub Discussions</a> to get help.</p>
 </div>
 <div class="paragraph">
-<p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville">MapStruct GitHub repository</a>,
+<p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville">Dettonville GitHub repository</a>,
 or, better yet, help the community and send a pull request for fixing it!</p>
 </div>
 <div class="paragraph">
@@ -665,16 +665,16 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>MapStruct is a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> for the generation of type-safe bean mapping classes.</p>
+<p>Dettonville is a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> for the generation of type-safe bean mapping classes.</p>
 </div>
 <div class="paragraph">
-<p>All you have to do is to define a mapper interface which declares any required mapping methods. During compilation, MapStruct will generate an implementation of this interface. This implementation uses plain Java method invocations for mapping between source and target objects, i.e. no reflection or similar.</p>
+<p>All you have to do is to define a mapper interface which declares any required mapping methods. During compilation, Dettonville will generate an implementation of this interface. This implementation uses plain Java method invocations for mapping between source and target objects, i.e. no reflection or similar.</p>
 </div>
 <div class="paragraph">
-<p>Compared to writing mapping code from hand, MapStruct saves time by generating code which is tedious and error-prone to write. Following a convention over configuration approach, MapStruct uses sensible defaults but steps out of your way when it comes to configuring or implementing special behavior.</p>
+<p>Compared to writing mapping code from hand, Dettonville saves time by generating code which is tedious and error-prone to write. Following a convention over configuration approach, Dettonville uses sensible defaults but steps out of your way when it comes to configuring or implementing special behavior.</p>
 </div>
 <div class="paragraph">
-<p>Compared to dynamic mapping frameworks, MapStruct offers the following advantages:</p>
+<p>Compared to dynamic mapping frameworks, Dettonville offers the following advantages:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -705,7 +705,7 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 <h2 id="setup"><a class="anchor" href="#setup"></a>2. Set up</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>MapStruct is a Java annotation processor based on <a href="http://www.jcp.org/en/jsr/detail?id=269">JSR 269</a> and as such can be used within command line builds (javac, Ant, Maven etc.) as well as from within your IDE.</p>
+<p>Dettonville is a Java annotation processor based on <a href="http://www.jcp.org/en/jsr/detail?id=269">JSR 269</a> and as such can be used within command line builds (javac, Ant, Maven etc.) as well as from within your IDE.</p>
 </div>
 <div class="paragraph">
 <p>It comprises the following artifacts:</p>
@@ -723,7 +723,7 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 <div class="sect2">
 <h3 id="_apache_maven"><a class="anchor" href="#_apache_maven"></a>2.1. Apache Maven</h3>
 <div class="paragraph">
-<p>For Maven based projects add the following to your POM file in order to use MapStruct:</p>
+<p>For Maven based projects add the following to your POM file in order to use Dettonville:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 1. Maven configuration</div>
@@ -814,12 +814,12 @@ or, better yet, help the community and send a pull request for fixing it!</p>
 <td class="content">
 <div class="paragraph">
 <p>If you are working with the Eclipse IDE, make sure to have a current version of the <a href="http://www.eclipse.org/m2e/">M2E plug-in</a>.
-When importing a Maven project configured as shown above, it will set up the MapStruct annotation processor so it runs right in the IDE, whenever you save a mapper type.
+When importing a Maven project configured as shown above, it will set up the Dettonville annotation processor so it runs right in the IDE, whenever you save a mapper type.
 Neat, isn&#8217;t it?</p>
 </div>
 <div class="paragraph">
 <p>To double check that everything is working as expected, go to your project&#8217;s properties and select "Java Compiler" &#8594; "Annotation Processing" &#8594; "Factory Path".
-The MapStruct processor JAR should be listed and enabled there.
+The Dettonville processor JAR should be listed and enabled there.
 Any processor options configured via the compiler plug-in (see below) should be listed under "Java Compiler" &#8594; "Annotation Processing".</p>
 </div>
 <div class="paragraph">
@@ -839,7 +839,7 @@ It will not work with older versions.</p>
 <div class="sect2">
 <h3 id="_gradle"><a class="anchor" href="#_gradle"></a>2.2. Gradle</h3>
 <div class="paragraph">
-<p>Add the following to your Gradle build file in order to enable MapStruct:</p>
+<p>Add the following to your Gradle build file in order to enable Dettonville:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 2. Gradle configuration</div>
@@ -890,7 +890,7 @@ dependencies {
 <div class="sect2">
 <h3 id="_apache_ant"><a class="anchor" href="#_apache_ant"></a>2.3. Apache Ant</h3>
 <div class="paragraph">
-<p>Add the <code>javac</code> task configured as follows to your <em>build.xml</em> file in order to enable MapStruct in your Ant-based project. Adjust the paths as required for your project layout.</p>
+<p>Add the <code>javac</code> task configured as follows to your <em>build.xml</em> file in order to enable Dettonville in your Ant-based project. Adjust the paths as required for your project layout.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 3. Ant configuration</div>
@@ -929,10 +929,10 @@ dependencies {
 <div class="sect2">
 <h3 id="configuration-options"><a class="anchor" href="#configuration-options"></a>2.4. Configuration options</h3>
 <div class="paragraph">
-<p>The MapStruct code generator can be configured using <em>annotation processor options</em>.</p>
+<p>The Dettonville code generator can be configured using <em>annotation processor options</em>.</p>
 </div>
 <div class="paragraph">
-<p>When invoking javac directly, these options are passed to the compiler in the form <em>-Akey=value</em>. When using MapStruct via Maven, any processor options can be passed using an <code>options</code> element within the configuration of the Maven processor plug-in like this:</p>
+<p>When invoking javac directly, these options are passed to the compiler in the form <em>-Akey=value</em>. When using Dettonville via Maven, any processor options can be passed using an <code>options</code> element within the configuration of the Maven processor plug-in like this:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 4. Maven configuration</div>
@@ -1042,7 +1042,7 @@ compileJava {
 <p>The following options exist:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. MapStruct processor options</caption>
+<caption class="title">Table 1. Dettonville processor options</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -1067,7 +1067,7 @@ suppressGeneratorTimestamp</code></p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.verbose</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If set to <code>true</code>, MapStruct in which MapStruct logs its major decisions. Note, at the moment of writing in Maven, also <code>showWarnings</code> needs to be added due to a problem in the maven-compiler-plugin configuration.</p>
+<p>If set to <code>true</code>, Dettonville in which Dettonville logs its major decisions. Note, at the moment of writing in Maven, also <code>showWarnings</code> needs to be added due to a problem in the maven-compiler-plugin configuration.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 </tr>
@@ -1075,7 +1075,7 @@ suppressGeneratorTimestamp</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>dettonville.
 suppressGeneratorVersionInfoComment</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If set to <code>true</code>, the creation of the <code>comment</code> attribute in the <code>@Generated</code> annotation in the generated mapper classes is suppressed. The comment contains information about the version of MapStruct and about the compiler used for the annotation processing.</p>
+<p>If set to <code>true</code>, the creation of the <code>comment</code> attribute in the <code>@Generated</code> annotation in the generated mapper classes is suppressed. The comment contains information about the version of Dettonville and about the compiler used for the annotation processing.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 </tr>
@@ -1191,9 +1191,9 @@ If a policy is given for a specific bean mapping via <code>@BeanMapping#ignoreUn
 </table>
 </div>
 <div class="sect2">
-<h3 id="_using_dettonville_with_the_java_module_system"><a class="anchor" href="#_using_dettonville_with_the_java_module_system"></a>2.5. Using MapStruct with the Java Module System</h3>
+<h3 id="_using_dettonville_with_the_java_module_system"><a class="anchor" href="#_using_dettonville_with_the_java_module_system"></a>2.5. Using Dettonville with the Java Module System</h3>
 <div class="paragraph">
-<p>MapStruct can be used with Java 9 and higher versions.</p>
+<p>Dettonville can be used with Java 9 and higher versions.</p>
 </div>
 <div class="paragraph">
 <p>To allow usage of the <code>@Generated</code> annotation <code>java.annotation.processing.Generated</code> (part of the <code>java.compiler</code> module) can be enabled.</p>
@@ -1205,7 +1205,7 @@ If a policy is given for a specific bean mapping via <code>@BeanMapping#ignoreUn
 <h2 id="defining-mapper"><a class="anchor" href="#defining-mapper"></a>3. Defining a mapper</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section you&#8217;ll learn how to define a bean mapper with MapStruct and which options you have to do so.</p>
+<p>In this section you&#8217;ll learn how to define a bean mapper with Dettonville and which options you have to do so.</p>
 </div>
 <div class="sect2">
 <h3 id="basic-mappings"><a class="anchor" href="#basic-mappings"></a>3.1. Basic mappings</h3>
@@ -1245,7 +1245,7 @@ If a policy is given for a specific bean mapping via <code>@BeanMapping#ignoreUn
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>@Mapper</code> annotation causes the MapStruct code generator to create an implementation of the <code>CarMapper</code> interface during build-time.</p>
+<p>The <code>@Mapper</code> annotation causes the Dettonville code generator to create an implementation of the <code>CarMapper</code> interface during build-time.</p>
 </div>
 <div class="paragraph">
 <p>In the generated method implementations all readable properties from the source type (e.g. <code>Car</code>) will be copied into the corresponding property in the target type (e.g. <code>CarDto</code>):</p>
@@ -1315,10 +1315,10 @@ Fluent setters are setters that return the same type as the type being modified.
 </table>
 </div>
 <div class="paragraph">
-<p>To get a better understanding of what MapStruct does have a look at the following implementation of the <code>carToCarDto()</code> method as generated by MapStruct:</p>
+<p>To get a better understanding of what Dettonville does have a look at the following implementation of the <code>carToCarDto()</code> method as generated by Dettonville:</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 7. Code generated by MapStruct</div>
+<div class="title">Example 7. Code generated by Dettonville</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -1418,27 +1418,27 @@ Fluent setters are setters that return the same type as the type being modified.
 </div>
 </div>
 <div class="paragraph">
-<p>The general philosophy of MapStruct is to generate code which looks as much as possible as if you had written it yourself from hand. In particular this means that the values are copied from source to target by plain getter/setter invocations instead of reflection or similar.</p>
+<p>The general philosophy of Dettonville is to generate code which looks as much as possible as if you had written it yourself from hand. In particular this means that the values are copied from source to target by plain getter/setter invocations instead of reflection or similar.</p>
 </div>
 <div class="paragraph">
 <p>As the example shows the generated code takes into account any name mappings specified via <code>@Mapping</code>.
 If the type of a mapped attribute is different in source and target entity,
-MapStruct will either apply an automatic conversion (as e.g. for the <em>price</em> property, see also <a href="#implicit-type-conversions">Implicit type conversions</a>)
+Dettonville will either apply an automatic conversion (as e.g. for the <em>price</em> property, see also <a href="#implicit-type-conversions">Implicit type conversions</a>)
 or optionally invoke / create another mapping method (as e.g. for the <em>driver</em> / <em>engine</em> property, see also <a href="#mapping-object-references">Mapping object references</a>).
-MapStruct will only create a new mapping method if and only if the source and target property are properties of a Bean and they themselves are Beans or simple properties.
+Dettonville will only create a new mapping method if and only if the source and target property are properties of a Bean and they themselves are Beans or simple properties.
 i.e. they are not <code>Collection</code> or <code>Map</code> type properties.</p>
 </div>
 <div class="paragraph">
 <p>Collection-typed attributes with the same element type will be copied by creating a new instance of the target collection type containing the elements from the source property. For collection-typed attributes with different element types each element will be mapped individually and added to the target collection (see <a href="#mapping-collections">Mapping collections</a>).</p>
 </div>
 <div class="paragraph">
-<p>MapStruct takes all public properties of the source and target types into account. This includes properties declared on super-types.</p>
+<p>Dettonville takes all public properties of the source and target types into account. This includes properties declared on super-types.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="mapping-composition"><a class="anchor" href="#mapping-composition"></a>3.2. Mapping Composition (experimental)</h3>
 <div class="paragraph">
-<p>MapStruct supports the use of meta annotations. The <code>@Mapping</code> annotation supports now <code>@Target</code> with <code>ElementType#ANNOTATION_TYPE</code> in addition to <code>ElementType#METHOD</code>. This allows <code>@Mapping</code> to be used on other (user defined) annotations for re-use purposes. For example:</p>
+<p>Dettonville supports the use of meta annotations. The <code>@Mapping</code> annotation supports now <code>@Target</code> with <code>ElementType#ANNOTATION_TYPE</code> in addition to <code>ElementType#METHOD</code>. This allows <code>@Mapping</code> to be used on other (user defined) annotations for re-use purposes. For example:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -1515,13 +1515,13 @@ Therefore, the user should use this feature with care, especially when uncertain
 <div class="sect2">
 <h3 id="adding-custom-methods"><a class="anchor" href="#adding-custom-methods"></a>3.3. Adding custom methods to mappers</h3>
 <div class="paragraph">
-<p>In some cases it can be required to manually implement a specific mapping from one type to another which can&#8217;t be generated by MapStruct. One way to handle this is to implement the custom method on another class which then is used by mappers generated by MapStruct (see <a href="#invoking-other-mappers">Invoking other mappers</a>).</p>
+<p>In some cases it can be required to manually implement a specific mapping from one type to another which can&#8217;t be generated by Dettonville. One way to handle this is to implement the custom method on another class which then is used by mappers generated by Dettonville (see <a href="#invoking-other-mappers">Invoking other mappers</a>).</p>
 </div>
 <div class="paragraph">
 <p>Alternatively, when using Java 8 or later, you can implement custom methods directly in a mapper interface as default methods. The generated code will invoke the default methods if the argument and return types match.</p>
 </div>
 <div class="paragraph">
-<p>As an example let&#8217;s assume the mapping from <code>Person</code> to <code>PersonDto</code> requires some special logic which can&#8217;t be generated by MapStruct. You could then define the mapper from the previous example like this:</p>
+<p>As an example let&#8217;s assume the mapping from <code>Person</code> to <code>PersonDto</code> requires some special logic which can&#8217;t be generated by Dettonville. You could then define the mapper from the previous example like this:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 8. Mapper which defines a custom mapping with a default method</div>
@@ -1558,10 +1558,10 @@ Therefore, the user should use this feature with care, especially when uncertain
 </div>
 </div>
 <div class="paragraph">
-<p>The class generated by MapStruct implements the method <code>carToCarDto()</code>. The generated code in <code>carToCarDto()</code> will invoke the manually implemented <code>personToPersonDto()</code> method when mapping the <code>driver</code> attribute.</p>
+<p>The class generated by Dettonville implements the method <code>carToCarDto()</code>. The generated code in <code>carToCarDto()</code> will invoke the manually implemented <code>personToPersonDto()</code> method when mapping the <code>driver</code> attribute.</p>
 </div>
 <div class="paragraph">
-<p>A mapper could also be defined in the form of an abstract class instead of an interface and implement the custom methods directly in the mapper class. In this case MapStruct will generate an extension of the abstract class with implementations of all abstract methods. An advantage of this approach over declaring default methods is that additional fields could be declared in the mapper class.</p>
+<p>A mapper could also be defined in the form of an abstract class instead of an interface and implement the custom methods directly in the mapper class. In this case Dettonville will generate an extension of the abstract class with implementations of all abstract methods. An advantage of this approach over declaring default methods is that additional fields could be declared in the mapper class.</p>
 </div>
 <div class="paragraph">
 <p>The previous example where the mapping from <code>Person</code> to <code>PersonDto</code> requires some special logic could then be defined like this:</p>
@@ -1601,13 +1601,13 @@ Therefore, the user should use this feature with care, especially when uncertain
 </div>
 </div>
 <div class="paragraph">
-<p>MapStruct will generate a sub-class of <code>CarMapper</code> with an implementation of the <code>carToCarDto()</code> method as it is declared abstract. The generated code in <code>carToCarDto()</code> will invoke the manually implemented <code>personToPersonDto()</code> method when mapping the <code>driver</code> attribute.</p>
+<p>Dettonville will generate a sub-class of <code>CarMapper</code> with an implementation of the <code>carToCarDto()</code> method as it is declared abstract. The generated code in <code>carToCarDto()</code> will invoke the manually implemented <code>personToPersonDto()</code> method when mapping the <code>driver</code> attribute.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="mappings-with-several-source-parameters"><a class="anchor" href="#mappings-with-several-source-parameters"></a>3.4. Mapping methods with several source parameters</h3>
 <div class="paragraph">
-<p>MapStruct also supports mapping methods with several source parameters. This is useful e.g. in order to combine several entities into one data transfer object. The following shows an example:</p>
+<p>Dettonville also supports mapping methods with several source parameters. This is useful e.g. in order to combine several entities into one data transfer object. The following shows an example:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 10. Mapping method with several source parameters</div>
@@ -1670,7 +1670,7 @@ Therefore, the user should use this feature with care, especially when uncertain
 </table>
 </div>
 <div class="paragraph">
-<p>MapStruct also offers the possibility to directly refer to a source parameter.</p>
+<p>Dettonville also offers the possibility to directly refer to a source parameter.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 11. Mapping method directly referring to a source parameter</div>
@@ -1706,7 +1706,7 @@ Therefore, the user should use this feature with care, especially when uncertain
 <h3 id="mapping-nested-bean-properties-to-current-target"><a class="anchor" href="#mapping-nested-bean-properties-to-current-target"></a>3.5. Mapping nested bean properties to current target</h3>
 <div class="paragraph">
 <p>If you don&#8217;t want explicitly name all properties from nested source bean, you can use <code>.</code> as target.
- This will tell MapStruct to map every property from source bean to target object. The following shows an example:</p>
+ This will tell Dettonville to map every property from source bean to target object. The following shows an example:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 12. use of "target this" annotation "."</div>
@@ -1784,7 +1784,7 @@ The same goes for <code>Customer.account</code>.</p>
 <div class="sect2">
 <h3 id="direct-field-mappings"><a class="anchor" href="#direct-field-mappings"></a>3.7. Mappings with direct field access</h3>
 <div class="paragraph">
-<p>MapStruct also supports mappings of <code>public</code> fields that have no getters/setters. MapStruct will
+<p>Dettonville also supports mappings of <code>public</code> fields that have no getters/setters. Dettonville will
 use the fields as read/write accessor if it cannot find suitable getter/setter methods for the property.</p>
 </div>
 <div class="paragraph">
@@ -1922,8 +1922,8 @@ project on GitHub.</p>
 <div class="sect2">
 <h3 id="mapping-with-builders"><a class="anchor" href="#mapping-with-builders"></a>3.8. Using builders</h3>
 <div class="paragraph">
-<p>MapStruct also supports mapping of immutable types via builders.
-When performing a mapping MapStruct checks if there is a builder for the type being mapped.
+<p>Dettonville also supports mapping of immutable types via builders.
+When performing a mapping Dettonville checks if there is a builder for the type being mapped.
 This is done via the <code>BuilderProvider</code> SPI.
 If a Builder exists for a certain type, then that builder will be used for the mappings.</p>
 </div>
@@ -1941,7 +1941,7 @@ So for example <code>Person</code> has a public static method that returns <code
 In our example <code>PersonBuilder</code> has a method returning <code>Person</code>.</p>
 </li>
 <li>
-<p>In case there are multiple build methods, MapStruct will look for a method called <code>build</code>, if such method exists
+<p>In case there are multiple build methods, Dettonville will look for a method called <code>build</code>, if such method exists
 then this would be used, otherwise a compilation error would be created.</p>
 </li>
 <li>
@@ -1950,13 +1950,13 @@ then this would be used, otherwise a compilation error would be created.</p>
 <li>
 <p>In case there are multiple builder creation methods that satisfy the above conditions then a <code>MoreThanOneBuilderCreationMethodException</code>
 will be thrown from the <code>DefaultBuilderProvider</code> SPI.
-In case of a <code>MoreThanOneBuilderCreationMethodException</code> MapStruct will write a warning in the compilation and not use any builder.</p>
+In case of a <code>MoreThanOneBuilderCreationMethodException</code> Dettonville will write a warning in the compilation and not use any builder.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If such type is found then MapStruct will use that type to perform the mapping to (i.e. it will look for setters into that type).
-To finish the mapping MapStruct generates code that will invoke the build method of the builder.</p>
+<p>If such type is found then Dettonville will use that type to perform the mapping to (i.e. it will look for setters into that type).
+To finish the mapping Dettonville generates code that will invoke the build method of the builder.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1966,7 +1966,7 @@ To finish the mapping MapStruct generates code that will invoke the build method
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Builder detection can be switched off by means of <code>@Builder#disableBuilder</code>. MapStruct will fall back on regular getters / setters in case builders are disabled.</p>
+<p>Builder detection can be switched off by means of <code>@Builder#disableBuilder</code>. Dettonville will fall back on regular getters / setters in case builders are disabled.</p>
 </div>
 </td>
 </tr>
@@ -2120,7 +2120,7 @@ E.g. If an object factory exists for our <code>PersonBuilder</code> then this fa
 <ul>
 <li>
 <p><a href="https://projectlombok.org/">Lombok</a> - It is required to have the Lombok classes in a separate module.
-See for more information at <a href="https://github.com/rzwitserloot/lombok/issues/1538">rzwitserloot/lombok#1538</a> and to set up Lombok with MapStruct, refer to <a href="#lombok">Lombok</a>.</p>
+See for more information at <a href="https://github.com/rzwitserloot/lombok/issues/1538">rzwitserloot/lombok#1538</a> and to set up Lombok with Dettonville, refer to <a href="#lombok">Lombok</a>.</p>
 </li>
 <li>
 <p><a href="https://github.com/google/auto/blob/master/value/userguide/index.md">AutoValue</a></p>
@@ -2130,7 +2130,7 @@ See for more information at <a href="https://github.com/rzwitserloot/lombok/issu
 </li>
 <li>
 <p><a href="https://github.com/google/FreeBuilder">FreeBuilder</a> - When FreeBuilder is present on the annotation processor path then the <code>FreeBuilderAccessorNamingStrategy</code> would be used by default.
-When using FreeBuilder then the JavaBean convention should be followed, otherwise MapStruct won&#8217;t recognize the fluent getters.</p>
+When using FreeBuilder then the JavaBean convention should be followed, otherwise Dettonville won&#8217;t recognize the fluent getters.</p>
 </li>
 <li>
 <p>It also works for custom builders (handwritten ones) if the implementation supports the defined rules for the default <code>BuilderProvider</code>.
@@ -2156,9 +2156,9 @@ Otherwise, you would need to write a custom <code>BuilderProvider</code></p>
 <div class="sect2">
 <h3 id="mapping-with-constructors"><a class="anchor" href="#mapping-with-constructors"></a>3.9. Using Constructors</h3>
 <div class="paragraph">
-<p>MapStruct supports using constructors for mapping target types.
-When doing a mapping MapStruct checks if there is a builder for the type being mapped.
-If there is no builder, then MapStruct looks for a single accessible constructor.
+<p>Dettonville supports using constructors for mapping target types.
+When doing a mapping Dettonville checks if there is a builder for the type being mapped.
+If there is no builder, then Dettonville looks for a single accessible constructor.
 When there are multiple constructors then the following is done to pick the one which should be used:</p>
 </div>
 <div class="ulist">
@@ -2222,13 +2222,13 @@ When there are multiple constructors then the following is done to pick the one 
 
     <span class="directive">protected</span> Vehicle() { }
 
-    <span class="comment">// MapStruct will use this constructor, because it is a single public constructor</span>
+    <span class="comment">// Dettonville will use this constructor, because it is a single public constructor</span>
     <span class="directive">public</span> Vehicle(<span class="predefined-type">String</span> color) { }
 }
 
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Car</span> {
 
-    <span class="comment">// MapStruct will use this constructor, because it is a parameterless empty constructor</span>
+    <span class="comment">// Dettonville will use this constructor, because it is a parameterless empty constructor</span>
     <span class="directive">public</span> Car() { }
 
     <span class="directive">public</span> Car(<span class="predefined-type">String</span> make, <span class="predefined-type">String</span> color) { }
@@ -2238,14 +2238,14 @@ When there are multiple constructors then the following is done to pick the one 
 
     <span class="directive">public</span> Truck() { }
 
-    <span class="comment">// MapStruct will use this constructor, because it is annotated with @Default</span>
+    <span class="comment">// Dettonville will use this constructor, because it is annotated with @Default</span>
     <span class="annotation">@Default</span>
     <span class="directive">public</span> Truck(<span class="predefined-type">String</span> make, <span class="predefined-type">String</span> color) { }
 }
 
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Van</span> {
 
-    <span class="comment">// There will be a compilation error when using this class because MapStruct cannot pick a constructor</span>
+    <span class="comment">// There will be a compilation error when using this class because Dettonville cannot pick a constructor</span>
 
     <span class="directive">public</span> Van(<span class="predefined-type">String</span> make) { }
 
@@ -2381,7 +2381,7 @@ The target object constructor will not be used in that case.</p>
 <h3 id="mapping-map-to-bean"><a class="anchor" href="#mapping-map-to-bean"></a>3.10. Mapping Map to Bean</h3>
 <div class="paragraph">
 <p>There are situations when a mapping from a <code>Map&lt;String, ???&gt;</code> into a specific bean is needed.
-MapStruct offers a transparent way of doing such a mapping by using the target bean properties (or defined through <code>Mapping#source</code>) to extract the values from the map.
+Dettonville offers a transparent way of doing such a mapping by using the target bean properties (or defined through <code>Mapping#source</code>) to extract the values from the map.
 Such a mapping looks like:</p>
 </div>
 <div class="exampleblock">
@@ -2600,7 +2600,7 @@ CarDto dto = CarMapper.INSTANCE.carToCarDto( car );</pre></td>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that mappers generated by MapStruct are stateless and thread-safe and thus can safely be accessed from several threads at the same time.</p>
+<p>Note that mappers generated by Dettonville are stateless and thread-safe and thus can safely be accessed from several threads at the same time.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2717,12 +2717,12 @@ It is recommended to use constructor injection to simplify testing.</p>
 <p>Another example are references to other objects which should be mapped to the corresponding types in the target model. E.g. the class <code>Car</code> might have a property <code>driver</code> of the type <code>Person</code> which needs to be converted into a <code>PersonDto</code> object when mapping a <code>Car</code> object.</p>
 </div>
 <div class="paragraph">
-<p>In this section you&#8217;ll learn how MapStruct deals with such data type conversions.</p>
+<p>In this section you&#8217;ll learn how Dettonville deals with such data type conversions.</p>
 </div>
 <div class="sect2">
 <h3 id="implicit-type-conversions"><a class="anchor" href="#implicit-type-conversions"></a>5.1. Implicit type conversions</h3>
 <div class="paragraph">
-<p>MapStruct takes care of type conversions automatically in many cases. If for instance an attribute is of type <code>int</code> in the source bean but of type <code>String</code> in the target bean, the generated code will transparently perform a conversion by calling <code>String#valueOf(int)</code> and <code>Integer#parseInt(String)</code>, respectively.</p>
+<p>Dettonville takes care of type conversions automatically in many cases. If for instance an attribute is of type <code>int</code> in the source bean but of type <code>String</code> in the target bean, the generated code will transparently perform a conversion by calling <code>String#valueOf(int)</code> and <code>Integer#parseInt(String)</code>, respectively.</p>
 </div>
 <div class="paragraph">
 <p>Currently the following conversions are applied automatically:</p>
@@ -2991,7 +2991,7 @@ It is recommended to use constructor injection to simplify testing.</p>
 <p>That way it is possible to map arbitrary deep object graphs. When mapping from entities into data transfer objects it is often useful to cut references to other entities at a certain point. To do so, implement a custom mapping method (see the next section) which e.g. maps a referenced entity to its id in the target object.</p>
 </div>
 <div class="paragraph">
-<p>When generating the implementation of a mapping method, MapStruct will apply the following routine for each attribute pair in the source and target object:</p>
+<p>When generating the implementation of a mapping method, Dettonville will apply the following routine for each attribute pair in the source and target object:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3002,10 +3002,10 @@ It is recommended to use constructor injection to simplify testing.</p>
 <p>If source and target attribute type differ, check whether there is another <strong>mapping method</strong> which has the type of the source attribute as parameter type and the type of the target attribute as return type. If such a method exists it will be invoked in the generated mapping implementation.</p>
 </li>
 <li>
-<p>If no such method exists MapStruct will look whether a <strong>built-in conversion</strong> for the source and target type of the attribute exists. If this is the case, the generated mapping code will apply this conversion.</p>
+<p>If no such method exists Dettonville will look whether a <strong>built-in conversion</strong> for the source and target type of the attribute exists. If this is the case, the generated mapping code will apply this conversion.</p>
 </li>
 <li>
-<p>If no such method exists MapStruct will apply <strong>complex</strong> conversions:</p>
+<p>If no such method exists Dettonville will apply <strong>complex</strong> conversions:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -3021,15 +3021,15 @@ It is recommended to use constructor injection to simplify testing.</p>
 </div>
 </li>
 <li>
-<p>If no such method was found MapStruct will try to generate an automatic sub-mapping method that will do the mapping between the source and target attributes.</p>
+<p>If no such method was found Dettonville will try to generate an automatic sub-mapping method that will do the mapping between the source and target attributes.</p>
 </li>
 <li>
-<p>If MapStruct could not create a name based mapping method an error will be raised at build time, indicating the non-mappable attribute and its path.</p>
+<p>If Dettonville could not create a name based mapping method an error will be raised at build time, indicating the non-mappable attribute and its path.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>A mapping control (<code>MappingControl</code>) can be defined on all levels (<code>@MapperConfig</code>, <code>@Mapper</code>, <code>@BeanMapping</code>, <code>@Mapping</code>), the latter taking precedence over the former. For example: <code>@Mapper( mappingControl = NoComplexMapping.class )</code> takes precedence over <code>@MapperConfig( mappingControl = DeepClone.class )</code>. <code>@IterableMapping</code> and <code>@MapMapping</code> work similar as <code>@Mapping</code>. MappingControl is experimental from MapStruct 1.4.
+<p>A mapping control (<code>MappingControl</code>) can be defined on all levels (<code>@MapperConfig</code>, <code>@Mapper</code>, <code>@BeanMapping</code>, <code>@Mapping</code>), the latter taking precedence over the former. For example: <code>@Mapper( mappingControl = NoComplexMapping.class )</code> takes precedence over <code>@MapperConfig( mappingControl = DeepClone.class )</code>. <code>@IterableMapping</code> and <code>@MapMapping</code> work similar as <code>@Mapping</code>. MappingControl is experimental from Dettonville 1.4.
 <code>MappingControl</code> has an enum that corresponds to the first 4 options above: <code>MappingControl.Use#DIRECT</code>, <code>MappingControl.Use#MAPPING_METHOD</code>, <code>MappingControl.Use#BUILT_IN_CONVERSION</code> and <code>MappingControl.Use#COMPLEX_MAPPING</code> the presence of which allows the user to switch <strong>on</strong> a option. The absence of an enum switches <strong>off</strong> a mapping option. Default they are all present enabling all mapping options.</p>
 </div>
 <div class="admonitionblock note">
@@ -3040,7 +3040,7 @@ It is recommended to use constructor injection to simplify testing.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In order to stop MapStruct from generating automatic sub-mapping methods as in 5. above, one can use <code>@Mapper( disableSubMappingMethodsGeneration = true )</code>.</p>
+<p>In order to stop Dettonville from generating automatic sub-mapping methods as in 5. above, one can use <code>@Mapper( disableSubMappingMethodsGeneration = true )</code>.</p>
 </div>
 </td>
 </tr>
@@ -3054,7 +3054,7 @@ It is recommended to use constructor injection to simplify testing.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The user has full control over the mapping by means of meta annotations. Some handy ones have been defined such as <code>@DeepClone</code> which only allows direct mappings. The result: if source and target type are the same, MapStruct will make a deep clone of the source. Sub-mappings-methods have to be allowed (default option).</p>
+<p>The user has full control over the mapping by means of meta annotations. Some handy ones have been defined such as <code>@DeepClone</code> which only allows direct mappings. The result: if source and target type are the same, Dettonville will make a deep clone of the source. Sub-mappings-methods have to be allowed (default option).</p>
 </div>
 </td>
 </tr>
@@ -3094,7 +3094,7 @@ You can read more about that in <a href="#mapping-with-constructors">Using Const
 <div class="sect2">
 <h3 id="controlling-nested-bean-mappings"><a class="anchor" href="#controlling-nested-bean-mappings"></a>5.3. Controlling nested bean mappings</h3>
 <div class="paragraph">
-<p>As explained above, MapStruct will generate a method based on the name of the source and target property. Unfortunately, in many occasions these names do not match.</p>
+<p>As explained above, Dettonville will generate a method based on the name of the source and target property. Unfortunately, in many occasions these names do not match.</p>
 </div>
 <div class="paragraph">
 <p>The ‘.’ notation in an <code>@Mapping</code> source or target type can be used to control how properties should be mapped when names do not match.
@@ -3103,10 +3103,10 @@ There is an elaborate <a href="https://github.com/dettonville/dettonville-exampl
 <div class="paragraph">
 <p>In the simplest scenario there’s a property on a nested level that needs to be corrected.
 Take for instance a property <code>fish</code> which has an identical name in <code>FishTankDto</code> and <code>FishTank</code>.
-For this property MapStruct automatically generates a mapping: <code>FishDto fishToFishDto(Fish fish)</code>.
-MapStruct cannot possibly be aware of the deviating properties <code>kind</code> and <code>type</code>.
+For this property Dettonville automatically generates a mapping: <code>FishDto fishToFishDto(Fish fish)</code>.
+Dettonville cannot possibly be aware of the deviating properties <code>kind</code> and <code>type</code>.
 Therefore this can be addressed in a mapping rule: <code>@Mapping(target="fish.kind", source="fish.type")</code>.
-This tells MapStruct to deviate from looking for a name <code>kind</code> at this level and map it to <code>type</code>.</p>
+This tells Dettonville to deviate from looking for a name <code>kind</code> at this level and map it to <code>type</code>.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 36. Mapper controlling nested beans mappings I</div>
@@ -3144,7 +3144,7 @@ This tells MapStruct to deviate from looking for a name <code>kind</code> at thi
 <p>The same constructs can be used to ignore certain properties at a nesting level, as is demonstrated in the second <code>@Mapping</code> rule.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct can even be used to “cherry pick” properties when source and target do not share the same nesting level (the same number of properties).
+<p>Dettonville can even be used to “cherry pick” properties when source and target do not share the same nesting level (the same number of properties).
 This can be done in the source – and in the target type. This is demonstrated in the next 2 rules: <code>@Mapping(target="ornament", source="interior.ornament")</code> and <code>@Mapping(target="material.materialType", source="material")</code>.</p>
 </div>
 <div class="paragraph">
@@ -3156,7 +3156,7 @@ This is demonstrated in <code>@Mapping(target="quality.report.organisation.name"
 </div>
 <div class="paragraph">
 <p>Coming back to the original example: what if <code>kind</code> and <code>type</code> would be beans themselves?
-In that case MapStruct would again generate a method continuing to map.
+In that case Dettonville would again generate a method continuing to map.
 Such is demonstrated in the next example:</p>
 </div>
 <div class="exampleblock">
@@ -3200,11 +3200,11 @@ Such is demonstrated in the next example:</p>
 <div class="paragraph">
 <p>Note what happens in <code>@Mapping(target="quality.document", source="quality.report")</code>.
 <code>DocumentDto</code> does not exist as such on the target side. It is mapped from <code>Report</code>.
-MapStruct continues to generate mapping code here. That mapping itself can be guided towards another name.
+Dettonville continues to generate mapping code here. That mapping itself can be guided towards another name.
 This even works for constants and expression. Which is shown in the final example: <code>@Mapping(target="quality.document.organisation.name", constant="NoIdeaInc")</code>.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct will perform a null check on each nested property in the source.</p>
+<p>Dettonville will perform a null check on each nested property in the source.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3231,7 +3231,7 @@ instead of re-configuring the same things on all of those upper methods.</p>
 <td class="content">
 <div class="paragraph">
 <p>In some cases the <code>ReportingPolicy</code> that is going to be used for the generated nested method would be <code>IGNORE</code>.
-This means that it is possible for MapStruct not to report unmapped target properties in nested mappings.</p>
+This means that it is possible for Dettonville not to report unmapped target properties in nested mappings.</p>
 </div>
 </td>
 </tr>
@@ -3244,7 +3244,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 <p>Sometimes mappings are not straightforward and some fields require custom logic.</p>
 </div>
 <div class="paragraph">
-<p>The example below demonstrates how the properties <code>length</code>, <code>width</code> and <code>height</code> in <code>FishTank</code> can be mapped to the <code>VolumeDto</code> bean, which is a member of <code>FishTankWithVolumeDto</code>. <code>VolumeDto</code> contains the properties <code>volume</code> and <code>description</code>. Custom logic is achieved by defining a method which takes <code>FishTank</code> instance as a parameter and returns a <code>VolumeDto</code>. MapStruct will take the entire parameter <code>source</code> and generate code to call the custom method <code>mapVolume</code> in order to map the <code>FishTank</code> object to the target property <code>volume</code>.</p>
+<p>The example below demonstrates how the properties <code>length</code>, <code>width</code> and <code>height</code> in <code>FishTank</code> can be mapped to the <code>VolumeDto</code> bean, which is a member of <code>FishTankWithVolumeDto</code>. <code>VolumeDto</code> contains the properties <code>volume</code> and <code>description</code>. Custom logic is achieved by defining a method which takes <code>FishTank</code> instance as a parameter and returns a <code>VolumeDto</code>. Dettonville will take the entire parameter <code>source</code> and generate code to call the custom method <code>mapVolume</code> in order to map the <code>FishTank</code> object to the target property <code>volume</code>.</p>
 </div>
 <div class="paragraph">
 <p>The remainder of the fields could be mapped the regular way: using mappings defined defined by means of <code>@Mapping</code> annotations.</p>
@@ -3340,7 +3340,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 <div class="sect2">
 <h3 id="invoking-other-mappers"><a class="anchor" href="#invoking-other-mappers"></a>5.5. Invoking other mappers</h3>
 <div class="paragraph">
-<p>In addition to methods defined on the same mapper type MapStruct can also invoke mapping methods defined in other classes, be it mappers generated by MapStruct or hand-written mapping methods. This can be useful to structure your mapping code in several classes (e.g. with one mapper type per application module) or if you want to provide custom mapping logic which can&#8217;t be generated by MapStruct.</p>
+<p>In addition to methods defined on the same mapper type Dettonville can also invoke mapping methods defined in other classes, be it mappers generated by Dettonville or hand-written mapping methods. This can be useful to structure your mapping code in several classes (e.g. with one mapper type per application module) or if you want to provide custom mapping logic which can&#8217;t be generated by Dettonville.</p>
 </div>
 <div class="paragraph">
 <p>For instance the <code>Car</code> class might contain an attribute <code>manufacturingDate</code> while the corresponding DTO attribute is of type String. In order to map this attribute, you could implement a mapper class like this:</p>
@@ -3417,16 +3417,16 @@ This means that it is possible for MapStruct not to report unmapped target prope
 </div>
 </div>
 <div class="paragraph">
-<p>When generating code for the implementation of the <code>carToCarDto()</code> method, MapStruct will look for a method which maps a <code>Date</code> object into a String, find it on the <code>DateMapper</code> class and generate an invocation of <code>asString()</code> for mapping the <code>manufacturingDate</code> attribute.</p>
+<p>When generating code for the implementation of the <code>carToCarDto()</code> method, Dettonville will look for a method which maps a <code>Date</code> object into a String, find it on the <code>DateMapper</code> class and generate an invocation of <code>asString()</code> for mapping the <code>manufacturingDate</code> attribute.</p>
 </div>
 <div class="paragraph">
-<p>Generated mappers retrieve referenced mappers using the component model configured for them. If e.g. CDI was used as component model for <code>CarMapper</code>, <code>DateMapper</code> would have to be a CDI bean as well. When using the default component model, any hand-written mapper classes to be referenced by MapStruct generated mappers must declare a public no-args constructor in order to be instantiable.</p>
+<p>Generated mappers retrieve referenced mappers using the component model configured for them. If e.g. CDI was used as component model for <code>CarMapper</code>, <code>DateMapper</code> would have to be a CDI bean as well. When using the default component model, any hand-written mapper classes to be referenced by Dettonville generated mappers must declare a public no-args constructor in order to be instantiable.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="passing-target-type"><a class="anchor" href="#passing-target-type"></a>5.6. Passing the mapping target type to custom mappers</h3>
 <div class="paragraph">
-<p>When having a custom mapper hooked into the generated mapper with <code>@Mapper#uses()</code>, an additional parameter of type <code>Class</code> (or a super-type of it) can be defined in the custom mapping method in order to perform general mapping tasks for specific target object types. That attribute must be annotated with <code>@TargetType</code> for MapStruct to generate calls that pass the <code>Class</code> instance representing the corresponding property type of the target bean.</p>
+<p>When having a custom mapper hooked into the generated mapper with <code>@Mapper#uses()</code>, an additional parameter of type <code>Class</code> (or a super-type of it) can be defined in the custom mapping method in order to perform general mapping tasks for specific target object types. That attribute must be annotated with <code>@TargetType</code> for Dettonville to generate calls that pass the <code>Class</code> instance representing the corresponding property type of the target bean.</p>
 </div>
 <div class="paragraph">
 <p>For instance, the <code>CarDto</code> could have a property <code>owner</code> of type <code>Reference</code> that contains the primary key of a <code>Person</code> entity. You could now create a generic custom mapper that resolves any <code>Reference</code> objects to their corresponding managed JPA entity instances.</p>
@@ -3484,7 +3484,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 </div>
 </div>
 <div class="paragraph">
-<p>MapStruct will then generate something like this:</p>
+<p>Dettonville will then generate something like this:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 42. Generated code</div>
@@ -3581,7 +3581,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 </div>
 </div>
 <div class="paragraph">
-<p>MapStruct will then generate something like this:</p>
+<p>Dettonville will then generate something like this:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 44. Generated code</div>
@@ -3625,7 +3625,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 <div class="sect2">
 <h3 id="mapping-method-resolution"><a class="anchor" href="#mapping-method-resolution"></a>5.8. Mapping method resolution</h3>
 <div class="paragraph">
-<p>When mapping a property from one type to another, MapStruct looks for the most specific method which maps the source type into the target type. The method may either be declared on the same mapper interface or on another mapper which is registered via <code>@Mapper#uses()</code>. The same applies for factory methods (see <a href="#object-factories">Object factories</a>).</p>
+<p>When mapping a property from one type to another, Dettonville looks for the most specific method which maps the source type into the target type. The method may either be declared on the same mapper interface or on another mapper which is registered via <code>@Mapper#uses()</code>. The same applies for factory methods (see <a href="#object-factories">Object factories</a>).</p>
 </div>
 <div class="paragraph">
 <p>The algorithm for finding a mapping or factory method resembles Java&#8217;s method resolution algorithm as much as possible. In particular, methods with a more specific source type will take precedence (e.g. if there are two methods, one which maps the searched source type, and another one which maps a super-type of the same). In case more than one most-specific method is found, an error will be raised.</p>
@@ -3638,7 +3638,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When working with JAXB, e.g. when converting a <code>String</code> to a corresponding <code>JAXBElement&lt;String&gt;</code>, MapStruct will take the <code>scope</code> and <code>name</code> attributes of <code>@XmlElementDecl</code> annotations into account when looking for a mapping method. This makes sure that the created <code>JAXBElement</code> instances will have the right QNAME value. You can find a test which maps JAXB objects <a href="https://github.com/dettonville/dettonville/blob/1.5.0.Beta2/integrationtest/src/test/resources/jaxbTest/src/test/java/org/dettonville/itest/jaxb/JaxbBasedMapperTest.java">here</a>.</p>
+<p>When working with JAXB, e.g. when converting a <code>String</code> to a corresponding <code>JAXBElement&lt;String&gt;</code>, Dettonville will take the <code>scope</code> and <code>name</code> attributes of <code>@XmlElementDecl</code> annotations into account when looking for a mapping method. This makes sure that the created <code>JAXBElement</code> instances will have the right QNAME value. You can find a test which maps JAXB objects <a href="https://github.com/dettonville/dettonville/blob/1.5.0.Beta2/integrationtest/src/test/resources/jaxbTest/src/test/java/org/dettonville/itest/jaxb/JaxbBasedMapperTest.java">here</a>.</p>
 </div>
 </td>
 </tr>
@@ -3649,7 +3649,7 @@ This means that it is possible for MapStruct not to report unmapped target prope
 <h3 id="selection-based-on-qualifiers"><a class="anchor" href="#selection-based-on-qualifiers"></a>5.9. Mapping method selection based on qualifiers</h3>
 <div class="paragraph">
 <p>In many occasions one requires mapping methods with the same method signature (apart from the name) that have different behavior.
-MapStruct has a handy mechanism to deal with such situations: <code>@Qualifier</code> (<code>org.dettonville.Qualifier</code>).
+Dettonville has a handy mechanism to deal with such situations: <code>@Qualifier</code> (<code>org.dettonville.Qualifier</code>).
 A ‘qualifier’ is a custom annotation that the user can write, ‘stick onto’ a mapping method which is included as used mapper
 and can be referred to in a bean property mapping, iterable mapping or map mapping.
 Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
@@ -3717,7 +3717,7 @@ Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Without the use of qualifiers, this would result in an ambiguous mapping method error, because 2 qualifying methods are found (<code>translateTitleEG</code>, <code>translateTitleGE</code>) and MapStruct would not have a hint which one to choose.</p>
+<p>Without the use of qualifiers, this would result in an ambiguous mapping method error, because 2 qualifying methods are found (<code>translateTitleEG</code>, <code>translateTitleGE</code>) and Dettonville would not have a hint which one to choose.</p>
 </div>
 <div class="paragraph">
 <p>Enter the qualifier approach:</p>
@@ -3911,7 +3911,7 @@ Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>In many occasions, declaring a new annotation to aid the selection process can be too much for what you try to achieve. For those situations, MapStruct has the <code>@Named</code> annotation. This annotation is a pre-defined qualifier (annotated with <code>@Qualifier</code> itself) and can be used to name a Mapper or, more directly a mapping method by means of its value. The same example above would look like:</p>
+<p>In many occasions, declaring a new annotation to aid the selection process can be too much for what you try to achieve. For those situations, Dettonville has the <code>@Named</code> annotation. This annotation is a pre-defined qualifier (annotated with <code>@Qualifier</code> itself) and can be used to name a Mapper or, more directly a mapping method by means of its value. The same example above would look like:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 51. Custom mapper, annotating the methods to qualify by means of <code>@Named</code></div>
@@ -3995,7 +3995,7 @@ Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
 <div class="sect2">
 <h3 id="_combining_qualifiers_with_defaults"><a class="anchor" href="#_combining_qualifiers_with_defaults"></a>5.10. Combining qualifiers with defaults</h3>
 <div class="paragraph">
-<p>Please note that the <code>Mapping#defaultValue</code> is in essence a <code>String</code>, which needs to be converted to the <code>Mapping#target</code>. Providing a <code>Mapping#qualifiedByName</code> or <code>Mapping#qualifiedBy</code> will force MapStruct to use that method. If you want different behavior for the <code>Mapping#defaultValue</code>, then please provide an appropriate mapping method. This mapping method needs to transforms a <code>String</code> into the desired type of <code>Mapping#target</code> and also be annotated so that it can be found by the <code>Mapping#qualifiedByName</code> or <code>Mapping#qualifiedBy</code>.</p>
+<p>Please note that the <code>Mapping#defaultValue</code> is in essence a <code>String</code>, which needs to be converted to the <code>Mapping#target</code>. Providing a <code>Mapping#qualifiedByName</code> or <code>Mapping#qualifiedBy</code> will force Dettonville to use that method. If you want different behavior for the <code>Mapping#defaultValue</code>, then please provide an appropriate mapping method. This mapping method needs to transforms a <code>String</code> into the desired type of <code>Mapping#target</code> and also be annotated so that it can be found by the <code>Mapping#qualifiedByName</code> or <code>Mapping#qualifiedBy</code>.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 53. Mapper using defaultValue</div>
@@ -4125,7 +4125,7 @@ Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
 <h2 id="mapping-collections"><a class="anchor" href="#mapping-collections"></a>6. Mapping collections</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The mapping of collection types (<code>List</code>, <code>Set</code> etc.) is done in the same way as mapping bean types, i.e. by defining mapping methods with the required source and target types in a mapper interface. MapStruct supports a wide range of iterable types from the <a href="http://docs.oracle.com/javase/tutorial/collections/intro/index.html">Java Collection Framework</a>.</p>
+<p>The mapping of collection types (<code>List</code>, <code>Set</code> etc.) is done in the same way as mapping bean types, i.e. by defining mapping methods with the required source and target types in a mapper interface. Dettonville supports a wide range of iterable types from the <a href="http://docs.oracle.com/javase/tutorial/collections/intro/index.html">Java Collection Framework</a>.</p>
 </div>
 <div class="paragraph">
 <p>The generated code will contain a loop which iterates over the source collection, converts each element and puts it into the target collection. If a mapping method for the collection element types is found in the given mapper or the mapper it uses, this method is invoked to perform the element conversion. Alternatively, if an implicit conversion for the source and target element types exists, this conversion routine will be invoked. The following shows an example:</p>
@@ -4236,7 +4236,7 @@ Multiple qualifiers can be ‘stuck onto’ a method and mapping.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that MapStruct will look for a collection mapping method with matching parameter and return type, when mapping a collection-typed attribute of a bean, e.g. from <code>Car#passengers</code> (of type <code>List&lt;Person&gt;</code>) to <code>CarDto#passengers</code> (of type <code>List&lt;PersonDto&gt;</code>).</p>
+<p>Note that Dettonville will look for a collection mapping method with matching parameter and return type, when mapping a collection-typed attribute of a bean, e.g. from <code>Car#passengers</code> (of type <code>List&lt;Person&gt;</code>) to <code>CarDto#passengers</code> (of type <code>List&lt;PersonDto&gt;</code>).</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 58. Usage of collection mapping method to map a bean property</div>
@@ -4387,7 +4387,7 @@ carDto.getPassengers().addAll( personsToPersonDtos( car.getPassengers() ) );
 <div class="sect2">
 <h3 id="collection-mapping-strategies"><a class="anchor" href="#collection-mapping-strategies"></a>6.2. Collection mapping strategies</h3>
 <div class="paragraph">
-<p>MapStruct has a <code>CollectionMappingStrategy</code>, with the possible values: <code>ACCESSOR_ONLY</code>, <code>SETTER_PREFERRED</code>, <code>ADDER_PREFERRED</code> and <code>TARGET_IMMUTABLE</code>.</p>
+<p>Dettonville has a <code>CollectionMappingStrategy</code>, with the possible values: <code>ACCESSOR_ONLY</code>, <code>SETTER_PREFERRED</code>, <code>ADDER_PREFERRED</code> and <code>TARGET_IMMUTABLE</code>.</p>
 </div>
 <div class="paragraph">
 <p>In the table below, the dash <code>-</code> indicates a property name. Next, the trailing <code>s</code> indicates the plural form. The table explains the options and how they are applied to the presence/absence of a <code>set-s</code>, <code>add-</code> and / or <code>get-s</code> method on the target object:</p>
@@ -4448,10 +4448,10 @@ carDto.getPassengers().addAll( personsToPersonDtos( car.getPassengers() ) );
 </tbody>
 </table>
 <div class="paragraph">
-<p>Some background: An <code>adder</code> method is typically used in case of <a href="http://www.eclipse.org/webtools/dali/">generated (JPA) entities</a>, to add a single element (entity) to an underlying collection. Invoking the adder establishes a parent-child relation between parent - the bean (entity) on which the adder is invoked - and its child(ren), the elements (entities) in the collection. To find the appropriate <code>adder</code>, MapStruct will try to make a match between the generic parameter type of the underlying collection and the single argument of a candidate <code>adder</code>. When there are more candidates, the plural <code>setter</code> / <code>getter</code> name is converted to singular and will be used in addition to make a match.</p>
+<p>Some background: An <code>adder</code> method is typically used in case of <a href="http://www.eclipse.org/webtools/dali/">generated (JPA) entities</a>, to add a single element (entity) to an underlying collection. Invoking the adder establishes a parent-child relation between parent - the bean (entity) on which the adder is invoked - and its child(ren), the elements (entities) in the collection. To find the appropriate <code>adder</code>, Dettonville will try to make a match between the generic parameter type of the underlying collection and the single argument of a candidate <code>adder</code>. When there are more candidates, the plural <code>setter</code> / <code>getter</code> name is converted to singular and will be used in addition to make a match.</p>
 </div>
 <div class="paragraph">
-<p>The option <code>DEFAULT</code> should not be used explicitly. It is used to distinguish between an explicit user desire to override the default in a <code>@MapperConfig</code> from the implicit Mapstruct choice in a <code>@Mapper</code>. The option <code>DEFAULT</code> is synonymous to <code>ACCESSOR_ONLY</code>.</p>
+<p>The option <code>DEFAULT</code> should not be used explicitly. It is used to distinguish between an explicit user desire to override the default in a <code>@MapperConfig</code> from the implicit Dettonville choice in a <code>@Mapper</code>. The option <code>DEFAULT</code> is synonymous to <code>ACCESSOR_ONLY</code>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -4461,7 +4461,7 @@ carDto.getPassengers().addAll( personsToPersonDtos( car.getPassengers() ) );
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When working with an <code>adder</code> method and JPA entities, Mapstruct assumes that the target collections are initialized with a collection implementation (e.g. an <code>ArrayList</code>). You can use factories to create a new target entity with intialized collections instead of Mapstruct creating the target entity by its constructor.</p>
+<p>When working with an <code>adder</code> method and JPA entities, Dettonville assumes that the target collections are initialized with a collection implementation (e.g. an <code>ArrayList</code>). You can use factories to create a new target entity with intialized collections instead of Dettonville creating the target entity by its constructor.</p>
 </div>
 </td>
 </tr>
@@ -4661,7 +4661,7 @@ collection when doing <code>Stream</code> to <code>Iterable</code> mapping.</p>
 <div class="sect2">
 <h3 id="_mapping_enum_to_enum_types"><a class="anchor" href="#_mapping_enum_to_enum_types"></a>8.1. Mapping enum to enum types</h3>
 <div class="paragraph">
-<p>MapStruct supports the generation of methods which map one Java enum type into another.</p>
+<p>Dettonville supports the generation of methods which map one Java enum type into another.</p>
 </div>
 <div class="paragraph">
 <p>By default, each constant from the source enum is mapped to a constant with the same name in the target enum type. If required, a constant from the source enum may be mapped to a constant with another name with help of the <code>@ValueMapping</code> annotation. Several constants from the source enum can be mapped to the same constant in the target type.</p>
@@ -4774,20 +4774,20 @@ collection when doing <code>Stream</code> to <code>Iterable</code> mapping.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>By default an error will be raised by MapStruct in case a constant of the source enum type does not have a corresponding constant with the same name in the target type and also is not mapped to another constant via <code>@ValueMapping</code>. This ensures that all constants are mapped in a safe and predictable manner. The generated
+<p>By default an error will be raised by Dettonville in case a constant of the source enum type does not have a corresponding constant with the same name in the target type and also is not mapped to another constant via <code>@ValueMapping</code>. This ensures that all constants are mapped in a safe and predictable manner. The generated
 mapping method will throw an IllegalStateException if for some reason an unrecognized source value occurs.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct also has a mechanism for mapping any remaining (unspecified) mappings to a default. This can be used only once in a set of value mappings and only applies to the source. It comes in two flavors: <code>&lt;ANY_REMAINING&gt;</code> and <code>&lt;ANY_UNMAPPED&gt;</code>. They cannot be used at the same time.</p>
+<p>Dettonville also has a mechanism for mapping any remaining (unspecified) mappings to a default. This can be used only once in a set of value mappings and only applies to the source. It comes in two flavors: <code>&lt;ANY_REMAINING&gt;</code> and <code>&lt;ANY_UNMAPPED&gt;</code>. They cannot be used at the same time.</p>
 </div>
 <div class="paragraph">
-<p>In case of source <code>&lt;ANY_REMAINING&gt;</code> MapStruct will continue to map a source enum constant to a target enum constant with the same name. The remainder of the source enum constants will be mapped to the target specified in the <code>@ValueMapping</code> with <code>&lt;ANY_REMAINING&gt;</code> source.</p>
+<p>In case of source <code>&lt;ANY_REMAINING&gt;</code> Dettonville will continue to map a source enum constant to a target enum constant with the same name. The remainder of the source enum constants will be mapped to the target specified in the <code>@ValueMapping</code> with <code>&lt;ANY_REMAINING&gt;</code> source.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct will <strong>not</strong> attempt such name based mapping for <code>&lt;ANY_UNMAPPED&gt;</code> and directly apply the target specified in the <code>@ValueMapping</code> with <code>&lt;ANY_UNMAPPED&gt;</code> source to the remainder.</p>
+<p>Dettonville will <strong>not</strong> attempt such name based mapping for <code>&lt;ANY_UNMAPPED&gt;</code> and directly apply the target specified in the <code>@ValueMapping</code> with <code>&lt;ANY_UNMAPPED&gt;</code> source to the remainder.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct is able to handle <code>null</code> sources and <code>null</code> targets by means of the <code>&lt;NULL&gt;</code> keyword.</p>
+<p>Dettonville is able to handle <code>null</code> sources and <code>null</code> targets by means of the <code>&lt;NULL&gt;</code> keyword.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -4903,7 +4903,7 @@ mapping method will throw an IllegalStateException if for some reason an unrecog
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Note:</strong> MapStruct would have refrained from mapping the <code>RETAIL</code> and <code>B2B</code> when <code>&lt;ANY_UNMAPPED&gt;</code> was used instead of <code>&lt;ANY_REMAINING&gt;</code>.</p>
+<p><strong>Note:</strong> Dettonville would have refrained from mapping the <code>RETAIL</code> and <code>B2B</code> when <code>&lt;ANY_UNMAPPED&gt;</code> was used instead of <code>&lt;ANY_REMAINING&gt;</code>.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -4913,7 +4913,7 @@ mapping method will throw an IllegalStateException if for some reason an unrecog
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The mapping of enum to enum via the <code>@Mapping</code> annotation is <strong>DEPRECATED</strong>. It will be removed from future versions of MapStruct. Please adapt existing enum mapping methods to make use of <code>@ValueMapping</code> instead.</p>
+<p>The mapping of enum to enum via the <code>@Mapping</code> annotation is <strong>DEPRECATED</strong>. It will be removed from future versions of Dettonville. Please adapt existing enum mapping methods to make use of <code>@ValueMapping</code> instead.</p>
 </div>
 </td>
 </tr>
@@ -4923,7 +4923,7 @@ mapping method will throw an IllegalStateException if for some reason an unrecog
 <div class="sect2">
 <h3 id="_mapping_enum_to_string_or_string_to_enum"><a class="anchor" href="#_mapping_enum_to_string_or_string_to_enum"></a>8.2. Mapping enum-to-String or String-to-enum</h3>
 <div class="paragraph">
-<p>MapStruct supports enum to a String mapping along the same lines as is described in <a href="#_mapping_enum_to_enum_types">enum-to-enum types</a>. There are similarities and differences:</p>
+<p>Dettonville supports enum to a String mapping along the same lines as is described in <a href="#_mapping_enum_to_enum_types">enum-to-enum types</a>. There are similarities and differences:</p>
 </div>
 <div class="paragraph">
 <p><strong>enum to <code>String</code></strong></p>
@@ -5134,7 +5134,7 @@ E.g. a suffix needs to be applied to map from the source into the target enum.</
 </div>
 </div>
 <div class="paragraph">
-<p>MapStruct provides the following out of the box enum name transformation strategies:</p>
+<p>Dettonville provides the following out of the box enum name transformation strategies:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5185,7 +5185,7 @@ For more information on how to do that have a look at <a href="#custom-enum-tran
 <p>Alternatively you can plug in custom object factories which will be invoked to obtain instances of the target type. One use case for this is JAXB which creates <code>ObjectFactory</code> classes for obtaining new instances of schema types.</p>
 </div>
 <div class="paragraph">
-<p>To make use of custom factories register them via <code>@Mapper#uses()</code> as described in <a href="#invoking-other-mappers">Invoking other mappers</a>, or implement them directly in your mapper. When creating the target object of a bean mapping, MapStruct will look for a parameterless method, a method annotated with <code>@ObjectFactory</code>, or a method with only one <code>@TargetType</code> parameter that returns the required target type and invoke this method instead of calling the default constructor:</p>
+<p>To make use of custom factories register them via <code>@Mapper#uses()</code> as described in <a href="#invoking-other-mappers">Invoking other mappers</a>, or implement them directly in your mapper. When creating the target object of a bean mapping, Dettonville will look for a parameterless method, a method annotated with <code>@ObjectFactory</code>, or a method with only one <code>@TargetType</code> parameter that returns the required target type and invoke this method instead of calling the default constructor:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 71. Custom object factories</div>
@@ -5462,7 +5462,7 @@ For more information on how to do that have a look at <a href="#custom-enum-tran
 <div class="paragraph">
 <p>In addition, annotating a factory method with <code>@ObjectFactory</code> lets you gain access to the mapping sources.
 Source objects can be added as parameters in the same way as for mapping method. The <code>@ObjectFactory</code>
-annotation is necessary to let MapStruct know that the given method is only a factory method.</p>
+annotation is necessary to let Dettonville know that the given method is only a factory method.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 73. Custom object factories with <code>@ObjectFactory</code></div>
@@ -5558,7 +5558,7 @@ The String <code>"Constant Value"</code> is set as is to the target property <co
 <p>By means of Expressions it will be possible to include constructs from a number of languages.</p>
 </div>
 <div class="paragraph">
-<p>Currently only Java is supported as a language. This feature is e.g. useful to invoke constructors. The entire source object is available for usage in the expression. Care should be taken to insert only valid Java code: MapStruct will not validate the expression at generation-time, but errors will show up in the generated classes during compilation.</p>
+<p>Currently only Java is supported as a language. This feature is e.g. useful to invoke constructors. The entire source object is available for usage in the expression. Care should be taken to insert only valid Java code: Dettonville will not validate the expression at generation-time, but errors will show up in the generated classes during compilation.</p>
 </div>
 <div class="paragraph">
 <p>The example below demonstrates how two source properties can be mapped to one target:</p>
@@ -5594,7 +5594,7 @@ The String <code>"Constant Value"</code> is set as is to the target property <co
 </div>
 </div>
 <div class="paragraph">
-<p>The example demonstrates how the source properties <code>time</code> and <code>format</code> are composed into one target property <code>TimeAndFormat</code>. Please note that the fully qualified package name is specified because MapStruct does not take care of the import of the <code>TimeAndFormat</code> class (unless it&#8217;s used otherwise explicitly in the <code>SourceTargetMapper</code>). This can be resolved by defining <code>imports</code> on the <code>@Mapper</code> annotation.</p>
+<p>The example demonstrates how the source properties <code>time</code> and <code>format</code> are composed into one target property <code>TimeAndFormat</code>. Please note that the fully qualified package name is specified because Dettonville does not take care of the import of the <code>TimeAndFormat</code> class (unless it&#8217;s used otherwise explicitly in the <code>SourceTargetMapper</code>). This can be resolved by defining <code>imports</code> on the <code>@Mapper</code> annotation.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 76. Declaring an import</div>
@@ -5637,7 +5637,7 @@ The String <code>"Constant Value"</code> is set as is to the target property <co
 <p>Default expressions are a combination of default values and expressions. They will only be used when the source attribute is <code>null</code>.</p>
 </div>
 <div class="paragraph">
-<p>The same warnings and restrictions apply to default expressions that apply to expressions. Only Java is supported, and MapStruct will not validate the expression at generation-time.</p>
+<p>The same warnings and restrictions apply to default expressions that apply to expressions. Only Java is supported, and Dettonville will not validate the expression at generation-time.</p>
 </div>
 <div class="paragraph">
 <p>The example below demonstrates how two source properties can be mapped to one target:</p>
@@ -5675,7 +5675,7 @@ The String <code>"Constant Value"</code> is set as is to the target property <co
 </div>
 </div>
 <div class="paragraph">
-<p>The example demonstrates how to use defaultExpression to set an <code>ID</code> field if the source field is null, this could be used to take the existing <code>sourceId</code> from the source object if it is set, or create a new <code>Id</code> if it isn&#8217;t. Please note that the fully qualified package name is specified because MapStruct does not take care of the import of the <code>UUID</code> class (unless it’s used otherwise explicitly in the <code>SourceTargetMapper</code>). This can be resolved by defining imports on the @Mapper annotation (see <a href="#expressions">Expressions</a>).</p>
+<p>The example demonstrates how to use defaultExpression to set an <code>ID</code> field if the source field is null, this could be used to take the existing <code>sourceId</code> from the source object if it is set, or create a new <code>Id</code> if it isn&#8217;t. Please note that the fully qualified package name is specified because Dettonville does not take care of the import of the <code>UUID</code> class (unless it’s used otherwise explicitly in the <code>SourceTargetMapper</code>). This can be resolved by defining imports on the @Mapper annotation (see <a href="#expressions">Expressions</a>).</p>
 </div>
 </div>
 <div class="sect2">
@@ -5848,7 +5848,7 @@ The same issue exists for the <code>@Context</code> and <code>@TargetType</code>
 <div class="sect2">
 <h3 id="mapping-result-for-null-arguments"><a class="anchor" href="#mapping-result-for-null-arguments"></a>10.6. Controlling mapping result for 'null' arguments</h3>
 <div class="paragraph">
-<p>MapStruct offers control over the object to create when the source argument of the mapping method equals <code>null</code>. By default <code>null</code> will be returned.</p>
+<p>Dettonville offers control over the object to create when the source argument of the mapping method equals <code>null</code>. By default <code>null</code> will be returned.</p>
 </div>
 <div class="paragraph">
 <p>However, by specifying <code>nullValueMappingStrategy = NullValueMappingStrategy.RETURN_DEFAULT</code> on <code>@BeanMapping</code>, <code>@IterableMapping</code>, <code>@MapMapping</code>, or globally on <code>@Mapper</code> or <code>@MapperConfig</code>, the mapping result can be altered to return empty <strong>default</strong> values. This means for:</p>
@@ -5873,7 +5873,7 @@ The same issue exists for the <code>@Context</code> and <code>@TargetType</code>
 <div class="sect2">
 <h3 id="mapping-result-for-null-properties"><a class="anchor" href="#mapping-result-for-null-properties"></a>10.7. Controlling mapping result for 'null' properties in bean mappings (update mapping methods only).</h3>
 <div class="paragraph">
-<p>MapStruct offers control over the property to set in an <code>@MappingTarget</code> annotated target bean when the source property equals <code>null</code> or the presence check method results in 'absent'.</p>
+<p>Dettonville offers control over the property to set in an <code>@MappingTarget</code> annotated target bean when the source property equals <code>null</code> or the presence check method results in 'absent'.</p>
 </div>
 <div class="paragraph">
 <p>By default the target property will be set to null.</p>
@@ -5885,7 +5885,7 @@ The same issue exists for the <code>@Context</code> and <code>@TargetType</code>
 <ol class="arabic">
 <li>
 <p>By specifying <code>nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.SET_TO_DEFAULT</code> on <code>@Mapping</code>, <code>@BeanMapping</code>, <code>@Mapper</code> or <code>@MapperConfig</code>, the mapping result can be altered to return <strong>default</strong> values.
-For <code>List</code> MapStruct generates an <code>ArrayList</code>, for <code>Map</code> a <code>LinkedHashMap</code>, for arrays an empty array, for <code>String</code> <code>""</code> and for primitive / boxed types a representation of <code>false</code> or <code>0</code>.
+For <code>List</code> Dettonville generates an <code>ArrayList</code>, for <code>Map</code> a <code>LinkedHashMap</code>, for arrays an empty array, for <code>String</code> <code>""</code> and for primitive / boxed types a representation of <code>false</code> or <code>0</code>.
 For all other objects an new instance is created. Please note that a default constructor is required. If not available, use the <code>@Mapping#defaultValue</code>.</p>
 </li>
 <li>
@@ -5904,7 +5904,7 @@ For all other objects an new instance is created. Please note that a default con
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Some types of mappings (collections, maps), in which MapStruct is instructed to use a getter or adder as target accessor (see <code>CollectionMappingStrategy</code>), MapStruct will always generate a source property
+<p>Some types of mappings (collections, maps), in which Dettonville is instructed to use a getter or adder as target accessor (see <code>CollectionMappingStrategy</code>), Dettonville will always generate a source property
 null check, regardless of the value of the <code>NullValuePropertyMappingStrategy</code>, to avoid addition of <code>null</code> to the target collection or map. Since the target is assumed to be initialised this strategy will not be applied.</p>
 </div>
 </td>
@@ -5929,7 +5929,7 @@ null check, regardless of the value of the <code>NullValuePropertyMappingStrateg
 <div class="sect2">
 <h3 id="checking-source-property-for-null-arguments"><a class="anchor" href="#checking-source-property-for-null-arguments"></a>10.8. Controlling checking result for 'null' properties in bean mapping</h3>
 <div class="paragraph">
-<p>MapStruct offers control over when to generate a <code>null</code> check. By default (<code>nullValueCheckStrategy = NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</code>) a <code>null</code> check will be generated for:</p>
+<p>Dettonville offers control over when to generate a <code>null</code> check. By default (<code>nullValueCheckStrategy = NullValueCheckStrategy.ON_IMPLICIT_CONVERSION</code>) a <code>null</code> check will be generated for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5967,7 +5967,7 @@ null check, regardless of the value of the <code>NullValuePropertyMappingStrateg
 <div class="sect2">
 <h3 id="source-presence-check"><a class="anchor" href="#source-presence-check"></a>10.9. Source presence checking</h3>
 <div class="paragraph">
-<p>Some frameworks generate bean properties that have a source presence checker. Often this is in the form of a method <code>hasXYZ</code>, <code>XYZ</code> being a property on the source bean in a bean mapping method. MapStruct will call this <code>hasXYZ</code> instead of performing a <code>null</code> check when it finds such <code>hasXYZ</code> method.</p>
+<p>Some frameworks generate bean properties that have a source presence checker. Often this is in the form of a method <code>hasXYZ</code>, <code>XYZ</code> being a property on the source bean in a bean mapping method. Dettonville will call this <code>hasXYZ</code> instead of performing a <code>null</code> check when it finds such <code>hasXYZ</code> method.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -5977,7 +5977,7 @@ null check, regardless of the value of the <code>NullValuePropertyMappingStrateg
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The source presence checker name can be changed in the MapStruct service provider interface (SPI). It can also be deactivated in this way.</p>
+<p>The source presence checker name can be changed in the Dettonville service provider interface (SPI). It can also be deactivated in this way.</p>
 </div>
 </td>
 </tr>
@@ -5991,7 +5991,7 @@ null check, regardless of the value of the <code>NullValuePropertyMappingStrateg
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Some types of mappings (collections, maps), in which MapStruct is instructed to use a getter or adder as target accessor see <code>CollectionMappingStrategy</code>, MapStruct will always generate a source property
+<p>Some types of mappings (collections, maps), in which Dettonville is instructed to use a getter or adder as target accessor see <code>CollectionMappingStrategy</code>, Dettonville will always generate a source property
 null check, regardless the value of the <code>NullValueCheckStrategy</code> to avoid addition of <code>null</code> to the target collection or map.</p>
 </div>
 </td>
@@ -6134,7 +6134,7 @@ In order to use a more specific condition method you will need to use one of <co
 <div class="sect2">
 <h3 id="exceptions"><a class="anchor" href="#exceptions"></a>10.11. Exceptions</h3>
 <div class="paragraph">
-<p>Calling applications may require handling of exceptions when calling a mapping method. These exceptions could be thrown by hand-written logic and by the generated built-in mapping methods or type-conversions of MapStruct. When the calling application requires handling of exceptions, a throws clause can be defined in the mapping method:</p>
+<p>Calling applications may require handling of exceptions when calling a mapping method. These exceptions could be thrown by hand-written logic and by the generated built-in mapping methods or type-conversions of Dettonville. When the calling application requires handling of exceptions, a throws clause can be defined in the mapping method:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 82. Mapper using custom method declaring checked exception</div>
@@ -6204,7 +6204,7 @@ In order to use a more specific condition method you will need to use one of <co
 </div>
 </div>
 <div class="paragraph">
-<p>MapStruct now, wraps the <code>FatalException</code> in a <code>try-catch</code> block and rethrows an unchecked <code>RuntimeException</code>. MapStruct delegates handling of the <code>GearException</code> to the application logic because it is defined as throws clause in the <code>carToCarDto</code> method:</p>
+<p>Dettonville now, wraps the <code>FatalException</code> in a <code>try-catch</code> block and rethrows an unchecked <code>RuntimeException</code>. Dettonville delegates handling of the <code>GearException</code> to the application logic because it is defined as throws clause in the <code>carToCarDto</code> method:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 84. try-catch block in generated implementation</div>
@@ -6253,7 +6253,7 @@ In order to use a more specific condition method you will need to use one of <co
 </div>
 </div>
 <div class="paragraph">
-<p>Some <strong>notes</strong> on null checks. MapStruct does provide null checking only when required: when applying type-conversions or constructing a new type by invoking its constructor. This means that the user is responsible in hand-written code for returning valid non-null objects. Also null objects can be handed to hand-written code, since MapStruct does not want to make assumptions on the meaning assigned by the user to a null object. Hand-written code has to deal with this.</p>
+<p>Some <strong>notes</strong> on null checks. Dettonville does provide null checking only when required: when applying type-conversions or constructing a new type by invoking its constructor. This means that the user is responsible in hand-written code for returning valid non-null objects. Also null objects can be handed to hand-written code, since Dettonville does not want to make assumptions on the meaning assigned by the user to a null object. Hand-written code has to deal with this.</p>
 </div>
 </div>
 </div>
@@ -6300,7 +6300,7 @@ In order to use a more specific condition method you will need to use one of <co
 </div>
 </div>
 <div class="paragraph">
-<p>The example above declares a mapping method <code>carDtoToCar()</code> with a configuration to define how the property <code>numberOfSeats</code> in the type <code>Car</code> shall be mapped. The update method that performs the mapping on an existing instance of <code>Car</code> needs the same configuration to successfully map all properties. Declaring <code>@InheritConfiguration</code> on the method lets MapStruct search for inheritance candidates to apply the annotations of the method that is inherited from.</p>
+<p>The example above declares a mapping method <code>carDtoToCar()</code> with a configuration to define how the property <code>numberOfSeats</code> in the type <code>Car</code> shall be mapped. The update method that performs the mapping on an existing instance of <code>Car</code> needs the same configuration to successfully map all properties. Declaring <code>@InheritConfiguration</code> on the method lets Dettonville search for inheritance candidates to apply the annotations of the method that is inherited from.</p>
 </div>
 <div class="paragraph">
 <p>One method <strong>A</strong> can inherit the configuration from another method <strong>B</strong> if all types of <strong>A</strong> (source types and result type) are assignable to the corresponding types of <strong>B</strong>.</p>
@@ -6417,7 +6417,7 @@ In order to use a more specific condition method you will need to use one of <co
 <div class="sect2">
 <h3 id="shared-configurations"><a class="anchor" href="#shared-configurations"></a>11.3. Shared configurations</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to define a shared configuration by pointing to a central interface annotated with <code>@MapperConfig</code>. For a mapper to use the shared configuration, the configuration interface needs to be defined in the <code>@Mapper#config</code> property.</p>
+<p>Dettonville offers the possibility to define a shared configuration by pointing to a central interface annotated with <code>@MapperConfig</code>. For a mapper to use the shared configuration, the configuration interface needs to be defined in the <code>@Mapper#config</code> property.</p>
 </div>
 <div class="paragraph">
 <p>The <code>@MapperConfig</code> annotation has the same attributes as the <code>@Mapper</code> annotation. Any attributes not given via <code>@Mapper</code> will be inherited from the shared configuration. Attributes specified in <code>@Mapper</code> take precedence over the attributes specified via the referenced configuration class. List properties such as <code>uses</code> are simply combined:</p>
@@ -6558,12 +6558,12 @@ In order to use a more specific condition method you will need to use one of <co
 <h2 id="_customizing_mappings"><a class="anchor" href="#_customizing_mappings"></a>12. Customizing mappings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Sometimes it&#8217;s needed to apply custom logic before or after certain mapping methods. MapStruct provides two ways for doing so: decorators which allow for a type-safe customization of specific mapping methods and the before-mapping and after-mapping lifecycle methods which allow for a generic customization of mapping methods with given source or target types.</p>
+<p>Sometimes it&#8217;s needed to apply custom logic before or after certain mapping methods. Dettonville provides two ways for doing so: decorators which allow for a type-safe customization of specific mapping methods and the before-mapping and after-mapping lifecycle methods which allow for a generic customization of mapping methods with given source or target types.</p>
 </div>
 <div class="sect2">
 <h3 id="customizing-mappers-using-decorators"><a class="anchor" href="#customizing-mappers-using-decorators"></a>12.1. Mapping customization with decorators</h3>
 <div class="paragraph">
-<p>In certain cases it may be required to customize a generated mapping method, e.g. to set an additional property in the target object which can&#8217;t be set by a generated method implementation. MapStruct supports this requirement using decorators.</p>
+<p>In certain cases it may be required to customize a generated mapping method, e.g. to set an additional property in the target object which can&#8217;t be set by a generated method implementation. Dettonville supports this requirement using decorators.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -6572,7 +6572,7 @@ In order to use a more specific condition method you will need to use one of <co
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-When working with the component model <code>cdi</code>, use <a href="https://docs.jboss.org/cdi/spec/1.0/html/decorators.html">CDI decorators</a> with MapStruct mappers instead of the <code>@DecoratedWith</code> annotation described here.
+When working with the component model <code>cdi</code>, use <a href="https://docs.jboss.org/cdi/spec/1.0/html/decorators.html">CDI decorators</a> with Dettonville mappers instead of the <code>@DecoratedWith</code> annotation described here.
 </td>
 </tr>
 </table>
@@ -7038,18 +7038,18 @@ parameters and constructing a new target bean.</p>
 <p><strong>Important:</strong> the order of methods declared within one type can not be guaranteed, as it depends on the compiler and the processing environment implementation.</p>
 </div>
 <div class="paragraph">
-<p><strong>Important:</strong> when using a builder, the <code>@AfterMapping</code> annotated method must have the builder as <code>@MappingTarget</code> annotated parameter so that the method is able to modify the object going to be build. The <code>build</code> method is called when the <code>@AfterMapping</code> annotated method scope finishes. MapStruct will not call the <code>@AfterMapping</code> annotated method if the real target is used as <code>@MappingTarget</code> annotated parameter.</p>
+<p><strong>Important:</strong> when using a builder, the <code>@AfterMapping</code> annotated method must have the builder as <code>@MappingTarget</code> annotated parameter so that the method is able to modify the object going to be build. The <code>build</code> method is called when the <code>@AfterMapping</code> annotated method scope finishes. Dettonville will not call the <code>@AfterMapping</code> annotated method if the real target is used as <code>@MappingTarget</code> annotated parameter.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="using-spi"><a class="anchor" href="#using-spi"></a>13. Using the MapStruct SPI</h2>
+<h2 id="using-spi"><a class="anchor" href="#using-spi"></a>13. Using the Dettonville SPI</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_custom_accessor_naming_strategy"><a class="anchor" href="#_custom_accessor_naming_strategy"></a>13.1. Custom Accessor Naming Strategy</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to override the <code>AccessorNamingStrategy</code> via the Service Provider Interface (SPI). A nice example is the use of the fluent API on the source object <code>GolfPlayer</code> and <code>GolfPlayerDto</code> below.</p>
+<p>Dettonville offers the possibility to override the <code>AccessorNamingStrategy</code> via the Service Provider Interface (SPI). A nice example is the use of the fluent API on the source object <code>GolfPlayer</code> and <code>GolfPlayerDto</code> below.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 97. Source object GolfPlayer with fluent API.</div>
@@ -7287,9 +7287,9 @@ Fore more details: The example above is present in our examples repository (<a h
 <div class="sect2">
 <h3 id="_mapping_exclusion_provider"><a class="anchor" href="#_mapping_exclusion_provider"></a>Mapping Exclusion Provider</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to override the <code>MappingExclusionProvider</code> via the Service Provider Interface (SPI).
-A nice example is to not allow MapStruct to create an automatic sub-mapping for a certain type,
-i.e. MapStruct will not try to generate an automatic sub-mapping method for an excluded type.</p>
+<p>Dettonville offers the possibility to override the <code>MappingExclusionProvider</code> via the Service Provider Interface (SPI).
+A nice example is to not allow Dettonville to create an automatic sub-mapping for a certain type,
+i.e. Dettonville will not try to generate an automatic sub-mapping method for an excluded type.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -7300,7 +7300,7 @@ i.e. MapStruct will not try to generate an automatic sub-mapping method for an e
 <td class="content">
 <div class="paragraph">
 <p>The <code>DefaultMappingExclusionProvider</code> will exclude all types under the <code>java</code> or <code>javax</code> packages.
-This means that MapStruct will not try to generate an automatic sub-mapping method between some custom type and some type declared in the Java class library.</p>
+This means that Dettonville will not try to generate an automatic sub-mapping method between some custom type and some type declared in the Java class library.</p>
 </div>
 </td>
 </tr>
@@ -7452,7 +7452,7 @@ This JAR file needs to be added to the annotation processor classpath
 <div class="sect2">
 <h3 id="custom-builder-provider"><a class="anchor" href="#custom-builder-provider"></a>13.2. Custom Builder Provider</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to override the <code>DefaultProvider</code> via the Service Provider Interface (SPI).
+<p>Dettonville offers the possibility to override the <code>DefaultProvider</code> via the Service Provider Interface (SPI).
 A nice example is to provide support for a custom builder strategy.</p>
 </div>
 <div class="exampleblock">
@@ -7493,7 +7493,7 @@ A nice example is to provide support for a custom builder strategy.</p>
 <div class="sect2">
 <h3 id="custom-enum-naming-strategy"><a class="anchor" href="#custom-enum-naming-strategy"></a>13.3. Custom Enum Naming Strategy</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to override the <code>EnumMappingStrategy</code> via the Service Provider Interface (SPI).
+<p>Dettonville offers the possibility to override the <code>EnumMappingStrategy</code> via the Service Provider Interface (SPI).
 This can be used when you have certain enums that follow some conventions within your organization.
 For example all enums which implement an interface named <code>CustomEnumMarker</code> are prefixed with <code>CUSTOM_</code>
 and the default value for them when mapping from <code>null</code> is <code>UNSPECIFIED</code></p>
@@ -7756,7 +7756,7 @@ Here’s an implemented <code>org.dettonville.ap.spi.EnumMappingStrategy</code>:
 <div class="sect2">
 <h3 id="custom-enum-transformation-strategy"><a class="anchor" href="#custom-enum-transformation-strategy"></a>13.4. Custom Enum Transformation Strategy</h3>
 <div class="paragraph">
-<p>MapStruct offers the possibility to other transformations strategies by implementing <code>EnumTransformationStrategy</code> via the Service Provider Interface (SPI).
+<p>Dettonville offers the possibility to other transformations strategies by implementing <code>EnumTransformationStrategy</code> via the Service Provider Interface (SPI).
 A nice example is to provide support for a custom transformation strategy.</p>
 </div>
 <div class="exampleblock">
@@ -7810,9 +7810,9 @@ A nice example is to provide support for a custom transformation strategy.</p>
 <div class="sect2">
 <h3 id="non-shipped-annotations"><a class="anchor" href="#non-shipped-annotations"></a>14.1. Non-shipped annotations</h3>
 <div class="paragraph">
-<p>There are various use-cases you must resolve ambiguity for MapStruct to use a correct piece of code.
-However, the primary goal of MapStruct is to focus on bean mapping without polluting the entity code.
-For that reason, MapStruct is flexible enough to interact with already defined annotations from third-party libraries.
+<p>There are various use-cases you must resolve ambiguity for Dettonville to use a correct piece of code.
+However, the primary goal of Dettonville is to focus on bean mapping without polluting the entity code.
+For that reason, Dettonville is flexible enough to interact with already defined annotations from third-party libraries.
 The requirement to enable this behavior is to match the <em>name</em> of such annotation.
 Hence, we say that annotation can be <em>from any package</em>.</p>
 </div>
@@ -7877,10 +7877,10 @@ In such cases create your own annotation, for example:</p>
 <div class="sect2">
 <h3 id="lombok"><a class="anchor" href="#lombok"></a>14.2. Lombok</h3>
 <div class="paragraph">
-<p>MapStruct works together with <a href="https://projectlombok.org/">Project Lombok</a> as of MapStruct 1.2.0.Beta1 and Lombok 1.16.14.</p>
+<p>Dettonville works together with <a href="https://projectlombok.org/">Project Lombok</a> as of Dettonville 1.2.0.Beta1 and Lombok 1.16.14.</p>
 </div>
 <div class="paragraph">
-<p>MapStruct takes advantage of generated getters, setters, and constructors and uses them to generate the mapper implementations.</p>
+<p>Dettonville takes advantage of generated getters, setters, and constructors and uses them to generate the mapper implementations.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -7891,8 +7891,8 @@ In such cases create your own annotation, for example:</p>
 <td class="content">
 <div class="paragraph">
 <p>Lombok 1.18.16 introduces a breaking change (<a href="https://projectlombok.org/changelog">changelog</a>).
-The additional annotation processor <code>lombok-dettonville-binding</code> (<a href="https://mvnrepository.com/artifact/org.projectlombok/lombok-dettonville-binding">Maven</a>) must be added otherwise MapStruct stops working with Lombok.
-This resolves the compilation issues of Lombok and MapStruct modules.</p>
+The additional annotation processor <code>lombok-dettonville-binding</code> (<a href="https://mvnrepository.com/artifact/org.projectlombok/lombok-dettonville-binding">Maven</a>) must be added otherwise Dettonville stops working with Lombok.
+This resolves the compilation issues of Lombok and Dettonville modules.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -8071,7 +8071,7 @@ dependencies {
 <p>The usage combines what you already know from <a href="#defining-mapper">Defining a mapper</a> and Lombok.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 114. Usage of MapStruct with Lombok</div>
+<div class="title">Example 114. Usage of Dettonville with Lombok</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">

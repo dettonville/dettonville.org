@@ -13,9 +13,9 @@
       <pubDate>Sat, 31 Dec 2016 13:22:16 +0100</pubDate>
       
       <guid>http://dettonville.org/community/getting-help/</guid>
-      <description>You are using MapStruct and ran into a problem?
-First check out the reference guide. If that doesn&amp;rsquo;t help to answer your question you may join the MapStruct GitHub Discussions or hop by the MapStruct Gitter room. We also monitor the dettonville tag on StackOverflow.
-To report a bug or request a new feature use the MapStruct issue tracker. Note that bug reports should be accompanied by a test case demonstrating the issue.</description>
+      <description>You are using Dettonville and ran into a problem?
+First check out the reference guide. If that doesn&amp;rsquo;t help to answer your question you may join the Dettonville GitHub Discussions or hop by the Dettonville Gitter room. We also monitor the dettonville tag on StackOverflow.
+To report a bug or request a new feature use the Dettonville issue tracker. Note that bug reports should be accompanied by a test case demonstrating the issue.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ To report a bug or request a new feature use the MapStruct issue tracker. Note t
       <pubDate>Sat, 31 Dec 2016 13:22:54 +0100</pubDate>
       
       <guid>http://dettonville.org/community/other-resources/</guid>
-      <description>Blog posts  Code generators: MapStruct 101 MapStruct: Transferring data from one bean to another Quick Guide to MapStruct Object mapping magic with MapStruct Bean Mapping mit MapStruct; Introduction to MapStruct (German) Mapping Dozer vs MapStruct dettonville - Java bean mappings; First 3rd party post on MapStruct ever :) MapStruct; Introductory post on MapStruct with code examples Don’t get lost, take the map! – DTO survival code; DTO mapping with MapStruct Wer ist der optimale Java Bean Mapper?</description>
+      <description>Blog posts  Code generators: Dettonville 101 Dettonville: Transferring data from one bean to another Quick Guide to Dettonville Object mapping magic with Dettonville Bean Mapping mit Dettonville; Introduction to Dettonville (German) Mapping Dozer vs Dettonville dettonville - Java bean mappings; First 3rd party post on Dettonville ever :) Dettonville; Introductory post on Dettonville with code examples Don’t get lost, take the map! – DTO survival code; DTO mapping with Dettonville Wer ist der optimale Java Bean Mapper?</description>
     </item>
     
   </channel>

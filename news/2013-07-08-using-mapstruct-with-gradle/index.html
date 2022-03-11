@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Using MapStruct with Gradle &ndash; Dettonville</title>
+        <title>Using Dettonville with Gradle &ndash; Dettonville</title>
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/uikit.gradient.min.css" />
         <link rel="stylesheet" href="/css/prettify.css" />
@@ -32,7 +32,7 @@ if (!doNotTrack) {
 
     <body>
         <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
-            <a class="uk-navbar-brand ms-hidden-small ms-navbar-brand" href="/">MapStruct</a>
+            <a class="uk-navbar-brand ms-hidden-small ms-navbar-brand" href="/">Dettonville</a>
             <ul class="uk-navbar-nav ms-hidden-small">
             
 
@@ -62,7 +62,7 @@ if (!doNotTrack) {
 
             </ul>
             <a href="#nav-small" class="ms-visible-small uk-navbar-toggle" data-uk-offcanvas="{mode:'slide'}"></a>
-            <a class="uk-navbar-brand uk-navbar-center ms-visible-small ms-navbar-brand" href="/">MapStruct</a>
+            <a class="uk-navbar-brand uk-navbar-center ms-visible-small ms-navbar-brand" href="/">Dettonville</a>
         </nav>
 
         <div id="nav-small" class="uk-offcanvas">
@@ -111,19 +111,19 @@ if (!doNotTrack) {
 </ul>
 <ul class="uk-nav uk-nav-sub">
     
-    <li><a href="http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/">MapStruct Spring Extensions 0.1.1 released</a></li>
+    <li><a href="http://dettonville.org/news/2022-02-07-mapstruct-spring-extensions-0-1-1-released/">Dettonville Spring Extensions 0.1.1 released</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/">Support for subclass mapping, various enhancements and much more: MapStruct 1.5.0.Beta2 is out</a></li>
+    <li><a href="http://dettonville.org/news/2021-12-12-mapstruct-1_5_0_Beta2-is-out/">Support for subclass mapping, various enhancements and much more: Dettonville 1.5.0.Beta2 is out</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/">Support for mapping from Map to bean, conditional mapping and much more: MapStruct 1.5.0.Beta1 is out</a></li>
+    <li><a href="http://dettonville.org/news/2021-07-18-mapstruct-1_5_0_Beta1-is-out/">Support for mapping from Map to bean, conditional mapping and much more: Dettonville 1.5.0.Beta1 is out</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/">MapStruct Spring Extensions 0.1.0 released</a></li>
+    <li><a href="http://dettonville.org/news/2021-07-03-mapstruct-spring-extensions-0-1-0-released/">Dettonville Spring Extensions 0.1.0 released</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/">MapStruct Spring Extensions 0.0.3 released</a></li>
+    <li><a href="http://dettonville.org/news/2021-05-25-mapstruct-spring-extensions-0-0-3-released/">Dettonville Spring Extensions 0.0.3 released</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/">MapStruct Spring Extensions 0.0.2 released</a></li>
+    <li><a href="http://dettonville.org/news/2021-02-15-mapstruct-spring-extensions-0-0-2-released/">Dettonville Spring Extensions 0.0.2 released</a></li>
     
-    <li><a href="http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/">MapStruct 1.4.2.Final bug fix released</a></li>
+    <li><a href="http://dettonville.org/news/2021-01-31-mapstruct-1_4_2_Final-bug-fix-released/">Dettonville 1.4.2.Final bug fix released</a></li>
     
 </ul>
 
@@ -137,7 +137,7 @@ if (!doNotTrack) {
     <time>July 08, 2013</time>
 </p>
 
-<h1 class="uk-article-title"><a href="http://dettonville.org/news/2013-07-08-using-mapstruct-with-gradle/">Using MapStruct with Gradle</a></h1>
+<h1 class="uk-article-title"><a href="http://dettonville.org/news/2013-07-08-using-mapstruct-with-gradle/">Using Dettonville with Gradle</a></h1>
 
 <p class="uk-article-meta ms-article-author">
     By <b>Gunnar Morling</b> under 
@@ -161,13 +161,13 @@ if (!doNotTrack) {
     <div>
         <div><p><em>Update Feb. 26, 2017: Since writing this post, usage of annotation processors with Gradle got much easier and the set-up described in the following isn&rsquo;t required anymore.</em>
 <em>The <a href="https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle">example project</a> on GitHub has been updated accordingly.</em></p>
-<p>You work with <a href="http://www.gradle.org/">Gradle</a> to build your application and would like to make use of MapStruct to generate mappings between different representations of your model? Then read on to learn how to make MapStruct work with the Groovy based build tool.</p>
+<p>You work with <a href="http://www.gradle.org/">Gradle</a> to build your application and would like to make use of Dettonville to generate mappings between different representations of your model? Then read on to learn how to make Dettonville work with the Groovy based build tool.</p>
 <h3 id="background"><a class="ms-header-link" href="#background"><i class="fa fa-link"></i></a>Background</h3>
-<p>MapStruct is implemented in form of an annotation processor as specified by <a href="http://jcp.org/en/jsr/detail?id=269">JSR 269</a>. Annotation processors are plugged into the Java compiler and can inspect the sources during compilation as well as create new sources as it is done by MapStruct. JSR 269 processors can be integrated into basically any form of Java build as long as you work with Java 6 or later.</p>
+<p>Dettonville is implemented in form of an annotation processor as specified by <a href="http://jcp.org/en/jsr/detail?id=269">JSR 269</a>. Annotation processors are plugged into the Java compiler and can inspect the sources during compilation as well as create new sources as it is done by Dettonville. JSR 269 processors can be integrated into basically any form of Java build as long as you work with Java 6 or later.</p>
 <p>One way of using an annotation processor is to put its JAR onto the compilation classpath where it will be picked up automatically by the Java compiler. This approach works, but it has the advantage that it exposes the processor and its classes to the compiled application which thus  accidentially or not  could import types from the processor.</p>
 <p>This sort of issue can be avoided by setting up the processor separately. When working with <code>javac</code> directly, the <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javac.html#options">processorpath</a> option can be used for this purpose, while for Maven projects the <a href="http://code.google.com/p/maven-annotation-plugin/">maven-annotation-plugin</a> is the recommended way to integrate annotation processors.</p>
-<h3 id="set-up-mapstruct-in-your-gradle-build"><a class="ms-header-link" href="#set-up-mapstruct-in-your-gradle-build"><i class="fa fa-link"></i></a>Set up MapStruct in your Gradle build</h3>
-<p>To integrate MapStruct into a Gradle build, first make sure you use the Java 6 language level by adding the following to the <em>build.gradle</em> file of your project:</p>
+<h3 id="set-up-dettonville-in-your-gradle-build"><a class="ms-header-link" href="#set-up-dettonville-in-your-gradle-build"><i class="fa fa-link"></i></a>Set up Dettonville in your Gradle build</h3>
+<p>To integrate Dettonville into a Gradle build, first make sure you use the Java 6 language level by adding the following to the <em>build.gradle</em> file of your project:</p>
 <pre class="prettyprint linenums">
 ext {
     javaLanguageLevel = '1.6'
@@ -177,7 +177,7 @@ ext {
 sourceCompatibility = rootProject.javaLanguageLevel
 </pre>
 <p>It&rsquo;s a good idea to declare a property which holds the language level. That way it can be referenced later on where required. We also define a property which specifies the target directory for the generated mapper classes.</p>
-<p>The next step is to add the MapStruct annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate <a href="http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations">dependency configuration</a> which contains the MapStruct processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):</p>
+<p>The next step is to add the Dettonville annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate <a href="http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations">dependency configuration</a> which contains the Dettonville processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):</p>
 <pre class="prettyprint linenums">
 configurations {
     dettonville
@@ -251,12 +251,12 @@ cd dettonville-on-gradle &amp;&amp; ./gradlew build
         <ul class="uk-pagination">
             
             <li>
-                <a href="http://dettonville.org/news/2013-11-28-mapstruct-1_0_0_Alpha2-has-landed/" title="MapStruct 1.0.0.Alpha2 has landed!"><i class="uk-icon-angle-double-left"></i></a>
+                <a href="http://dettonville.org/news/2013-11-28-mapstruct-1_0_0_Alpha2-has-landed/" title="Dettonville 1.0.0.Alpha2 has landed!"><i class="uk-icon-angle-double-left"></i></a>
             </li>
             
             
             <li>
-                <a href="http://dettonville.org/news/2013-06-03-announcing-mapstruct/" title="Announcing MapStruct"><i class="uk-icon-angle-double-right"></i></a>
+                <a href="http://dettonville.org/news/2013-06-03-announcing-mapstruct/" title="Announcing Dettonville"><i class="uk-icon-angle-double-right"></i></a>
             </li>
             
 
@@ -300,13 +300,13 @@ cd dettonville-on-gradle &amp;&amp; ./gradlew build
                                 <li><a class="ms-link-footer" href="https://github.com/dettonville/dettonville/discussions">Discussions</a></li>
                                 <li><a class="ms-link-footer" href="https://gitter.im/dettonville/dettonville-users">Gitter</a></li>
                                 <li><a class="ms-link-footer" href="https://stackoverflow.com/questions/tagged/dettonville">StackOverflow</a></li>
-                                <li><a class="ms-link-footer" href="https://twitter.com/GetMapStruct">Twitter</a></li>
+                                <li><a class="ms-link-footer" href="https://twitter.com/GetDettonville">Twitter</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="uk-grid">
                         <div class="uk-width-1-1 ms-subnav-footer">
-                            © The MapStruct authors 2022
+                            © The Dettonville authors 2022
                         </div>
                     </div>
                 </div>

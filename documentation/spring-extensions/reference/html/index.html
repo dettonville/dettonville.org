@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Asciidoctor 2.0.10">
     <meta name="author" content="Raimund Klein">
-    <title>MapStruct Spring Extensions 0.1.1 Reference Guide</title>
+    <title>Dettonville Spring Extensions 0.1.1 Reference Guide</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
     <style>
         /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,7 +440,7 @@
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-    <h1>MapStruct Spring Extensions 0.1.1 Reference Guide</h1>
+    <h1>Dettonville Spring Extensions 0.1.1 Reference Guide</h1>
     <div class="details">
         <span id="author" class="author">Raimund Klein</span><br>
         <span id="revnumber">version 0.1.1,</span>
@@ -473,14 +473,14 @@
         <h2 id="Preface"><a class="anchor" href="#Preface"></a>Preface</h2>
         <div class="sectionbody">
             <div class="paragraph">
-                <p>This is the reference documentation of the MapStruct Spring Extensions, an annotation processor designed to complement the core MapStruct project with features specific to the Spring Framework.
-                    This guide covers all the functionality provided by the MapStruct Spring Extensions. In case this guide doesn&#8217;t answer all your questions just join the MapStruct <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">Google group</a> to get help.</p>
+                <p>This is the reference documentation of the Dettonville Spring Extensions, an annotation processor designed to complement the core Dettonville project with features specific to the Spring Framework.
+                    This guide covers all the functionality provided by the Dettonville Spring Extensions. In case this guide doesn&#8217;t answer all your questions just join the Dettonville <a href="https://groups.google.com/forum/?fromgroups#!forum/dettonville-users">Google group</a> to get help.</p>
             </div>
             <div class="paragraph">
-                <p>Please note that this guide assumes some familiarity with the MapStruct core. If this is your first introduction to MapStruct, you might wish to start with the <a href="https://dettonville.org/documentation/stable/reference/html/">core documentation</a>.</p>
+                <p>Please note that this guide assumes some familiarity with the Dettonville core. If this is your first introduction to Dettonville, you might wish to start with the <a href="https://dettonville.org/documentation/stable/reference/html/">core documentation</a>.</p>
             </div>
             <div class="paragraph">
-                <p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville-spring-extensions">MapStruct Spring Extensions GitHub repository</a>,
+                <p>You found a typo or other error in this guide? Please let us know by opening an issue in the <a href="https://github.com/dettonville/dettonville-spring-extensions">Dettonville Spring Extensions GitHub repository</a>,
                     or, better yet, help the community and send a pull request for fixing it!</p>
             </div>
             <div class="paragraph">
@@ -492,13 +492,13 @@
         <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
         <div class="sectionbody">
             <div class="paragraph">
-                <p>The MapStruct Spring Extensions are a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> extending the well known <a href="https://dettonville.org/">MapStruct project</a> with features specific to the <a href="https://spring.io/">Spring Framework</a>.</p>
+                <p>The Dettonville Spring Extensions are a Java <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html">annotation processor</a> extending the well known <a href="https://dettonville.org/">Dettonville project</a> with features specific to the <a href="https://spring.io/">Spring Framework</a>.</p>
             </div>
             <div class="paragraph">
-                <p>All you have to do is to define your MapStruct mapper to extend Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-Converter-API">Converter interface</a>. During compilation, the extensions will generate an adapter which allows the standard MapStruct mappers to use Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API">ConversionService</a>.</p>
+                <p>All you have to do is to define your Dettonville mapper to extend Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-Converter-API">Converter interface</a>. During compilation, the extensions will generate an adapter which allows the standard Dettonville mappers to use Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-ConversionService-API">ConversionService</a>.</p>
             </div>
             <div class="paragraph">
-                <p>This enables the developer to define MapStruct mappers with only the <code>ConversionService</code> in their <code>uses</code> attribute rather than having to import every single Mapper individually, thus allowing for looser coupling between Mappers.</p>
+                <p>This enables the developer to define Dettonville mappers with only the <code>ConversionService</code> in their <code>uses</code> attribute rather than having to import every single Mapper individually, thus allowing for looser coupling between Mappers.</p>
             </div>
         </div>
     </div>
@@ -506,7 +506,7 @@
         <h2 id="setup"><a class="anchor" href="#setup"></a>2. Set up</h2>
         <div class="sectionbody">
             <div class="paragraph">
-                <p>MapStruct Spring Extensions is a Java annotation processor based on <a href="http://www.jcp.org/en/jsr/detail?id=269">JSR 269</a> and as such can be used within command line builds (javac, Ant, Maven etc.) as well as from within your IDE. Also, you will need MapStruct itself (at least version <code>1.4.0.Final</code>) in your project.</p>
+                <p>Dettonville Spring Extensions is a Java annotation processor based on <a href="http://www.jcp.org/en/jsr/detail?id=269">JSR 269</a> and as such can be used within command line builds (javac, Ant, Maven etc.) as well as from within your IDE. Also, you will need Dettonville itself (at least version <code>1.4.0.Final</code>) in your project.</p>
             </div>
             <div class="paragraph">
                 <p>It comprises the following artifacts:</p>
@@ -524,7 +524,7 @@
             <div class="sect2">
                 <h3 id="_apache_maven"><a class="anchor" href="#_apache_maven"></a>2.1. Apache Maven</h3>
                 <div class="paragraph">
-                    <p>For Maven based projects add the following to your POM file in order to use MapStruct Spring Extensions:</p>
+                    <p>For Maven based projects add the following to your POM file in order to use Dettonville Spring Extensions:</p>
                 </div>
                 <div class="exampleblock">
                     <div class="title">Example 1. Maven configuration</div>
@@ -615,12 +615,12 @@
                             <td class="content">
                                 <div class="paragraph">
                                     <p>If you are working with the Eclipse IDE, make sure to have a current version of the <a href="http://www.eclipse.org/m2e/">M2E plug-in</a>.
-                                        When importing a Maven project configured as shown above, it will set up the MapStruct Spring Extensions annotation processor so it runs right in the IDE, whenever you save a mapper type extending a Spring converter.
+                                        When importing a Maven project configured as shown above, it will set up the Dettonville Spring Extensions annotation processor so it runs right in the IDE, whenever you save a mapper type extending a Spring converter.
                                         Neat, isn&#8217;t it?</p>
                                 </div>
                                 <div class="paragraph">
                                     <p>To double check that everything is working as expected, go to your project&#8217;s properties and select "Java Compiler" &#8594; "Annotation Processing" &#8594; "Factory Path".
-                                        The MapStruct Spring Extensions JAR should be listed and enabled there.
+                                        The Dettonville Spring Extensions JAR should be listed and enabled there.
                                         Any processor options configured via the compiler plug-in (see below) should be listed under "Java Compiler" &#8594; "Annotation Processing".</p>
                                 </div>
                                 <div class="paragraph">
@@ -640,7 +640,7 @@
             <div class="sect2">
                 <h3 id="_gradle"><a class="anchor" href="#_gradle"></a>2.2. Gradle</h3>
                 <div class="paragraph">
-                    <p>Add the following to your Gradle build file in order to enable MapStruct Spring Extensions:</p>
+                    <p>Add the following to your Gradle build file in order to enable Dettonville Spring Extensions:</p>
                 </div>
                 <div class="exampleblock">
                     <div class="title">Example 2. Gradle configuration (5.2 and later)</div>
@@ -667,7 +667,7 @@ dependencies {
     implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
     annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
-    <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
+    <span class="comment">// If you are using Dettonville Spring Extensions in test code</span>
     testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
@@ -719,7 +719,7 @@ dependencies {
     implementation <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
     annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
-    <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
+    <span class="comment">// If you are using Dettonville Spring Extensions in test code</span>
     testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
@@ -771,7 +771,7 @@ dependencies {
     compile <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-annotations:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
     annotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 
-    <span class="comment">// If you are using MapStruct Spring Extensions in test code</span>
+    <span class="comment">// If you are using Dettonville Spring Extensions in test code</span>
     testAnnotationProcessor <span class="string"><span class="delimiter">&quot;</span><span class="content">org.dettonville.extensions.spring:dettonville-spring-extensions:</span><span class="inline"><span class="inline-delimiter">${</span>dettonvilleSpringExtensionsVersion<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
 }
 ...</pre></td>
@@ -784,7 +784,7 @@ dependencies {
             <div class="sect2">
                 <h3 id="_apache_ant"><a class="anchor" href="#_apache_ant"></a>2.3. Apache Ant</h3>
                 <div class="paragraph">
-                    <p>Add the <code>javac</code> task configured as follows to your <em>build.xml</em> file in order to enable MapStruct Spring Extensions in your Ant-based project. Adjust the paths as required for your project layout.</p>
+                    <p>Add the <code>javac</code> task configured as follows to your <em>build.xml</em> file in order to enable Dettonville Spring Extensions in your Ant-based project. Adjust the paths as required for your project layout.</p>
                 </div>
                 <div class="exampleblock">
                     <div class="title">Example 5. Ant configuration</div>
@@ -823,7 +823,7 @@ dependencies {
         <h2 id="mapperAsConverter"><a class="anchor" href="#mapperAsConverter"></a>3. Mappers as Converters</h2>
         <div class="sectionbody">
             <div class="paragraph">
-                <p>MapStruct Mappers nicely match Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-Converter-API">Converter</a> idea:</p>
+                <p>Dettonville Mappers nicely match Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert-Converter-API">Converter</a> idea:</p>
             </div>
             <div class="exampleblock">
                 <div class="content">
@@ -873,10 +873,10 @@ dependencies {
                 </div>
             </div>
             <div class="paragraph">
-                <p>All this can be achieved already with MapStruct&#8217;s core functionality. However, when a Mapper wants to <a href="https://dettonville.org/documentation/stable/reference/html/#invoking-other-mappers">invoke</a> another one, it can&#8217;t take the route via the <code>ConversionService</code>, because the latter&#8217;s <code>convert</code> method does not match the signature that MapStruct expects for a mapping method. Thus, the developer still has to add every invoked Mapper to the invoking Mapper&#8217;s <code>uses</code> element. This creates (aside from a potentially long list) a tight coupling between Mappers that the <code>ConversionService</code> wants to avoid.</p>
+                <p>All this can be achieved already with Dettonville&#8217;s core functionality. However, when a Mapper wants to <a href="https://dettonville.org/documentation/stable/reference/html/#invoking-other-mappers">invoke</a> another one, it can&#8217;t take the route via the <code>ConversionService</code>, because the latter&#8217;s <code>convert</code> method does not match the signature that Dettonville expects for a mapping method. Thus, the developer still has to add every invoked Mapper to the invoking Mapper&#8217;s <code>uses</code> element. This creates (aside from a potentially long list) a tight coupling between Mappers that the <code>ConversionService</code> wants to avoid.</p>
             </div>
             <div class="paragraph">
-                <p>This is where MapStruct Spring Extensions can help. Including the two artifacts in your build will generate an Adapter class that <em>can</em> be used by an invoking Mapper. Let&#8217;s say that the above CarMapper is accompanied by a SeatConfigurationMapper:</p>
+                <p>This is where Dettonville Spring Extensions can help. Including the two artifacts in your build will generate an Adapter class that <em>can</em> be used by an invoking Mapper. Let&#8217;s say that the above CarMapper is accompanied by a SeatConfigurationMapper:</p>
             </div>
             <div class="exampleblock">
                 <div class="content">
@@ -950,7 +950,7 @@ dependencies {
                 </div>
             </div>
             <div class="paragraph">
-                <p>Since this class' methods match the signature that MapStruct expects, we can now add it to the CarMapper:</p>
+                <p>Since this class' methods match the signature that Dettonville expects, we can now add it to the CarMapper:</p>
             </div>
             <div class="exampleblock">
                 <div class="content">
@@ -1070,14 +1070,14 @@ dependencies {
 <span class="annotation">@MapperConfig</span>(componentModel = <span class="string"><span class="delimiter">&quot;</span><span class="content">spring</span><span class="delimiter">&quot;</span></span>)
 <span class="annotation">@SpringMapperConfig</span>(
     externalConversions = <span class="annotation">@ExternalConversion</span>(sourceType = <span class="predefined-type">String</span>.class, targetType = <span class="predefined-type">Locale</span>.class))
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">MapstructConfig</span> {}</pre></td>
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">DettonvilleConfig</span> {}</pre></td>
 </tr></table></code></pre>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="paragraph">
-                    <p>The processor will add the corresponding methods to the generated adapter so MapStruct can use them in the same fashion as the ones for the Converter Mappers in the same module:</p>
+                    <p>The processor will add the corresponding methods to the generated adapter so Dettonville can use them in the same fashion as the ones for the Converter Mappers in the same module:</p>
                 </div>
                 <div class="exampleblock">
                     <div class="content">

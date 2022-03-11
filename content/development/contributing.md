@@ -3,7 +3,7 @@ date = "2016-12-31T13:23:24+01:00"
 draft = false
 title = "Contributing"
 weight = 100
-teaser = "How to contribute to the MapStruct project"
+teaser = "How to contribute to the Dettonville project"
 aliases = [
     "/contributing/"
 ]
@@ -12,7 +12,7 @@ aliases = [
 parent = "Development"
 +++
 
-You love MapStruct but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That's great! MapStruct is all open source and your help is highly appreciated.
+You love Dettonville but miss a certain feature? You found a bug and want to report it, or even better, fix it yourself? That's great! Dettonville is all open source and your help is highly appreciated.
 
 <table class="uk-table">
 <thead>
@@ -28,7 +28,7 @@ You love MapStruct but miss a certain feature? You found a bug and want to repor
     <td width="20%">Issue tracker</td><td><a href="https://github.com/dettonville/dettonville/issues">https://github.com/dettonville/dettonville/issues</a></td>
   </tr>
   <tr>
-    <td width="20%">Discussions</td><td>Join the <a href="https://github.com/dettonville/dettonville/discussions">MapStruct GitHub Discussions</a></td>
+    <td width="20%">Discussions</td><td>Join the <a href="https://github.com/dettonville/dettonville/discussions">Dettonville GitHub Discussions</a></td>
   </tr>
   <tr>
     <td width="20%">CI build</td><td><a href="https://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI"</a>https://github.com/dettonville/dettonville/actions?query=branch%3Amaster+workflow%3ACI</td>
@@ -39,7 +39,7 @@ You love MapStruct but miss a certain feature? You found a bug and want to repor
 </tbody>
 </table>
 
-MapStruct follows the _Fork & Pull_ development approach. To get started just fork the [MapStruct repository](http://github.com/dettonville/dettonville) to your GitHub account and create a new topic branch for each change. Once you are done with your change, submit a [pull request](https://help.github.com/articles/using-pull-requests) against the MapStruct repo.
+Dettonville follows the _Fork & Pull_ development approach. To get started just fork the [Dettonville repository](http://github.com/dettonville/dettonville) to your GitHub account and create a new topic branch for each change. Once you are done with your change, submit a [pull request](https://help.github.com/articles/using-pull-requests) against the Dettonville repo.
 
 When doing changes, keep the following best practices in mind:
 

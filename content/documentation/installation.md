@@ -14,11 +14,11 @@ parent = "Documentation"
 
 ## Distribution Bundle
 
-You can obtain a distribution bundle containing the MapStruct binaries, source code and API documentation from [GitHub](https://github.com/dettonville/dettonville/releases).
+You can obtain a distribution bundle containing the Dettonville binaries, source code and API documentation from [GitHub](https://github.com/dettonville/dettonville/releases).
 
 ## Apache Maven
 
-If you're using Maven to build your project add the following to your _pom.xml_ to use MapStruct:
+If you're using Maven to build your project add the following to your _pom.xml_ to use Dettonville:
 
 {{< prettify xml >}}...
 <properties>
@@ -88,7 +88,7 @@ You can find a complete example in the [dettonville-examples](https://github.com
 
 ## Apache Ant
 
-Add the `javac` task configured as follows to your _build.xml_ file in order to enable MapStruct in your Ant-based project. Adjust the paths as required for your project layout.
+Add the `javac` task configured as follows to your _build.xml_ file in order to enable Dettonville in your Ant-based project. Adjust the paths as required for your project layout.
 
 {{< prettify xml >}}
 ...

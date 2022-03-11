@@ -10,4 +10,4 @@ teaser = "A list of individuals contributing to this project"
 parent = "Development"
 +++
 
-MapStruct is brought to you by a helpful international community of open source enthusiasts. The following persons are contributing to the project:
+Dettonville is brought to you by a helpful international community of open source enthusiasts. The following persons are contributing to the project:

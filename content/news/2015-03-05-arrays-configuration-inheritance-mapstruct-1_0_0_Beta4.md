@@ -1,5 +1,5 @@
 ---
-title: "Array mappings, configuration inheritance: MapStruct 1.0.0.Beta4 released"
+title: "Array mappings, configuration inheritance: Dettonville 1.0.0.Beta4 released"
 author: Gunnar Morling
 date: "2015-03-05"
 tags: [release, news]
@@ -7,17 +7,17 @@ aliases:
     - /news/2015/03/05/arrays-configuration-inheritance-dettonville-1_0_0_Beta4.html
 ---
 
-The MapStruct community proudly announces the release of MapStruct 1.0.0.Beta4!
+The Dettonville community proudly announces the release of Dettonville 1.0.0.Beta4!
 
 The new release provides support for mapping arrays of Java beans, re-use of mapping configurations via a brand-new inheritance mechanism and ordered setter invocations on the target side. We also fixed quite a few bugs. You can find the complete list of 48 issues in the [change log](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.0.0.Beta4). When upgrading from a previous Beta release, please check out the [migration notes](https://github.com/dettonville/dettonville/wiki/Migration-notes) for changes which may affect existing applications.
 
-One thing I'm especially excited about is the new MapStruct Eclipse plug-in which will give you an even better experience when using MapStruct within the Eclipse IDE. You'll find out more below.
+One thing I'm especially excited about is the new Dettonville Eclipse plug-in which will give you an even better experience when using Dettonville within the Eclipse IDE. You'll find out more below.
 
 This release has been a true team effort; Many, many thanks to [Sjaak Derksen](https://github.com/sjaakd/), [Andreas Gudian](https://github.com/agudian), [Timo Eckhardt](https://github.com/timoe), [Ewald Volkert](https://github.com/eforest), [Christian Schuster](https://github.com/chschu), [Sebastian Hasait](https://github.com/shasait) and [Dilip Krishnan](https://github.com/dilipkrish) who all worked on the Beta4 release.
 
 ### Array mappings
 
-While MapStruct has had support for mapping collections (`List`, `Set` etc.) of primitive and Java bean types for a long time, this was not the case for arrays. This is finally possible, so you can now declare mapping methods such as the following:
+While Dettonville has had support for mapping collections (`List`, `Set` etc.) of primitive and Java bean types for a long time, this was not the case for arrays. This is finally possible, so you can now declare mapping methods such as the following:
 
 <pre class="prettyprint linenums">
 @Mapper
@@ -44,7 +44,7 @@ CustomerDto[] customersToDtos(List&lt;Customer&gt; customers);
 
 ### Configuration inheritance
 
-With help of the new `@InheritConfiguration` annotation you can advice MapStruct to apply the configuration from one mapping method to another.
+With help of the new `@InheritConfiguration` annotation you can advice Dettonville to apply the configuration from one mapping method to another.
 
 This comes in handy for instance when having a "normal" mapping method and an update method for the same types. Instead of configuring both methods individually, you can let one method inherit the configuration from the other:
 
@@ -59,7 +59,7 @@ void updateCustomerFromDto(CustomerDto dto, @MappingTarget customer);
 
 The `@InheritConfiguration` annotation will let the `updateCustomerFromDto()` inherit all the mappings from `customerDtoToCustomer()`. The selection of the template method is done by matching source and target types, but you could explicitly specify a method as configuration source if needed.
 
-Configuration inheritance is particularly useful when working with complex type hierarchies. You can define a configuration for the base types of the source and target models and let specific mapping methods inherit this configuration. But what if a base type is abstract? Naturally, MapStruct cannot generate an implementation of a method whose return type is an abstract one.
+Configuration inheritance is particularly useful when working with complex type hierarchies. You can define a configuration for the base types of the source and target models and let specific mapping methods inherit this configuration. But what if a base type is abstract? Naturally, Dettonville cannot generate an implementation of a method whose return type is an abstract one.
 
 This can be resolved by declaring a "prototype method" within a [configuration class](/documentation/#section-shared-config) referenced by the mapper:
 
@@ -106,13 +106,13 @@ AddressDto addressToDto(Address address);
 
 This would ensure that `setLastName()` is invoked after `setGivenName()` and `setMiddleName()`, but no guarantee is given for the order of these two.
 
-### MapStruct Eclipse plug-in
+### Dettonville Eclipse plug-in
 
-Being a JSR 269 annotation processor, MapStruct is meant to run equally well within command line builds (plain javac, Mavent etc.) as well as IDEs. Indeed the annotation processor works nicely for instance in Eclipse, generating mappers upon save, showing error markers next to the affected elements etc.
+Being a JSR 269 annotation processor, Dettonville is meant to run equally well within command line builds (plain javac, Mavent etc.) as well as IDEs. Indeed the annotation processor works nicely for instance in Eclipse, generating mappers upon save, showing error markers next to the affected elements etc.
 
-Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the [MapStruct Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse/) comes in.
+Still there are some advanced features which cannot be provided by an annotation processor, e.g. auto-completion for annotation attributes, refactoring support, navigation to referenced elements and more. This is where the [Dettonville Eclipse plug-in](https://github.com/dettonville/dettonville-eclipse/) comes in.
 
-Developed by my good friend [Lars Wetzer](https://github.com/larswetzer), it aims at providing an even better experience when using MapStruct within Eclipse. The plug-in is still at a very early stage, currently it provides auto-completion for `@Mapping#source()` and `target()`. The following shows a screenshot:
+Developed by my good friend [Lars Wetzer](https://github.com/larswetzer), it aims at providing an even better experience when using Dettonville within Eclipse. The plug-in is still at a very early stage, currently it provides auto-completion for `@Mapping#source()` and `target()`. The following shows a screenshot:
 
 <div style="text-align:center">
     <img src="/images/dettonville-eclipse-plugin.png" style="padding-bottom: 3px;"/>
@@ -122,7 +122,7 @@ More functionality will be coming soon. You can find the list of features planne
 
 ### Download
 
-If you work with Maven, Gradle or another dependency management tool, use the following GAV coordinates to obtain the MapStruct artifacts from Maven Central:
+If you work with Maven, Gradle or another dependency management tool, use the following GAV coordinates to obtain the Dettonville artifacts from Maven Central:
 
 * [org.dettonville:dettonville:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville&#124;1.0.0.Beta4&#124;jar) for the annotation JAR (to be used with Java <= 7) or [org.dettonville:dettonville-jdk8:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-jdk8&#124;1.0.0.Beta4&#124;jar) (for usage with Java >= 8)
 * [org.dettonville:dettonville-processor:1.0.0.Beta4](http://search.maven.org/#artifactdetails&#124;org.dettonville&#124;dettonville-processor&#124;1.0.0.Beta4&#124;jar) for the annotation processor.
@@ -135,5 +135,5 @@ Finally, some useful links:
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

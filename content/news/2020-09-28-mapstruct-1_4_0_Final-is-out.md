@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.4.0.Final is out"
+title: "Dettonville 1.4.0.Final is out"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2020-09-27"
 tags: [release, news]
 ---
 
-Long overdue it is our pleasure to announce the final version MapStruct 1.4. 
+Long overdue it is our pleasure to announce the final version Dettonville 1.4. 
 This is our 4th release since november 2015.
 
 Besides bug fixes, the 1.4 release brings some new exciting features:
@@ -34,11 +34,11 @@ First and foremost as we promised in the 1.3.0.Final release we have delivered t
 Here it is included mapping into Kotlin Data Classes and Java 14 records.
 Apart from that we also have the following new features / enhancements:
 
-* Support Gradle incremental annotation processing - MapStruct will no longer cause an entire recompilation of your java module
+* Support Gradle incremental annotation processing - Dettonville will no longer cause an entire recompilation of your java module
 * Map nested beans to current target - i.e. you can use "." in `Mapping#target` to map nested beans to the current target
 * Supporting value mapping between `String` and `Enum` - i.e. `@ValueMapping` can be used to map enums into strings and vice versa
 * Supping meta annotations wih `@Mapping` - i.e. you can create your own annotation that holds common `@Mapping` definitions
-* User control over mapping features - i.e. you can decide which steps MapStruct should execute during the mapping, meaning that you can easily define clone methods without the need to define mappings for your entire object structure
+* User control over mapping features - i.e. you can decide which steps Dettonville should execute during the mapping, meaning that you can easily define clone methods without the need to define mappings for your entire object structure
 * New SPIs for enum mapping
 
 In total 105 issues have been fixed between the 1.3.0.Final and 1.4.0.Final releases.
@@ -79,8 +79,8 @@ The number of Downloads compared to the time we released 1.3.0.Final has been qu
 
 ### Thanks
 
-Last but not least we would like to congratulate all the enthusiastic MapStruct contributors making this release possible. 
-In alphabetic order this are all the contributors that contributed to the 1.4 release of Mapstruct:
+Last but not least we would like to congratulate all the enthusiastic Dettonville contributors making this release possible. 
+In alphabetic order this are all the contributors that contributed to the 1.4 release of Dettonville:
 
 * [@dekelpilli](https://github.com/dekelpilli),
 * [@fml2](https://github.com/fml2),
@@ -97,9 +97,9 @@ In alphabetic order this are all the contributors that contributed to the 1.4 re
 * [@vegemite4me](https://github.com/vegemite4me),
 * [@xcorail](https://github.com/xcorail),
 * [@Zomzog](https://github.com/Zomzog),
-and of course seasoned MapStruct hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922) and [Andrei Arlou](https://github.com/Captain1653).
+and of course seasoned Dettonville hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922) and [Andrei Arlou](https://github.com/Captain1653).
 
-Happy coding with MapStruct 1.4!!
+Happy coding with Dettonville 1.4!!
 
 ### Download
 
@@ -114,4 +114,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

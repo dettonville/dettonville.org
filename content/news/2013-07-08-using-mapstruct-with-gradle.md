@@ -1,5 +1,5 @@
 ---
-title: Using MapStruct with Gradle
+title: Using Dettonville with Gradle
 author: Gunnar Morling
 date: "2013-07-08"
 tags: [how-to, build, gradle]
@@ -9,19 +9,19 @@ aliases:
 _Update Feb. 26, 2017: Since writing this post, usage of annotation processors with Gradle got much easier and the set-up described in the following isn't required anymore._
 _The [example project](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-on-gradle) on GitHub has been updated accordingly._
 
-You work with [Gradle](http://www.gradle.org/) to build your application and would like to make use of MapStruct to generate mappings between different representations of your model? Then read on to learn how to make MapStruct work with the Groovy based build tool.
+You work with [Gradle](http://www.gradle.org/) to build your application and would like to make use of Dettonville to generate mappings between different representations of your model? Then read on to learn how to make Dettonville work with the Groovy based build tool.
 
 ### Background
 
-MapStruct is implemented in form of an annotation processor as specified by [JSR 269](http://jcp.org/en/jsr/detail?id=269). Annotation processors are plugged into the Java compiler and can inspect the sources during compilation as well as create new sources as it is done by MapStruct. JSR 269 processors can be integrated into basically any form of Java build as long as you work with Java 6 or later.
+Dettonville is implemented in form of an annotation processor as specified by [JSR 269](http://jcp.org/en/jsr/detail?id=269). Annotation processors are plugged into the Java compiler and can inspect the sources during compilation as well as create new sources as it is done by Dettonville. JSR 269 processors can be integrated into basically any form of Java build as long as you work with Java 6 or later.
 
 One way of using an annotation processor is to put its JAR onto the compilation classpath where it will be picked up automatically by the Java compiler. This approach works, but it has the advantage that it exposes the processor and its classes to the compiled application which thus &#150; accidentially or not &#150; could import types from the processor.
 
 This sort of issue can be avoided by setting up the processor separately. When working with `javac` directly, the [processorpath](http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javac.html#options) option can be used for this purpose, while for Maven projects the [maven-annotation-plugin](http://code.google.com/p/maven-annotation-plugin/) is the recommended way to integrate annotation processors.
 
-### Set up MapStruct in your Gradle build
+### Set up Dettonville in your Gradle build
 
-To integrate MapStruct into a Gradle build, first make sure you use the Java 6 language level by adding the following to the _build.gradle_ file of your project:
+To integrate Dettonville into a Gradle build, first make sure you use the Java 6 language level by adding the following to the _build.gradle_ file of your project:
 
 <pre class="prettyprint linenums">
 ext {
@@ -34,7 +34,7 @@ sourceCompatibility = rootProject.javaLanguageLevel
 
 It's a good idea to declare a property which holds the language level. That way it can be referenced later on where required. We also define a property which specifies the target directory for the generated mapper classes.
 
-The next step is to add the MapStruct annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate [dependency configuration](http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations) which contains the MapStruct processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):
+The next step is to add the Dettonville annotation module (<em>org.dettonville:dettonville:&lt;VERSION&gt;</em>) as compilation dependency and to declare a separate [dependency configuration](http://www.gradle.org/docs/current/userguide/dependency_management.html#sub:configurations) which contains the Dettonville processor module (<em>org.dettonville:dettonville-processor:&lt;VERSION&gt;</em>):
 
 <pre class="prettyprint linenums">
 configurations {

@@ -1,11 +1,11 @@
 ---
-title: "Support for constructors, Gradle incremental compilation and much more: MapStruct 1.4.0.Beta1 is out"
+title: "Support for constructors, Gradle incremental compilation and much more: Dettonville 1.4.0.Beta1 is out"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2020-06-01"
 tags: [release, news]
 ---
 
-It' my pleasure to announce the first Beta release of MapStruct 1.4.
+It' my pleasure to announce the first Beta release of Dettonville 1.4.
 
 The new release comes with a whole lot of new functionality, e.g.:
 
@@ -38,7 +38,7 @@ This would not have been possible without our fantastic community of contributor
 * [@sullis](https://github.com/sullis),
 * [@pradzins](https://github.com/pradzins),
 * [@seime](https://github.com/seime),
-and of course seasoned MapStruct hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922) and [Andrei Arlou](https://github.com/Captain1653). Thanks to [Gunnar Morling](https://github.com/gunnarmorling) and [Andreas Gudian](https://github.com/agudian) for the council and advice on this release.
+and of course seasoned Dettonville hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922) and [Andrei Arlou](https://github.com/Captain1653). Thanks to [Gunnar Morling](https://github.com/gunnarmorling) and [Andreas Gudian](https://github.com/agudian) for the council and advice on this release.
 
 Thank you everyone for all your hard work!
 
@@ -46,16 +46,16 @@ We know that it took us some time to do this, and we want to thank everyone for 
 
 This release is also the first release which uses our new Gem Tools project instead of [Hickory](https://web.archive.org/web/20070724060104/https://hickory.dev.java.net/).
 You can read more about it in the [Announcing Gem Tools](/news/2020-02-03-announcing-gem-tools.md) blog.
-With this release we also want to introduce a new community driven effort for different MapStruct extensions. 
+With this release we also want to introduce a new community driven effort for different Dettonville extensions. 
 More about it below. 
 
 Enough of the pep talk, let's take a closer look at some of the new features!
 
 ### Making use of constructor arguments when instantiating mapping targets
 
-Making use of [constructor arguments](https://github.com/dettonville/dettonville/issues/73) when instantiating mapping targets has been one of the oldest and the most requested feature of MapStruct.
+Making use of [constructor arguments](https://github.com/dettonville/dettonville/issues/73) when instantiating mapping targets has been one of the oldest and the most requested feature of Dettonville.
 
-We are happy to announce that as of 1.4.0.Beta1 MapStruct has out of the box support for mapping your immutable objects via constructors.
+We are happy to announce that as of 1.4.0.Beta1 Dettonville has out of the box support for mapping your immutable objects via constructors.
 This works with:
 
 * [Java 14 Records](https://openjdk.java.net/jeps/359)
@@ -66,8 +66,8 @@ For more details how the Constructor support works have a look at the [Using con
 ### Gradle incremental annotation processing
 
 Starting From Gradle 4.7, Gradle has supported [incremental annotation processing](https://docs.gradle.org/current/userguide/java_plugin.html#sec:incremental_annotation_processing).
-We are happy to say that starting from 1.4.0.Beta1 MapStruct is an isolating processor. 
-MapStruct will no longer be the reason for triggering an entire recompilation in your Gradle projects.
+We are happy to say that starting from 1.4.0.Beta1 Dettonville is an isolating processor. 
+Dettonville will no longer be the reason for triggering an entire recompilation in your Gradle projects.
 
 
 ### Map nested bean properties to current target
@@ -148,9 +148,9 @@ For more details have a look at the [Mapping Composition](http://dettonville.org
 
 ### User control over mapping features
 
-MapStruct has an extensive support for implicit type conversions, reusing other mappers, 2 step conversion, etc.
+Dettonville has an extensive support for implicit type conversions, reusing other mappers, 2 step conversion, etc.
 However, users were not able to control this.
-For example it was not possible to easily tell MapStruct to create a Mapper for deep cloning.
+For example it was not possible to easily tell Dettonville to create a Mapper for deep cloning.
 
 In 1.4.0.Beta1 we added a new experimental annotation (`@MappingControl`) that can be used to control how the mapping should be performed.
 It can enable or disable certain types of mappings.
@@ -158,7 +158,7 @@ This can be set over the different mechanisms that we support (`@BeanMapping`, `
 
 The following mapping possibilities exist:
 
-* `BUILT_IN_CONVERSION` - Allows using the built in MapStruct type conversions
+* `BUILT_IN_CONVERSION` - Allows using the built in Dettonville type conversions
 * `COMPLEX_MAPPING` - Allows using 2 step mappings (type conversion passed into a mapping method, mapping method passed into a type conversion and mapping method passed into another mapping method)
 * `DIRECT` - Allows using direct mapping when the source and target type match. Types from the `java` package are always directly mapped
 * `MAPPING_METHOD` - Allows using custom referred or built in mapping methods
@@ -204,7 +204,7 @@ public interface CloningMapper {
 }
 {{< /prettify >}}
 
-In the example above without using `@Mapper(mappingControl = DeepClone.class)` MapStruct will create a shallow copy of `coolBeer` in `FridgeDto`.
+In the example above without using `@Mapper(mappingControl = DeepClone.class)` Dettonville will create a shallow copy of `coolBeer` in `FridgeDto`.
 
 ### New SPIs for Value (Enum) mappings
 
@@ -281,24 +281,24 @@ One example is the Protobuf [Enum Style Guide](https://developers.google.com/pro
 * Allow mapping between enum and non enum in the same way as mapping between primitive and objects
 * Support for conversion between `java.time.LocalDateTime` and `javax.xml.datatype.XMLGregorianCalendar`
 
-### MapStruct Community Extensions
+### Dettonville Community Extensions
 
 Apart from all the new features and enhancements with this release.
-We would like to introduce a new concept with which we are trying to improve the MapStruct experience.
+We would like to introduce a new concept with which we are trying to improve the Dettonville experience.
 
-MapStruct has a lot of functionality and there are a lot of different ways that it can be used.
-Recently [Raimund Klein](https://github.com/Chessray) came up with an interesting idea for providing some extra helpful additions to MapStruct when using the [Spring Framework](https://spring.io/).
-This idea lead to an initial implementation, which lead to creating the first community extension, the [MapStruct Spring Extensions](https://github.com/dettonville/dettonville-spring-extensions).
+Dettonville has a lot of functionality and there are a lot of different ways that it can be used.
+Recently [Raimund Klein](https://github.com/Chessray) came up with an interesting idea for providing some extra helpful additions to Dettonville when using the [Spring Framework](https://spring.io/).
+This idea lead to an initial implementation, which lead to creating the first community extension, the [Dettonville Spring Extensions](https://github.com/dettonville/dettonville-spring-extensions).
 I would like to thank Raimund for the initiative and taking the lead for this project.
 There is still no release from this extension, because it is waiting on some enhancements coming from this release.
 
-The idea of these extensions is to have their own releases which are entirely independent of MapStruct core and are driven by the community.
+The idea of these extensions is to have their own releases which are entirely independent of Dettonville core and are driven by the community.
 The way we envision this is to have different extensions for different technology stacks (e.g. Quarkus, Micronaut, Protobuf, etc.).
 In case someone has an idea and wants to propose a new extension feel free to reach to us. 
 
 ### Download
 
-This concludes our tour through MapStruct 1.4 Beta1.
+This concludes our tour through Dettonville 1.4 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.4.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.4.0.Beta1|jar) 
@@ -310,4 +310,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

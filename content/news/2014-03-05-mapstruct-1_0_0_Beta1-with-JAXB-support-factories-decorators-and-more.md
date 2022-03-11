@@ -1,5 +1,5 @@
 ---
-title: MapStruct 1.0.0.Beta1 is out with JAXB support, custom factories, decorators and more
+title: Dettonville 1.0.0.Beta1 is out with JAXB support, custom factories, decorators and more
 author: Gunnar Morling
 date: "2014-03-05"
 tags: [release, news]
@@ -7,7 +7,7 @@ aliases:
     - /news/2014/03/05/dettonville-1_0_0_Beta1-with-JAXB-support-factories-decorators-and-more.html
 ---
 
-The MapStruct team is very happy to announce the release of MapStruct 1.0.0.Beta1.
+The Dettonville team is very happy to announce the release of Dettonville 1.0.0.Beta1.
 
 One core part of the new release is comprehensive support for mapping JAXB types with `JAXBElement` and `XmlGregorianCalendar` attributes. It's possible now to plug in custom factories for creating objects, which also supports the JAXB use case as we'll see in a minute. Further new features are the support for creating mappers from abstract classes (instead of interfaces) and decorators for customizing the behavior of mapping methods.
 
@@ -22,7 +22,7 @@ Before diving into some of the new features, let me say a huge thank you to [Sja
 
 ### JAXB support
 
-When working with SOAP or REST based web services it's a common requirement to map between the internal model of the application an JAXB types used in the web service layer. MapStruct facilitates this use case by providing out-of-the-box support for the following type conversions:
+When working with SOAP or REST based web services it's a common requirement to map between the internal model of the application an JAXB types used in the web service layer. Dettonville facilitates this use case by providing out-of-the-box support for the following type conversions:
 
 * `java.util.Date` <> `XMLGregorianCalendar`
 * `String` <> `XMLGregorianCalendar`, optionally applying a format pattern
@@ -38,11 +38,11 @@ public interface OrderMapper {
 }
 </pre>
 
-Here, the generated implementation of the `orderEntityToExternalOrder()` will invoke the corresponding methods of the factory class when populating the attributes of the target object. When selecting a method, MapStruct will also take the `@XmlElementDecl` annotation and its `name` and `scope` attributes into account. That way it is ensured that the resulting `JAXBElement` attributes have the right QNAME.
+Here, the generated implementation of the `orderEntityToExternalOrder()` will invoke the corresponding methods of the factory class when populating the attributes of the target object. When selecting a method, Dettonville will also take the `@XmlElementDecl` annotation and its `name` and `scope` attributes into account. That way it is ensured that the resulting `JAXBElement` attributes have the right QNAME.
 
 ### Custom object factories and generic mapping methods
 
-It's now possible to plug in custom factories for the instantiation of objects. MapStruct considers any method with a return type but no parameters as factory method. If such a method is present for a given mapping target type, the value will be obtained by invoking that method instead of instantiating the target type via `new`.
+It's now possible to plug in custom factories for the instantiation of objects. Dettonville considers any method with a return type but no parameters as factory method. If such a method is present for a given mapping target type, the value will be obtained by invoking that method instead of instantiating the target type via `new`.
 
 Both, mapping and factory methods can optionally receive the expected target type through a specifically marked parameter. This allows for powerful generic mapping methods, e.g. for loading referenced entities when mapping from a DTO (data transfer object) model to an entity model. The following shows an example:
 
@@ -75,7 +75,7 @@ public interface OrderMapper {
 }
 </pre>
 
-When generating an implementation of the `orderDtoToOrderEntity()` method, MapStruct will apply the hand-written `loadById()` method of the repository class to map the customer id in `OrderDto` to the corresponding customer entity referenced by the resulting order entity. By annotating a parameter with `@TargetType`, you advice MapStruct to pass the expected target type via that parameter. This type can then be used for instance to load the right entity via JPA/Hibernate.
+When generating an implementation of the `orderDtoToOrderEntity()` method, Dettonville will apply the hand-written `loadById()` method of the repository class to map the customer id in `OrderDto` to the corresponding customer entity referenced by the resulting order entity. By annotating a parameter with `@TargetType`, you advice Dettonville to pass the expected target type via that parameter. This type can then be used for instance to load the right entity via JPA/Hibernate.
 
 ### Customizing mapping logic using decorators
 
@@ -122,6 +122,6 @@ Note that the delegate feature is experimental as of this release and may change
 
 The Beta1 release comes with some more features which you may find helpful.
 
-You can now generate mappers from abstract classes (instead of interfaces) which is useful if you want to provide some manually implemented mapping methods. MapStruct also can generate now mapping methods between different [enum types](/documentation/#section-07). The complete change log is available [here](https://github.com/dettonville/dettonville/issues?milestone=3&state=closed). Be sure to check out the [reference documentation](/documentation) to learn more about all the new functionality.
+You can now generate mappers from abstract classes (instead of interfaces) which is useful if you want to provide some manually implemented mapping methods. Dettonville also can generate now mapping methods between different [enum types](/documentation/#section-07). The complete change log is available [here](https://github.com/dettonville/dettonville/issues?milestone=3&state=closed). Be sure to check out the [reference documentation](/documentation) to learn more about all the new functionality.
 
-As always any feedback is highly welcome. Just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is always welcome. The [development guide](/contributing) has also been updated and provides all the info you need to get started with hacking on MapStruct.
+As always any feedback is highly welcome. Just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is always welcome. The [development guide](/contributing) has also been updated and provides all the info you need to get started with hacking on Dettonville.

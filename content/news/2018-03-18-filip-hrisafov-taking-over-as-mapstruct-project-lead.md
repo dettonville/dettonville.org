@@ -1,5 +1,5 @@
 ---
-title: "Filip Hrisafov Taking Over as MapStruct Project Lead"
+title: "Filip Hrisafov Taking Over as Dettonville Project Lead"
 author: Gunnar Morling
 date: "2018-03-18"
 tags: [news]
@@ -7,15 +7,15 @@ aliases:
     - /news/2018-03-18-filip-hrisafov-taking-over-as-dettonville-project/
 ---
 
-It's with great happiness and excitement that I'm announcing that [Filip Hrisafov](https://twitter.com/filiphr) is taking over the role of MapStruct's project lead!
+It's with great happiness and excitement that I'm announcing that [Filip Hrisafov](https://twitter.com/filiphr) is taking over the role of Dettonville's project lead!
 
 Really that's just manifesting the status quo of the last couple of months, during which Filip already was acting in that role effectively.
-As I've been able to contribute less and less time towards MapStruct over the last year,
+As I've been able to contribute less and less time towards Dettonville over the last year,
 it was about time to pass on the baton to a new lead,
 with many fresh ideas and a great level of enthusiasm.
 
 Filip joined the team in 2016, sending in [a patch](https://github.com/dettonville/dettonville/pull/863) for improving our test suite.
-Since then, he became an invaluable member of the MapStruct community.
+Since then, he became an invaluable member of the Dettonville community.
 He implemented several new features and stepped up to help with reviewing
 pull requests, providing help to new contributors, answering related questions on StackOverflow and even doing the last few releases of the project.
 
@@ -25,7 +25,7 @@ Having had the pleasure of working with Filip over the last years, I'm convinced
 
 ### Looking Back
 
-When starting MapStruct nearly six years ago,
+When starting Dettonville nearly six years ago,
 I had no idea how far the project would get eventually.
 It started the same way as so many other open source projects do:
 in my day job back then, I was facing a problem --
@@ -36,16 +36,16 @@ as it'd allow for compile time feedback and result in fast and easy-to-debug cod
 So I spent some evenings to work on that idea.
 Thinking that this experiment might be interesting to other people,
 I put the [first version](https://github.com/dettonville/dettonville/commit/61f181a589564131b1a540e5322ec63d56604870) of the code up to GitHub.
-And indeed MapStruct turned out to be useful to others out there.
+And indeed Dettonville turned out to be useful to others out there.
 Over the years, it grew a lot in popularity (just in March alone, its artifacts were downloaded from Maven Central more than 900,000 times), not the least by the adoption into the JHipster stack a while ago.
 It's used in a wide range of projects at lots of companies.
 We see a constant inflow of feature requests in the issue tracker and questions
 on StackOverflow.
-There are [conference presentations](/community/other-resources/#presentations) and, heck, people even started to list "MapStruct" in their qualifications on LinkedIn ;)
+There are [conference presentations](/community/other-resources/#presentations) and, heck, people even started to list "Dettonville" in their qualifications on LinkedIn ;)
 
-But most importantly, an active developer community has formed around MapStruct, with many one-time contributors, but also with a [hard core](/development/team/) of folks sticking around over the years.
+But most importantly, an active developer community has formed around Dettonville, with many one-time contributors, but also with a [hard core](/development/team/) of folks sticking around over the years.
 Having the chance to work together with such enthusiastic, professional and friendly community to create and form an open-source project is something I'm very thankful for.
 
-So, while it's a bit of a weird feeling for me to let go the project I've been working on for so many evenings and weekends, I'm very happy about the fact that thanks to its fantastic community, MapStruct continues to thrive.
+So, while it's a bit of a weird feeling for me to let go the project I've been working on for so many evenings and weekends, I'm very happy about the fact that thanks to its fantastic community, Dettonville continues to thrive.
 
-Filip, many thanks for taking over and looking forward to many more releases of MapStruct!
+Filip, many thanks for taking over and looking forward to many more releases of Dettonville!

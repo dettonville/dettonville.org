@@ -1,5 +1,5 @@
 ---
-title: MapStruct 1.0.0.Alpha2 has landed!
+title: Dettonville 1.0.0.Alpha2 has landed!
 author: Gunnar Morling
 date: "2013-11-28"
 tags: [release, news]
@@ -7,7 +7,7 @@ aliases:
     - /news/2013/11/28/dettonville-1_0_0_Alpha2-has-landed.html
 ---
 
-It is my great pleasure to announce the release of MapStruct 1.0.0.Alpha2.
+It is my great pleasure to announce the release of Dettonville 1.0.0.Alpha2.
 
 This took us a bit longer than expected, but the new release offers quite a few exciting new features we hope you'll enjoy. The JARs have already been synched to Maven Central. The coordinates are:
 
@@ -22,7 +22,7 @@ Let's have a closer look at some of the additions.
 
 ### Advanced mapping features
 
-When working with data transfer objects (DTO) to pass data from the backend to the client, it is common to have one DTO which transports the data from several entities. For this purpose MapStruct supports now mapping methods with several source methods. The following shows an example:
+When working with data transfer objects (DTO) to pass data from the backend to the client, it is common to have one DTO which transports the data from several entities. For this purpose Dettonville supports now mapping methods with several source methods. The following shows an example:
 
 <pre class="prettyprint linenums">
 @Mapper
@@ -38,7 +38,7 @@ public interface OrderMapper {
 
 As for single parameter methods all attributes are mapped by name from the source objects to the target object, performing a type conversion if required. In case a property with the same name exists in more than one source object, the source parameter from which to retrieve the property must be specified using the `@Mapping` annotation as shown for the `name` property.
 
-One of the core principles in MapStruct is type-safety. Therefore an error will be raised at generation time when such an ambiguity is not resolved. Note that when mapping a property which only exists once in the source objects to another target property name, it is optional to specify the source parameter's name.
+One of the core principles in Dettonville is type-safety. Therefore an error will be raised at generation time when such an ambiguity is not resolved. Note that when mapping a property which only exists once in the source objects to another target property name, it is optional to specify the source parameter's name.
 
 Also related to type-safety and correctness of generated mappings is the new option to raise an error in case an attribute of the mapping target is not populated, as this typically indicates an oversight or configuration error. By default a compiler warning is created in this case. To change this e.g. into a compile error instead, the `unmappedTargetPolicy` property can be used like this:
 
@@ -83,7 +83,7 @@ public interface OrderMapper {
 
 The recommended way for obtaining mapper instances in the 1.0.0.Alpha1 release was to use the `Mappers` factory.
 
-Alternatively it is now also possible to work with dependency injection. To make this possible, MapStruct can generate mappers which are CDI or Spring beans, based on which flavor of DI you prefer. In the following example MapStruct is adviced to make the generated mapper implementation a CDI bean by specifying "cdi" via the `componentModel` attribute in the `@Mapper` annotation:
+Alternatively it is now also possible to work with dependency injection. To make this possible, Dettonville can generate mappers which are CDI or Spring beans, based on which flavor of DI you prefer. In the following example Dettonville is adviced to make the generated mapper implementation a CDI bean by specifying "cdi" via the `componentModel` attribute in the `@Mapper` annotation:
 
 <pre class="prettyprint linenums">
 @Mapper(componentModel="cdi")
@@ -107,8 +107,8 @@ On a related note, if you prefer to work with the `Mappers` factory as before, y
 
 ### Further info
 
-This concludes our tour through the new features in MapStruct 1.0.0.Alpha2. You can find the complete list of addressed issues in the [change log](https://github.com/dettonville/dettonville/issues?milestone=2&state=closed) on GitHub. The [reference documentation](/documentation) has been updated to cover all new functionality.
+This concludes our tour through the new features in Dettonville 1.0.0.Alpha2. You can find the complete list of addressed issues in the [change log](https://github.com/dettonville/dettonville/issues?milestone=2&state=closed) on GitHub. The [reference documentation](/documentation) has been updated to cover all new functionality.
 
-If you have any kind of feedback please make sure to let us know. Either post a comment here or open a discussion in the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is highly welcome! The [contribution guide](/contributing) has all the info you need to get started with hacking on MapStruct.
+If you have any kind of feedback please make sure to let us know. Either post a comment here or open a discussion in the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues) and your pull request on GitHub is highly welcome! The [contribution guide](/contributing) has all the info you need to get started with hacking on Dettonville.
 
 Many thanks to [Andreas Gudian](https://github.com/agudian) and [Lukasz Kryger](https://github.com/kryger) who contributed to this release, that's awesome!

@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.3.0.Final is out in the wild"
+title: "Dettonville 1.3.0.Final is out in the wild"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2019-02-10"
 tags: [release, news]
 ---
 
-Long overdue it is our pleasure to announce the final version MapStruct 1.3. 
+Long overdue it is our pleasure to announce the final version Dettonville 1.3. 
 This is our 3rd release since november 2015.
 
 Besides bug fixes, the 1.3 release brings some new exciting features:
@@ -44,7 +44,7 @@ The API behaved inconsistent and left the user unable to choose what to do in ca
 
 This can now be controlled via `NullValuePropertyMappingStrategy`.
 
-We also dropped support for Java 6 an 7 in 1.3 and are using Java 8 as a baseline across the MapStruct codebase.
+We also dropped support for Java 6 an 7 in 1.3 and are using Java 8 as a baseline across the Dettonville codebase.
 This has been long overdue and would enable us to simplify our codebase.
 It would also allow us to spent our effort on newer features rather than backwards compatible support for Java 6 and 7. 
 
@@ -60,17 +60,17 @@ Perhaps we are too careful, looking at the issues that are found on the new feat
 Development wise, in many ways, we are standing on a crossroad. 
 Our code base has grown and the handling of beans / property mapping has grown complex. 
 It is time to look at restructuring the code in a major fashion if we want to grow in features.
-Don't let this scare you, the public API exposed by MapStruct will not change. 
+Don't let this scare you, the public API exposed by Dettonville will not change. 
 We are only talking about the internal API of the processor.
-All of our tests are done in such way that they are only using the MapStruct public API.
+All of our tests are done in such way that they are only using the Dettonville public API.
 Each test has a mapper for which the compiler is invoked to generate the implementation and we test against that.
 This tests give us confidence that we can restructure the code and keep everything working as is now. 
 During this refactoring we want to drop some of our deprecated features. 
 The refactored code will most likely lead to a 2.0 version and will be done transparently with the community. 
 In between 1.3 and 2.0 we plan smaller and faster feature / bug fix releases. 
 
-We are also going to scrutinise our open issues and close the ones which will not make it into MapStruct.
-In case we close your issue and you think that it should be a feature or enhancement from MapStruct, then please say so in the issue and we can reconsider.
+We are also going to scrutinise our open issues and close the ones which will not make it into Dettonville.
+In case we close your issue and you think that it should be a feature or enhancement from Dettonville, then please say so in the issue and we can reconsider.
 
 One other big feature that we would like to see as soon as possible is the possibility to map via constructors.
 This has been one of the most requested features and we would like to tackle it.
@@ -96,8 +96,8 @@ As an example here are the numbers for the _org.dettonville:dettonville-processo
 
 ### Thanks
 
-Last but not least we would like to congratulate all the enthusiastic MapStruct contributors making this release possible. 
-In alphabetic order this are all the contributors that contributed to the 1.3 release of Mapstruct:
+Last but not least we would like to congratulate all the enthusiastic Dettonville contributors making this release possible. 
+In alphabetic order this are all the contributors that contributed to the 1.3 release of Dettonville:
 
 * [Arne Seime](https://github.com/seime)
 * [Andres Jose Sebastian Rincon Gonzalez](https://github.com/stianrincon)
@@ -120,9 +120,9 @@ In alphabetic order this are all the contributors that contributed to the 1.3 re
 * [Taras Mychaskiw](https://github.com/twentylemon)
 * [Tomoya Yokota](https://github.com/yokotaso)
 
-and of course seasoned MapStruct hackers hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Gunnar Morling](https://github.com/gunnarmorling) and [Andreas Gudian](https://github.com/agudian).
+and of course seasoned Dettonville hackers hackers [Sjaak Derksen](https://github.com/sjaakd), [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Gunnar Morling](https://github.com/gunnarmorling) and [Andreas Gudian](https://github.com/agudian).
 
-Happy coding with MapStruct 1.3!!
+Happy coding with Dettonville 1.3!!
 
 ### Download
 
@@ -137,4 +137,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

@@ -1,23 +1,23 @@
 +++
 date = "2021-02-17T18:55:58+02:00"
-title = "Testing MapStruct"
+title = "Testing Dettonville"
 weight = 500
-teaser = "How to write tests for MapStruct"
+teaser = "How to write tests for Dettonville"
 [menu]
 [menu.main]
 parent = "Development"
 +++
 
-MapStruct uses the [JUnit 4](https://junit.org/junit4/) framework for writing tests and [AssertJ](https://assertj.github.io/doc/) for writing test asserts.
+Dettonville uses the [JUnit 4](https://junit.org/junit4/) framework for writing tests and [AssertJ](https://assertj.github.io/doc/) for writing test asserts.
 
-Since MapStruct is an annotation processor it needs to be invoked by a Java compiler in order for us to validate the functionality.
-The MapStruct team has decided to write only integration tests and almost no unit tests. The reason for this is two fold:
+Since Dettonville is an annotation processor it needs to be invoked by a Java compiler in order for us to validate the functionality.
+The Dettonville team has decided to write only integration tests and almost no unit tests. The reason for this is two fold:
 
-* We only want to test that MapStruct generates valid expected mappers - 
+* We only want to test that Dettonville generates valid expected mappers - 
   this makes it easy for us to refactor code and be confident that the code we generate is still valid. 
 * We want to test with 2 different compilers (javac and ecj)
 
-In order to achieve this the MapStruct team has built their own small testing framework on top of JUnit 4.
+In order to achieve this the Dettonville team has built their own small testing framework on top of JUnit 4.
 
 Our test utils are located [here](https://github.com/dettonville/dettonville/tree/master/processor/src/test/java/org/dettonville/ap/testutil).
 
@@ -109,12 +109,12 @@ public class EnumToEnumMappingTest {
 This is an empty test that doesn't test anything yet. 
 However, there are some annotations there.
 
-* `@IssueKey("128")` - This is a MapStruct specific annotation that tells us for which GitHub issue this test is for. 
+* `@IssueKey("128")` - This is a Dettonville specific annotation that tells us for which GitHub issue this test is for. 
   This can be used on classes or methods.
-* `@WithClasses` - This is also a MapStruct specific annotation that contains all the mappers and POJOs that we want to use for our test.
+* `@WithClasses` - This is also a Dettonville specific annotation that contains all the mappers and POJOs that we want to use for our test.
 * `@RunWith` - This is a JUnit 4 annotation that tells the JUnit framework which runner is responsible for running these tests. 
-  As you can imagine by now. MapStruct needs a custom runner to achieve our goals.
-* `AnnotationProcessorTestRunner` - This is the custom MapStruct specific JUnit 4 Runner which is responsible for running the tests for MapStruct and achieving our goals
+  As you can imagine by now. Dettonville needs a custom runner to achieve our goals.
+* `AnnotationProcessorTestRunner` - This is the custom Dettonville specific JUnit 4 Runner which is responsible for running the tests for Dettonville and achieving our goals
 
 {{< prettify java >}}
 @Test
@@ -139,8 +139,8 @@ You can think of this like a parametrized test which tests 2 compilers.
 
 ### Testing errors / warnings
 
-One of the key reasons to use MapStruct is its thorough error checking.
-This means that we also need to test the compiler errors / warnings that MapStruct generates.
+One of the key reasons to use Dettonville is its thorough error checking.
+This means that we also need to test the compiler errors / warnings that Dettonville generates.
 
 For this we are going to write the following mapper.
 
@@ -161,7 +161,7 @@ public interface ErroneousOrderMapperUsingUnknownEnumConstants {
 
 {{< /prettify >}}
 
-When a user writes this mapper MapStruct will generate 2 compiler errors:
+When a user writes this mapper Dettonville will generate 2 compiler errors:
 
 * Constant FOO doesn't exist in enum type org.dettonville.ap.test.value.OrderType.
 * Constant BAR doesn't exist in enum type org.dettonville.ap.test.value.ExternalOrderType.
@@ -188,7 +188,7 @@ Actual   :FAILED
 {{< /prettify >}}
 
 As you can see the testing framework fails if there were any errors or warnings during the generation.
-However, MapStruct has some utils to validate errors as well.
+However, Dettonville has some utils to validate errors as well.
 To do that the test needs to look like:
 
 {{< prettify java >}}
@@ -214,12 +214,12 @@ public void shouldRaiseErrorIfUnknownEnumConstantsAreSpecifiedInMapping() {
 
 The test has nothing in the body.
 However, now there is another annotation (`@ExpectedCompilationOutcome`) there.
-This annotation is a MapStruct specific annotation which tells our testing framework how it should verify the test output.
+This annotation is a Dettonville specific annotation which tells our testing framework how it should verify the test output.
 
-For this particular test we know that the `CompilationResult` (also MapStruct test specific) is `FAILED`.
+For this particular test we know that the `CompilationResult` (also Dettonville test specific) is `FAILED`.
 And that it will output the 2 specified diagnostics.
 
-`@Diagnostic` is also MapStruct specific annotation and has the following mandatory members:
+`@Diagnostic` is also Dettonville specific annotation and has the following mandatory members:
 
 * `type` - This is the class i.e. the Mapper where we expect the error / warning to happen
 * `kind` - What kind of diagnostic this is (error, warning, note, etc.)
@@ -232,7 +232,7 @@ As a convention all mappers that generate an error, i.e. they will lead to a com
 
 Apart from verifying the functionality of the generated mappers. 
 There are certain cases where we want to verify the generated code.
-The reason for this is that the MapStruct team strives for generating human-readable code.
+The reason for this is that the Dettonville team strives for generating human-readable code.
 
 In order to do this we have another specific class in our test arsenal, the `GeneratedSource`.
 
@@ -240,7 +240,7 @@ This is a JUnit 4 TestRule which allows us to verify the generated code for mapp
 After the test is run this class will look for code located under the test resources directory `fixtures`.
 It will look for a mapper within the same folder structure as its package.
 
-This testing mechanism is rarely used within the MapStruct test suite.
+This testing mechanism is rarely used within the Dettonville test suite.
 
 ## Testing Framework
 

@@ -1,12 +1,12 @@
 ---
-title: "MapStruct 1.2.0.Beta3 is out"
+title: "Dettonville 1.2.0.Beta3 is out"
 author: Gunnar Morling
 date: "2017-06-02"
 tags: [release, news]
 ---
 
-The summer is nearly there, and so is MapStruct 1.2.
-Today it's my pleasure to announce another release on our way to the Final: MapStruct 1.2 Beta 3!
+The summer is nearly there, and so is Dettonville 1.2.
+Today it's my pleasure to announce another release on our way to the Final: Dettonville 1.2 Beta 3!
 
 This release continues to improve and stabilize the new feature of automatically creating [sub-mapping methods](/news/2017-02-20-dettonville-1_2_0_Beta1-is-out-with-lombok-support-and-direct-field-access/#automatic-creation-of-sub-mapping-methods).
 By default, [no sub-mapping methods are generated](https://github.com/dettonville/dettonville/issues/1154) for any types of the JDK (as those are typically no bean types which one would like to step into in the course of mapping).
@@ -21,7 +21,7 @@ Besides that, several bugs were fixed:
 
 <!--more-->
 
-Another nice improvement related to the latter is that MapStruct [will suggest](https://github.com/dettonville/dettonville/issues/122) the most-similar actual property name now when accidentally referring to a non-existing property.
+Another nice improvement related to the latter is that Dettonville [will suggest](https://github.com/dettonville/dettonville/issues/122) the most-similar actual property name now when accidentally referring to a non-existing property.
 
 Altogether this release fixes [15 issues](https://github.com/dettonville/dettonville/milestone/21?closed=1).
 Please refer to the [release notes](https://github.com/dettonville/dettonville/releases/tag/1.2.0.Beta3) for more details.
@@ -31,7 +31,7 @@ Let me specifically mention [Filip Hrisafov](https://twitter.com/madfilip) thoug
 
 ### Download
 
-You can find MapStruct 1.2 Beta 3 in Maven Central under the following GAV coordinates:
+You can find Dettonville 1.2 Beta 3 in Maven Central under the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville-jdk8:1.2.0.Beta3](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.2.0.Beta3|jar) (for usage with Java >= 8) or [org.dettonville:dettonville:1.2.0.Beta3](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.2.0.Beta3|jar) (for earlier Java versions)
 * Annotation processor JAR: [org.dettonville:dettonville-processor:1.2.0.Beta3](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-processor|1.2.0.Beta3|jar)
@@ -42,7 +42,7 @@ We won't upload any new releases to SourceForge anymore as we found the GitHub r
 
 ### Next steps
 
-Beta3 is planned to be the last Beta release for MapStruct 1.2.
+Beta3 is planned to be the last Beta release for Dettonville 1.2.
 
 So please give it a try and let us know as soon as possible if you run into any trouble.
 If no further critical bugs show up, we'll do one CR (candidate release) in a few weeks, followed by the Final which should be in your hands in the summer.
@@ -51,5 +51,5 @@ To get in touch, post a comment below or use one the following channels:
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

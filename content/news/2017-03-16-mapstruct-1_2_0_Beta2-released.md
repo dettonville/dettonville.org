@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.2.0.Beta2 released"
+title: "Dettonville 1.2.0.Beta2 released"
 author: Andreas Gudian
 date: "2017-03-16"
 tags: [release, news]
 ---
 
-Just shy of a month after the first Beta release of MapStruct 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the [many new features](/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/) offered by the new 1.2 release line.
+Just shy of a month after the first Beta release of Dettonville 1.2, the team is happy to announce the second Beta, fixing a couple of bugs that sneaked in with the [many new features](/news/2017-02-20-dettonville-1_2_0_Beta2-is-out-with-lombok-support-and-direct-field-access/) offered by the new 1.2 release line.
 
 We fixed [16 issues](https://github.com/dettonville/dettonville/milestone/20?closed=1), most of them reported by users. The most infamous bugs reported and fixed are:
 
@@ -37,5 +37,5 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

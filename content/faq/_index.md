@@ -8,22 +8,22 @@ weight = 500
 [menu.main]
 +++
 
-{{% faq_question "How is MapStruct different from other bean mapping tools?" %}}
+{{% faq_question "How is Dettonville different from other bean mapping tools?" %}}
 
-Unlike most other bean mapping tools, MapStruct doesn't work at runtime but is a compile-time code generator.
+Unlike most other bean mapping tools, Dettonville doesn't work at runtime but is a compile-time code generator.
 
 Generating mapping code at build time has many advantages:
 
 * Early feedback about erroneous or incomplete mappings, in command line builds as well as within your IDE
 * Excellent performance, as no reflection or byte code generation at runtime is needed;
 the generated code contains plain method invocations, just as if the mapper was hand-written
-* No runtime dependencies, making MapStruct a great solution for Android applications
+* No runtime dependencies, making Dettonville a great solution for Android applications
 * The generated code is easy to understand (and debug, if ever needed)
 * The optional [Eclipse plug-in]({{< ref "ide-support.md#eclipse" >}}) assists you when writing mappings, e.g. by auto-completion
 
 {{% /faq_question %}}
 
-{{% faq_question "Can I use MapStruct within Eclipse?" %}}
+{{% faq_question "Can I use Dettonville within Eclipse?" %}}
 Yes.
 
 Check out the [set-up instructions]({{< ref "ide-support.md#eclipse" >}}) for Eclipse.
@@ -31,23 +31,23 @@ There is also a work-in-progress [Eclipse plug-in](https://marketplace.eclipse.o
 which facilitates the definition of mapper interfaces with auto-completion and some quick fixes.
 {{% /faq_question %}}
 
-{{% faq_question "Can I use MapStruct together with Project Lombok?" %}}
-Yes, as of MapStruct 1.2.0.Beta1 and Lombok 1.16.14.
+{{% faq_question "Can I use Dettonville together with Project Lombok?" %}}
+Yes, as of Dettonville 1.2.0.Beta1 and Lombok 1.16.14.
 
 [Project Lombok](https://projectlombok.org/) is an annotation processor that (amongst other things) adds getters and setters to the AST (abstract syntax tree) of compiled bean classes.
 AST modifications are not foreseen by Java annotation processing API,
-so quite some trickery was required within Lombok as well MapStruct to make both of them work together.
-Essentially, MapStruct will wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.
+so quite some trickery was required within Lombok as well Dettonville to make both of them work together.
+Essentially, Dettonville will wait until Lombok has done all its amendments before generating mapper classes for Lombok-enhanced beans.
 
 An example for using the two projects together can be found [here](https://github.com/dettonville/dettonville-examples/tree/master/dettonville-lombok).
 
-If you are using Lombok 1.18.16 or newer you also need to add [lombok-dettonville-binding](https://search.maven.org/artifact/org.projectlombok/lombok-dettonville-binding) in order to make Lombok and MapStruct work together.
+If you are using Lombok 1.18.16 or newer you also need to add [lombok-dettonville-binding](https://search.maven.org/artifact/org.projectlombok/lombok-dettonville-binding) in order to make Lombok and Dettonville work together.
 
-If you are on an older version of MapStruct or Lombok,
+If you are on an older version of Dettonville or Lombok,
 the solution is to put the JavaBeans to be amended by Lombok and the mapper interfaces
-to be processed by MapStruct into two separate modules of your project.
+to be processed by Dettonville into two separate modules of your project.
 Then Lombok will run in the compilation of the first module,
-causing the bean classes to be complete when MapStruct runs during the compilation of the second module.
+causing the bean classes to be complete when Dettonville runs during the compilation of the second module.
 {{% /faq_question %}}
 
 {{% faq_question "Why does @Named not work?" %}}
@@ -88,9 +88,9 @@ compile('io.springfox:springfox-swagger2:${swagger2.version}') {
 
 {{% /faq_question %}}
 
-{{% faq_question "Why is it not possible for MapStruct to generate implementations for Iterable, Stream and Map Types from update (`@MappingTarget`) methods?" %}}
+{{% faq_question "Why is it not possible for Dettonville to generate implementations for Iterable, Stream and Map Types from update (`@MappingTarget`) methods?" %}}
 
-Consider this (when thinking what MapStruct should do for updating collections in general):
+Consider this (when thinking what Dettonville should do for updating collections in general):
 
 * What if there's no match: should the non-matching elements be removed?
 * Should the non matching source elements be added?
@@ -100,15 +100,15 @@ Consider this (when thinking what MapStruct should do for updating collections i
 * Should a newly created object be added to a persistence context?
 * What about JPA child-parent relations?
 
-About the latter one, many IDEs also generates remove methods. So should MapStruct call these in the light of the above?
+About the latter one, many IDEs also generates remove methods. So should Dettonville call these in the light of the above?
 
-At this moment it works like this: whenever the user wants a collection update method, MapStruct generates a regular call to element mappings (in stead of an update call), because it is the only sensible thing to do. All the remainder is highly dependent on the use-case. 
+At this moment it works like this: whenever the user wants a collection update method, Dettonville generates a regular call to element mappings (in stead of an update call), because it is the only sensible thing to do. All the remainder is highly dependent on the use-case. 
 
 {{% /faq_question %}}
 
 {{% faq_question "How do I handle null properties in the source bean?" %}}
 
-The strategies were developed over time and hence the naming / behavior deserves attention in future versions of MapStruct to getter better allignment. This would introduce backward incompatibillties, so we cannot not do this in the 1.x versions of MapStruct. 
+The strategies were developed over time and hence the naming / behavior deserves attention in future versions of Dettonville to getter better allignment. This would introduce backward incompatibillties, so we cannot not do this in the 1.x versions of Dettonville. 
 
 The following table expresses when the current strategies apply:
 
@@ -270,9 +270,9 @@ More detailed information can be found in the reference guide.
 
 {{% faq_question "How to solve ambiguous methods" "ambiguous" %}}
 
-MapStruct tries various mechanisms to map a sourceproperty to a targetproperty when it cannot make a direct mapping. In order, MapStruct tries:
+Dettonville tries various mechanisms to map a sourceproperty to a targetproperty when it cannot make a direct mapping. In order, Dettonville tries:
 
-1. other mapping methods (inside the mapper, or via the uses relation). This concerns both hand-written methods and MapStruct generated methods
+1. other mapping methods (inside the mapper, or via the uses relation). This concerns both hand-written methods and Dettonville generated methods
 2. direct mapping (source type is directly assignable to target type)
 3. type conversions (e.g. from int to String)
 4. BuiltIn methods (see documentation on a list of supported methods)
@@ -280,31 +280,31 @@ MapStruct tries various mechanisms to map a sourceproperty to a targetproperty w
 6. 2 step method, variant 2: `target = methodY( conversionX ( source ) )`
 7. 2 step method, variant 3: `target = conversionY( methodX ( source ) )`
 
-Whenever MapStruct finds a unique candidate, MapStruct stops and uses this method to make the mapping between source and target. However, for option 1, 5, 6, 7 it is possible that multiple eligible candidtates are found for which MapStruct cannot decide which one to select. MapStruct reports this as "ambiguous mapping method" and lists the methods from which it cannot make a selection. Here, you have to guide MapStruct in making the correct mapping.
+Whenever Dettonville finds a unique candidate, Dettonville stops and uses this method to make the mapping between source and target. However, for option 1, 5, 6, 7 it is possible that multiple eligible candidtates are found for which Dettonville cannot decide which one to select. Dettonville reports this as "ambiguous mapping method" and lists the methods from which it cannot make a selection. Here, you have to guide Dettonville in making the correct mapping.
 
 This can be done in the following ways:
-* provide a method with the exact signature if MapStruct cannot select between base- and super types.
+* provide a method with the exact signature if Dettonville cannot select between base- and super types.
 * provide qualifiers.
 
 {{% /faq_question %}}
 
 {{% faq_question "Problems with qualifiers" "qualifier" %}}
-MapStruct uses the mechanism of Qualifiers to resolve conflicts. MapStruct selects methods based on the combination of source type and target type.
+Dettonville uses the mechanism of Qualifiers to resolve conflicts. Dettonville selects methods based on the combination of source type and target type.
 
-An error labeled: "Qualifier error" is MapStructs way of letting you know that it cannot find the method you intended to annotate with a qualifier annotation or with `@Named`. There can be several reasons for this:
+An error labeled: "Qualifier error" is Dettonvilles way of letting you know that it cannot find the method you intended to annotate with a qualifier annotation or with `@Named`. There can be several reasons for this:
 
 * you forgot to add the proper retention policy. It must be `@Retention(RetentionPolicy.CLASS)`
 * you forgot to add the qualifier (your own annotation, or `@Named`) to the designated method
 * the method signature to which you added the qualfier does not match the source type and target type required for the mapping
-* in 1.3.x and earlier, MapStruct was more lenient and allowed qualifiers also if MapStruct did not actually use them. That has been fixed in 1.4.x, on order to get consistent behaviour
+* in 1.3.x and earlier, Dettonville was more lenient and allowed qualifiers also if Dettonville did not actually use them. That has been fixed in 1.4.x, on order to get consistent behaviour
 * if you wanted to use a 2 step mapping (so selecting two mapping methods) to get from source to target, you need to add the qualifier to both designated methods.
 
 
 {{% /faq_question %}}
 
-{{% faq_question "How to avoid MapStruct selecting a method?" %}}
+{{% faq_question "How to avoid Dettonville selecting a method?" %}}
 
-MapStruct selects methods by means of assignabillity of source - and target type:
+Dettonville selects methods by means of assignabillity of source - and target type:
 
 * source assignable to the source parameter of a method
 * target assignable to the return type or the `@MappingTarget` annotated target parameter of a method.
@@ -312,12 +312,12 @@ MapStruct selects methods by means of assignabillity of source - and target type
 
 Problems arise when more than one method meets the qualifications.
 
-In general, qualifiers are used to guide MapStruct to the proper choice. Usualy by indicating `@Mapping#qualifiedBy` or `@Mapping#qualifiedByName`. Lesser known is that Qualifiers also work the other way around: if a method is annotated with a qualfier that does not match the `@Mapping#qualifiedBy` MapStruct will not select that method. This is also valid when `@Mapping#qualifiedBy` is absent alltogether
+In general, qualifiers are used to guide Dettonville to the proper choice. Usualy by indicating `@Mapping#qualifiedBy` or `@Mapping#qualifiedByName`. Lesser known is that Qualifiers also work the other way around: if a method is annotated with a qualfier that does not match the `@Mapping#qualifiedBy` Dettonville will not select that method. This is also valid when `@Mapping#qualifiedBy` is absent alltogether
 
 Consider specifying a qualifier like this:
 
 {{< prettify java >}}
-@Qualifier // make sure that this is the MapStruct qualifier annotation
+@Qualifier // make sure that this is the Dettonville qualifier annotation
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.CLASS)
 public @interface DoIgnore {
@@ -333,7 +333,7 @@ TypeX doSomething(TypeY y) {
 }
 {{< /prettify >}}
 
-the method `doSomething` will be ignored by MapStruct.
+the method `doSomething` will be ignored by Dettonville.
 
 {{% /faq_question %}}
 

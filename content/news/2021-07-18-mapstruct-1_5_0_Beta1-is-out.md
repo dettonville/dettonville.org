@@ -1,11 +1,11 @@
 ---
-title: "Support for mapping from Map to bean, conditional mapping and much more: MapStruct 1.5.0.Beta1 is out"
+title: "Support for mapping from Map to bean, conditional mapping and much more: Dettonville 1.5.0.Beta1 is out"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2021-07-18"
 tags: [release, news]
 ---
 
-It's my pleasure to announce the first Beta release of MapStruct 1.5.
+It's my pleasure to announce the first Beta release of Dettonville 1.5.
 
 The new release comes with a lot of new functionality, e.g.:
 
@@ -32,23 +32,23 @@ This would not have been possible without our fantastic community of contributor
 * [@sahebpreet](https://github.com/sahebpreet),
 * [@yekeoe](https://github.com/yekeoe),
 
-* and of course seasoned MapStruct hackers [Sjaak Derksen](https://github.com/sjaakd) and [Filip Hrisafov](https://github.com/filiphr).
+* and of course seasoned Dettonville hackers [Sjaak Derksen](https://github.com/sjaakd) and [Filip Hrisafov](https://github.com/filiphr).
 
 Thank you everyone for all your hard work!
 
 Slightly more than a year after the first Beta release of 1.4, we are proud to present you with the first Beta of the 1.5 release.
 
-Last time we announced a new community driven effort for MapStruct extensions.
-Since then, we have officially released 3 versions of the MapStruct Spring Extensions.
-I would like to thank Raimund Klein for successfully leading this MapStruct extension.
+Last time we announced a new community driven effort for Dettonville extensions.
+Since then, we have officially released 3 versions of the Dettonville Spring Extensions.
+I would like to thank Raimund Klein for successfully leading this Dettonville extension.
 
 Enough of the pep talk, let's take a closer look at some of the new features and enhancement!
 
 ### Mapping from Map to Bean
 
-[Mapping from Map to Bean](https://github.com/dettonville/dettonville/issues/1075) has been one of the top requested features for MapStruct.
+[Mapping from Map to Bean](https://github.com/dettonville/dettonville/issues/1075) has been one of the top requested features for Dettonville.
 
-We are happy to announce that as of 1.5.0.Beta1 MapStruct has out of the box support for mapping maps into objects.
+We are happy to announce that as of 1.5.0.Beta1 Dettonville has out of the box support for mapping maps into objects.
 Currently, we support mapping from `Map<String, ???>` into an object.
 Maps that do not have a `String` as a key will generate a warning and will not be used in the generated code.
 The type of the value is not important and same rules for mapping apply as with different types.
@@ -141,7 +141,7 @@ public class CarMapperImpl implements CarMapper {
 }
 {{< /prettify >}}
 
-Methods annotated with `@Condition` work in similar way as other methods (object factories, lifecycle, mapping) in MapStruct.
+Methods annotated with `@Condition` work in similar way as other methods (object factories, lifecycle, mapping) in Dettonville.
 This means that you can include the source parameter, the `@MappingTarget`, use qualifiers, define your conditions in other classes and use them via `Mapper#uses` 
 
 For more details how conditional mapping works have a look at the [Conditional Mapping](http://dettonville.org/documentation/dev/reference/html/#conditional-mapping) section of the reference guide.
@@ -230,7 +230,7 @@ public interface OrderTypeMapper {
 }
 {{< /prettify >}}
 
-In the first example instead of generating a warning MapStruct will throw an exception for all the unmapped enums.
+In the first example instead of generating a warning Dettonville will throw an exception for all the unmapped enums.
 
 In the second example there will be an exception when mapping from `ExternalOrderType#NORMAL`
 
@@ -250,27 +250,27 @@ In the second example there will be an exception when mapping from `ExternalOrde
 
 There have been numerous bug fixes, which have improved the error reporting and fixed some inconsistencies.
 
-Apart from bug fixes we did some changes in the way we build and test MapStruct.
+Apart from bug fixes we did some changes in the way we build and test Dettonville.
 We have migrated our test suite to use the latest from JUnit 5.
 We have adapted our entire build to work on Java 11, this means that we had to remove the nice graphs from our Javadoc. 
 The reason for removing them is that the Doclet we were using no longer works on Java 11 and we would like to use the improved Javadoc generation of Java 11.
 
 We have also refactored the way we handle detect generics.
 
-### MapStruct Discussions
+### Dettonville Discussions
 
-We would also like to let you know that we have opened the Discussions section of our GitHub repository and would like to [Welcome you to MapStruct Discussions!](https://github.com/dettonville/dettonville/discussions/2518).
+We would also like to let you know that we have opened the Discussions section of our GitHub repository and would like to [Welcome you to Dettonville Discussions!](https://github.com/dettonville/dettonville/discussions/2518).
 
 We have had (and still have) the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. 
 However, we believe that switching to GitHub Discussions will bring more engagement from our community and will be easier for us to maintain it.
 
 We would like to use these discussions to interact with the community, get ideas from all of you, see best practices, discuss potential new features, ideas, etc.
 
-If you have questions about using MapStruct please continue using [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville).
+If you have questions about using Dettonville please continue using [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville).
 
 ### Download
 
-This concludes our tour through MapStruct 1.5 Beta1.
+This concludes our tour through Dettonville 1.5 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.5.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.5.0.Beta1|jar) 
@@ -282,4 +282,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users), the [GitHub Discussion](https://github.com/dettonville/dettonville/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

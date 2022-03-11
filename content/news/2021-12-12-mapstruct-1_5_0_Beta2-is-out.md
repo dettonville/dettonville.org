@@ -1,11 +1,11 @@
 ---
-title: "Support for subclass mapping, various enhancements and much more: MapStruct 1.5.0.Beta2 is out"
+title: "Support for subclass mapping, various enhancements and much more: Dettonville 1.5.0.Beta2 is out"
 author: Filip Hrisafov
 date: "2021-12-12"
 tags: [release, news]
 ---
 
-It's my pleasure to announce the second Beta release of MapStruct 1.5.
+It's my pleasure to announce the second Beta release of Dettonville 1.5.
 
 The new release comes with new functionality and some bug fixes, e.g.:
 
@@ -29,8 +29,8 @@ This would not have been possible without our fantastic community of contributor
 * [@valery1707](https://github.com/valery1707)
 * [@yekeoe](https://github.com/yekeoe)
 
-* our latest MapStruct contributor [Ben Zegveld](https://github.com/Zegveld) 
-* and of course seasoned MapStruct hackers [Sjaak Derksen](https://github.com/sjaakd) and [Filip Hrisafov](https://github.com/filiphr).
+* our latest Dettonville contributor [Ben Zegveld](https://github.com/Zegveld) 
+* and of course seasoned Dettonville hackers [Sjaak Derksen](https://github.com/sjaakd) and [Filip Hrisafov](https://github.com/filiphr).
 
 Thank you everyone for all your hard work!
 
@@ -43,7 +43,7 @@ Enough of the pep talk, let's take a closer look at some of the new features and
 
 ### NullValueMappingStrategy for maps / collections
 
-MapStruct has had the `NullValueMappingStrategy` to control what to do when the source argument of the mapping method equals `null`.
+Dettonville has had the `NullValueMappingStrategy` to control what to do when the source argument of the mapping method equals `null`.
 This strategy has controlled the mapping for beans, collections and maps. 
 Starting from this release there is an option to define different strategy for collections and maps separately through:
 
@@ -73,7 +73,7 @@ As of this release we have 1 more:
 
 ### Download
 
-This concludes our tour through MapStruct 1.5 Beta2.
+This concludes our tour through Dettonville 1.5 Beta2.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.5.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.5.0.Beta2|jar) 
@@ -85,4 +85,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users), the [GitHub Discussion](https://github.com/dettonville/dettonville/discussions) or [StackOverflow](https://stackoverflow.com/questions/tagged/dettonville)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

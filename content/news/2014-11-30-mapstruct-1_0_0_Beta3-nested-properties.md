@@ -1,5 +1,5 @@
 ---
-title: "MapStruct 1.0.0.Beta3 is out with nested properties, qualifiers and more"
+title: "Dettonville 1.0.0.Beta3 is out with nested properties, qualifiers and more"
 author: Gunnar Morling
 date: "2014-11-30"
 tags: [release, news]
@@ -7,17 +7,17 @@ aliases:
     - /news/2014/11/30/dettonville-1_0_0_Beta3-nested-properties.html
 ---
 
-I'm delighted to announce the release of MapStruct 1.0.0.Beta3.
+I'm delighted to announce the release of Dettonville 1.0.0.Beta3.
 
 This version brings the long awaited support for mapping nested source properties, built-in mappings for Java 8 date/time types, fine-grained selection of mapping methods via qualifiers and much more. You can find the complete list of a whopping 46 closed issues [here](https://github.com/dettonville/dettonville/issues?page=2&q=milestone%3A1.0.0.Beta3+is%3Aclosed).
 
-Note that existing applications using MapStruct need to adapt to some changes we had to do in order to iron out some glitches from the previous beta releases. These changes are described in more detail at the end of this post.
+Note that existing applications using Dettonville need to adapt to some changes we had to do in order to iron out some glitches from the previous beta releases. These changes are described in more detail at the end of this post.
 
 Before diving into the details, let me say a huge thank you to [Sjaak Derksen](https://github.com/sjaakd/), [Andreas Gudian](https://github.com/agudian), [Timo Eckhardt](https://github.com/timoe) and [Christian Schuster](https://github.com/chschu)! Again you guys went far beyond what anyone could have hoped for; this release would not have been possible without you.
 
 ### Mapping nested properties
 
-One of the most wished-for features in MapStruct was to map attributes from nested elements of a source object (tree) into target objects. That's finally possible now, using simple "dot paths", just as you'd expect it:
+One of the most wished-for features in Dettonville was to map attributes from nested elements of a source object (tree) into target objects. That's finally possible now, using simple "dot paths", just as you'd expect it:
 
 <pre class="prettyprint linenums">
 @Mapper
@@ -62,7 +62,7 @@ public class DateMapper {
 }
 </pre>
 
-That mapper is used by MapStruct-generated mapper:
+That mapper is used by Dettonville-generated mapper:
 
 <pre class="prettyprint linenums">
 @Mapper(uses=DateMapper.class)
@@ -109,7 +109,7 @@ This will make sure that the `dateToString()` method will be invoked to map the 
 
 ### Migration notes
 
-For the sake of increased consistency and better usability, we had to do some changes which may require existing applications which already use MapStruct to be adapted. Most prominently, [reverse mapping methods](/documentation/#section-10) must now be explicitly marked as such using the new `@InheritInverseConfiguration` annotation:
+For the sake of increased consistency and better usability, we had to do some changes which may require existing applications which already use Dettonville to be adapted. Most prominently, [reverse mapping methods](/documentation/#section-10) must now be explicitly marked as such using the new `@InheritInverseConfiguration` annotation:
 
 <pre class="prettyprint linenums">
 @Mapper(uses=DateMapper.class)
@@ -137,4 +137,4 @@ You can fetch distribution bundles (ZIP, TAR.GZ) from [SourceForge](http://sourc
 
 The Beta3 release is planned to be the last beta, next will be CR1 (candidate release).
 
-Anything you'd like to propose for inclusion in the 1.0 Final release? Then let us know by commenting below or posting to the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). And if you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).
+Anything you'd like to propose for inclusion in the 1.0 Final release? Then let us know by commenting below or posting to the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). And if you'd like to hack on Dettonville yourself, check out the [development guide](/contributing).

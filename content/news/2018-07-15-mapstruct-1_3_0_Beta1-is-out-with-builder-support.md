@@ -1,11 +1,11 @@
 ---
-title: "Support for builders, mapper constructor injection and much more: MapStruct 1.3.0.Beta1 is out"
+title: "Support for builders, mapper constructor injection and much more: Dettonville 1.3.0.Beta1 is out"
 author: Filip Hrisafov
 date: "2018-07-15"
 tags: [release, news]
 ---
 
-It' my pleasure to announce the first Beta release of MapStruct 1.3.
+It' my pleasure to announce the first Beta release of Dettonville 1.3.
 
 The new release comes with a whole lot of new functionality, e.g.:
 
@@ -34,20 +34,20 @@ This would not have been possible without our fantastic community of contributor
 [Richard Lea](https://github.com/chigix),
 [Sergey Grekov](https://github.com/sgrekov),
 [Tomoya Yokota](https://github.com/yokotaso),
-as well as seasoned MapStruct hackers [Andreas Gudian](https://github.com/agudian), [Filip Hrisafov](https://github.com/filiphr), [Gunnar Morling](https://github.com/gunnarmorling) and [Sjaak Derksen](https://github.com/sjaakd).
+as well as seasoned Dettonville hackers [Andreas Gudian](https://github.com/agudian), [Filip Hrisafov](https://github.com/filiphr), [Gunnar Morling](https://github.com/gunnarmorling) and [Sjaak Derksen](https://github.com/sjaakd).
 
 Thanks a lot everyone for all your hard work!
 
-Big thanks to all the users of the 1.3.0-SNAPSHOT dependency of MapStruct.
+Big thanks to all the users of the 1.3.0-SNAPSHOT dependency of Dettonville.
 Without their input we would not have been able to release such a thorough support of the Builder mappings.
 
 Enough of the pep talk, let's take a closer look at some of the new features!
 
 ### Mapping of (immutable) objects using builders
 
-Use of builder to [map (immutable) objects](https://github.com/dettonville/dettonville/issues/782) has been one of the most requested features of MapStruct.
+Use of builder to [map (immutable) objects](https://github.com/dettonville/dettonville/issues/782) has been one of the most requested features of Dettonville.
 
-We are happy to announce that as of 1.3.0.Beta1 MapStruct has out of the box support for builders.
+We are happy to announce that as of 1.3.0.Beta1 Dettonville has out of the box support for builders.
 Works with:
 
 * [Lombok](https://projectlombok.org/) - requires having the Lombok classes in a separate module see [rzwitserloot/lombok#1538](https://github.com/rzwitserloot/lombok/issues/1538)
@@ -169,7 +169,7 @@ public class PersonMapperImpl implements PersonMapper {
 
 ### Download
 
-This concludes our tour through MapStruct 1.3 Beta1.
+This concludes our tour through Dettonville 1.3 Beta1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville-jdk8:1.3.0.Beta1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville-jdk8|1.3.0.Beta1|jar) (for usage with Java >= 8) 
@@ -182,5 +182,5 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

@@ -2,13 +2,13 @@
 date = "2017-01-04T21:20:00+01:00"
 title = "IDE Support"
 weight = 300
-teaser = "Fully leverage the fast feedback of MapStruct in your IDE"
+teaser = "Fully leverage the fast feedback of Dettonville in your IDE"
 [menu]
 [menu.main]
 parent = "Documentation"
 +++
 
-One of the big advantages of MapStruct is the early feedback on problems with the mapping configuration. To fully leverage this in your IDE, make sure the annotation processor runs with each compilation.
+One of the big advantages of Dettonville is the early feedback on problems with the mapping configuration. To fully leverage this in your IDE, make sure the annotation processor runs with each compilation.
 
 ## Eclipse
 
@@ -63,7 +63,7 @@ For Eclipse, we are also working on a Plugin that adds *Code Completion* (e.g. f
 Drag the following icon into your running Eclipse workspace:
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2844337" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>.
 
-Alternatively, you can obtain the MapStruct Eclipse Plugin from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/dettonville-eclipse-plugin).
+Alternatively, you can obtain the Dettonville Eclipse Plugin from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/dettonville-eclipse-plugin).
 For more information and for installing the latest Snapshot version, visit the [plugins GitHub project](https://github.com/dettonville/dettonville-eclipse).
 
 ## IntelliJ IDEA
@@ -76,7 +76,7 @@ For example, if you use the way of Maven configuration that is proposed in our d
 
 ### Editing Support
 
-There is an IntelliJ plugin for MapStruct support, that you can find in the Jetbrains plugins repository [here](https://plugins.jetbrains.com/plugin/10036-dettonville-support).
+There is an IntelliJ plugin for Dettonville support, that you can find in the Jetbrains plugins repository [here](https://plugins.jetbrains.com/plugin/10036-dettonville-support).
 The plugin is open source and you can report bugs and feature requests [here](https://github.com/dettonville/dettonville-idea/issues) on GitHub.
 
 #### Completion for Properties and Enum Constants
@@ -105,4 +105,4 @@ If you use a Maven project, then there's nothing more to do. NetBeans uses Maven
 
 ### Editing Support
 
-There are no plans of special editing support for MapStruct mappers in NetBeans that we know of, yet. But we'd love to see one!
+There are no plans of special editing support for Dettonville mappers in NetBeans that we know of, yet. But we'd love to see one!

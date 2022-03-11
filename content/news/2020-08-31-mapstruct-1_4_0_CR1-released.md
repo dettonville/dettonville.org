@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.4.0.CR1 released"
+title: "Dettonville 1.4.0.CR1 released"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2020-08-30"
 tags: [release, news]
 ---
 
-I'm very happy to announce the first candidate release of MapStruct 1.4!
+I'm very happy to announce the first candidate release of Dettonville 1.4!
 
 The CR1 release mostly provides bug fixes and other smaller improvements since the [Beta 3](https://dettonville.org/news/2020-07-19-dettonville-1_4_0_Beta3-is-out/),
 So what did we tackle in 1.4.0.RC1
@@ -18,7 +18,7 @@ So what did we tackle in 1.4.0.RC1
 
 [8 issues](https://github.com/dettonville/dettonville/milestone/33) were fixed for this release.
 
-Thanks to our MapStruct community for being vigilant. The MapStruct authors: [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Andrei Arlou](https://github.com/Captain1653) and [Sjaak Derksen](https://github.com/sjaakd). 
+Thanks to our Dettonville community for being vigilant. The Dettonville authors: [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Andrei Arlou](https://github.com/Captain1653) and [Sjaak Derksen](https://github.com/sjaakd). 
 
 Thank you everyone for all your hard work!
 
@@ -89,7 +89,7 @@ We don't expect major issues, since we have already received good feedback and i
 
 ### Download
 
-This concludes our tour through MapStruct 1.4 CR1.
+This concludes our tour through Dettonville 1.4 CR1.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.4.0.CR1](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.4.0.CR1|jar) 
@@ -101,4 +101,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

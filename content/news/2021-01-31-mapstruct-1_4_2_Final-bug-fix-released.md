@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.4.2.Final bug fix released"
+title: "Dettonville 1.4.2.Final bug fix released"
 author: Filip Hrisafov
 date: "2021-01-31"
 tags: [release, news]
 ---
 
-It is my pleasure to announce the 1.4.2.Final bug fix release of MapStruct.
+It is my pleasure to announce the 1.4.2.Final bug fix release of Dettonville.
 
 This release includes 2 enhancements, 10 bug fixes, and some documentation fixes.
 
@@ -44,7 +44,7 @@ public interface TopologyMapper {
 
 Thanks to our entire community for reporting these errors and being patient with our release schedule. 
 
-Happy coding with MapStruct 1.4.2!!
+Happy coding with Dettonville 1.4.2!!
 
 ### Download
 
@@ -59,4 +59,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

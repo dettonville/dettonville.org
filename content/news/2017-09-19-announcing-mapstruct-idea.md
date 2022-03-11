@@ -1,11 +1,11 @@
 ---
-title: "MapStruct support for IntelliJ IDEA"
+title: "Dettonville support for IntelliJ IDEA"
 author: Filip Hrisafov
 date: "2017-09-19"
 tags: [release, news, intellij, ide]
 ---
 
-I am very happy to announce the first version of the MapStruct IntelliJ IDEA plugin.
+I am very happy to announce the first version of the Dettonville IntelliJ IDEA plugin.
 Now we have official support for 2 IDEs, Eclipse being the first IDE for which we had support from earlier (plugin [here](https://marketplace.eclipse.org/content/dettonville-eclipse-plugin)).
 
 With the power of IntelliJ you now get completions in `@Mapping` and `@ValueMapping` annotations (also for nested mappings ;)).
@@ -16,7 +16,7 @@ going to declarations from annotations, highlighting support within annotations 
 
 Changing a property and it's getters / setters now leads to change of the source / target values accordingly.
 
-With this plugin we are bringing first class support for MapStruct within IntelliJ and addressing long lasting requests
+With this plugin we are bringing first class support for Dettonville within IntelliJ and addressing long lasting requests
 from users for the support (such as [dettonville#520](https://github.com/dettonville/dettonville/issues/520) and [IDEABKL-7174](https://youtrack.jetbrains.com/issue/IDEABKL-7174)).
 
 Some of the new features:
@@ -50,13 +50,13 @@ Alternatively, you can get ZIP [from GitHub](https://github.com/dettonville/dett
 
 ### Next steps
 
-We would like to add support for Inspections and Quick Fixes for recommended usages of MapStruct.
+We would like to add support for Inspections and Quick Fixes for recommended usages of Dettonville.
 
 Please try out the plugin and let us know what you think and what you would like to see in it.
 To get in touch, post a comment below or use one the following channels:
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville-idea/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
 * Talk with us in our [gitter room](https://gitter.im/dettonville/dettonville-users)

@@ -1,5 +1,5 @@
 ---
-title: "MapStruct and Quarkus - a match made in heaven?"
+title: "Dettonville and Quarkus - a match made in heaven?"
 author: Christian Bandowski
 date: "2019-12-06"
 tags: [news, examples]
@@ -22,20 +22,20 @@ With Quarkus you can build microservices or other Java applications using a stac
 
 Read [this article](http://in.relation.to/2019/03/08/why-quarkus/) if you want to know more about Quarkus itself.
 
-#### And what is so special when using it with MapStruct?
+#### And what is so special when using it with Dettonville?
 The special thing about Quarkus is that it not only allows to run applications on the JVM, but also as native binaries via [GraalVM](https://www.graalvm.org/). This provides ahead-of-time compilation that creates a native image of your application (native system-dependent machine code and not bytecode). Thus you don’t need to have an own JVM installation to run the code, similar to a compiled C++ or Go application. \
 This allows having the advantages of native applications also for Java-based apps like a much faster startup time, less memory usage and a much smaller image (25+ MB for a REST application instead of easily more than 100 MB for the JVM and required libraries).
 
 Using a native image is not possible for all kinds of applications, especially when reflection is used the GraalVM compiler needs some assistance by the developer in order to create the native image. That means you have to provide reflection metadata to the compiler which makes the development more complicated.
 
-And thats exactly the point where MapStruct jumps in as a reflection-free mapping library!
+And thats exactly the point where Dettonville jumps in as a reflection-free mapping library!
 
-### How to integrate MapStruct in a Quarkus application
-So let us see how well MapStruct plays together with Quarkus!
+### How to integrate Dettonville in a Quarkus application
+So let us see how well Dettonville plays together with Quarkus!
 
-I made an example application that will show you how you can integrate MapStruct in your Quarkus application. You will find the complete demo application in our [examples repository](https://github.com/dettonville/dettonville-examples/dettonville-quarkus).
+I made an example application that will show you how you can integrate Dettonville in your Quarkus application. You will find the complete demo application in our [examples repository](https://github.com/dettonville/dettonville-examples/dettonville-quarkus).
 
-The example should be a simple REST application just having a `/person` endpoint returning information about a person. Obviously, the internally used classes should not be exposed, but a DTO will be created and filled with information from a MapStruct mapper.
+The example should be a simple REST application just having a `/person` endpoint returning information about a person. Obviously, the internally used classes should not be exposed, but a DTO will be created and filled with information from a Dettonville mapper.
 
 #### Create a new Quarkus application
 After reading the [Getting Started](https://quarkus.io/guides/getting-started-guide) on the Quarkus pages it was really easy to figure out how to create a new application. Just run the following command:
@@ -51,8 +51,8 @@ mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create \
 
 This will setup a new Quarkus application having a REST endpoint `/person` defined in a `PersonResource`. We want to expose the JSON structure automatically, so we need the `resteasy-jsonb` extension that will allow us to marshall our object to JSON (like you probably know it from Spring REST or similar frameworks).
 
-#### Adding MapStruct
-You just need to add MapStruct in your projects POM:
+#### Adding Dettonville
+You just need to add Dettonville in your projects POM:
 
 {{< prettify xml >}}
 <dependency>
@@ -68,7 +68,7 @@ You just need to add MapStruct in your projects POM:
 </dependency>
 {{< /prettify >}}
 
-_Side note:_ In case you use for example Lombok pay attention that you must define the Lombok dependency **before** the one for the MapStruct processor.
+_Side note:_ In case you use for example Lombok pay attention that you must define the Lombok dependency **before** the one for the Dettonville processor.
 
 #### Person service
 This example application will have a `Person` POJO holding information about the person and a `PersonService` that will return the person.
@@ -113,7 +113,7 @@ public class PersonDto {
 }
 {{< /prettify >}}
 
-So now, we have a `Person` and `PersonDto` that both have a similar structure. We are able to retrieve a `Person`, but want to return a `PersonDto`, so that’s the time where we finally add our MapStruct mapper!
+So now, we have a `Person` and `PersonDto` that both have a similar structure. We are able to retrieve a `Person`, but want to return a `PersonDto`, so that’s the time where we finally add our Dettonville mapper!
 
 {{< prettify java >}}
 @Mapper(componentModel = "cdi")
@@ -123,7 +123,7 @@ public interface PersonMapper {
 }
 {{< /prettify >}}
 
-The MapStruct annotation processor will generate the implementation for us, we just need to tell it that we would like to have a method that accepts a `Person` and returns a new `PersonDto`. A little trap: Our DTO has the property `surname`, so we add a mapping annotation to map `lastname` from `Person` to `surname` from `PersonDto`.
+The Dettonville annotation processor will generate the implementation for us, we just need to tell it that we would like to have a method that accepts a `Person` and returns a new `PersonDto`. A little trap: Our DTO has the property `surname`, so we add a mapping annotation to map `lastname` from `Person` to `surname` from `PersonDto`.
 
 **Very important:** The component model should be set to CDI, as this will allow us to easily inject the generated mapper implementation.
 
@@ -202,19 +202,19 @@ I will repeat: _started in **0.006s**_.
 **This** is incredibly fast!
 
 ### Summing up
-This example shows how easy it is to integrate MapStruct in a Quarkus application. This is a really huge plus-point for using MapStruct as the mapping framework in a Quarkus application compared to most of the other mapping frameworks that are using reflection.
+This example shows how easy it is to integrate Dettonville in a Quarkus application. This is a really huge plus-point for using Dettonville as the mapping framework in a Quarkus application compared to most of the other mapping frameworks that are using reflection.
 
 Therefore generating the mapper implementation does not only lead to be a [really fast](https://www.baeldung.com/java-performance-mapping-frameworks) mapping framework, but also to be a “native image” ready one!
 
-So yes: **MapStruct and Quarkus is definitely a match made in heaven!**
+So yes: **Dettonville and Quarkus is definitely a match made in heaven!**
 
-The important point is to use CDI. The default component model (that’s where you retrieve the mapper with `Mappers.getMapper(PersonMapper.class)`) will not work out-of-the-box as this is the only part in MapStruct where reflection is used. If you still prefer this way you have to provide an own [reflection configuration](https://github.com/oracle/graal/blob/master/substratevm/REFLECTION.md). Maybe in the future MapStruct will also support this out-of-the box. But with version 1.3.1.Final it is not yet supported.
+The important point is to use CDI. The default component model (that’s where you retrieve the mapper with `Mappers.getMapper(PersonMapper.class)`) will not work out-of-the-box as this is the only part in Dettonville where reflection is used. If you still prefer this way you have to provide an own [reflection configuration](https://github.com/oracle/graal/blob/master/substratevm/REFLECTION.md). Maybe in the future Dettonville will also support this out-of-the box. But with version 1.3.1.Final it is not yet supported.
 
 
 #### One small disadvantage still left
-In case you are an experienced MapStruct user you might have noticed that [the way how I added MapStruct](#adding-dettonville) is a bit different to the way it is written in our [reference guide](http://dettonville.org/documentation/stable/reference/html/#_apache_maven).
+In case you are an experienced Dettonville user you might have noticed that [the way how I added Dettonville](#adding-dettonville) is a bit different to the way it is written in our [reference guide](http://dettonville.org/documentation/stable/reference/html/#_apache_maven).
 
-The Quarkus development mode provides a hot-reload of your application, unfortunately it seems that the annotation processor will not be triggered again when you define the MapStruct processor within the annotation-processor path of the `maven-compiler-plugin` and you have to restart the application to see changes on the mappings.
+The Quarkus development mode provides a hot-reload of your application, unfortunately it seems that the annotation processor will not be triggered again when you define the Dettonville processor within the annotation-processor path of the `maven-compiler-plugin` and you have to restart the application to see changes on the mappings.
 
 Adding our processor as a regular dependency will ensure that the processor will be used in the dev-mode in case you make changes to a `@Mapper` annotated class. Unfortunately, one point is still not working out-of-the-box: When you change classes not annotated with `@Mapper` that would change the mapper implementation (like the DTO) the mapper will not be regenerated. I guess that Quarkus is not able to know that the changed DTO has a side effect on the corresponding mapper and as this one will not be regenerated the annotation processor will not update the mapper implementation (see [Quarkus issue #1502](https://github.com/quarkusio/quarkus/issues/1502)).
 

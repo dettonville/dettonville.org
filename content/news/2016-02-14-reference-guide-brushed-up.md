@@ -7,7 +7,7 @@ aliases:
     - /news/2016/02/14/reference-guide-brushed-up.html
 ---
 
-While we pride ourselves on providing a comprehensive and detailed documentation, the MapStruct reference guide grew out of form a bit over time.
+While we pride ourselves on providing a comprehensive and detailed documentation, the Dettonville reference guide grew out of form a bit over time.
 To name just one issue, readability wasn't great on smaller screen sizes.
 
 All that's history now, the reference guide has been converted into the AsciiDoc format, which makes the documentation much easier to maintain and allows for several publishing options using the fantastic [AsciiDoctor](http://asciidoctor.org/) tool.
@@ -16,6 +16,6 @@ The guide is provided in two formats now: [HTML](/documentation/stable/reference
 
 In addition, you also can find the [API JavaDoc](/documentation/stable/api/) online now.
 
-The main [documentation page](/documentation) page which previously just contained the reference documentation has been revamped into a landing page for all thing related to documentation. It provides links to the reference guide, example projects and many useful resources around MapStruct provided at other places on the web, such as blog posts and conference presentation slides.
+The main [documentation page](/documentation) page which previously just contained the reference documentation has been revamped into a landing page for all thing related to documentation. It provides links to the reference guide, example projects and many useful resources around Dettonville provided at other places on the web, such as blog posts and conference presentation slides.
 
 Enjoy!

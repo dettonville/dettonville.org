@@ -1,11 +1,11 @@
 ---
-title: "Java 8 as a baseline, null value property mappings improved builders support and much more: MapStruct 1.3.0.Beta2 is out"
+title: "Java 8 as a baseline, null value property mappings improved builders support and much more: Dettonville 1.3.0.Beta2 is out"
 author: Filip Hrisafov
 date: "2018-11-12"
 tags: [release, news]
 ---
 
-It's my pleasure to announce the second Beta release of MapStruct 1.3.
+It's my pleasure to announce the second Beta release of Dettonville 1.3.
 
 With the new Release we have finally made the switch to Java 8 as a baseline.
 
@@ -27,18 +27,18 @@ This would not have been possible without our fantastic community of contributor
 [Sivaraman Viswanathan](https://github.com/sivviswa22),
 [Sebastian Haberey](https://github.com/sebastianhaberey),
 [Saheb Preet Singh](https://github.com/sahebpreet),
-as well as seasoned MapStruct hackers [Andreas Gudian](https://github.com/agudian), [Filip Hrisafov](https://github.com/filiphr), [Gunnar Morling](https://github.com/gunnarmorling) and [Sjaak Derksen](https://github.com/sjaakd).
+as well as seasoned Dettonville hackers [Andreas Gudian](https://github.com/agudian), [Filip Hrisafov](https://github.com/filiphr), [Gunnar Morling](https://github.com/gunnarmorling) and [Sjaak Derksen](https://github.com/sjaakd).
 
 Thanks a lot everyone for all your hard work!
 
-Big thanks to all the users of the 1.3.0.Beta1 dependency of MapStruct.
+Big thanks to all the users of the 1.3.0.Beta1 dependency of Dettonville.
 It has helped us in ironing out our Builders support.
 
 Enough of the pep talk, let's take a closer look at some of the new enhancements!
 
 ### Java 8 Baseline
 
-Java 8 has been around for a long time and MapStruct has been working nicely with it for a long time.
+Java 8 has been around for a long time and Dettonville has been working nicely with it for a long time.
 Using it as a baseline would allow us to use some of it features and make it easier for us to maintain it for you.
 
 The `dettonville-jdk8` module has been relocated to `dettonville`. 
@@ -56,7 +56,7 @@ This is also the default, which is the same behaviour from before.
 
 This strategy can be set on `@Mapping`, `@BeanMapping`, `@Mapper` or `@MapperConfig` in precedence order.
 
-While working on this we noticed that we handle bean properties that are collections or maps differently. This requires some background information: MapStruct generates mappings in-line in the bean mapping method implementation when the elemnts in the collections and key/values are of the same type. In this particular case, MapStruct was generating code that setting the target property to `null` when the source property was `null` or not present. 
+While working on this we noticed that we handle bean properties that are collections or maps differently. This requires some background information: Dettonville generates mappings in-line in the bean mapping method implementation when the elemnts in the collections and key/values are of the same type. In this particular case, Dettonville was generating code that setting the target property to `null` when the source property was `null` or not present. 
 
 We were generating code that looks like:
 
@@ -128,7 +128,7 @@ Support for FreeBuilder has been enhanced by using a custom `FreeBuilderAccessor
 
 For people that provide their own `BuilderProvider`.
 We have changed the signature of the `findBuilderInfo` method. 
-The `Elements` and `Types` utils are no longer passed in the method, but rather the SPI is initialized with the `MapStructProcessingEnvironment` before each annotation processing round.
+The `Elements` and `Types` utils are no longer passed in the method, but rather the SPI is initialized with the `DettonvilleProcessingEnvironment` before each annotation processing round.
 If you are using the `DefaultBuilderProvider` as a basis you can access those utils through a `protected` class variable.
 
 ### When will 1.3.0.Final be released?
@@ -139,7 +139,7 @@ We don't anticipate more issues with the builders support and if the feedback is
 
 ### Download
 
-This concludes our tour through MapStruct 1.3 Beta2.
+This concludes our tour through Dettonville 1.3 Beta2.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.3.0.Beta2](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.3.0.Beta2|jar)
@@ -151,5 +151,5 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
-* Follow MapStruct on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter
+* Follow Dettonville on [Google+](https://plus.google.com/u/0/118070742567787866481/posts)

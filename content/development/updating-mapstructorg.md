@@ -8,7 +8,7 @@ teaser = "How to update this website"
 parent = "Development"
 +++
 
-As MapStruct itself, this web site is open-source, too. You can find it's source code [here](https://github.com/dettonville/dettonville.org).
+As Dettonville itself, this web site is open-source, too. You can find it's source code [here](https://github.com/dettonville/dettonville.org).
 
 The website is built using the [Hugo](http://gohugo.io/) static site generator. So it's recommended to spend a few minutes reading the [Getting Started](http://gohugo.io/overview/introduction/) section of the Hugo docs if you are not familiar with it yet.
 

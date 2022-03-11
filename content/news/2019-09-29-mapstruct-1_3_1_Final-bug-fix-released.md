@@ -1,12 +1,12 @@
 ---
-title: "MapStruct 1.3.1.Final bug fix released"
+title: "Dettonville 1.3.1.Final bug fix released"
 author: Filip Hrisafov
 date: "2019-09-29"
 tags: [release, news]
 ---
 
-It is my pleasure to announce the 1.3.1.Final bug fix release of MapStruct.
-Since the Final release of MapStruct 1.3.0.Final we have received amazing feedback from the community.
+It is my pleasure to announce the 1.3.1.Final bug fix release of Dettonville.
+Since the Final release of Dettonville 1.3.0.Final we have received amazing feedback from the community.
 
 This release includes 3 enhancements, 12 bug fixes and 7 documentation improvements.
 
@@ -27,7 +27,7 @@ Apart from bug fixes we added some small enhancements.
 ### Ability to disable builder on method level
 
 It is now possible to disable the usage of Builders via the `Builder#disableBuilder` option.
-This is useful if you want to tell MapStruct no to use builders when mapping your beans.
+This is useful if you want to tell Dettonville no to use builders when mapping your beans.
 
 ### Stricter matching for lifecycle methods / non-unique parameters
 
@@ -35,9 +35,9 @@ In case a lifecycle method has multiple matching parameters (e. g. same type)
 all parameter names must match exactly with the ones from the mapping method,
 otherwise the lifecycle method will not be used and a warning will be shown.
 
-### Welcome Andrei to the MapStruct team
+### Welcome Andrei to the Dettonville team
 
-Since our last release we also have a new member join our small MapStruct team.
+Since our last release we also have a new member join our small Dettonville team.
 We are happy to say welcome to [Andrei Arlou](https://github.com/Captain1653).
 He has been busy answering questions, improving our codebase, fixing bugs and working on different enhancements for our next release. 
 
@@ -54,7 +54,7 @@ As an example here are the numbers for the _org.dettonville:dettonville-processo
     <img src="/images/downloads_09-2018_09-2019.png" style="padding-bottom: 3px;"/>
 </div>
 
-Happy coding with MapStruct 1.3!!
+Happy coding with Dettonville 1.3!!
 
 ### Download
 
@@ -69,4 +69,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group or in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

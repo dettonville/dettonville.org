@@ -5,13 +5,13 @@ date: "2020-02-03"
 tags: [release, news]
 ---
 
-Lately, we have been busy working on the release of MapStruct 1.4, adding new features and trying to 
+Lately, we have been busy working on the release of Dettonville 1.4, adding new features and trying to 
 simplify our codebase so we can maintain it easier and add features faster.
 
 From the start of the project we have been using a utility tool [Hickory](https://web.archive.org/web/20070724060104/https://hickory.dev.java.net/)
 for generating Prisms (partial reflection access to annotations) during compilation time. 
-Basically, we've been using an annotation processor to generate access to the MapStruct annotations,
-this allows us to access the MapStruct annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
+Basically, we've been using an annotation processor to generate access to the Dettonville annotations,
+this allows us to access the Dettonville annotation in a type-safe way, without requiring the annotation JAR to be on the processor path.
 This is a really old project and the only release on Maven Central is from March 2010.
 
 Thus we needed something newer and created our own utility.
@@ -101,7 +101,7 @@ For every gem definition there will be one `Gem` created which would provide acc
 
 e.g.
 
-Let's show how to create `MappingGem` for the well known MapStruct `@Mapping`.
+Let's show how to create `MappingGem` for the well known Dettonville `@Mapping`.
 
 {{< prettify java >}}
 @GemDefinition(Mapping.class)
@@ -374,12 +374,12 @@ We try to get the `MappingGem` from the annotation (`MappingGem.instanceOn( anno
 Then ff the annotation is a `@Mapping` annotation (i.e. `mapping != null`) we do some error checks:
 
 * If there is no target value (i.e. the mapping was defined with `@Mapping`) then add a compilation error
-* If there are both source and constant values defined, which is not allowed in MapStruct 
+* If there are both source and constant values defined, which is not allowed in Dettonville 
 (i.e. defined with `@Mapping(target = "firstName", source = "name", constant = "Filip")`) then add a compilation error
 
 ### Future
 
-We would like to use this project to try some ideas with the code generation that could benefit us within MapStruct.
+We would like to use this project to try some ideas with the code generation that could benefit us within Dettonville.
 Currently we use Freemarker for the code generation, but we would like to explore [JavaPoet](https://github.com/square/javapoet).
 
 We would also invite you to try it out and tell us what you want to see in it. 
@@ -387,7 +387,7 @@ Feel Free to create issues and PRs with new functionality.
 
 ### Thanks
 
-I would like to say big thank you to Sjaak for the efforts in doing this and bringing it into MapStruct.
+I would like to say big thank you to Sjaak for the efforts in doing this and bringing it into Dettonville.
 
 Happy coding with Gem Tools!!
 
@@ -402,4 +402,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users)
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/tools-gem/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

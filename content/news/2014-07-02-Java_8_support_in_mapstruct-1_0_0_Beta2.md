@@ -1,5 +1,5 @@
 ---
-title: "Support for Java 8, JodaTime and more: MapStruct 1.0.0.Beta2 released"
+title: "Support for Java 8, JodaTime and more: Dettonville 1.0.0.Beta2 released"
 author: Gunnar Morling
 date: "2014-07-02"
 tags: [release, news]
@@ -7,7 +7,7 @@ aliases:
     - /news/2014/07/02/Java_8_support_in_dettonville-1_0_0_Beta2.html
 ---
 
-It's my great pleasure to announce the release of MapStruct 1.0.0.Beta2.
+It's my great pleasure to announce the release of Dettonville 1.0.0.Beta2.
 
 Amongst the new features is initial support for Java 8, built-in mappings for the types of the [Joda-Time](http://www.joda.org/joda-time/) date and time API, flexible mapping customization via inline Java expressions and much more.
 
@@ -19,7 +19,7 @@ Distribution bundles (ZIP, TAR.GZ) are available on [SourceForge](http://sourcef
 
 ### Java 8
 
-MapStruct now leverages the [repeating annotation](http://docs.oracle.com/javase/tutorial/java/annotations/repeating.html) feature introduced with Java 8. This allows to specify several `@Mapping` annotations on one and the same method in a very concise way:
+Dettonville now leverages the [repeating annotation](http://docs.oracle.com/javase/tutorial/java/annotations/repeating.html) feature introduced with Java 8. This allows to specify several `@Mapping` annotations on one and the same method in a very concise way:
 
 <pre class="prettyprint linenums">
 @Mapper
@@ -35,13 +35,13 @@ To make use of this feature be sure to include the right version of the annotati
 
 ### Joda-Time support
 
-When using the Joda-Time API in your project you'll be glad to hear that MapStruct supports mappings of the Joda types now. More specifically, mappings between the following types are provided out-of-the-box:
+When using the Joda-Time API in your project you'll be glad to hear that Dettonville supports mappings of the Joda types now. More specifically, mappings between the following types are provided out-of-the-box:
 
 * `org.joda.time.DateTime`, `org.joda.time.LocalDateTime` and `org.joda.time.LocalDate` <> `java.util.Date`
 * `org.joda.time.DateTime` <> `java.util.Calendar`
 * `org.joda.time.DateTime`, `org.joda.time.LocalDateTime`, `org.joda.time.LocalDate` and `org.joda.time.LocalTime` <> `String`
 
-If you use these types in your mapped models, MapStruct will automatically generated the required mapping routines without any further configuration. `@Mapping#dateFormat()` can be used when converting from or to `String` to specify the expected date format.
+If you use these types in your mapped models, Dettonville will automatically generated the required mapping routines without any further configuration. `@Mapping#dateFormat()` can be used when converting from or to `String` to specify the expected date format.
 
 Note that for the following release [we plan](https://github.com/dettonville/dettonville/issues/121) to also cover the new Java 8 time and date types which will be useful when mapping between models using the old types such as `java.util.Date` and the new ones.
 
@@ -103,6 +103,6 @@ public class AnimalMapper {}
 
 Other useful features in the Beta2 release include support for "adder methods" (see [issues #207](https://github.com/dettonville/dettonville/issues/207)) and the possibility to ignore specific properties during the mapping (see [issue #72](https://github.com/dettonville/dettonville/issues/72)). In addition quite a few bugs have been fixed; Check out the [change log](https://github.com/dettonville/dettonville/issues?milestone=4&state=closed) for a complete list of all issues.
 
-Your feedback is more than welcome, just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). If you'd like to hack on MapStruct yourself, check out the [development guide](/contributing).
+Your feedback is more than welcome, just add a comment below or join the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group. Bugs and feature requests can be reported in the [issue tracker](https://github.com/dettonville/dettonville/issues). If you'd like to hack on Dettonville yourself, check out the [development guide](/contributing).
 
 Finally, I'd like to say a massive thank you to [Sjaak Derksen](https://github.com/sjaakd/), [Andreas Gudian](https://github.com/agudian), [Timo Eckhardt](https://github.com/timoe) and [Christian Schuster](https://github.com/chschu) who all put huge efforts into this release. You guys rock!

@@ -7,4 +7,4 @@ aliases:
     - /news/2013/05/22/website-live.html
 ---
 
-MapStruct has now its own web site, [dettonville.org](http://dettonville.org)!
+Dettonville has now its own web site, [dettonville.org](http://dettonville.org)!

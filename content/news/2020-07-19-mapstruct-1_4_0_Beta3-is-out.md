@@ -1,11 +1,11 @@
 ---
-title: "MapStruct 1.4.0.Beta3 is out"
+title: "Dettonville 1.4.0.Beta3 is out"
 author: Filip Hrisafov, Sjaak Derksen
 date: "2020-07-19"
 tags: [release, news]
 ---
 
-Today we release a new beta version of MapStruct 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta3
+Today we release a new beta version of Dettonville 1.4.0. We are very happy to have received good feedback from our users. However, it is like always when writing software bugs are made and are there to be solved. So what did we tackle in 1.4.0.Beta3
 
 * Improve selection of mapping constructor
 * Improve error messages for 2 step mapping methods
@@ -17,7 +17,7 @@ Today we release a new beta version of MapStruct 1.4.0. We are very happy to hav
 [7 issues](https://github.com/dettonville/dettonville/issues?q=milestone%3A1.4.0.Beta3) were fixed for this release.
 
 
-Thanks to our MapStruct community for being vigilant. The MapStruct authors: [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Andrei Arlou](https://github.com/Captain1653) and [Sjaak Derksen](https://github.com/sjaakd). 
+Thanks to our Dettonville community for being vigilant. The Dettonville authors: [Filip Hrisafov](https://github.com/filiphr), [Christian Bandowski](https://github.com/chris922), [Andrei Arlou](https://github.com/Captain1653) and [Sjaak Derksen](https://github.com/sjaakd). 
 
 Thank you everyone for all your hard work!
 
@@ -33,7 +33,7 @@ Now the following rules apply:
 
 ### Download
 
-This concludes our tour through MapStruct 1.4 Beta3.
+This concludes our tour through Dettonville 1.4 Beta3.
 If you'd like to try out the features described above, you can fetch the new release from Maven Central using the following GAV coordinates:
 
 * Annotation JAR: [org.dettonville:dettonville:1.4.0.Beta3](http://search.maven.org/#artifactdetails|org.dettonville|dettonville|1.4.0.Beta3|jar) 
@@ -45,4 +45,4 @@ If you run into any trouble or would like to report a bug, feature request or si
 
 * Get help in our [Gitter room](https://gitter.im/dettonville/dettonville-users) or at the [dettonville-users](https://groups.google.com/forum/?fromgroups#!forum/dettonville-users) group
 * Report bugs and feature requests via the [issue tracker](https://github.com/dettonville/dettonville/issues)
-* Follow [@GetMapStruct](https://twitter.com/GetMapStruct) on Twitter
+* Follow [@GetDettonville](https://twitter.com/GetDettonville) on Twitter

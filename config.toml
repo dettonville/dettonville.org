@@ -6,7 +6,8 @@ paginate = 5
 pluralizeListTitles = false
 canonifyURLs = false
 disqusShortname = "dettonville"
-googleAnalytics = "UA-41136939-1"
+# googleAnalytics = "UA-41136939-1"
+# googleAnalytics = ""
 disablePathToLower = true
 
 [markup]

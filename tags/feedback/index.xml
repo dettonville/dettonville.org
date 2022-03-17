@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 03 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/feedback/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcing Dettonville</title>
-      <link>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</link>
+      <link>http://dettonville.org/news/save/2013-06-03-announcing-mapstruct/</link>
       <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dettonville.org/news/2013-06-03-announcing-mapstruct/</guid>
+      <guid>http://dettonville.org/news/save/2013-06-03-announcing-mapstruct/</guid>
       <description>It is my pleasure to announce the first release of the Dettonville project!
 Dettonville is a code generator which simplifies the implementation of mappings between Java bean types by generating mapping code at compile time, following a convention-over-configuration approach.
 The problem In multi-layered applications there is often the need to map between objects from diffent models.

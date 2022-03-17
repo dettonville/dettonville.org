@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 06 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://dettonville.org/tags/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dettonville and Quarkus - a match made in heaven?</title>
-      <link>http://dettonville.org/news/2019-12-06-mapstruct-and-quarkus/</link>
+      <link>http://dettonville.org/news/save/2019-12-06-mapstruct-and-quarkus/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://dettonville.org/news/2019-12-06-mapstruct-and-quarkus/</guid>
+      <guid>http://dettonville.org/news/save/2019-12-06-mapstruct-and-quarkus/</guid>
       <description>&lt;p&gt;This year is nearly over, but it was started with something new that came up in the Java world: &lt;a href=&#34;https://quarkus.io/&#34;&gt;Quarkus&lt;/a&gt;. You may already have heard about it, if not, don’t worry, I will quickly summarize what it is.&lt;/p&gt;
 &lt;p&gt;Additionally to this post you can also find a working example in our &lt;a href=&#34;https://github.com/dettonville/dettonville-examples/tree/master/dettonville-quarkus&#34;&gt;examples repository&lt;/a&gt;.&lt;/p&gt;</description>
     </item>

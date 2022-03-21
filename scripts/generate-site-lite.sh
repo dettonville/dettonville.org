@@ -25,7 +25,7 @@ echo "SCRIPT_DIR=[${SCRIPT_DIR}]"
 
 PROJECT_DIR="$( cd "$SCRIPT_DIR/../" && pwd )"
 
-SOURCE=$HOME/foo/hugoroot/
+SOURCE=$PROJECT_DIR/
 DESTINATION=$PROJECT_DIR/public/
 LOG=${SCRIPT_NAME}.log
 

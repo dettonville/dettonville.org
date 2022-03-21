@@ -10,8 +10,8 @@
 # exit when any command fails
 set -e
 
-## https://www.pixelstech.net/article/1577768087-Create-TMP_DIR-file-in-Bash-using-mkTMP_DIR-and-trap
-TMP_DIR="$(mkTMP_DIR -d -p ~)"
+## https://www.pixelstech.net/article/1577768087-Create-temp-file-in-Bash-using-mktemp-and-trap
+TMP_DIR="$(mktemp -d -p ~)"
 
 # keep track of the last executed command
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG

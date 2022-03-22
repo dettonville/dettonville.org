@@ -23,7 +23,8 @@ SCRIPT_NAME=$(basename $0)
 SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 echo "SCRIPT_DIR=[${SCRIPT_DIR}]"
 
-PROJECT_DIR="$( cd "$SCRIPT_DIR/../" && pwd )"
+#PROJECT_DIR="$( cd "$SCRIPT_DIR/../" && pwd )"
+PROJECT_DIR="$( pwd . )"
 
 SOURCE=$PROJECT_DIR/
 DESTINATION=$PROJECT_DIR/public/
